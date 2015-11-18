@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'js-air';
+	src:url('fonts/js-air.eot?lqbogz');
+	src:url('fonts/js-air.eot?lqbogz#iefix') format('embedded-opentype'),
+		url('fonts/js-air.ttf?lqbogz') format('truetype'),
+		url('fonts/js-air.woff?lqbogz') format('woff'),
+		url('fonts/js-air.svg?lqbogz#js-air') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'js-air';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-podcast:before {
+	content: "\e91c";
+}
+.icon-google-plus:before {
+	content: "\ea88";
+}
+.icon-facebook2:before {
+	content: "\ea8d";
+}
+.icon-twitter:before {
+	content: "\ea91";
+}
+.icon-youtube:before {
+	content: "\ea97";
+}
+.icon-apple:before {
+	content: "\eabf";
+}
+
