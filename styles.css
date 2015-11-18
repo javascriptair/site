@@ -91,6 +91,10 @@ h3 small {
   border-radius: 50%;
 }
 
+.person a {
+  text-decoration: none;
+}
+
 .episode .person-group {
   margin-top: 30px;
 }
