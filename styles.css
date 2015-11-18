@@ -49,6 +49,16 @@ a[class^="icon-"], [class*=" icon-"] {
   text-decoration: none;
 }
 
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 small {
+  color: #7c7c7c;
+  font-size: 65%;
+}
+
 /* parts */
 #logo {
 }
@@ -81,9 +91,14 @@ a[class^="icon-"], [class*=" icon-"] {
   border-radius: 50%;
 }
 
+.episode .person-group {
+  margin-top: 30px;
+}
+
 
 /* utilities */
 
 .\+text-center {
   text-align: center;
 }
+
