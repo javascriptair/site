@@ -38,11 +38,11 @@ hr {
 }
 
 a {
-  color: #f7df1e;
+  color: #155674;
 }
 
 a:hover, a:focus, a:active {
-  color: #e7c41d;
+  color: #318CB7;
 }
 
 a[class^="icon-"], [class*=" icon-"] {
