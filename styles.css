@@ -61,12 +61,9 @@ h3 small {
 }
 
 /* parts */
-#logo {
-}
-
 #logo img {
-  max-width: 300px;
-  min-height: 300px;
+  max-width: 220px;
+  min-height: 220px;
 }
 
 .group-of-icons {
