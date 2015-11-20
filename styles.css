@@ -6,7 +6,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-  font-size: 23px;
   max-width: 1000px;
   width: 90%;
 }
@@ -34,8 +33,6 @@ hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  margin-top: 70px;
-  margin-bottom: 70px;
 }
 
 a {
@@ -63,20 +60,14 @@ h3 small {
 /* parts */
 #logo img {
   max-width: 220px;
-  min-height: 220px;
+  width: 90%;
 }
 
 .group-of-icons {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  font-size: 80px;
   text-align: center;
-}
-
-.\+space-children>* {
-  margin-left: 28px;
-  margin-right: 28px;
 }
 
 .person-group {
@@ -105,3 +96,88 @@ h3 small {
   text-align: center;
 }
 
+/* media queries */
+
+/* phone */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  hr {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+
+  #sub-title {
+    font-size: 23px;
+  }
+
+  .person img {
+    max-width: 120px;
+  }
+
+  .group-of-icons {
+    font-size: 60px;
+  }
+
+  .\+space-children>* {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 23px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  hr {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  #sub-title {
+    font-size: 30px;
+  }
+
+  .person img {
+    max-width: 180px;
+  }
+
+  .group-of-icons {
+    font-size: 80px;
+  }
+
+  .\+space-children>* {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+
+}

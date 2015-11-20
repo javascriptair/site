@@ -10,9 +10,10 @@ function App() {
       <head lang="en">
         <title>JavaScript Air</title>
         <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
         <meta name="theme-color" content="#155674" />
-        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="resources/font/font.css" />
       </head>
@@ -24,7 +25,7 @@ function App() {
             </a>
           </div>
           <h1>JavaScript Air</h1>
-          <p>
+          <p id="sub-title">
             The <strong>live</strong> broadcast podcast
             all about JavaScript
           </p>
