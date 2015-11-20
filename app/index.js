@@ -30,8 +30,7 @@ class App extends React.Component {
               all about JavaScript
             </p>
             <p>
-              Brought to you by
-              <a href="https://egghead.io">Egghead.io</a>
+              Brought to you by <a href="https://egghead.io">Egghead.io</a>
             </p>
           </header>
 
@@ -148,9 +147,7 @@ class App extends React.Component {
               </div>
             </div>
             <p className="+text-center">
-              JavaScript Air has
-              <a href="http://panelists.javascriptair.com">a panel</a>
-              of some of the most
+              JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of some of the most
               awesome people the community has to offer
             </p>
           </section>
