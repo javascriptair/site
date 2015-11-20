@@ -10,9 +10,9 @@ class App extends React.Component {
       <html>
         <head lang="en">
           <title>JavaScript Air</title>
-          <meta charSet="UTF-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+          <meta charSet="UTF-8" />
           <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
+          <meta name="theme-color" content="#155674" />
           <link rel="shortcut icon" type="image/png" href="favicon.png"/>
           <link rel="stylesheet" href="styles.css" />
           <link rel="stylesheet" href="resources/font/font.css" />
@@ -157,6 +157,7 @@ class App extends React.Component {
             <a href="https://plus.google.com/105493143005968326308" className="icon-google-plus" title="Google+ Page"></a>
             <a href="https://facebook.com/JavaScriptAir" className="icon-facebook2" title="Facebook Page"></a>
           </section>
+
           <script dangerouslySetInnerHTML={googleScript} />
         </body>
       </html>
