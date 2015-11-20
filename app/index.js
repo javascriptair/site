@@ -86,9 +86,7 @@ class App extends React.Component {
               </div>
             </div>
             <p className="+text-center">
-              JavaScript Air is hosted by
-              <a href="https://egghead.io/instructors/kentcdodds">egghead.io</a>
-              instructor Kent C. Dodds
+              JavaScript Air is hosted by <a href="https://egghead.io/instructors/kentcdodds">egghead.io</a> instructor Kent C. Dodds
             </p>
           </section>
 
