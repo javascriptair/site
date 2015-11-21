@@ -1,6 +1,8 @@
 import React from 'react' // eslint-disable-line no-unused-vars
 import ReactDOMServer from 'react-dom/server'
-import googleScript from './google-script'
+import UglifyJS from 'uglify-js'
+import Person from '../components/person'
+
 
 
 /* eslint max-len:[2, 161] */ // TODO fix this
@@ -58,15 +60,10 @@ function App() {
                 </small>
               </h3>
               <div className="person-group +space-children">
-                <div className="person">
-                  <a href="https://twitter.com/brendaneich">
-                    <img src="episodes/2015-12-09/brendaneich.png" alt="Brendan Eich Profile Picture" />
-                    <p>Brendan Eich<br />@brendaneich</p>
-                  </a>
-                </div>
+                <Person name="Brendan Eich" twitter="brendaneich" imgSrc="episodes/2015-12-09/brendaneich.png" />
               </div>
               <p>
-                Kicking off JavaScript Air with a bang with our first guest Brendan Eich
+                Kicking off JavaScript Air with our first guest Brendan Eich
                 (original creator of JavaScript) to talk about the past, present, and future of JavaScript.
               </p>
             </div>
@@ -78,15 +75,11 @@ function App() {
         <section>
           <h2>Host</h2>
           <div className="person-group">
-            <div className="person">
-              <a href="https://twitter.com/kentcdodds">
-                <img src="resources/kentcdodds.png" alt="Kent C. Dodds Profile Picture" />
-                <p>Kent C. Dodds<br />@kentcdodds</p>
-              </a>
-            </div>
+            <Person name="Kent C. Dodds" twitter="kentcdodds" imgSrc="resources/kentcdodds.png" />
           </div>
           <p className="+text-center">
-            JavaScript Air is hosted by <a href="https://egghead.io/instructors/kentcdodds">egghead.io</a> instructor Kent C. Dodds
+            <a href="https://egghead.io/instructors/kentcdodds">Egghead.io</a> instructor Kent C. Dodds
+            is your host
           </p>
         </section>
 
@@ -95,54 +88,14 @@ function App() {
         <section>
           <h2>Panelists</h2>
           <div className="person-group +space-children">
-            <div className="person">
-              <a href="https://twitter.com/dan_abramov">
-                <img src="resources/panelists/dan_abramov.png" alt="Dan Abramov Profile Picture" />
-                <p>Dan Abramov<br />@dan_abramov</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/drboolean">
-                <img src="resources/panelists/drboolean.png" alt="Brian Lonsdorf Profile Picture" />
-                <p>Brian Lonsdorf<br />@drboolean</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/getify">
-                <img src="resources/panelists/getify.png" alt="Kyle Simpson Profile Picture" />
-                <p>Kyle Simpson<br />@getify</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/kwuchu">
-                <img src="resources/panelists/kwuchu.png" alt="Iheanyi Ekechukwu Profile Picture" />
-                <p>Iheanyi Ekechukwu<br />@kwuchu</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/linclark">
-                <img src="resources/panelists/linclark.png" alt="Lin Clark Profile Picture" />
-                <p>Lin Clark<br />@linclark</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/mzabriskie">
-                <img src="resources/panelists/mzabriskie.png" alt="Matt Zabriskie Profile Picture" />
-                <p>Matt Zabriskie<br />@mzabriskie</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/pamasaur">
-                <img src="resources/panelists/pamasaur.png" alt="Pam Selle Profile Picture" />
-                <p>Pam Selle<br />@pamasaur</p>
-              </a>
-            </div>
-            <div className="person">
-              <a href="https://twitter.com/tylermcginnis33">
-                <img src="resources/panelists/tylermcginnis33.png" alt="Tyler McGinnis Profile Picture" />
-                <p>Tyler McGinnis<br />@tylermcginnis33</p>
-              </a>
-            </div>
+            <Panelist name="Dan Abramov" twitter="dan_abramov" />
+            <Panelist name="Brian Lonsdorf" twitter="drboolean" />
+            <Panelist name="Kyle Simpson" twitter="getify" />
+            <Panelist name="Iheanyi Ekechukwu" twitter="kwuchu" />
+            <Panelist name="Lin Clark" twitter="linclark" />
+            <Panelist name="Matt Zabriskie" twitter="mzabriskie" />
+            <Panelist name="Pam Selle" twitter="pamasaur" />
+            <Panelist name="Tyler McGinnis" twitter="tylermcginnis33" />
           </div>
           <p className="+text-center">
             JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of some of the most
@@ -158,7 +111,7 @@ function App() {
           <a href="https://facebook.com/JavaScriptAir" className="icon-facebook2" title="Facebook Page"></a>
         </section>
 
-        <script dangerouslySetInnerHTML={googleScript} />
+        <script dangerouslySetInnerHTML={getGoogleAnalyticsScript()} />
       </body>
     </html>
   )
@@ -167,3 +120,31 @@ function App() {
 const string = ReactDOMServer.renderToStaticMarkup(<App />)
 
 console.log(string) // eslint-disable-line no-console
+
+
+function getGoogleAnalyticsScript() {
+  return  {
+    __html: UglifyJS.minify(`
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-70331623-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    `, {fromString: true}).code,
+  }
+}
+
+function Panelist(props) {
+  return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
+}
+
