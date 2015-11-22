@@ -1,9 +1,22 @@
-import React from 'react' // eslint-disable-line no-unused-vars
+import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import UglifyJS from 'uglify-js'
-import Person from '../components/person'
+import Person from '../../components/person'
+import Episode from './episode'
 
 
+const firstEpisodeData = {
+  title: 'The past, present, and future of JavaScript',
+  hangoutUrl: 'https://plus.google.com/events/c39cuc7ueppus41ajobpr9qt6cg',
+  date: '2015-12-09',
+  guests: [
+    {name: 'Brendan Eich', twitter: 'brendaneich'},
+  ],
+  description: `
+    Kicking off JavaScript Air with our first guest Brendan Eich
+    (original creator of JavaScript) to talk about the past, present, and future of JavaScript.
+  `
+}
 
 /* eslint max-len:[2, 161] */ // TODO fix this
 function App() {
@@ -49,24 +62,9 @@ function App() {
         <section>
           <h2>Upcoming Episodes</h2>
           <div className="episodes">
-            <div className="episode">
-              <h3>
-                <a href="https://plus.google.com/events/c39cuc7ueppus41ajobpr9qt6cg">
-                  The past, present, and future of JavaScript
-                </a>
-                <br />
-                <small>
-                  Wednesday, December 9th, 2015 at 12:00 PM (CT)
-                </small>
-              </h3>
-              <div className="person-group +space-children">
-                <Person name="Brendan Eich" twitter="brendaneich" imgSrc="episodes/2015-12-09/brendaneich.png" />
-              </div>
-              <p>
-                Kicking off JavaScript Air with our first guest Brendan Eich
-                (original creator of JavaScript) to talk about the past, present, and future of JavaScript.
-              </p>
-            </div>
+            <Episode
+              episodeData={firstEpisodeData}
+            />
           </div>
         </section>
 

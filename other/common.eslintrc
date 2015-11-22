@@ -4,6 +4,7 @@
   ecmaFeatures: {
     experimentalObjectRestSpread: true,
     jsx: true,
+    no-unused-vars: [2, {ignore: ["React"]}]
   },
   plugins: [
     "react"

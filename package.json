@@ -5,7 +5,7 @@
   "description": "The JavaScript Air site",
   "main": "app/index.js",
   "scripts": {
-    "build": "babel-node src/pages > index.html",
+    "build": "babel-node src/pages/home > index.html",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
     "dev": "nodemon --watch src --exec npm run build",
@@ -35,6 +35,7 @@
     "eslint-plugin-react": "3.9.0",
     "glob": "6.0.1",
     "lodash": "3.10.1",
+    "moment": "2.10.6",
     "nodemon": "1.8.1",
     "react": "0.14.2",
     "react-dom": "0.14.2",
