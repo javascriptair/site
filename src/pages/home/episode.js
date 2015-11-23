@@ -35,7 +35,7 @@ function getTitle(hangoutUrl, title) {
   if (hangoutUrl) {
     return <a href={hangoutUrl}>{title}</a>
   } else {
-    return <span>{title} <small>(hangout url coming soon)</small></span>
+    return <span>{title} <small>(hangout link coming soon)</small></span>
   }
 }
 
