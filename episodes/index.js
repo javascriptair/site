@@ -1,7 +1,19 @@
-import first from './2015-12-09'
+// here be some interesting dragons
+// beware...
+import path from 'path'
+import glob from 'glob'
 
+const things = glob.sync(
+  path.join(__dirname, '**/index.js'),
+  {ignore: __filename}
+)
 
-export default [
-  first,
-]
+const dateRegex = /\/(\d{4}-\d{2}-\d{2})\/index\.js/
+
+export default things.map(thing => {
+  return {
+    date: dateRegex.exec(thing)[1],
+    ...require(thing).default,
+  }
+})
 
