@@ -1,13 +1,13 @@
 export default {
   title: 'Learning and Developing JavaScript',
-  hangoutUrl: '',
-  date: '2015-12-16',
   guests: [
     {name: 'Ashley G. Williams', twitter: 'ag_dubs'},
     {name: 'Kyle Simpson', twitter: 'getify', imgSrc: 'resources/panelists/getify.png'},
   ],
   description: `
-    nom nom nom
+    Ashley and Kyle know a thing or two about teaching JavaScript.
+    These two wonderful people will jump on and chat with us about
+    learning and developing this wonky language called JavaScript.
   `,
 }
 
