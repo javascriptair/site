@@ -220,16 +220,23 @@ function featureShow(index) {
     .forEach(e => e.parentNode.removeChild(e))
 
   // style stuff
-  feature.style['text-align'] = 'center'
-  feature.style['margin-top'] = '400px'
-  feature.style['margin-bottom'] = '1000px'
-  feature.style.zoom = '1.6'
-
-  var title = feature.querySelector('h3')
-  title.style['font-size'] = '30px'
+  var styles = `
+    .episode {
+      text-align: center;
+      margin-top: 400px;
+      margin-bottom: 1000px;
+      zoom: 1.6;
+    }
+    a { text-decoration: none; }
+    h3 { font-size: 40px; }
+  `
 
   var container = document.createElement('div')
-  container.innerHTML = feature.outerHTML
+  container.innerHTML = `
+    ${feature.outerHTML}
+    <style>${styles}</style>
+  `
+
   document.body.innerHTML = container.outerHTML
 }
 /* eslint-enable */
