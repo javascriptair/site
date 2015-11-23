@@ -1,22 +1,22 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
+import {groupBy} from 'lodash'
 import UglifyJS from 'uglify-js'
+import moment from 'moment'
+import utils from '../../utils'
+
+
 import Person from '../../components/person'
 import Episode from './episode'
 
+import episodes from '../../../episodes'
 
-const firstEpisodeData = {
-  title: 'The past, present, and future of JavaScript',
-  hangoutUrl: 'https://plus.google.com/events/c39cuc7ueppus41ajobpr9qt6cg',
-  date: '2015-12-09',
-  guests: [
-    {name: 'Brendan Eich', twitter: 'brendaneich'},
-  ],
-  description: `
-    Kicking off JavaScript Air with our first guest Brendan Eich
-    (original creator of JavaScript) to talk about the past, present, and future of JavaScript.
-  `
-}
+const today = moment()
+const yesterday = today.subtract(1, 'day')
+const episodeGroups = groupBy(episodes, e => {
+  return yesterday.diff(e.date) < 0 ? 'future' : 'past'
+})
+
 
 /* eslint max-len:[2, 161] */ // TODO fix this
 function App() {
@@ -62,13 +62,22 @@ function App() {
         <section>
           <h2>Upcoming Episodes</h2>
           <div className="episodes">
-            <Episode
-              episodeData={firstEpisodeData}
-            />
+            {
+              utils.intersperse(
+                (episodeGroups.future || [])
+                  .sort(sortEpisodes)
+                  .map((e, i) => <Episode episodeData={e} key={i} />),
+                (e, i) => <hr key={`hr${i}`} className="episode-separator" />
+              )
+            }
           </div>
         </section>
 
         <hr />
+
+        {getPreviousEpisodesSection(episodes.past)}
+
+        {episodes.past ? <hr /> : ''}
 
         <section>
           <h2>Host</h2>
@@ -96,8 +105,8 @@ function App() {
             <Panelist name="Tyler McGinnis" twitter="tylermcginnis33" />
           </div>
           <p className="+text-center">
-            JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of some of the most
-            awesome people the community has to offer
+            JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
+            some of the finest people the community has to offer
           </p>
         </section>
 
@@ -120,8 +129,44 @@ const string = ReactDOMServer.renderToStaticMarkup(<App />)
 console.log(string) // eslint-disable-line no-console
 
 
+function getPreviousEpisodesSection(pastEpisodes = []) {
+  if (pastEpisodes.length === 0) {
+    return undefined
+  }
+
+  return (
+    <section>
+      <h2>Previous Episodes</h2>
+      <div className="episodes">
+        {
+          pastEpisodes
+            .sort(sortEpisodes)
+            .map((e, i) => {
+              return (
+                <div key={i}>
+                  {i}. <a href={e.hangoutUrl} title={`${e.title} Hangout`}>{e.title}</a>
+                  <small>
+                    {' with '}
+                    {
+                      utils.displayListify(
+                        (e.guests || [])
+                          .map((g, gI) => {
+                            return <a key={gI} href={`https://twitter.com/${g.twitter}`}>{g.name}</a>
+                          })
+                      )
+                    }
+                  </small>
+                </div>
+              )
+            })
+        }
+      </div>
+    </section>
+  )
+}
+
 function getGoogleAnalyticsScript() {
-  return  {
+  return {
     __html: UglifyJS.minify(`
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -146,3 +191,6 @@ function Panelist(props) {
   return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
 }
 
+function sortEpisodes(a, b) {
+  return moment(a.date) > moment(b.date)
+}

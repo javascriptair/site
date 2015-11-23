@@ -35,6 +35,10 @@ hr {
   box-sizing: content-box;
 }
 
+hr.episode-separator {
+  width: 80%;
+}
+
 a {
   color: #155674;
 }

@@ -1,12 +1,13 @@
 {
   // custom rules shared between app and test will go here
-  rules: {},
+  rules: {
+    "react/jsx-uses-react": 2,
+  },
   ecmaFeatures: {
     experimentalObjectRestSpread: true,
     jsx: true,
-    no-unused-vars: [2, {ignore: ["React"]}]
   },
   plugins: [
     "react"
-  ]
+  ],
 }

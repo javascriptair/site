@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({twitter, name, imgSrc}) => {
-return (
+  return (
     <div className="person">
       <a href={`https://twitter.com/${twitter}`}>
         <img src={imgSrc} alt={`${name} Profile Picture`} />
