@@ -22,7 +22,9 @@ function Episode({episodeData}) {
           <Person imgSrc={`episodes/${date}/${guest.twitter}.png`} key={index} {...guest} />
         ))}
       </div>
-      <p dangerouslySetInnerHTML={getDescriptionHTML(description)}></p>
+      <div className="description">
+        <p dangerouslySetInnerHTML={getDescriptionHTML(description)}></p>
+      </div>
     </div>
   )
 }

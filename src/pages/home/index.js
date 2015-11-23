@@ -119,6 +119,7 @@ function App() {
         </section>
 
         <script dangerouslySetInnerHTML={getGoogleAnalyticsScript()} />
+        <script dangerouslySetInnerHTML={getFeatureShowScript()} />
       </body>
     </html>
   )
@@ -187,6 +188,15 @@ function getGoogleAnalyticsScript() {
   }
 }
 
+function getFeatureShowScript() {
+  return {
+    __html: UglifyJS.minify(
+      featureShow.toString(),
+      {fromString: true}
+    ).code,
+  }
+}
+
 function Panelist(props) {
   return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
 }
@@ -194,3 +204,32 @@ function Panelist(props) {
 function sortEpisodes(a, b) {
   return moment(a.date) > moment(b.date)
 }
+
+
+/* eslint-disable */
+function featureShow(index) {
+  // get featured episode
+  var episodes = document.body.querySelectorAll('.episode')
+  var feature = episodes[index]
+
+  // replace body content with feature episode
+  // document.body.innerHTML = feature.outerHTML
+
+  // remove all prose
+  Array.from(feature.querySelectorAll('.description'))
+    .forEach(e => e.parentNode.removeChild(e))
+
+  // style stuff
+  feature.style['text-align'] = 'center'
+  feature.style['margin-top'] = '400px'
+  feature.style['margin-bottom'] = '1000px'
+  feature.style.zoom = '1.6'
+
+  var title = feature.querySelector('h3')
+  title.style['font-size'] = '30px'
+
+  var container = document.createElement('div')
+  container.innerHTML = feature.outerHTML
+  document.body.innerHTML = container.outerHTML
+}
+/* eslint-enable */
