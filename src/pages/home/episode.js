@@ -13,7 +13,7 @@ function Episode({episodeData}) {
   return (
     <div className="episode">
       <h3>
-        <a href={hangoutUrl}>{title}</a>
+        {getTitle(hangoutUrl, title)}
         <br />
         <small>{dateDisplay} at {time}</small>
       </h3>
@@ -29,5 +29,13 @@ function Episode({episodeData}) {
 
 function getDescriptionHTML(description) {
   return {__html: markdown.toHTML(deindent(description))}
+}
+
+function getTitle(hangoutUrl, title) {
+  if (hangoutUrl) {
+    return <a href={hangoutUrl}>{title}</a>
+  } else {
+    return <span>{title} <small>(hangout url coming soon)</small></span>
+  }
 }
 
