@@ -10,6 +10,10 @@ import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import HostSection from './sections/host'
 import PanelistsSection from './sections/panelists'
+import SocialIconGroupSection from './sections/social-icon-group'
+import GoogleAnalyticsScript from './scripts/google-analytics'
+
+
 
 
 import episodes from '../../../episodes'
@@ -60,13 +64,9 @@ function App() {
 
         <hr />
 
-        <section className="group-of-icons +space-children">
-          <a href="https://twitter.com/JavaScriptAir" className="icon-twitter" title="Twitter Profile"></a>
-          <a href="https://plus.google.com/105493143005968326308" className="icon-google-plus" title="Google+ Page"></a>
-          <a href="https://facebook.com/JavaScriptAir" className="icon-facebook2" title="Facebook Page"></a>
-        </section>
+        <SocialIconGroupSection />
 
-        <script dangerouslySetInnerHTML={getGoogleAnalyticsScript()} />
+        <GoogleAnalyticsScript />
         <script dangerouslySetInnerHTML={getFeatureShowScript()} />
       </body>
     </html>
@@ -76,29 +76,6 @@ function App() {
 const string = ReactDOMServer.renderToStaticMarkup(<App />)
 
 console.log(string) // eslint-disable-line no-console
-
-
-function getGoogleAnalyticsScript() {
-  return {
-    __html: UglifyJS.minify(`
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-      ga('create', 'UA-70331623-1', 'auto');
-      ga('require', 'displayfeatures');
-      ga('send', 'pageview');
-    `, {fromString: true}).code,
-  }
-}
 
 function getFeatureShowScript() {
   return {
