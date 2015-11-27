@@ -5,10 +5,10 @@ import UglifyJS from 'uglify-js'
 import moment from 'moment'
 
 import Person from '../../components/person'
+
+import Header from './header'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
-
-
 
 import episodes from '../../../episodes'
 
@@ -34,21 +34,7 @@ function App() {
         <link rel="stylesheet" href="resources/font/font.css" />
       </head>
       <body>
-        <header className="+text-center">
-          <div id="logo">
-            <a href="https://twitter.com/JavaScriptAir">
-              <img src="resources/logo.png" />
-            </a>
-          </div>
-          <h1>JavaScript Air</h1>
-          <p id="sub-title">
-            The <strong>live</strong> broadcast podcast
-            all about JavaScript
-          </p>
-          <p>
-            Brought to you by <a href="https://egghead.io">Egghead.io</a>
-          </p>
-        </header>
+        <Header />
 
         <hr />
 
