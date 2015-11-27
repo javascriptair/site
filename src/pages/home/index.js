@@ -10,6 +10,8 @@ import Header from './header'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
+import HostSection from './sections/host'
+
 
 
 import episodes from '../../../episodes'
@@ -52,16 +54,7 @@ function App() {
 
         {episodes.past ? <hr /> : ''}
 
-        <section>
-          <h2>Host</h2>
-          <div className="person-group">
-            <Person name="Kent C. Dodds" twitter="kentcdodds" imgSrc="resources/kentcdodds.png" />
-          </div>
-          <p className="+text-center">
-            <a href="https://egghead.io/instructors/kentcdodds">Egghead.io</a> instructor Kent C. Dodds
-            is your host
-          </p>
-        </section>
+        <HostSection />
 
         <hr />
 
