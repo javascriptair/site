@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import {markdown} from 'markdown'
-import Person from '../../components/person'
+import Person from '../../../../components/person'
 import deindent from 'deindent'
 
 export default Episode

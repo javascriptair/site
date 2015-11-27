@@ -3,8 +3,8 @@ import {sortEpisodes, displayListify} from '../../../utils'
 
 export default PreviousEpisodeSection
 
-function PreviousEpisodeSection({pastEpisodes = []}) {
-  if (pastEpisodes.length === 0) {
+function PreviousEpisodeSection({episodes = []}) {
+  if (episodes.length === 0) {
     return <section />
   }
 
@@ -13,7 +13,7 @@ function PreviousEpisodeSection({pastEpisodes = []}) {
       <h2>Previous Episodes</h2>
       <div className="episodes">
         {
-          pastEpisodes
+          episodes
             .sort(sortEpisodes)
             .map((e, i) => {
               return (

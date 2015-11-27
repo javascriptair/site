@@ -3,12 +3,11 @@ import ReactDOMServer from 'react-dom/server'
 import {groupBy} from 'lodash'
 import UglifyJS from 'uglify-js'
 import moment from 'moment'
-import utils from '../../utils'
-
 
 import Person from '../../components/person'
-import Episode from './episode'
 import PreviousEpisodeSection from './sections/previous-episodes'
+import EpisodesSection from './sections/episodes'
+
 
 
 import episodes from '../../../episodes'
@@ -61,23 +60,11 @@ function App() {
 
         <hr />
 
-        <section>
-          <h2>Upcoming Episodes</h2>
-          <div className="episodes">
-            {
-              utils.intersperse(
-                (episodeGroups.future || [])
-                  .sort(utils.sortEpisodes)
-                  .map((e, i) => <Episode episodeData={e} key={i} />),
-                (e, i) => <hr key={`hr${i}`} className="episode-separator" />
-              )
-            }
-          </div>
-        </section>
+        <EpisodesSection episodes={episodeGroups.future} />
 
         <hr />
 
-        <PreviousEpisodeSection pastEpisodes={episodes.past} />
+        <PreviousEpisodeSection episodes={episodeGroups.past} />
 
         {episodes.past ? <hr /> : ''}
 
