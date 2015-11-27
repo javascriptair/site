@@ -4,14 +4,12 @@ import {groupBy} from 'lodash'
 import UglifyJS from 'uglify-js'
 import moment from 'moment'
 
-import Person from '../../components/person'
-
 import Header from './header'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import HostSection from './sections/host'
-
+import PanelistsSection from './sections/panelists'
 
 
 import episodes from '../../../episodes'
@@ -58,23 +56,7 @@ function App() {
 
         <hr />
 
-        <section>
-          <h2>Panelists</h2>
-          <div className="person-group +space-children">
-            <Panelist name="Dan Abramov" twitter="dan_abramov" />
-            <Panelist name="Brian Lonsdorf" twitter="drboolean" />
-            <Panelist name="Kyle Simpson" twitter="getify" />
-            <Panelist name="Iheanyi Ekechukwu" twitter="kwuchu" />
-            <Panelist name="Lin Clark" twitter="linclark" />
-            <Panelist name="Matt Zabriskie" twitter="mzabriskie" />
-            <Panelist name="Pam Selle" twitter="pamasaur" />
-            <Panelist name="Tyler McGinnis" twitter="tylermcginnis33" />
-          </div>
-          <p className="+text-center">
-            JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
-            some of the finest people the community has to offer
-          </p>
-        </section>
+        <PanelistsSection />
 
         <hr />
 
@@ -125,10 +107,6 @@ function getFeatureShowScript() {
       {fromString: true}
     ).code,
   }
-}
-
-function Panelist(props) {
-  return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
 }
 
 /* eslint-disable */
