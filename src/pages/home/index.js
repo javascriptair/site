@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import {groupBy} from 'lodash'
-import UglifyJS from 'uglify-js'
 import moment from 'moment'
 
 import Header from './header'
@@ -12,8 +11,7 @@ import HostSection from './sections/host'
 import PanelistsSection from './sections/panelists'
 import SocialIconGroupSection from './sections/social-icon-group'
 import GoogleAnalyticsScript from './scripts/google-analytics'
-
-
+import FeatureShowScript from './scripts/feature-show'
 
 
 import episodes from '../../../episodes'
@@ -67,7 +65,7 @@ function App() {
         <SocialIconGroupSection />
 
         <GoogleAnalyticsScript />
-        <script dangerouslySetInnerHTML={getFeatureShowScript()} />
+        <FeatureShowScript />
       </body>
     </html>
   )
@@ -77,46 +75,3 @@ const string = ReactDOMServer.renderToStaticMarkup(<App />)
 
 console.log(string) // eslint-disable-line no-console
 
-function getFeatureShowScript() {
-  return {
-    __html: UglifyJS.minify(
-      featureShow.toString(),
-      {fromString: true}
-    ).code,
-  }
-}
-
-/* eslint-disable */
-function featureShow(index) {
-  // get featured episode
-  var episodes = document.body.querySelectorAll('.episode')
-  var feature = episodes[index]
-
-  // replace body content with feature episode
-  // document.body.innerHTML = feature.outerHTML
-
-  // remove all prose
-  Array.from(feature.querySelectorAll('.description'))
-    .forEach(e => e.parentNode.removeChild(e))
-
-  // style stuff
-  var styles = `
-    .episode {
-      text-align: center;
-      margin-top: 400px;
-      margin-bottom: 1000px;
-      zoom: 1.6;
-    }
-    a { text-decoration: none; }
-    h3 { font-size: 40px; }
-  `
-
-  var container = document.createElement('div')
-  container.innerHTML = `
-    ${feature.outerHTML}
-    <style>${styles}</style>
-  `
-
-  document.body.innerHTML = container.outerHTML
-}
-/* eslint-enable */
