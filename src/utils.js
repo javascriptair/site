@@ -1,5 +1,7 @@
+import moment from 'moment'
+
 export default {
-  displayListify, intersperse,
+  displayListify, intersperse, sortEpisodes,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -49,4 +51,8 @@ function displayListify(arr) {
     }
     return xs.concat(concat)
   }, [])
+}
+
+function sortEpisodes(a, b) {
+  return moment(a.date) > moment(b.date)
 }

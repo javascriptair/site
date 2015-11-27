@@ -8,6 +8,8 @@ import utils from '../../utils'
 
 import Person from '../../components/person'
 import Episode from './episode'
+import PreviousEpisodeSection from './sections/previous-episodes'
+
 
 import episodes from '../../../episodes'
 
@@ -65,7 +67,7 @@ function App() {
             {
               utils.intersperse(
                 (episodeGroups.future || [])
-                  .sort(sortEpisodes)
+                  .sort(utils.sortEpisodes)
                   .map((e, i) => <Episode episodeData={e} key={i} />),
                 (e, i) => <hr key={`hr${i}`} className="episode-separator" />
               )
@@ -75,7 +77,7 @@ function App() {
 
         <hr />
 
-        {getPreviousEpisodesSection(episodes.past)}
+        <PreviousEpisodeSection pastEpisodes={episodes.past} />
 
         {episodes.past ? <hr /> : ''}
 
@@ -130,42 +132,6 @@ const string = ReactDOMServer.renderToStaticMarkup(<App />)
 console.log(string) // eslint-disable-line no-console
 
 
-function getPreviousEpisodesSection(pastEpisodes = []) {
-  if (pastEpisodes.length === 0) {
-    return undefined
-  }
-
-  return (
-    <section>
-      <h2>Previous Episodes</h2>
-      <div className="episodes">
-        {
-          pastEpisodes
-            .sort(sortEpisodes)
-            .map((e, i) => {
-              return (
-                <div key={i}>
-                  {i}. <a href={e.hangoutUrl} title={`${e.title} Hangout`}>{e.title}</a>
-                  <small>
-                    {' with '}
-                    {
-                      utils.displayListify(
-                        (e.guests || [])
-                          .map((g, gI) => {
-                            return <a key={gI} href={`https://twitter.com/${g.twitter}`}>{g.name}</a>
-                          })
-                      )
-                    }
-                  </small>
-                </div>
-              )
-            })
-        }
-      </div>
-    </section>
-  )
-}
-
 function getGoogleAnalyticsScript() {
   return {
     __html: UglifyJS.minify(`
@@ -200,11 +166,6 @@ function getFeatureShowScript() {
 function Panelist(props) {
   return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
 }
-
-function sortEpisodes(a, b) {
-  return moment(a.date) > moment(b.date)
-}
-
 
 /* eslint-disable */
 function featureShow(index) {
