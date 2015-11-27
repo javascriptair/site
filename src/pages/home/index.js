@@ -7,8 +7,10 @@ import moment from 'moment'
 import Person from '../../components/person'
 
 import Header from './header'
+import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
+
 
 import episodes from '../../../episodes'
 
@@ -38,11 +40,7 @@ function App() {
 
         <hr />
 
-        <section className="group-of-icons +space-children">
-          <a href="http://audio.javascriptair.com/feed/" className="icon-podcast" title="Podcast RSS Feed"></a>
-          <a href="http://video.javascriptair.com" className="icon-youtube" title="YouTube Channel"></a>
-          <a href="http://itunes.javascriptair.com" className="icon-apple" title="iTunes Podcast"></a>
-        </section>
+        <SubscribeIconGroupSection />
 
         <hr />
 
