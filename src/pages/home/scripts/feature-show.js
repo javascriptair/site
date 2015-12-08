@@ -32,6 +32,7 @@ function setFeatureShow() {
       }
       a { text-decoration: none; }
       h3 { font-size: 40px; }
+      body { width: inherit; max-width: inherit }
     `
 
     var container = document.createElement('div')

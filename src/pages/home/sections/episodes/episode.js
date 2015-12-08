@@ -7,7 +7,13 @@ import deindent from 'deindent'
 export default Episode
 
 function Episode({episodeData}) {
-  const {hangoutUrl, title, date, guests, description} = episodeData
+  const {
+    hangoutUrl,
+    title = 'TBA',
+    date,
+    guests = [],
+    description = getDefaultDescription(),
+  } = episodeData
   const time = episodeData.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   return (
@@ -27,6 +33,13 @@ function Episode({episodeData}) {
       </div>
     </div>
   )
+}
+
+function getDefaultDescription() {
+  return `
+    This show is yet to be announced,
+    but you can bet that it'll be awesome!
+  `
 }
 
 function getDescriptionHTML(description) {
