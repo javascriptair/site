@@ -5,7 +5,7 @@ export default Host
 
 function Host() {
   return (
-    <section>
+    <section id="host">
       <h2>Host</h2>
       <div className="person-group">
         <Person name="Kent C. Dodds" twitter="kentcdodds" imgSrc="resources/kentcdodds.png" />

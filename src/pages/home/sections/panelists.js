@@ -5,7 +5,7 @@ export default Panelists
 
 function Panelists() {
   return (
-    <section>
+    <section id="panelists">
       <h2>Panelists</h2>
       <div className="person-group +space-children">
         <Panelist name="Dan Abramov" twitter="dan_abramov" />

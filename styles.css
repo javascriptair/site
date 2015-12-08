@@ -74,7 +74,7 @@ h3 small {
   text-align: center;
 }
 
-.person-group {
+.person-group, .sponsor-group {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -98,6 +98,10 @@ h3 small {
 
 .\+text-center {
   text-align: center;
+}
+
+.\+margin-bottom-large {
+  margin-bottom: 40px;
 }
 
 /* media queries */

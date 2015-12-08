@@ -17,6 +17,8 @@ function Header() {
       </p>
       <p>
         Brought to you by <a href="https://egghead.io">Egghead.io</a>
+        {' '}and{' '}
+        <a href="#sponsors" alt="Sponsors">others</a>
       </p>
     </header>
   )

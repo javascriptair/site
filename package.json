@@ -10,7 +10,7 @@
     "build": "npm run build:index",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
-    "dev": "nodemon --watch src --watch episodes --exec npm run build:index",
+    "dev": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:index",
     "eslint": "eslint src/ episodes/",
     "test": "echo \"Error: no test specified.\""
   },

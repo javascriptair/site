@@ -8,7 +8,7 @@ export default EpisodesSection
 
 function EpisodesSection({episodes = []}) {
   return (
-    <section>
+    <section id="episodes">
       <h2>Upcoming Episodes</h2>
       <div className="episodes">
         {

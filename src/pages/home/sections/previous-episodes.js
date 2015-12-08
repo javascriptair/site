@@ -9,7 +9,7 @@ function PreviousEpisodeSection({episodes = []}) {
   }
 
   return (
-    <section>
+    <section id="previous-episodes">
       <h2>Previous Episodes</h2>
       <div className="episodes">
         {
