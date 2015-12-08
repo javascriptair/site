@@ -133,7 +133,7 @@ h3 small {
     font-size: 23px;
   }
 
-  .person img {
+  .person img, .sponsor img {
     max-width: 120px;
   }
 
@@ -144,6 +144,10 @@ h3 small {
   .\+space-children>* {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .\+font-smaller {
+    font-size: 12px;
   }
 
 }
@@ -175,7 +179,7 @@ h3 small {
     font-size: 30px;
   }
 
-  .person img {
+  .person img, .sponsor img {
     max-width: 180px;
   }
 
@@ -188,4 +192,8 @@ h3 small {
     margin-right: 28px;
   }
 
+
+  .\+font-smaller {
+    font-size: 18px;
+  }
 }
