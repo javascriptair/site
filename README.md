@@ -6,6 +6,15 @@
 
 ## Suggest Episode topic/guest
 
-Please [file an issue](https://github.com/javascriptair/site/issues/new)
-to suggest an episode topic and/or guest
+Please suggest an episode [using this tool](http://suggest.javascriptair.com)
+or by simply [filing an issue](https://github.com/javascriptair/site/issues/new)
+
+## Track episode progress
+
+The official schedule is on [the website](http://javascriptair.com)
+but you can find things in progress in [schedule.md](other/schedule.md).
+
+You can also track episode suggestions on
+[waffle.io](https://waffle.io/javascriptair/site)
+
 
