@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-export default {
+export {
   displayListify, intersperse, sortEpisodes,
 }
 
