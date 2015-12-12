@@ -1,7 +1,7 @@
 import React from 'react'
 import Episode from '../../../../components/episode'
 
-import * as utils from '../../../../utils'
+import * as utils from '../../../../../shared/utils'
 
 
 export default EpisodesSection

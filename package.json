@@ -13,9 +13,10 @@
     "build": "npm run build:index && npm run build:episodes",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
-    "dev": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:index",
-    "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:episode",
+    "dev": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:index -s",
+    "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:episode -s",
     "eslint": "eslint src/ episodes/",
+    "server": "http-server",
     "test": "echo \"Error: no test specified.\""
   },
   "repository": {
@@ -41,6 +42,7 @@
     "eslint-plugin-mocha": "1.1.0",
     "eslint-plugin-react": "3.9.0",
     "glob": "6.0.1",
+    "http-server": "0.8.5",
     "lodash": "3.10.1",
     "markdown": "0.5.0",
     "moment": "2.10.6",
@@ -51,5 +53,8 @@
     "surge": "0.17.3",
     "trash": "3.4.0",
     "uglify-js": "2.6.1"
+  },
+  "dependencies": {
+    "query-string": "3.0.0"
   }
 }

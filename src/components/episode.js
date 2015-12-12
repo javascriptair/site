@@ -1,21 +1,18 @@
 import React from 'react'
-import moment from 'moment'
-import {markdown} from 'markdown'
-import Person from './person'
-import deindent from 'deindent'
+import PersonGroup from './person-group'
 
 export default Episode
 
 function Episode({episodeData}) {
   const {
     hangoutUrl,
-    title = 'TBA',
-    date,
+    title,
+    time,
+    dateDisplay,
     guests = [],
-    description = getDefaultDescription(),
+    descriptionHTML,
   } = episodeData
-  const time = episodeData.time || '12:00 PM (CT)'
-  const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
+
   return (
     <div className="episode">
       <h3>
@@ -23,27 +20,12 @@ function Episode({episodeData}) {
         <br />
         <small>{dateDisplay} at {time}</small>
       </h3>
-      <div className="person-group +space-children">
-        {guests.map((guest, index) => (
-          <Person imgSrc={`/episodes/${date}/${guest.twitter}.png`} key={index} {...guest} />
-        ))}
-      </div>
+      <PersonGroup people={guests} />
       <div className="description">
-        <p dangerouslySetInnerHTML={getDescriptionHTML(description)}></p>
+        <p dangerouslySetInnerHTML={descriptionHTML}></p>
       </div>
     </div>
   )
-}
-
-function getDefaultDescription() {
-  return `
-    This show is yet to be announced,
-    but you can bet that it'll be awesome!
-  `
-}
-
-function getDescriptionHTML(description) {
-  return {__html: markdown.toHTML(deindent(description))}
 }
 
 function getTitle(hangoutUrl, title) {

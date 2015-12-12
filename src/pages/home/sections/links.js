@@ -1,5 +1,5 @@
 import React from 'react'
-import * as utils from '../../../utils'
+import * as utils from '../../../../shared/utils'
 
 export default Links
 

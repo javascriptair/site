@@ -10,7 +10,7 @@ import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import HostSection from './sections/host'
 import PanelistsSection from './sections/panelists'
-import SponsorsSection from './sections/sponsors'
+import SponsorsSection from '../../components/sponsors'
 import LinksSection from './sections/links'
 
 import SocialIconGroupSection from './sections/social-icon-group'

@@ -1,5 +1,5 @@
 import React from 'react'
-import {sortEpisodes, displayListify} from '../../../utils'
+import {sortEpisodes, displayListify} from '../../../../shared/utils'
 
 export default PreviousEpisodeSection
 
@@ -18,7 +18,7 @@ function PreviousEpisodeSection({episodes = []}) {
             .map((e, i) => {
               return (
                 <div key={i}>
-                  {i}. <a href={e.hangoutUrl} title={`${e.title} Hangout`}>{e.title}</a>
+                  {i}. <a href={`/episodes/${e.date}`} title={`${e.title}`}>{e.title}</a>
                   <small>
                     {' with '}
                     {
