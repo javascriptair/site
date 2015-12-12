@@ -17,6 +17,22 @@ Thanks for your interest in contributing to the JavaScript Air website!
 11. Create a pull request from your branch on your fork to master on this repo
 12. Get merged!
 
+### Episodes
+
+I've hacked together a pretty crazy way to build these files. I'm sure
+there's a much better way to do this. But what we've got works pretty
+well. If you're working on a specific episode (for example, the first
+episode), simply run:
+
+```
+npm run dev:episode -- episodes/2015-12-09
+```
+
+
+This will start nodemon watching your file system for changes and
+recompiling your page on changes. No hot reloading or anything. Yes, I
+have no idea what I'm doing.
+
 ## Deploying
 
 We deploy with [surge.sh](https://surge.sh) automatically with

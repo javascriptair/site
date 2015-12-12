@@ -6,11 +6,15 @@
   "main": "app/index.js",
   "scripts": {
     "prebuild:index": "npm run eslint || x=1",
+    "prebuild:episode": "npm run eslint || x=1",
     "build:index": "babel-node src/pages/home > index.html",
-    "build": "npm run build:index",
+    "build:episodes": "./scripts/build-episodes.sh",
+    "build:episode": "./scripts/build-episode.sh",
+    "build": "npm run build:index && npm run build:episodes",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:index",
+    "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:episode",
     "eslint": "eslint src/ episodes/",
     "test": "echo \"Error: no test specified.\""
   },

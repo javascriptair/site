@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import {groupBy} from 'lodash'
 import moment from 'moment'
 
-import Page from '../page'
+import Page from '../../components/page'
 import Header from './header'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import PreviousEpisodeSection from './sections/previous-episodes'
@@ -14,7 +14,6 @@ import SponsorsSection from './sections/sponsors'
 import LinksSection from './sections/links'
 
 import SocialIconGroupSection from './sections/social-icon-group'
-import GoogleAnalyticsScript from './scripts/google-analytics'
 import FeatureShowScript from './scripts/feature-show'
 
 import episodes from '../../../episodes'
@@ -63,7 +62,6 @@ function Home({futureEpisodes = [], pastEpisodes = [], sponsors}) {
 
       <LinksSection />
 
-      <GoogleAnalyticsScript />
       <FeatureShowScript />
     </Page>
   )

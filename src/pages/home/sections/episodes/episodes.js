@@ -1,5 +1,5 @@
 import React from 'react'
-import Episode from './episode'
+import Episode from '../../../../components/episode'
 
 import * as utils from '../../../../utils'
 

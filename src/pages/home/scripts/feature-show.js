@@ -1,5 +1,5 @@
 import React from 'react'
-import InlineScript from './inline-script'
+import InlineScript from '../../../components/scripts/inline-script'
 
 export default FeatureShow
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import {markdown} from 'markdown'
-import Person from '../../../../components/person'
+import Person from './person'
 import deindent from 'deindent'
 
 export default Episode
@@ -25,7 +25,7 @@ function Episode({episodeData}) {
       </h3>
       <div className="person-group +space-children">
         {guests.map((guest, index) => (
-          <Person imgSrc={`episodes/${date}/${guest.twitter}.png`} key={index} {...guest} />
+          <Person imgSrc={`/episodes/${date}/${guest.twitter}.png`} key={index} {...guest} />
         ))}
       </div>
       <div className="description">
