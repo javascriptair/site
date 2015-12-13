@@ -8,7 +8,7 @@ export default ShowNotes
 function ShowNotes({episode}) {
   const {guests, panelists, host} = episode
   const panelistsAndHost = sortPeople([...panelists, host])
-  const showAttendees = [...guests, ...panelistsAndHost]
+  const showAttendees = [...sortPeople(guests), ...panelistsAndHost]
   return (
     <section id="show-notes">
       <h3 className="+margin-bottom-large">Links, Tips, and Picks</h3>

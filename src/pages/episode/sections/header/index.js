@@ -1,5 +1,6 @@
 import React from 'react'
 import PersonGroup from '../../../../components/person-group'
+import {sortPeople} from '../../../../../shared/utils'
 
 
 export default Header
@@ -12,6 +13,7 @@ function Header({episode}) {
     guests = [],
     descriptionHTML,
   } = episode
+  const sortedGuests = sortPeople(guests)
   return (
     <div className="episode">
       <div className="+text-center">
@@ -23,7 +25,7 @@ function Header({episode}) {
           <br />
           <small>{dateDisplay} at {time}</small>
         </h2>
-        <PersonGroup people={guests} />
+        <PersonGroup people={sortedGuests} />
       </div>
       <div className="description">
         <p dangerouslySetInnerHTML={descriptionHTML}></p>
