@@ -28,10 +28,20 @@ episode), simply run:
 npm run dev:episode -- episodes/2015-12-09
 ```
 
-
 This will start nodemon watching your file system for changes and
 recompiling your page on changes. No hot reloading or anything. Yes, I
 have no idea what I'm doing.
+
+### Podbean description
+
+You can generate the description for the podbean podcast like so:
+
+```
+npm run description -- episodes/2015-12-09
+```
+
+`pbcopy` is available on OSX if you want to pipe the output to your
+clipboard (recommended)
 
 ## Deploying
 

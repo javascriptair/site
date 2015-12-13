@@ -7,7 +7,7 @@ import panelists from '../resources/panelists'
 export {
   displayListify, intersperse, sortEpisodes,
   isPast, isFuture, isToday, getEpisodeData,
-  sortPeople,
+  sortPeople, markdownToHTML,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -143,13 +143,14 @@ function getEpisodeData(episodePath) {
     thing.tipsHTML = thing.tips.map(markdownToHTML)
     thing.picksHTML = thing.picks.map(markdownToHTML)
   }
-
-  function markdownToHTML(string) {
-    return {__html: markdown.toHTML(deindent(string))}
-  }
-
 }
 
 function sortPeople(people = []) {
   return people.sort((a, b) => a.twitter > b.twitter)
 }
+
+function markdownToHTML(string) {
+  return {__html: markdown.toHTML(deindent(string))}
+}
+
+

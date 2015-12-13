@@ -15,7 +15,8 @@
     "deploy": "surge --project . --domain javascriptair.com",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --exec npm run build:index -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --exec npm run build:episode -s",
-    "eslint": "eslint src/ episodes/ shared/",
+    "description": "babel-node other/generate-episode-description",
+    "eslint": "eslint src/ episodes/ shared/ other/",
     "server": "http-server",
     "test": "echo \"Error: no test specified.\""
   },
