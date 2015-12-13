@@ -8,7 +8,7 @@ export default plop => {
     return {
       type: 'add',
       abortOnFail: true,
-      ...options
+      ...options,
     }
   }
 }

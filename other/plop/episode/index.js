@@ -35,7 +35,7 @@ export default ({addFile}) => {
     ]
   }
 
-  function episodeActions(data) {
+  function episodeActions() {
     const actions = []
 
     actions.push(addFile({
