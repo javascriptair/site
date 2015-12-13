@@ -27,7 +27,7 @@ function EpisodePage({episode, sponsors}) {
       {
         isPast(episode.date) ?
           <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
-          ''
+          <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
       }
     </Page>
   )
@@ -39,10 +39,34 @@ function PastEpisodeStuff({episodeData, sponsors}) {
     <div>
       <hr />
       <AudioSection podbeanId={podbeanId} />
-      <hr />
-      <VideoSection youTubeId={youTubeId} />
+      {
+        youTubeId ? (
+          <div>
+            <hr />
+            <VideoSection youTubeId={youTubeId} />
+          </div>
+        ) : ''
+      }
       <hr />
       <ShowNotes episode={episodeData} />
+      <hr />
+      <SponsorsSection {...sponsors} />
+    </div>
+  )
+}
+
+function FutureEpisodeStuff({episodeData, sponsors}) {
+  const {youTubeId} = episodeData
+  return (
+    <div>
+      {
+        youTubeId ? (
+          <div>
+            <hr />
+            <VideoSection youTubeId={youTubeId} />
+          </div>
+        ) : ''
+      }
       <hr />
       <SponsorsSection {...sponsors} />
     </div>
