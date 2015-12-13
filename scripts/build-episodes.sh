@@ -1,4 +1,4 @@
-for D in `find episodes -depth 1 -type d`
+for D in `ls -d episodes/*/`
 do
   ./scripts/build-episode.sh $D
 done
