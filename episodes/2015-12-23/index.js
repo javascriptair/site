@@ -1,8 +1,11 @@
+/* eslint max-len:0 */
 export default {
   title: 'Babel, the JavaScript Compiler',
   hangoutUrl: 'https://plus.google.com/events/coi555uqlhl7vsdspafjj05k4dc',
   guests: [
     {name: 'Henry Zhu', twitter: '_henryzhu'},
+    {name: 'Logan Smyth', twitter: 'loganfsmyth'},
+    {name: 'Amjad Masad', twitter: 'amasad'},
   ],
   description: `
     Tons of people use Babel. With the release of Babel 6,
