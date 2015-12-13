@@ -1,12 +1,12 @@
 import React from 'react'
 import AudioPlayer from './audio-player'
 
-export default VideoSection
+export default AudioSection
 
-function VideoSection({podbeanId}) {
+function AudioSection({podbeanId}) {
   return (
     <section id="audio">
-      <h2>Audio</h2>
+      <h3>Audio</h3>
       <AudioPlayer podbeanId={podbeanId} />
     </section>
   )

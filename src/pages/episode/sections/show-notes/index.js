@@ -11,7 +11,7 @@ function ShowNotes({episode}) {
   const showAttendees = [...guests, ...panelistsAndHost]
   return (
     <section id="show-notes">
-      <h2 className="+margin-bottom-large">Links, Tips, and Picks</h2>
+      <h3 className="+margin-bottom-large">Links, Tips, and Picks</h3>
       <div className="show-notes">
         <PeopleNotes people={showAttendees} />
       </div>
