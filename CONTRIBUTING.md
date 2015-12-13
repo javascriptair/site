@@ -32,6 +32,15 @@ This will start nodemon watching your file system for changes and
 recompiling your page on changes. No hot reloading or anything. Yes, I
 have no idea what I'm doing.
 
+I've added a [plop](http://npm.im/plop) generator for adding new
+episodes. In the root directory, simply enter
+
+```
+plop episode
+```
+
+Follow the prompts and it will generate the episode file for you.
+
 ### Podbean description
 
 You can generate the description for the podbean podcast like so:
