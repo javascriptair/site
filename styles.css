@@ -39,6 +39,10 @@ hr.episode-separator {
   width: 80%;
 }
 
+hr.person-note-separator {
+  width: 90%;
+}
+
 a {
   color: #155674;
 }
@@ -81,6 +85,10 @@ h3 small {
   text-align: center;
 }
 
+.person {
+  text-align: center;
+}
+
 .person img {
   border-radius: 50%;
 }
@@ -102,6 +110,10 @@ h3 small {
 
 .\+margin-bottom-large {
   margin-bottom: 40px;
+}
+
+.\+display-flex {
+  display: flex;
 }
 
 /* media queries */
@@ -150,6 +162,11 @@ h3 small {
     font-size: 12px;
   }
 
+  hr.person-note-separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 }
 
 /* Desktop */
@@ -195,5 +212,10 @@ h3 small {
 
   .\+font-smaller {
     font-size: 18px;
+  }
+
+  hr.person-note-separator {
+    margin-top: 36px;
+    margin-bottom: 36px;
   }
 }

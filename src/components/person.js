@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default ({twitter, name, imgSrc}) => {
+export default Person
+
+function Person({twitter, name, imgSrc}) {
   return (
     <div className="person">
       <a href={`https://twitter.com/${twitter}`}>
@@ -9,5 +11,11 @@ export default ({twitter, name, imgSrc}) => {
       </a>
     </div>
   )
+}
+
+Person.propTypes = {
+  twitter: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired,
+  imgSrc: React.PropTypes.string.isRequired,
 }
 

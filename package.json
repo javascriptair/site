@@ -13,9 +13,9 @@
     "build": "npm run build:index && npm run build:episodes",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
-    "dev": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:index -s",
-    "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --exec npm run build:episode -s",
-    "eslint": "eslint src/ episodes/",
+    "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --exec npm run build:index -s",
+    "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --exec npm run build:episode -s",
+    "eslint": "eslint src/ episodes/ shared/",
     "server": "http-server",
     "test": "echo \"Error: no test specified.\""
   },

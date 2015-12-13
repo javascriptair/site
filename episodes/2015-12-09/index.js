@@ -73,7 +73,7 @@ export default {
     {
       twitter: 'tylermcginnis33',
       tips: ['Find people smarter than you and copy what they do.'],
-      picks: ['Flexbox Foggy](http://flexboxfroggy.com/)'],
+      picks: ['[Flexbox Foggy](http://flexboxfroggy.com/)'],
     },
   ],
 }

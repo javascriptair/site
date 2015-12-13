@@ -7,6 +7,7 @@ import panelists from '../resources/panelists'
 export {
   displayListify, intersperse, sortEpisodes,
   isPast, isFuture, isToday, getEpisodeData,
+  sortPeople,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -80,17 +81,19 @@ function getEpisodeData(episodePath) {
   const date = dateRegex.exec(episodePath)[1]
 
   episode.guests = (episode.guests || []).map(guest => {
-    return {
+    guest = {
       imgSrc: `/episodes/${date}/${guest.twitter}.png`,
       links: [],
       tips: [],
       picks: [],
       ...guest,
     }
+    htmlifyLinksPicksAndTips(guest)
+    return guest
   })
 
   episode.panelists = (episode.panelists || []).map(panelist => {
-    return {
+    panelist = {
       imgSrc: `/resources/panelists/${panelist.twitter}.png`,
       links: [],
       tips: [],
@@ -98,6 +101,8 @@ function getEpisodeData(episodePath) {
       ...panelists.find(({twitter}) => twitter === panelist.twitter),
       ...panelist,
     }
+    htmlifyLinksPicksAndTips(panelist)
+    return panelist
   })
 
   episode.host = {
@@ -109,6 +114,7 @@ function getEpisodeData(episodePath) {
     picks: [],
     ...episode.host,
   }
+  htmlifyLinksPicksAndTips(episode.host)
 
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
@@ -132,8 +138,18 @@ function getEpisodeData(episodePath) {
     `
   }
 
-  function markdownToHTML(description) {
-    return {__html: markdown.toHTML(deindent(description))}
+  function htmlifyLinksPicksAndTips(thing) {
+    thing.linksHTML = thing.links.map(markdownToHTML)
+    thing.tipsHTML = thing.tips.map(markdownToHTML)
+    thing.picksHTML = thing.picks.map(markdownToHTML)
   }
 
+  function markdownToHTML(string) {
+    return {__html: markdown.toHTML(deindent(string))}
+  }
+
+}
+
+function sortPeople(people = []) {
+  return people.sort((a, b) => a.twitter > b.twitter)
 }
