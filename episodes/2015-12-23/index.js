@@ -11,4 +11,5 @@ export default {
     ASTs, and all of the neat stuff that you can do with this
     amazing tool with some of the core contributors to the project.
   `,
+  youTubeId: '1w_W5cd8qRE',
 }

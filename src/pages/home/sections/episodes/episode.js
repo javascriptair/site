@@ -1,11 +1,11 @@
 import React from 'react'
-import PersonGroup from './person-group'
+import PersonGroup from '../../../../components/person-group'
 
 export default Episode
 
 function Episode({episodeData}) {
   const {
-    hangoutUrl,
+    date,
     title,
     time,
     dateDisplay,
@@ -16,7 +16,7 @@ function Episode({episodeData}) {
   return (
     <div className="episode">
       <h3>
-        {getTitle(hangoutUrl, title)}
+        <a href={`/episodes/${date}`}>{title}</a>
         <br />
         <small>{dateDisplay} at {time}</small>
       </h3>
@@ -26,13 +26,5 @@ function Episode({episodeData}) {
       </div>
     </div>
   )
-}
-
-function getTitle(hangoutUrl, title) {
-  if (hangoutUrl) {
-    return <a href={hangoutUrl}>{title}</a>
-  } else {
-    return <span>{title} <small>(hangout link coming soon)</small></span>
-  }
 }
 

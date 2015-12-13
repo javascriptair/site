@@ -11,5 +11,6 @@ export default {
     performance and things you need to consider when building
     applications for all consumption mediums and geolocations.
   `,
+  youTubeId: 'wseL3Vl-Hh4',
 }
 

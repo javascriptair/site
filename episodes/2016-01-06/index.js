@@ -13,5 +13,6 @@ export default {
     than ever before. Join us as we talk with Ward Bell,
     Joe Eames, and Christian Johansen about unit testing JavaScript.
   `,
+  youTubeId: 'tfkUN8Jr9zY',
 }
 

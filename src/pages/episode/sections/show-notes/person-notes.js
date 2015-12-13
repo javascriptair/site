@@ -19,7 +19,7 @@ function PersonNotes({person}) {
       <Person {...person} />
       {
         nothing ?
-          <p>No links, picks, or tips this week</p> :
+          <p>No links, tips, or picks this week</p> :
           (
             <div>
             {
