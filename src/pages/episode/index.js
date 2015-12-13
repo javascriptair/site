@@ -5,7 +5,10 @@ import ReactDOMServer from 'react-dom/server'
 
 import {isPast, getEpisodeData} from '../../../shared/utils'
 
+import TwitterWidgetScript from '../../components/scripts/twitter-widget'
+
 import Page from '../../components/page'
+import TwitterFeed from './twitter-feed'
 
 import Header from './sections/header'
 import AudioSection from './sections/audio'
@@ -63,7 +66,26 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
         youTubeId ? (
           <div>
             <hr />
-            <VideoSection youTubeId={youTubeId} />
+            <div className="+margin-bottom-large">
+              <VideoSection youTubeId={youTubeId} label="Watch Live" />
+            </div>
+
+            <div className="+display-flex +space-children">
+              <TwitterFeed
+                widgetId="675885424049393664"
+                linkTo="https://twitter.com/hashtag/JavaScriptAir"
+              >
+                Tweet about #JavaScriptAir
+              </TwitterFeed>
+
+              <TwitterFeed
+                widgetId="675879000950988805"
+                linkTo="https://twitter.com/hashtag/jsAirQuestion"
+              >
+                Ask a #jsAirQuestion
+              </TwitterFeed>
+              <TwitterWidgetScript />
+            </div>
           </div>
         ) : ''
       }
