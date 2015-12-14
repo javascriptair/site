@@ -3,7 +3,9 @@ import process from 'process'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-import {isPast, getEpisodeData} from '../../../shared/utils'
+import {isPast} from '../../../shared/utils'
+import getEpisodeData from '../../../shared/get-episode-data'
+
 
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
 

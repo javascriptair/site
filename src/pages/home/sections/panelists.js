@@ -3,19 +3,12 @@ import Person from '../../../components/person'
 
 export default Panelists
 
-function Panelists() {
+function Panelists({panelists}) {
   return (
     <section id="panelists">
       <h2>Panelists</h2>
       <div className="person-group +space-children">
-        <Panelist name="Dan Abramov" twitter="dan_abramov" />
-        <Panelist name="Brian Lonsdorf" twitter="drboolean" />
-        <Panelist name="Kyle Simpson" twitter="getify" />
-        <Panelist name="Iheanyi Ekechukwu" twitter="kwuchu" />
-        <Panelist name="Lin Clark" twitter="linclark" />
-        <Panelist name="Matt Zabriskie" twitter="mzabriskie" />
-        <Panelist name="Pam Selle" twitter="pamasaur" />
-        <Panelist name="Tyler McGinnis" twitter="tylermcginnis33" />
+        {panelists.map((p, i) => <Person {...p} key={i} />)}
       </div>
       <p className="+text-center">
         JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
@@ -23,10 +16,5 @@ function Panelists() {
       </p>
     </section>
   )
-}
-
-
-function Panelist(props) {
-  return <Person {...props} imgSrc={`resources/panelists/${props.twitter}.png`} />
 }
 

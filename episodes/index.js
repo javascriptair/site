@@ -2,7 +2,9 @@
 // beware...
 import path from 'path'
 import glob from 'glob'
-import {getEpisodeData} from '../shared/utils'
+import moment from 'moment'
+import {groupBy} from 'lodash'
+import getEpisodeData from '../shared/get-episode-data'
 
 
 const episodeDirectories = glob.sync(
@@ -11,5 +13,15 @@ const episodeDirectories = glob.sync(
 )
 
 
-export default episodeDirectories.map(getEpisodeData)
+const episodes = episodeDirectories.map(getEpisodeData)
 
+const today = moment()
+const yesterday = today.subtract(1, 'day')
+const episodeGroups = groupBy(episodes, e => {
+  return yesterday.diff(e.date) < 0 ? 'future' : 'past'
+})
+
+const {future, past} = episodeGroups
+
+export default episodes
+export {future, past, episodes}

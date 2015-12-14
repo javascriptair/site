@@ -1,7 +1,4 @@
 import React from 'react'
-import ReactDOMServer from 'react-dom/server'
-import {groupBy} from 'lodash'
-import moment from 'moment'
 
 import Page from '../../components/page'
 import Header from './header'
@@ -16,16 +13,16 @@ import LinksSection from './sections/links'
 import SocialIconGroupSection from './sections/social-icon-group'
 import FeatureShowScript from './scripts/feature-show'
 
-import episodes from '../../../episodes'
-import allSponsors from '../../../sponsors'
+export default Home
 
-const today = moment()
-const yesterday = today.subtract(1, 'day')
-const episodeGroups = groupBy(episodes, e => {
-  return yesterday.diff(e.date) < 0 ? 'future' : 'past'
-})
-
-function Home({futureEpisodes = [], pastEpisodes = [], sponsors}) {
+function Home(
+  {
+    futureEpisodes = [],
+    pastEpisodes = [],
+    sponsors,
+    panelists,
+  }
+) {
   return (
     <Page>
       <Header />
@@ -52,7 +49,7 @@ function Home({futureEpisodes = [], pastEpisodes = [], sponsors}) {
 
       <hr />
 
-      <PanelistsSection />
+      <PanelistsSection panelists={panelists} />
 
       <hr />
 
@@ -67,12 +64,3 @@ function Home({futureEpisodes = [], pastEpisodes = [], sponsors}) {
   )
 }
 
-const string = ReactDOMServer.renderToStaticMarkup(
-  <Home
-    futureEpisodes={episodeGroups.future}
-    pastEpisodes={episodeGroups.past}
-    sponsors={allSponsors}
-  />
-)
-
-console.log(string) // eslint-disable-line no-console
