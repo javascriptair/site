@@ -5,7 +5,7 @@
 | 2015-12-30 | [Functional and Immutable Design Patterns in JavaScript](/../../issues/9) |
 | 2016-01-06 | [Unit Testing JavaScript](/../../issues/10) |
 | 2016-01-13 | [Web Performance](/../../issues/16) |
-| 2016-01-20 | [Introducing the Panel (Pending)](/../../issues/4) |
+| 2016-01-20 | [Introducing the Panel](/../../issues/4) |
 | 2016-01-27 | [Chackra, Microsoft's Open Source JS Engine](/../../issues/12) |
 | 2016-02-03 | [JavaScript Debugging](/../../issues/17) |
 | 2016-02-10 | [ESLint](/../../issues/13) |
