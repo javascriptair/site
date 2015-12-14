@@ -2,7 +2,7 @@
 | ---- | ----- |
 | 2015-12-16 | [Learning and Developing JavaScript](/../../issues/3) |
 | 2015-12-23 | [Babel, the JavaScript Compiler](/../../issues/14) |
-| 2015-12-30 | [](/../../issues/) |
+| 2015-12-30 | [Functional and Immutable Design Patterns in JavaScript](/../../issues/9) |
 | 2016-01-06 | [Unit Testing JavaScript](/../../issues/10) |
 | 2016-01-13 | [Web Performance](/../../issues/16) |
 | 2016-01-20 | [Introducing the Panel (Pending)](/../../issues/4) |
