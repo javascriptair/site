@@ -1,7 +1,7 @@
 /* eslint max-len:0 */
 export default {
   title: 'Babel, the JavaScript Compiler',
-  hangoutUrl: 'https://plus.google.com/events/coi555uqlhl7vsdspafjj05k4dc',
+  hangoutId: 'coi555uqlhl7vsdspafjj05k4dc',
   guests: [
     {name: 'Henry Zhu', twitter: '_henryzhu'},
     {name: 'Logan Smyth', twitter: 'loganfsmyth'},

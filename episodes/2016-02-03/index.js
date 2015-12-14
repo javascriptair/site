@@ -2,7 +2,7 @@
 
 export default {
   title: `JavaScript Debugging`,
-  hangoutUrl: 'https://plus.google.com/events/c36b25girvo89474lqo92loikic',
+  hangoutId: 'c36b25girvo89474lqo92loikic',
   guests: [
     {
       name: 'Alex Liu',

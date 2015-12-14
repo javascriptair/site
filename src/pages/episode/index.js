@@ -59,7 +59,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
 }
 
 function FutureEpisodeStuff({episodeData, sponsors}) {
-  const {youTubeId, hangoutUrl} = episodeData
+  const {youTubeId, hangoutId} = episodeData
   return (
     <div>
       {
@@ -69,7 +69,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
             <div className="+margin-bottom-large">
               <VideoSection
                 youTubeId={youTubeId}
-                hangoutUrl={hangoutUrl}
+                hangoutId={hangoutId}
                 label="Watch Live"
               />
             </div>

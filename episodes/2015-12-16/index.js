@@ -1,6 +1,6 @@
 export default {
   title: 'Learning and Developing JavaScript',
-  hangoutUrl: 'https://plus.google.com/events/c2bgue075m3us9cemis03iivrag',
+  hangoutId: 'c2bgue075m3us9cemis03iivrag',
   guests: [
     {name: 'Ashley G. Williams', twitter: 'ag_dubs'},
     {name: 'Kyle Simpson', twitter: 'getify', imgSrc: '/resources/panelists/getify.png'},

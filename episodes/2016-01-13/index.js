@@ -1,6 +1,6 @@
 export default {
   title: 'Web Performance',
-  hangoutUrl: 'https://plus.google.com/events/c06t5m6an80s3aracj7erm18lkc',
+  hangoutId: 'c06t5m6an80s3aracj7erm18lkc',
   guests: [
     {name: 'Nik Molnar', twitter: 'nikmd23'},
   ],

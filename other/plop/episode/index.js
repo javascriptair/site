@@ -18,14 +18,14 @@ export default ({addFile}) => {
         message: 'Title',
       },
       {
-        name: 'hangoutUrl',
-        type: 'input',
-        message: 'Hangout Url',
-      },
-      {
         name: 'description',
         type: 'input',
         message: 'Description',
+      },
+      {
+        name: 'hangoutId',
+        type: 'input',
+        message: 'Hangout ID',
       },
       {
         name: 'youTubeId',

@@ -3,12 +3,12 @@ import VideoPlayer from './video-player'
 
 export default VideoSection
 
-function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
+function VideoSection({youTubeId, hangoutId, label = 'Video'}) {
   return (
     <section id="video">
       <h3 className="+margin-bottom-large">
         {label}
-        {hangoutUrl ? <Rsvp hangoutUrl={hangoutUrl} /> : ''}
+        {hangoutId ? <Rsvp hangoutId={hangoutId} /> : ''}
       </h3>
       <div className="+text-center">
         <VideoPlayer youTubeId={youTubeId} />
@@ -19,17 +19,20 @@ function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
 
 VideoSection.propTypes = {
   youTubeId: React.PropTypes.string.isRequired,
-  hangoutUrl: React.PropTypes.string,
+  hangoutId: React.PropTypes.string,
   label: React.PropTypes.string,
 }
 
-function Rsvp({hangoutUrl}) {
+function Rsvp({hangoutId}) {
   return (
     <span>
       <br />
       <small>
-        RSVP to <a href={hangoutUrl}>the event</a> to add it to your calendar
+        {'RSVP to '}
+        <a href={`https://plus.google.com/events/${hangoutId}`}>the event</a>
+        {' to add it to your calendar'}
       </small>
     </span>
   )
 }
+

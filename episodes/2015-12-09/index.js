@@ -1,7 +1,7 @@
 /* eslint max-len:0 */
 export default {
   title: 'The past, present, and future of JavaScript',
-  hangoutUrl: 'https://plus.google.com/events/c39cuc7ueppus41ajobpr9qt6cg',
+  hangoutId: 'c39cuc7ueppus41ajobpr9qt6cg',
   guests: [
     {
       name: 'Brendan Eich',

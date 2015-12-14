@@ -1,6 +1,6 @@
 export default {
   title: 'Unit Testing JavaScript',
-  hangoutUrl: 'https://plus.google.com/events/cd2pvrr2mghpv56o12rnlo6i488',
+  hangoutId: 'cd2pvrr2mghpv56o12rnlo6i488',
   guests: [
     {name: 'Christian Johansen', twitter: 'cjno'},
     {name: 'Joe Eames', twitter: 'josepheames'},
