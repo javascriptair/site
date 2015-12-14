@@ -1,1 +1,1 @@
-babel-node src/pages/episode $1 > $1/index.html
+babel-node generate/episode $1 > $1/index.html

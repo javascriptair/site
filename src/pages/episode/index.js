@@ -1,11 +1,5 @@
-import path from 'path'
-import process from 'process'
 import React from 'react'
-import ReactDOMServer from 'react-dom/server'
-
 import {isPast} from '../../../shared/utils'
-import getEpisodeData from '../../../shared/get-episode-data'
-
 
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
 
@@ -18,8 +12,8 @@ import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
 import SponsorsSection from '../../components/sponsors'
 
-import allSponsors from '../../../sponsors'
 
+export default EpisodePage
 
 function EpisodePage({episode, sponsors}) {
   return (
@@ -101,14 +95,3 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
   )
 }
 
-const episodePath = path.join(process.cwd(), process.argv[2])
-const episodeData = getEpisodeData(episodePath)
-
-const string = ReactDOMServer.renderToStaticMarkup(
-  <EpisodePage
-    episode={episodeData}
-    sponsors={allSponsors}
-  />
-)
-
-console.log(string) // eslint-disable-line no-console
