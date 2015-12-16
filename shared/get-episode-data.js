@@ -58,6 +58,7 @@ function getEpisodeData(episodePath) {
     title: 'TBA',
     description,
     descriptionHTML: markdownToHTML(description),
+    hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
     ...episode,
   }
 

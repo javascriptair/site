@@ -2,7 +2,7 @@ import moment from 'moment'
 
 export {
   displayListify, intersperse, sortEpisodes,
-  isPast, isFuture, isToday, sortPeople,
+  isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -68,6 +68,10 @@ function isPast(date) {
 
 function isToday(date) {
   return moment(date).isSame(moment(), 'day')
+}
+
+function isPastAndNotToday(date) {
+  return isPast(date) && !isToday(date)
 }
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {isPast} from '../../../shared/utils'
+import {isPastAndNotToday} from '../../../shared/utils'
 
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
 
@@ -24,7 +24,7 @@ function EpisodePage({episode, sponsors}) {
         episode={episode}
       />
       {
-        isPast(episode.date) ?
+        isPastAndNotToday(episode.date) ?
           <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
           <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
       }
@@ -55,7 +55,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
 }
 
 function FutureEpisodeStuff({episodeData, sponsors}) {
-  const {youTubeId, hangoutId} = episodeData
+  const {youTubeId, hangoutUrl} = episodeData
   return (
     <div>
       {
@@ -65,7 +65,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
             <div className="+margin-bottom-large">
               <VideoSection
                 youTubeId={youTubeId}
-                hangoutId={hangoutId}
+                hangoutUrl={hangoutUrl}
                 label="Watch Live"
               />
             </div>

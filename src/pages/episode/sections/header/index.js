@@ -1,7 +1,7 @@
 import React from 'react'
 import PersonGroup from '../../../../components/person-group'
 import {sortPeople} from '../../../../../shared/utils'
-
+import RSVPIcon from '../../../../components/rsvp-icon'
 
 export default Header
 
@@ -12,6 +12,7 @@ function Header({episode}) {
     dateDisplay,
     guests = [],
     descriptionHTML,
+    hangoutUrl,
   } = episode
   const sortedGuests = sortPeople(guests)
   return (
@@ -23,7 +24,10 @@ function Header({episode}) {
         <h2>
           <strong>{title}</strong>
           <br />
-          <small>{dateDisplay} at {time}</small>
+          <small>
+            <RSVPIcon hangoutUrl={hangoutUrl} />
+            {' ' + dateDisplay} at {time}
+          </small>
         </h2>
         <PersonGroup people={sortedGuests} />
       </div>

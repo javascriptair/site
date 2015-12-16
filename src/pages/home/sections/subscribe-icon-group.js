@@ -1,13 +1,14 @@
 import React from 'react'
+import IconLink from '../../../components/icon-link'
 
 export default SubscribeIconGroup
 
 function SubscribeIconGroup() {
   return (
     <section className="group-of-icons +space-children">
-      <a href="http://audio.javascriptair.com/feed/" className="icon-podcast" title="Podcast RSS Feed"></a>
-      <a href="http://video.javascriptair.com" className="icon-youtube" title="YouTube Channel"></a>
-      <a href="http://itunes.javascriptair.com/" className="icon-apple" title="iTunes Podcast"></a>
+      <IconLink href="http://audio.javascriptair.com/feed/" name="podcast" title="Podcast RSS Feed" />
+      <IconLink href="http://video.javascriptair.com" name="youtube" title="YouTube Channel" />
+      <IconLink href="http://itunes.javascriptair.com/" name="apple" title="iTunes Podcast" />
     </section>
   )
 }
