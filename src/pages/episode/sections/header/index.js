@@ -1,6 +1,6 @@
 import React from 'react'
 import PersonGroup from '../../../../components/person-group'
-import {sortPeople} from '../../../../../shared/utils'
+import {sortPeople, isPast} from '../../../../../shared/utils'
 import RSVPIcon from '../../../../components/rsvp-icon'
 
 export default Header
@@ -10,10 +10,12 @@ function Header({episode}) {
     title,
     time,
     dateDisplay,
+    date,
     guests = [],
     descriptionHTML,
     hangoutUrl,
   } = episode
+  const past = episode.past || isPast(date)
   const sortedGuests = sortPeople(guests)
   return (
     <div className="episode">
@@ -25,7 +27,7 @@ function Header({episode}) {
           <strong>{title}</strong>
           <br />
           <small>
-            <RSVPIcon hangoutUrl={hangoutUrl} />
+            {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}
             {' ' + dateDisplay} at {time}
           </small>
         </h2>

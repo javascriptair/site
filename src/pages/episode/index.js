@@ -16,6 +16,7 @@ import SponsorsSection from '../../components/sponsors'
 export default EpisodePage
 
 function EpisodePage({episode, sponsors}) {
+  const past = episode.past || isPastAndNotToday(episode.date)
   return (
     <Page
       title={`JavaScript Air | ${episode.title}`}
@@ -24,7 +25,7 @@ function EpisodePage({episode, sponsors}) {
         episode={episode}
       />
       {
-        isPastAndNotToday(episode.date) ?
+        past ?
           <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
           <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
       }
@@ -36,8 +37,14 @@ function PastEpisodeStuff({episodeData, sponsors}) {
   const {podbeanId, youTubeId} = episodeData
   return (
     <div>
-      <hr />
-      <AudioSection podbeanId={podbeanId} />
+      {
+        podbeanId ? (
+          <div>
+            <hr />
+            <AudioSection podbeanId={podbeanId} />
+          </div>
+        ) : ''
+      }
       {
         youTubeId ? (
           <div>
