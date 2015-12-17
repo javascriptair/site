@@ -68,7 +68,7 @@ export default {
       ],
       picks: [
         `[Jared Tobin Recursive Types](https://medium.com/@jaredtobin/a-tour-of-some-useful-recursive-types-8fa8e423b5b9#.gwhpp43bj)`,
-        `[Hard Jones’ Computational Effects](https://github.com/computational-effects/free/blob/master/examples/http/index.js)`,
+        `[Hardy Jones’ Computational Effects](https://github.com/computational-effects/free/blob/master/examples/http/index.js)`,
       ],
     },
     {
