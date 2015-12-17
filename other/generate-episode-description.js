@@ -10,10 +10,11 @@ import deindent from 'deindent'
 import allSponsors from '../sponsors'
 
 import * as utils from '../shared/utils'
+import getEpisodeData from '../shared/get-episode-data'
 
 
 const episodePath = path.join(process.cwd(), process.argv[2])
-const episodeData = utils.getEpisodeData(episodePath)
+const episodeData = getEpisodeData(episodePath)
 
 const string = ReactDOMServer.renderToStaticMarkup(
   <EpisodeDescription

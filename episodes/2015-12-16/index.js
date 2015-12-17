@@ -49,6 +49,7 @@ export default {
     learning and developing this wonky language called JavaScript.
   `,
   youTubeId: 'uDtkEEIBsz4',
+  podbeanId: 'fq39m-5b07c8',
   past: true,
   host: {
     tips: [
