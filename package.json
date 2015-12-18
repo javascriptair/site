@@ -10,11 +10,14 @@
     "build:index": "babel-node generate/home > index.html",
     "build:episodes": "./scripts/build-episodes.sh",
     "build:episode": "./scripts/build-episode.sh",
-    "build": "npm run build:index && npm run build:episodes",
+    "prebuild:guests": "rm -rf guests && mkdir guests",
+    "build:guests": "babel-node generate/guests > guests/index.html",
+    "build": "npm run build:index && npm run build:episodes && npm run build:guests",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:index -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
+    "dev:guests": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:guests -s",
     "description": "babel-node other/generate-episode-description",
     "eslint": "eslint src/ episodes/ shared/ other/ generate/",
     "server": "http-server",
@@ -48,14 +51,12 @@
     "markdown": "0.5.0",
     "moment": "2.10.6",
     "nodemon": "1.8.1",
+    "query-string": "3.0.0",
     "react": "0.14.2",
     "react-dom": "0.14.2",
     "read-glob": "2.1.0",
     "surge": "0.17.3",
     "trash": "3.4.0",
     "uglify-js": "2.6.1"
-  },
-  "dependencies": {
-    "query-string": "3.0.0"
   }
 }

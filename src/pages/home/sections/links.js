@@ -33,5 +33,10 @@ function getLinks() {
       alt: 'Email JavaScript Air',
       title: 'Contact us',
     },
+    {
+      href: '/guests',
+      alt: 'Guests',
+      title: 'All Show Guests',
+    },
   ]
 }

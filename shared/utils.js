@@ -77,6 +77,10 @@ function isPastAndNotToday(date) {
 
 
 function sortPeople(people = []) {
-  return people.sort((a, b) => a.twitter > b.twitter)
+  return people.sort((a, b) => {
+    const aVal = (a.twitter || a.name).toLowerCase()
+    const bVal = (b.twitter || b.name).toLowerCase()
+    return aVal > bVal ? 1 : -1
+  })
 }
 
