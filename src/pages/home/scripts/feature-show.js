@@ -36,7 +36,7 @@ function setFeatureShow() {
       a { text-decoration: none; }
       .icon-calendar-plus-o { display: none; }
       h3 { font-size: ${newFontSize}px; }
-      body {http://javascriptair.com/
+      body {
         text-align: center;
         max-width: 1200px;
         width: 1200px;
