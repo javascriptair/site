@@ -21,10 +21,11 @@ function setFeatureShow() {
 
     const newFontSize = 40
 
-    const totalTitleWidth = getWidthOfTitle()
-    const totalWidthOfPeople = getWidthOfPeople()
+    const titleWidth = getWidthOfText(feature.querySelector('h3 a'))
+    const subTitleWidth = getWidthOfText(feature.querySelector('h3 small'))
+    const peopleWidth = getWidthOfPeople()
 
-    const episodeWidth = (totalTitleWidth > totalWidthOfPeople ? totalTitleWidth : totalWidthOfPeople) + 1
+    const episodeWidth = Math.max(titleWidth, peopleWidth, subTitleWidth) + 1
 
     // remove all prose
     Array.from(feature.querySelectorAll('.description'))
@@ -80,12 +81,11 @@ function setFeatureShow() {
       }
     }
 
-    function getWidthOfTitle() {
-      const title = feature.querySelector('h3 a')
-      const titleWidth = getWidth(title)
-      const fontSize = getComputedStyle(title)['font-size'].slice(0, -2)
+    function getWidthOfText(elWithText) {
+      const width = getWidth(elWithText)
+      const fontSize = getComputedStyle(elWithText)['font-size'].slice(0, -2)
       const fontSizeRatio = fontSize / newFontSize
-      return Math.ceil(titleWidth / fontSizeRatio)
+      return Math.ceil(width / fontSizeRatio)
     }
 
     function getWidth(el) {
