@@ -8,6 +8,11 @@ export default {
       name: 'Gaurav Seth',
       twitter: 'gauravseth',
     },
+    {
+      name: 'Steve Lucco',
+      imgSrc: '/episodes/2016-01-27/steveluc.png',
+      link: 'https://www.linkedin.com/in/steve-lucco-b5084958',
+    },
   ],
   description: `
     Microsoft has been making some pretty awesome

@@ -2,19 +2,22 @@ import React from 'react'
 
 export default Person
 
-function Person({twitter, name, imgSrc}) {
+function Person({twitter, link, name, imgSrc}) {
   return (
     <div className="person">
-      <a href={`https://twitter.com/${twitter}`}>
+      <a href={link}>
         <img src={imgSrc} alt={`${name} Profile Picture`} />
-        <p>{name}<br />@{twitter}</p>
+        <p>
+          {name}<br />
+          {twitter ? `@${twitter}` : ''}
+        </p>
       </a>
     </div>
   )
 }
 
 Person.propTypes = {
-  twitter: React.PropTypes.string.isRequired,
+  twitter: React.PropTypes.string,
   name: React.PropTypes.string.isRequired,
   imgSrc: React.PropTypes.string.isRequired,
 }

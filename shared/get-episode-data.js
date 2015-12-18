@@ -14,6 +14,7 @@ function getEpisodeData(episodePath) {
   episode.guests = (episode.guests || []).map(guest => {
     guest = {
       imgSrc: `/episodes/${date}/${guest.twitter}.png`,
+      link: `https://twitter.com/${guest.twitter}`,
       links: [],
       tips: [],
       picks: [],
