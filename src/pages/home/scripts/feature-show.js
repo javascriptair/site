@@ -7,7 +7,7 @@ function FeatureShow() {
   return <InlineScript fn={setFeatureShow} />
 }
 
-function setFeatureShow() {
+function setFeatureShow() http://javascriptair.com/{
   window.featureShow = featureShow
   function featureShow(index = 0) {
     // get featured episode
@@ -42,10 +42,6 @@ function setFeatureShow() {
         width: 1200px;
         height: 300px;
       }
-      body.small {
-        transform: scale(0.5);
-        transform-origin: top;
-      }
       .episode {
         width: ${episodeWidth}px;
         margin: auto;
@@ -62,7 +58,7 @@ function setFeatureShow() {
       <style>${styles}</style>
     `
 
-    document.body.innerHTML = container.outerHTML
+    document.body.innerHTML = container.innerHTML
     document.body.classList.add('small')
 
     function getWidthOfPeople() {
