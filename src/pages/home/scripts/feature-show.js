@@ -36,7 +36,7 @@ function setFeatureShow() {
       a { text-decoration: none; }
       .icon-calendar-plus-o { display: none; }
       h3 { font-size: ${newFontSize}px; }
-      body {
+      body {http://javascriptair.com/
         text-align: center;
         max-width: 1200px;
         width: 1200px;
@@ -49,6 +49,15 @@ function setFeatureShow() {
       body.small .episode {
         transform: scale(${scales[rows]});
         transform-origin: top;
+      }
+
+      @media
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+          body {
+            transform: scale(0.5);
+            transform-origin: top;
+          }
       }
     `
 
