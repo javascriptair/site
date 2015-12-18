@@ -24,7 +24,7 @@ function setFeatureShow() {
     const totalTitleWidth = getWidthOfTitle()
     const totalWidthOfPeople = getWidthOfPeople()
 
-    const episodeWidth = totalTitleWidth > totalWidthOfPeople ? totalTitleWidth : totalWidthOfPeople
+    const episodeWidth = (totalTitleWidth > totalWidthOfPeople ? totalTitleWidth : totalWidthOfPeople) + 1
 
     // remove all prose
     Array.from(feature.querySelectorAll('.description'))
