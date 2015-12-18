@@ -7,7 +7,7 @@ function FeatureShow() {
   return <InlineScript fn={setFeatureShow} />
 }
 
-function setFeatureShow() http://javascriptair.com/{
+function setFeatureShow() {
   window.featureShow = featureShow
   function featureShow(index = 0) {
     // get featured episode
