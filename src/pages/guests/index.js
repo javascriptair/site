@@ -7,7 +7,9 @@ export default Guests
 
 function Guests({guests}) {
   return (
-    <Page>
+    <Page
+      title="JavaScript Air show guests"
+    >
       <header className="+text-center">
         <h1>
           <a href="/" alt="home">JavaScript Air</a>

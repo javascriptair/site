@@ -7,6 +7,7 @@ export default Page
 function Page({
   children,
   title = 'JavaScript Air',
+  description = 'The live JavaScript podcast all about JavaScript and the web platform. Available on YouTube, iTunes, and an RSS audio feed',
 } = {}) {
   /* eslint max-len:0 */
   return (
@@ -18,7 +19,7 @@ function Page({
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
         <meta name="theme-color" content="#155674" />
         <meta name="author" content="Kent C. Dodds" />
-        <meta name="description" content="The live JavaScript broadcast podcast all about JavaScript and the web platform. Available on YouTube, iTunes, and an RSS audio feed" />
+        <meta name="description" content={description} />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="/resources/font/font.css" />

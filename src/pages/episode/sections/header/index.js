@@ -14,6 +14,7 @@ function Header({episode}) {
     guests = [],
     descriptionHTML,
     hangoutUrl,
+    numberDisplay,
   } = episode
   const past = episode.past || isPast(date)
   const sortedGuests = sortPeople(guests)
@@ -24,7 +25,7 @@ function Header({episode}) {
           <a href="/">JavaScript Air</a>
         </h1>
         <h2>
-          <strong>{title}</strong>
+          <strong>Episode {numberDisplay}: {title}</strong>
           <br />
           <small>
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}

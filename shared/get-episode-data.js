@@ -1,8 +1,12 @@
+import fs from 'fs'
+import path from 'path'
+
 import {panelists} from '../resources/panelists'
 import moment from 'moment'
 import deindent from 'deindent'
 import {markdown} from 'markdown'
 
+const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
 
 export default getEpisodeData
@@ -10,6 +14,8 @@ export default getEpisodeData
 function getEpisodeData(episodePath) {
   const episode = require(episodePath).default
   const date = dateRegex.exec(episodePath)[1]
+  const number = episode.number || episodes.indexOf(date)
+  const numberDisplay = pad(number, 2)
 
   episode.guests = (episode.guests || []).map(guest => {
     guest = {
@@ -60,6 +66,8 @@ function getEpisodeData(episodePath) {
     description,
     descriptionHTML: markdownToHTML(description),
     hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
+    number,
+    numberDisplay,
     ...episode,
   }
 
@@ -82,4 +90,16 @@ function markdownToHTML(string) {
   return {__html: markdown.toHTML(deindent(string))}
 }
 
+
+function getDirectories(srcpath) {
+  return fs.readdirSync(srcpath).filter((file) => {
+    return fs.statSync(path.join(srcpath, file)).isDirectory()
+  })
+}
+
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
 

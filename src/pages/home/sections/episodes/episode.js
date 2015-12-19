@@ -15,12 +15,13 @@ function Episode({episodeData}) {
     guests = [],
     descriptionHTML,
     hangoutUrl,
+    numberDisplay,
   } = episodeData
   const sortedGuests = sortPeople(guests)
   return (
     <div className="episode">
       <h3>
-        <a href={`/episodes/${date}`}>{title}</a>
+        <a href={`/episodes/${date}`}>Episode {numberDisplay}: {title}</a>
         <br />
         <small>
           <RSVPIcon hangoutUrl={hangoutUrl} />

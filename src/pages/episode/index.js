@@ -1,4 +1,6 @@
 import React from 'react'
+import deindent from 'deindent'
+
 import {isPastAndNotToday} from '../../../shared/utils'
 
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
@@ -17,9 +19,11 @@ export default EpisodePage
 
 function EpisodePage({episode, sponsors}) {
   const past = episode.past || isPastAndNotToday(episode.date)
+  const {numberDisplay, title, description} = episode
   return (
     <Page
-      title={`JavaScript Air | ${episode.title}`}
+      title={`JavaScript Air | ${title}`}
+      description={getPageDescription(numberDisplay, description)}
     >
       <Header
         episode={episode}
@@ -31,6 +35,15 @@ function EpisodePage({episode, sponsors}) {
       }
     </Page>
   )
+}
+
+function getPageDescription(numberDisplay, description) {
+  description = deindent(description)
+    .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
+    .replace(/\n/g, ' ')
+    .replace(/DOUBLE_NEW_LINE/g, '\n\n')
+    .trim()
+  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${description}`
 }
 
 function PastEpisodeStuff({episodeData, sponsors}) {
