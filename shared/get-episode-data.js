@@ -12,6 +12,7 @@ const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
 export default getEpisodeData
 
 function getEpisodeData(episodePath) {
+  /* eslint complexity:[2,6] */
   const episode = require(episodePath).default
   const date = dateRegex.exec(episodePath)[1]
   const number = episode.number || episodes.indexOf(date)
@@ -98,8 +99,8 @@ function getDirectories(srcpath) {
 }
 
 function pad(n, width, z) {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+  z = z || '0'
+  n = n + ''
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
 }
 
