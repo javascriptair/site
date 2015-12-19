@@ -8,6 +8,7 @@ function Page({
   children,
   title = 'JavaScript Air',
 } = {}) {
+  /* eslint max-len:0 */
   return (
     <html>
       <head lang="en">
@@ -16,6 +17,8 @@ function Page({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
         <meta name="theme-color" content="#155674" />
+        <meta name="author" content="Kent C. Dodds" />
+        <meta name="description" content="The live JavaScript broadcast podcast all about JavaScript and the web platform. Available on YouTube, iTunes, and an RSS audio feed" />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="/resources/font/font.css" />
