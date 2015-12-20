@@ -25,7 +25,7 @@ function Links() {
 function getLinks() {
   return [
     {
-      href: 'http://issuetemplate.com/#/javascriptair/site/episode-suggestion',
+      href: 'http://suggest.javascriptair.com',
       title: 'Suggest Episodes',
     },
     {
