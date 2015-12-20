@@ -8,6 +8,7 @@ export default function VideoPlayer({youTubeId}) {
       src={`https://www.youtube-nocookie.com/embed/${youTubeId}?rel=0`}
       frameBorder="0"
       allowFullScreen
+      style={{maxWidth: '100%'}}
     >
     </iframe>
   )
