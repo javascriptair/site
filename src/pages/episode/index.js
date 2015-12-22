@@ -90,7 +90,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
               />
             </div>
 
-            <div className="+display-flex +space-children">
+            <div className="twitter-feed-container">
               <TwitterFeed
                 widgetId="675885424049393664"
                 linkTo="https://twitter.com/hashtag/JavaScriptAir"
@@ -114,4 +114,3 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
     </div>
   )
 }
-
