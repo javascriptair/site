@@ -21,7 +21,7 @@ function Page({
         <meta name="author" content="Kent C. Dodds" />
         <meta name="description" content={description} />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/styles.dist.css" />
         <link rel="stylesheet" href="/resources/font/font.css" />
       </head>
       <body>
@@ -32,4 +32,3 @@ function Page({
     </html>
   )
 }
-
