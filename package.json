@@ -12,7 +12,7 @@
     "build:episode": "./scripts/build-episode.sh",
     "prebuild:guests": "rm -rf guests && mkdir guests",
     "build:guests": "babel-node generate/guests > guests/index.html",
-    "build:css": "postcss -u postcss-import styles.css > styles.dist.css",
+    "build:css": "postcss -u postcss-import -u autoprefixer styles.css > styles.dist.css",
     "build": "npm run build:index && npm run build:episodes && npm run build:guests",
     "prebuild": "npm run eslint",
     "deploy": "surge --project . --domain javascriptair.com",
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/javascriptair/javascriptair.github.io#readme",
   "devDependencies": {
+    "autoprefixer": "^6.2.1",
     "babel-cli": "6.2.0",
     "babel-core": "6.1.21",
     "babel-preset-es2015": "6.1.18",

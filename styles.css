@@ -15,14 +15,10 @@ h1, h2, h3, h4 {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 :before, :after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
 
@@ -30,8 +26,6 @@ hr {
   border: 0;
   border-top: 1px solid #eee;
   height: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
