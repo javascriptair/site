@@ -6,6 +6,7 @@ export default {
     {name: 'Henry Zhu', twitter: '_henryzhu'},
     {name: 'Logan Smyth', twitter: 'loganfsmyth'},
     {name: 'Amjad Masad', twitter: 'amasad'},
+    {name: 'Sebastian McKenzie', twitter: 'sebmck'},
   ],
   description: `
     Tons of people use Babel. With the release of Babel 6,
