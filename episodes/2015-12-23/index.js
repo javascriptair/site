@@ -42,7 +42,7 @@ export default {
       name: 'Sebastian McKenzie',
       twitter: 'sebmck',
       picks: [
-        `[Sainsbury's Chocolate Flavoured British 1% Fat Milk](https://youtu.be/1w_W5cd8qRE?t=1h6m54s)`,
+        `[Sainsbury's Chocolate Flavoured British 1% Fat Milk](https://www.sainsburys.co.uk/shop/gb/groceries/sainsburys-fresh-chocolate-flavoured-milk-1l)`,
       ],
     },
   ],
