@@ -55,6 +55,7 @@ export default {
     amazing tool with some of the core contributors to the project.
   `,
   youTubeId: '1w_W5cd8qRE',
+  podbeanId: 'ec6u9-5b3066',
   host: {
     links: [
       `[Why is Babel a Monorepo?](https://github.com/babel/babel/blob/master/doc/design/monorepo.md)`,
