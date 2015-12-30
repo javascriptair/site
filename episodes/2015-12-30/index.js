@@ -65,7 +65,7 @@ export default {
     {
       twitter: 'linclark',
       tips: [
-        `git checkout - takes you back to the branch you were last on`,
+        `When running git checkout, using '-' as the argument (git checkout -) takes you back to the branch you were last on`,
         `[hub](https://github.com/github/hub) makes it easier to work with github on the command line. [Tab completion](https://github.com/github/hub#shell-tab-completion) is especially helpful`,
         `[fetch all PRs](https://gist.github.com/piscisaureus/3342247) if you do a lot of PR reviews, this can be really helpful. It downloads all new PRs as branches whenever you fetch`,
       ],
