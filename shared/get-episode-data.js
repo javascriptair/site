@@ -16,7 +16,7 @@ function getEpisodeData(episodePath) {
   const episode = require(episodePath).default
   const date = dateRegex.exec(episodePath)[1]
   const number = episode.number || episodes.indexOf(date)
-  const numberDisplay = pad(number, 2)
+  const numberDisplay = pad(number, 3)
 
   episode.guests = (episode.guests || []).map(guest => {
     guest = {
