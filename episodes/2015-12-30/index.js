@@ -39,7 +39,7 @@ export default {
   `,
   hangoutId: 'c6gcf8f0nirc5t83homjb5trquc',
   youTubeId: '82M9fKe7hiw',
-  podbeanId: '',
+  podbeanId: 'eu658-5b510e',
   past: true,
   host: {
     tips: ['Try a standing desk'],
