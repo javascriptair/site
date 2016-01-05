@@ -10,7 +10,7 @@
 | 2016-02-03 | [JavaScript Debugging](/../../issues/17) |
 | 2016-02-10 | [Forward Web Summit](/../../issues/32) |
 | 2016-02-17 | [ESLint](/../../issues/13) |
-| 2016-02-24 | [](/../../issues/) |
+| 2016-02-22 | [React Conf](/../../issues/33) |
 | 2016-03-02 | [](/../../issues/) |
 | 2016-03-09 | [](/../../issues/) |
 | 2016-03-16 | [](/../../issues/) |
