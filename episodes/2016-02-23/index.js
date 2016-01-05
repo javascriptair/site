@@ -2,6 +2,7 @@
 
 export default {
   title: `Live at React Conf`,
+  time: '**12:45** PM **PST**',
   guests: [
     {
       name: 'React Conf',
