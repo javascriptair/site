@@ -15,7 +15,7 @@ export default {
     },
   ],
   description: `
-    We'll be live at [React Conf](http://conf.reactjs.com/) talking with speakers and others about what's going on at the conference. This is your chance to get an insiders look at the conference if you didn't get a chance to snatch a ticket.﻿
+    We'll be live at [React Conf](http://conf.reactjs.com/) talking with speakers and others about what's going on at the conference. This is your chance to get an insiders look at the conference if you didn't get a chance to snatch a ticket.
   `,
   hangoutId: 'c6kdirtpl5i76am6mlhuqis490o',
   youTubeId: 'rgoyT95ce2U',
