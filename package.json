@@ -15,7 +15,7 @@
     "build:css": "postcss -u postcss-import -u autoprefixer -u cssnano styles.css > styles.dist.css",
     "build": "npm run build:index && npm run build:episodes && npm run build:guests && npm run build:css",
     "prebuild": "npm run eslint",
-    "deploy": "surge --project . --domain javascriptair.com",
+    "deploy": "./scripts/deploy.sh",
     "getShortUrl": "babel-node ./scripts/shorten-url",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:index -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
