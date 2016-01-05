@@ -66,6 +66,7 @@ function getEpisodeData(episodePath) {
     title: 'TBA',
     description,
     descriptionHTML: markdownToHTML(description),
+    timeHTML: markdownToHTML(time, true),
     hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
     number,
     numberDisplay,
@@ -87,8 +88,12 @@ function getEpisodeData(episodePath) {
   }
 }
 
-function markdownToHTML(string) {
-  return {__html: markdown.toHTML(deindent(string))}
+function markdownToHTML(string, stripP) {
+  let html = markdown.toHTML(deindent(string))
+  if (stripP) {
+    html = html.slice(3, -4)
+  }
+  return {__html: html}
 }
 
 

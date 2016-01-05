@@ -1,59 +1,101 @@
 /* eslint max-len:0 */
 
 export default {
-  title: `ESLint`,
+  title: `Forward 4 Web Technology Summit`,
+  time: '12:00 PM **PST**',
   guests: [
     {
-      name: 'Gyandeep Singh',
-      twitter: 'gyandeeps',
-    },
-    {
-      name: 'Ilya Volodin',
-      twitter: 'i_volodin',
-    },
-    {
-      name: 'Feross Aboukhadijeh',
-      twitter: 'feross',
-    },
-    {
-      name: 'Jamund Ferguson',
-      twitter: 'xjamundx',
+      name: 'ForwardJS',
+      twitter: 'forwardJS',
+      squareImage: true,
     },
   ],
   description: `
-    Let's talk about what [ESLint](http://eslint.org/) is, how it works,
-    and how it can be super useful for your project.
-    We'll be joined by ESLint committers and the author
-    of [the Standard library](http://npm.im/standard).
+    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll talk with speakers and workshop instructors about the awesome stuff going on the conference.
   `,
-  hangoutId: 'cms6et0sffpkf92nucv1nf70c74',
-  youTubeId: 'sEXow0FPE3Q',
+  hangoutId: 'cs8p8a6fgmlrl490siif59emci0',
+  youTubeId: '7wb0gwjk1aY',
   podbeanId: '',
-  host: {},
+  host: {
+    links: [
+    ],
+    tips: [
+    ],
+    picks: [
+    ],
+  },
   panelists: [
     {
       twitter: 'dan_abramov',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'drboolean',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'getify',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'kwuchu',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'linclark',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'mzabriskie',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'pamasaur',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
     {
       twitter: 'tylermcginnis33',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
     },
   ],
 }

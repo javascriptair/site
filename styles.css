@@ -83,7 +83,7 @@ h3 small {
   text-align: center;
 }
 
-.person img {
+.person img:not(.square) {
   border-radius: 50%;
 }
 

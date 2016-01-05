@@ -10,7 +10,7 @@ function Episode({episodeData}) {
   const {
     date,
     title,
-    time,
+    timeHTML,
     dateDisplay,
     guests = [],
     descriptionHTML,
@@ -25,12 +25,12 @@ function Episode({episodeData}) {
         <br />
         <small>
           <RSVPIcon hangoutUrl={hangoutUrl} />
-          {' ' + dateDisplay} at {time}
+          {' ' + dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
         </small>
       </h3>
       <PersonGroup people={sortedGuests} />
       <div className="description">
-        <p dangerouslySetInnerHTML={descriptionHTML}></p>
+        <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
     </div>
   )

@@ -35,8 +35,11 @@ export default ({addFile}) => {
     ]
   }
 
-  function episodeActions() {
+  function episodeActions(data) {
     const actions = []
+    Object.keys(data).forEach((d, k) => {
+      data[k] = d.replace(/&#x27;/g, `'`)
+    })
 
     actions.push(addFile({
       path: 'episodes/{{date}}/index.js',

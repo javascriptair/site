@@ -8,7 +8,7 @@ export default Header
 function Header({episode}) {
   const {
     title,
-    time,
+    timeHTML,
     dateDisplay,
     date,
     guests = [],
@@ -29,7 +29,7 @@ function Header({episode}) {
           <br />
           <small>
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}
-            {' ' + dateDisplay} at {time}
+            {' ' + dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
           </small>
         </h2>
         <PersonGroup people={sortedGuests} />

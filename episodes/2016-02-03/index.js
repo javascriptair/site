@@ -12,6 +12,10 @@ export default {
       name: 'Todd Gardner',
       twitter: 'toddhgardner',
     },
+    {
+      name: 'Yunong Xiao',
+      twitter: 'yunongx',
+    },
   ],
   description: `
     JavaScript has a pretty interesting debugging story.
