@@ -82,9 +82,10 @@ function getEpisodeData(episodePath) {
   }
 
   function htmlifyLinksPicksAndTips(thing) {
-    thing.linksHTML = thing.links.map(markdownToHTML)
-    thing.tipsHTML = thing.tips.map(markdownToHTML)
-    thing.picksHTML = thing.picks.map(markdownToHTML)
+    const stripP = true
+    thing.linksHTML = thing.links.map(l => markdownToHTML(l, stripP))
+    thing.tipsHTML = thing.tips.map(t => markdownToHTML(t, stripP))
+    thing.picksHTML = thing.picks.map(p => markdownToHTML(p, stripP))
   }
 }
 
