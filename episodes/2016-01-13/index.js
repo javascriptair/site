@@ -23,6 +23,17 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Lin Clark',
+      twitter: 'linclark',
+      imgSrc: '/resources/panelists/linclark.png',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     React is in your browser. Not just in web pages, but in the browser itself! Join us as we talk with developers from Firefox's Developer Tools team about how they're using React and Redux to build developer tools, and how the two make the DX (developer experience) of building developer tools better.
