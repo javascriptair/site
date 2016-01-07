@@ -48,7 +48,7 @@ export default {
     Joe Eames, and Christian Johansen about unit testing JavaScript.
   `,
   youTubeId: 'tfkUN8Jr9zY',
-  podbeanId: '',
+  podbeanId: 'yr8s4-5b8aee',
   host: {
     links: [
     ],
