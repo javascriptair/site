@@ -8,14 +8,24 @@ Thanks for your interest in contributing to the JavaScript Air website!
 2. Clone your fork
 3. Make a branch for your feature/bugfix/new episode/etc.
 4. Run `npm install` (make sure you have node and npm installed first)
-5. Run `npm run dev`
+5. Run `npm run build` to get everything built for the first bit
 6. Open `index.html` in a browser
-7. Make your changes and refresh your browser to see them
+7. Run the dev script(s) relevant for the changes you're making (see below), make your changes, and refresh your browser to see them
 8. Run `npm run eslint` to make sure your code passes our guidelines
-9. Commit your changes `git commit -am 'Your descriptive message. Closes #34'`
+9. Commit your changes and reference the issue you're addressing (for example: `git commit -am 'Your descriptive message. Closes #34'`)
 10. Push your branch to your fork
 11. Create a pull request from your branch on your fork to master on this repo
-12. Get merged!
+12. Get merged! 🎉 🎊
+
+### Home Page
+
+To develop the home page, use `npm run dev`.
+
+### CSS
+
+CSS is processed using [postcss](https://github.com/postcss/postcss) and you need to build it (it's `.gitignored`). To do this, run `npm run build:css`.
+
+If you're going to work on the css, you can run `npm run dev:css` and it will watch the file for changes and rebuild.
 
 ### Episodes
 
@@ -30,7 +40,7 @@ npm run dev:episode -- episodes/2015-12-09
 
 This will start nodemon watching your file system for changes and
 recompiling your page on changes. No hot reloading or anything. Yes, I
-have no idea what I'm doing.
+have no idea what I'm doing. (protip, you may also want to look into [npm-quick-run](npm.im/npm-quick-run))
 
 I've added a [plop](http://npm.im/plop) generator for adding new
 episodes. In the root directory, simply enter
