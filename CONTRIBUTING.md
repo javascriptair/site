@@ -11,7 +11,7 @@ Thanks for your interest in contributing to the JavaScript Air website!
 5. Run `npm run build` to get everything built for the first bit
 6. Open `index.html` in a browser
 7. Run the dev script(s) relevant for the changes you're making (see below), make your changes, and refresh your browser to see them
-8. Run `npm run eslint` to make sure your code passes our guidelines
+8. Run `npm run build` again to make sure you wont break the build
 9. Commit your changes and reference the issue you're addressing (for example: `git commit -am 'Your descriptive message. Closes #34'`)
 10. Push your branch to your fork
 11. Create a pull request from your branch on your fork to master on this repo
