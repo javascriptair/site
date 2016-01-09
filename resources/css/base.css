@@ -1,0 +1,59 @@
+body {
+  font-family: 'helvetica neue', Helvetica, Arial;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:before, :after {
+  box-sizing:border-box;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  height: 0;
+  box-sizing: content-box;
+}
+
+hr.episode-separator {
+  width: 80%;
+}
+
+hr.person-note-separator {
+  width: 90%;
+}
+
+a {
+  color: #155674;
+}
+
+a:hover, a:focus, a:active {
+  color: #318CB7;
+}
+
+a[class^="icon-"], [class*=" icon-"] {
+  text-decoration: none;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 small {
+  color: #7c7c7c;
+  font-size: 65%;
+}
