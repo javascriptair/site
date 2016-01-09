@@ -1,0 +1,25 @@
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+a {
+  color: #155674;
+}
+
+a:hover, a:focus, a:active {
+  color: #318CB7;
+}
+
+a[class^="icon-"], [class*=" icon-"] {
+  text-decoration: none;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 small {
+  color: #7c7c7c;
+  font-size: 65%;
+}
