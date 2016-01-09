@@ -1,0 +1,19 @@
+.header {
+  background-color: #F5DD00;
+}
+
+.header__heading {
+  font-weight: bold;
+}
+
+.header__heading >span{
+  font-style: italic;
+}
+
+.header__subtext {
+  color: #8C8015;
+}
+
+.header__sponsor-link {
+  text-decoration: underline;
+}
