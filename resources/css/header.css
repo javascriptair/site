@@ -2,6 +2,12 @@
   background-color: #F5DD00;
 }
 
+.header__container {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
 .header__heading {
   font-weight: bold;
 }
