@@ -2,7 +2,6 @@ import React from 'react'
 
 import Page from '../../components/page'
 import Header from './header'
-import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import HostSection from './sections/host'
@@ -26,7 +25,6 @@ function Home(
   return (
     <Page>
       <Header />
-      <SubscribeIconGroupSection />
 
       <div className="container">
 

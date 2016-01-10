@@ -1,4 +1,5 @@
 import React from 'react'
+import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 
 export default Header
 
@@ -15,6 +16,7 @@ function Header() {
         <a href="#" className="header__btn">Upcoming Shows</a>
         <a href="#" className="header__btn">Past Shows</a>
       </div>
+      <SubscribeIconGroupSection />
     </header>
   )
 }
