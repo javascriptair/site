@@ -2,57 +2,53 @@
   background-color: #F5DD00;
   text-align: center;
   overflow: hidden;
-}
 
-.header__container {
-  max-width: 1000px;
-  width: 90%;
-  margin: auto;
-}
-
-.header__heading {
-  font-weight: bold;
-
-  margin: 0;
-
-}
-
-.header__heading >span{
-  font-style: italic;
-}
-
-.header__subtext {
-  font-weight: bold;
-  color: #8C8015;
-  margin: 0;
-}
-
-.header__sponsor-link {
-  text-decoration: underline;
-}
-
-.header__site-tagline {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-.header__btn {
-  font-weight: bold;
-  border: 3px #000000 solid;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  width: 200px;
-  margin: 12px auto;
-}
-
-@media only screen and (min-width : 515px) {
-  .header__btn {
-    display: inline-block;
-    margin-right: 12px;
+  &__container {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
   }
-}
 
-.header__speech-bubble {
-  /* The "speech-bubble.css" module is meant to be loosely coupled. Styles that are specific to the header's speech bubble (specifically positioning) belong here. */
+  &__heading {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__heading >span{
+    font-style: italic;
+  }
+
+  &__subtext {
+    font-weight: bold;
+    color: #8C8015;
+    margin: 0;
+  }
+
+  &__sponsor-link {
+    text-decoration: underline;
+  }
+
+  &__site-tagline {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  &__btn {
+    font-weight: bold;
+    border: 3px #000000 solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 200px;
+    margin: 12px auto;
+
+    @media only screen and (min-width : 515px) {
+      display: inline-block;
+      margin-right: 12px;
+    }
+  }
+
+  &__speech-bubble {
+    /* The "speech-bubble.css" module is meant to be loosely coupled. Styles that are specific to the header's speech bubble (specifically positioning) belong here. */
+  }
 }
