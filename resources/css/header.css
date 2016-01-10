@@ -45,3 +45,10 @@
   width: 200px;
   margin: 12px auto;
 }
+
+@media only screen and (min-width : 515px) {
+  .header__btn {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
