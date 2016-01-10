@@ -12,6 +12,10 @@ function Header() {
            <a className="header__sponsor-link" href="" >others</a>.
         </p>
         <p className="header__site-tagline">The live broadcast all about JavaScript</p>
+        <div className="header__button-group">
+          <a href="#" className="header__btn">Upcoming Shows</a>
+          <a href="#" className="header__btn">Past Shows</a>
+        </div>
       </div>
     </header>
   )
