@@ -38,5 +38,9 @@
 .header__btn {
   font-weight: bold;
   border: 3px #000000 solid;
-  padding: 10px 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  width: 200px;
+  margin: 12px auto;
 }
