@@ -1,5 +1,6 @@
 .header {
   background-color: #F5DD00;
+  text-align: center;
 }
 
 .header__container {
@@ -10,6 +11,9 @@
 
 .header__heading {
   font-weight: bold;
+
+  margin: 0;
+
 }
 
 .header__heading >span{
@@ -17,7 +21,9 @@
 }
 
 .header__subtext {
+  font-weight: bold;
   color: #8C8015;
+  margin: 0;
 }
 
 .header__sponsor-link {
