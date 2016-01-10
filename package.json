@@ -20,7 +20,7 @@
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:index -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
     "dev:guests": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:guests -s",
-    "dev:css": "nodemon --watch styles.css --exec npm run build:css",
+    "dev:css": "nodemon --watch resources/css --ext css --exec npm run build:css",
     "description": "babel-node other/generate-episode-description",
     "eslint": "eslint src/ episodes/ shared/ other/ generate/",
     "server": "http-server",
