@@ -1,6 +1,7 @@
 .header {
   background-color: #F5DD00;
   text-align: center;
+  overflow: hidden;
 }
 
 .header__container {
