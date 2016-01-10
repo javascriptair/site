@@ -26,41 +26,38 @@ function Home(
   return (
     <Page>
       <Header />
-
-      <hr />
-
       <SubscribeIconGroupSection />
 
-      <hr />
+      <div className="container">
 
-      <EpisodesSection episodes={futureEpisodes} />
+        <EpisodesSection episodes={futureEpisodes} />
 
-      {futureEpisodes.length ? <hr /> : ''}
+        {futureEpisodes.length ? <hr /> : ''}
 
-      <SponsorsSection {...sponsors} />
+        <SponsorsSection {...sponsors} />
 
-      <hr />
+        <hr />
 
-      <PreviousEpisodeSection episodes={pastEpisodes} />
+        <PreviousEpisodeSection episodes={pastEpisodes} />
 
-      {pastEpisodes.length ? <hr /> : ''}
+        {pastEpisodes.length ? <hr /> : ''}
 
-      <HostSection />
+        <HostSection />
 
-      <hr />
+        <hr />
 
-      <PanelistsSection panelists={panelists} />
+        <PanelistsSection panelists={panelists} />
 
-      <hr />
+        <hr />
 
-      <SocialIconGroupSection />
+        <SocialIconGroupSection />
 
-      <hr />
+        <hr />
 
-      <LinksSection />
+        <LinksSection />
 
-      <FeatureShowScript />
+        <FeatureShowScript />
+      </div>
     </Page>
   )
 }
-
