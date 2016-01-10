@@ -7,6 +7,23 @@ import {copy} from 'copy-paste'
 
 inquirer.registerPrompt('directory', inquirerDirectory);
 
+export default getShortUrl
+
+function getShortUrl(date, title) {
+  return new Promise(resolve => {
+    inquirer.prompt([
+      {
+        name: 'alias',
+        type: 'input',
+        message: 'What alias do you want?',
+        default: getNameSuggestionFromEpisodeTitle(title),
+      },
+    ], ({alias}) => {
+      resolve({...data, alias, date})
+    })
+  })
+}
+
  getCustomAlias()
   .then(getApiKey)
   .then(shortenUrl)
@@ -15,19 +32,7 @@ inquirer.registerPrompt('directory', inquirerDirectory);
 
 function getCustomAlias(data = {}) {
   return getEpisodeInfo().then(({title, date}) => {
-    return new Promise(resolve => {
-      inquirer.prompt([
-        {
-          name: 'alias',
-          type: 'input',
-          message: 'What alias do you want?',
-          default: getNameSuggestionFromEpisodeTitle(title),
-        },
-      ], ({alias}) => {
-        resolve({...data, alias, date})
       })
-    })
-  })
 
   function getNameSuggestionFromEpisodeTitle(title) {
     return title

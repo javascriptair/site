@@ -19,6 +19,7 @@ export default {
   `,
   podbeanId: 'ugk9e-5ad77a',
   youTubeId: 'fg4e-2lBw5E',
+  shortUrl: 'http://jsair.io/first',
   host: {
     tips: ['Learn JavaScript with [MDN](https://developer.mozilla.org/en-US/)'],
     picks: [
