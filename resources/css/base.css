@@ -12,18 +12,3 @@ body {
 :before, :after {
   box-sizing:border-box;
 }
-
-hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  height: 0;
-  box-sizing: content-box;
-}
-
-hr.episode-separator {
-  width: 80%;
-}
-
-hr.person-note-separator {
-  width: 90%;
-}
