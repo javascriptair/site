@@ -29,3 +29,8 @@
 .header__sponsor-link {
   text-decoration: underline;
 }
+
+.header__site-tagline {
+  font-size: 1.3em;
+  font-weight: bold;
+}

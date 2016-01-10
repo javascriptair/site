@@ -11,6 +11,7 @@ function Header() {
           Sponsored by <a className="header__sponsor-link" href="">Egghead.io</a>, and
            <a className="header__sponsor-link" href="" >others</a>.
         </p>
+        <p className="header__site-tagline">The live broadcast all about JavaScript</p>
       </div>
     </header>
   )
