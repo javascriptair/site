@@ -10,42 +10,54 @@
   }
 
   &__heading {
-    font-weight: bold;
+    font-weight: 600;
     margin: 0;
   }
 
-  &__heading >span{
-    font-style: italic;
+  &__heading > span {
+    font-weight: 300;
   }
 
   &__subtext {
+    font-size: 0.875em;
     font-weight: bold;
     color: #8C8015;
     margin: 0;
   }
 
   &__sponsor-link {
+    color: #8C8015;
     text-decoration: underline;
   }
 
   &__site-tagline {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: bold;
   }
 
   &__btn {
+    font-size: 0.9em;
     font-weight: bold;
-    border: 3px #000000 solid;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: 5px #000000 solid;
+    padding: 10px 0px;
     display: block;
-    width: 200px;
+    width: 240px;
     margin: 12px auto;
+
+    color: black;
+    text-decoration: none;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: black;
+      color: #F5DD00;
+    }
 
     @media only screen and (min-width : 515px) {
       display: inline-block;
       margin-right: 12px;
     }
+
   }
 
   &__speech-bubble {
