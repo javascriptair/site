@@ -5,10 +5,19 @@ export default SubscribeIconGroup
 
 function SubscribeIconGroup() {
   return (
-    <section className="group-of-icons +space-children">
-      <IconLink href="http://audio.javascriptair.com/feed/" name="podcast" title="Podcast RSS Feed" />
-      <IconLink href="http://video.javascriptair.com" name="youtube" title="YouTube Channel" />
-      <IconLink href="http://itunes.javascriptair.com/" name="apple" title="iTunes Podcast" />
-    </section>
+    <div className="speech-bubble header__speech-bubble">
+      <h2 className="speech-bubble__heading">Get the Podcast</h2>
+      <ul className="subscribe-icon-list">
+        <li className="subscribe-icon-list__item">
+          <IconLink href="http://audio.javascriptair.com/feed/" name="podcast" title="Podcast RSS Feed" />
+        </li>
+        <li className="subscribe-icon-list__item">
+          <IconLink href="http://video.javascriptair.com" name="youtube" title="YouTube Channel" />
+        </li>
+        <li className="subscribe-icon-list__item">
+          <IconLink href="http://itunes.javascriptair.com/" name="apple" title="iTunes Podcast" />
+        </li>
+      </ul>
+    </div>
   )
 }

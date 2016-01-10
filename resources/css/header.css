@@ -52,3 +52,7 @@
     margin-right: 12px;
   }
 }
+
+.header__speech-bubble {
+  /* The "speech-bubble.css" module is meant to be loosely coupled. Styles that are specific to the header's speech bubble (specifically positioning) belong here. */
+}

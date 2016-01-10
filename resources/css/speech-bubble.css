@@ -1,0 +1,12 @@
+.speech-bubble {
+  background-color: white;
+
+  width: 400px;
+  height: 150px;
+  margin: 10px;
+}
+
+.speech-bubble__heading {
+  font-weight: bold;
+  font-size: 1.1em;
+}
