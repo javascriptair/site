@@ -3,6 +3,7 @@
   color: #ffffff;
   padding: 30px;
   text-align: center;
+
   &__heading {
     text-transform: uppercase;
     color: #F5DD00;

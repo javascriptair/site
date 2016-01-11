@@ -5,7 +5,7 @@ export default SubscribeIconGroup
 
 function SubscribeIconGroup() {
   return (
-    <div className="speech-bubble header__speech-bubble">
+    <div className="header__speech-bubble speech-bubble">
       <h2 className="speech-bubble__heading">Get the Podcast</h2>
       <ul className="subscribe-icon-list">
         <li className="subscribe-icon-list__item">

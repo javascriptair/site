@@ -1,14 +1,13 @@
 .speech-bubble {
   background-color: white;
-  width: auto;
-  margin: 10px;
+  width: 270px;
   border-radius: 10px;
-  display: inline-block;
-  padding: 14px 55px;
+  text-align: center;
+  padding: 10px;
 }
 
 .speech-bubble__heading {
   font-weight: bold;
-  font-size: 1.2em;
-  margin: 0;
+  font-size: 1.35em;
+  margin-bottom: 10px;
 }

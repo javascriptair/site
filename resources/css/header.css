@@ -1,8 +1,10 @@
 .header {
+  position: relative;
   &__top-half {
     background-color: #F5DD00;
     text-align: center;
     overflow: hidden;
+    padding-bottom: 100px;
   }
   &__container {
     max-width: 1000px;
@@ -49,5 +51,9 @@
   }
   &__speech-bubble {
     /* The "speech-bubble.css" module is meant to be loosely coupled. Styles that are specific to the header's speech bubble (specifically positioning) belong here. */
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -135px; /* -(speech bubble width / 2) */
   }
 }
