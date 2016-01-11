@@ -25,7 +25,7 @@ function Header({episode}) {
           <a href="/">JavaScript Air</a>
         </h1>
         <h2>
-          <strong>Episode {numberDisplay}: {title}</strong>
+          <strong class="episode-title">Episode {numberDisplay}: {title}</strong>
           <br />
           <small>
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}

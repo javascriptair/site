@@ -2,6 +2,12 @@ language: node_js
 cache:
   directories:
     - node_modules
+notifications:
+  webhooks:
+    urls:
+      - https://api.ghostinspector.com/v1/suites/5693b09b0077af792c1a6ad5/execute/?apiKey=fa38baa2759df4b34f5330b34331d4c5a87b6d57
+    on_success: always
+    on_failure: never
 branches:
   only:
     - master
