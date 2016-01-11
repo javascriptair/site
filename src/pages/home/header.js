@@ -6,16 +6,35 @@ export default Header
 function Header() {
   return (
     <header className="header">
+
       <div className="header__container">
-        <h1 className="header__heading">JavaScript <span>Air</span></h1>
-        <p className="header__subtext">
-          Sponsored by <a className="header__sponsor-link" href="">Egghead.io</a>, and <a className="header__sponsor-link" href="" >others</a>.
-        </p>
-        <p className="header__site-tagline">The live broadcast podcast all about JavaScript</p>
-        <a href="#" className="header__btn">Upcoming Shows</a>
-        <a href="#" className="header__btn">Past Shows</a>
+
+        {/* Header - Text based titles and subtitles */}
+        <div className="header__heading">
+
+          <h1 className="header__title">
+            <span className="first">Javascript </span>
+            <span className="second">Air</span>
+          </h1>
+
+          <p className="header__subtext">
+            Sponsored by <a className="header__sponsor-link" href="">Egghead.io</a>
+            , and <a className="header__sponsor-link" href="" >others</a>.
+          </p>
+
+        </div>
+
+        {/* Hero - Call to action text and buttons*/}
+        <div className="header__hero">
+          <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
+          <a href="#" className="header__btn">Upcoming Shows</a>
+          <a href="#" className="header__btn">Past Shows</a>
+        </div>
+
       </div>
+
       <SubscribeIconGroupSection />
+
     </header>
   )
 }
