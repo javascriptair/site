@@ -8,4 +8,4 @@ branches:
 node_js:
   - "4.2.1"
 script:
-  - npm run build && npm run deploy
+  - npm run time build && npm run time deploy
