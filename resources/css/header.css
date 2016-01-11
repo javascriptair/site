@@ -25,6 +25,7 @@
     font-weight: bold;
     color: #8C8015;
     margin-top: 10px;
+    line-height: 1.35em;
   }
   &__sponsor-link {
     color: #8C8015;
