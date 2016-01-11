@@ -13,8 +13,7 @@ function Header() {
         <div className="header__heading">
 
           <h1 className="header__title">
-            <span className="first">Javascript </span>
-            <span className="second">Air</span>
+            Javascript <span>Air</span>
           </h1>
 
           <p className="header__subtext">

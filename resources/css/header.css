@@ -16,7 +16,7 @@
   &__title {
     font-size: 4.3em;
     font-weight: 600;
-    > .second {
+    > span {
       font-weight: 300;
     }
   }
