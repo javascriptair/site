@@ -26,9 +26,14 @@ function Header() {
 
         {/* Hero - Call to action text and buttons*/}
         <div className="header__hero">
+
           <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
-          <a href="#" className="header__btn">Upcoming Shows</a>
-          <a href="#" className="header__btn">Past Shows</a>
+
+          <div className="btn-container header__btn-container">
+            <a href="#" className="btn btn--large btn--black">Upcoming Shows</a>
+            <a href="#" className="btn btn--large btn--black">Past Shows</a>
+          </div>
+
         </div>
 
       </div>
