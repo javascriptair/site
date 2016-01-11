@@ -1,26 +1,12 @@
 /* eslint max-len:0 */
 
 export default {
-  title: `Live at React Conf`,
-  time: '**12:45** PM **PST**',
+  title: `TBA`,
   guests: [
-    {
-      name: 'React Conf',
-      twitter: 'reactjs',
-      squareImage: true,
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
   ],
-  description: `
-    We'll be live at [React Conf](http://conf.reactjs.com/) talking with speakers and others about what's going on at the conference. This is your chance to get an insiders look at the conference if you didn't get a chance to snatch a ticket.
-  `,
-  hangoutId: 'c6kdirtpl5i76am6mlhuqis490o',
-  youTubeId: 'rgoyT95ce2U',
+  description: '',
+  hangoutId: 'c143rgrflt08nui9n5h42morjbs',
+  youTubeId: 'pqZGVV35BPU',
   podbeanId: '',
   host: {
     links: [

@@ -1,26 +1,19 @@
 /* eslint max-len:0 */
 
 export default {
-  title: `Live at React Conf`,
-  time: '**12:45** PM **PST**',
+  title: `Live at Fluent Conf`,
   guests: [
     {
-      name: 'React Conf',
-      twitter: 'reactjs',
+      name: 'Fluent Conf',
+      twitter: 'fluentconf',
       squareImage: true,
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
     },
   ],
   description: `
-    We'll be live at [React Conf](http://conf.reactjs.com/) talking with speakers and others about what's going on at the conference. This is your chance to get an insiders look at the conference if you didn't get a chance to snatch a ticket.
+    Live at [Fluent Conf](http://conferences.oreilly.com/fluent/javascript-html-us), the web conference from O'Reilly Media about JavaScript, HTML5, CSS, and the latest web development technologies and frameworks.
   `,
-  hangoutId: 'c6kdirtpl5i76am6mlhuqis490o',
-  youTubeId: 'rgoyT95ce2U',
+  hangoutId: 'c7vou4l3f49a9vcamh1it3mru5c',
+  youTubeId: 'R0eIlOvo5Js',
   podbeanId: '',
   host: {
     links: [
