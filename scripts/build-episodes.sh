@@ -3,3 +3,6 @@ do
   ./scripts/build-episode.sh $D &
 done
 
+wait
+echo "episodes built 😎"
+
