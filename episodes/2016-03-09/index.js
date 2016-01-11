@@ -2,6 +2,7 @@
 
 export default {
   title: `Live at Fluent Conf`,
+  time: '**12:45** PM **PST**',
   guests: [
     {
       name: 'Fluent Conf',
