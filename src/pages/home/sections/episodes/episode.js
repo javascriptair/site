@@ -6,7 +6,7 @@ import {sortPeople} from '../../../../../shared/utils'
 
 export default Episode
 
-function Episode({episodeData}) {
+function Episode({episodeData, index}) {
   const {
     date,
     title,
@@ -19,7 +19,7 @@ function Episode({episodeData}) {
   } = episodeData
   const sortedGuests = sortPeople(guests)
   return (
-    <div className="episode">
+    <div className={`episode episode-index-${index}`}>
       <h3>
         <a href={`/episodes/${date}`}>Episode {numberDisplay}: {title}</a>
         <br />

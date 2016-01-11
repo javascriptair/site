@@ -15,7 +15,7 @@ function EpisodesSection({episodes = []}) {
           utils.intersperse(
             episodes
               .sort(utils.sortEpisodes)
-              .map((e, i) => <Episode episodeData={e} key={i} />),
+              .map((e, i) => <Episode episodeData={e} key={i} index={i} />),
             (e, i) => <hr key={`hr${i}`} className="episode-separator" />
           )
         }
