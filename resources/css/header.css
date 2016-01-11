@@ -1,7 +1,9 @@
 .header {
-  background-color: #F5DD00;
-  text-align: center;
-  overflow: hidden;
+  &__top-half {
+    background-color: #F5DD00;
+    text-align: center;
+    overflow: hidden;
+  }
   &__container {
     max-width: 1000px;
     width: 90%;
