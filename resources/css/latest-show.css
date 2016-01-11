@@ -2,4 +2,29 @@
   background-color: #000000;
   color: #ffffff;
   padding: 30px;
+  text-align: center;
+  &__heading {
+    text-transform: uppercase;
+    color: #F5DD00;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    margin-bottom: 15px;
+    line-height: 1.35em;
+  }
+  &__link {
+    color: #ffffff;
+    font-size: 1.6em;
+    line-height: 1.65em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+  }
+  &__date {
+    display: block;
+    text-transform: uppercase;
+    color: #606060;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
 }
