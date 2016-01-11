@@ -20,6 +20,7 @@ export default {
   hangoutId: 'c143rgrflt08nui9n5h42morjbs',
   youTubeId: 'pqZGVV35BPU',
   podbeanId: '',
+  shortUrl: 'http://jsair.io/lodash',
   host: {
     links: [
     ],
