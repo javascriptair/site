@@ -6,12 +6,12 @@
   &__container {
     max-width: 1000px;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
   }
 
   &__heading {
+    font-size: 4.3em;
     font-weight: 600;
-    margin: 0;
   }
 
   &__heading > span {
@@ -19,7 +19,7 @@
   }
 
   &__subtext {
-    font-size: 0.875em;
+    font-size: 1.2em;
     font-weight: bold;
     color: #8C8015;
     margin: 0;
@@ -31,7 +31,7 @@
   }
 
   &__site-tagline {
-    font-size: 1.4em;
+    font-size: 2.2em;
     font-weight: bold;
   }
 
