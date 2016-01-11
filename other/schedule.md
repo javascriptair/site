@@ -11,7 +11,7 @@
 | 2016-02-10 | [Forward Web Summit](/../../issues/32) |
 | 2016-02-17 | [ESLint](/../../issues/13) |
 | 2016-02-23 | [React Conf](/../../issues/33) |
-| 2016-03-02 | [](/../../issues/) |
+| 2016-03-02 | [JavaScript Utils & Lodash](/../../issues/40) |
 | 2016-03-09 | [Fluent Conf](/../../issues/39) |
 | 2016-03-16 | [](/../../issues/) |
 | 2016-03-23 | [](/../../issues/) |
