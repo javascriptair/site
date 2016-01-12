@@ -1,29 +1,44 @@
 .header {
   position: relative;
+
   &__top-half {
     background-color: #F5DD00;
     text-align: center;
-    overflow: hidden;
-    padding-bottom: 100px;
   }
+
+  &__bottom-half {
+    background-color: black;
+  }
+
   &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
   }
+
   /* Heading -
      Branding and sponsor information at the top
      of the page. */
+
   &__heading {
-    margin-top: 35px;
+    width: 100%;
+    padding: 40px;
   }
+
   &__title {
     font-size: 4.3em;
     font-weight: 600;
+
     > span {
       font-weight: 300;
     }
+
   }
+
   &__subtext {
     font-size: 1.2em;
     font-weight: bold;
@@ -31,29 +46,38 @@
     margin-top: 10px;
     line-height: 1.35em;
   }
+
   &__sponsor-link {
     color: #8C8015;
     text-decoration: underline;
   }
+
   /* Hero -
      The page's call-to-action text and buttons */
+
   &__hero {
-    padding: 50px 0;
+    width: 100%;
+    padding: 40px 0;
   }
+
   &__tagline {
     font-size: 2.2em;
     font-weight: bold;
   }
+
   /* Changes to the button container that only happen
        within the context of the header itself. */
+
   &__btn-container {
-    margin-top: 18px;
+    margin-top: 22px;
   }
+
+  /* Changes to the speech bubble that only happen
+     within the context of the header itself. */
+
   &__speech-bubble {
-    /* The "speech-bubble.css" module is meant to be loosely coupled. Styles that are specific to the header's speech bubble (specifically positioning) belong here. */
-    position: absolute;
-    bottom: 200px;
-    left: 50%;
-    margin-left: -135px; /* -(speech bubble width / 2) */
+    position: relative;
+    top: 18px;
   }
+
 }

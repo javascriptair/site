@@ -1,9 +1,24 @@
 .speech-bubble {
-  background-color: white;
+  position: relative;
+
   width: 270px;
+  padding: 10px;
+  
+  background-color: white;
   border-radius: 10px;
   text-align: center;
-  padding: 10px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+    width: 0px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: white transparent;
+  }
 }
 
 .speech-bubble__heading {

@@ -39,9 +39,11 @@ function LatestShow() {
   return (
     <div className="latest-show">
       <div className="latest-show__container">
+
         <h2 className="latest-show__heading">Most recent show</h2>
         <a className="latest-show__link" href="#">Episode 003: Functional JavaScript</a>
         <time className="latest-show__date" dateTime="2016-01-1">1 January, 2016</time>
+
       </div>
     </div>
   )
@@ -56,13 +58,14 @@ function Header() {
 
           <Heading />
           <Hero />
+          <SubscribeIconGroupSection />
 
         </div>
       </div>
 
-      <LatestShow />
-
-      <SubscribeIconGroupSection />
+      <div className="header__bottom-half">
+        <LatestShow />
+      </div>
 
     </header>
   )
