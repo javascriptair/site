@@ -1,0 +1,23 @@
+.decor {
+
+  &__part {
+    display: inline-block;
+    color: black;
+    width: 33.3333%;
+    height: 18px;
+
+    &--light {
+      background-color: #d4be13;
+    }
+
+    &--medium {
+      background-color: #baa713;
+    }
+
+    &--dark {
+      background-color: #98880c;
+    }
+
+  }
+
+}

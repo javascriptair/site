@@ -30,7 +30,7 @@
   }
 
   &__title {
-    font-size: 4.3em;
+    font-size: 4.45em;
     font-weight: 600;
 
     > span {
@@ -53,16 +53,22 @@
   }
 
   /* Hero -
-     The page's call-to-action text and buttons */
+     The page's call-to-action text and buttolns */
 
   &__hero {
     width: 100%;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   &__tagline {
     font-size: 2.2em;
     font-weight: bold;
+  }
+
+  &__bubble-container {
+    width: 100%;
+    height: 100px;
   }
 
   /* Changes to the button container that only happen
@@ -76,8 +82,8 @@
      within the context of the header itself. */
 
   &__speech-bubble {
-    position: relative;
-    top: 18px;
+    top: 20px;
+    float: right;
   }
 
 }

@@ -8,7 +8,7 @@ function Heading() {
     <div className="header__heading">
 
       <h1 className="header__title">
-        Javascript <span>Air</span>
+        JavaScript <span>Air</span>
       </h1>
 
       <p className="header__subtext">
@@ -54,13 +54,24 @@ function Header() {
     <header className="header">
 
       <div className="header__top-half">
+
         <div className="header__container">
 
           <Heading />
           <Hero />
-          <SubscribeIconGroupSection />
+
+          <div className="header__bubble-container">
+            <SubscribeIconGroupSection />
+          </div>
 
         </div>
+
+        <div className="decor">
+          <span className="decor__part decor__part--dark"></span>
+          <span className="decor__part decor__part--medium"></span>
+          <span className="decor__part decor__part--light"></span>
+        </div>
+
       </div>
 
       <div className="header__bottom-half">
