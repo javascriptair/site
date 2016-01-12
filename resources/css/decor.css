@@ -1,10 +1,11 @@
 .decor {
+  background-color: tomato;
+  display: flex;
+  width: 100%;
 
   &__part {
-    display: inline-block;
-    color: black;
-    width: 33.3333%;
     height: 18px;
+    flex-grow: 1;
 
     &--light {
       background-color: #d4be13;

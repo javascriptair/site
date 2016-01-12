@@ -11,10 +11,6 @@
   }
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
@@ -25,7 +21,6 @@
      of the page. */
 
   &__heading {
-    width: 100%;
     padding: 40px;
   }
 
