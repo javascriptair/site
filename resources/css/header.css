@@ -21,12 +21,16 @@
      of the page. */
 
   &__heading {
-    padding: 40px;
+    padding: 40px 0;
   }
 
   &__title {
-    font-size: 4.45em;
     font-weight: 600;
+    font-size: 3em;
+
+    @media only screen and (min-width : 488px) {
+      font-size: 4.45em;
+    }
 
     > span {
       font-weight: 300;
