@@ -4,6 +4,7 @@
   &__top-half {
     background-color: #F5DD00;
     text-align: center;
+    padding-top: 50px;
   }
 
   &__bottom-half {
@@ -20,15 +21,37 @@
      Branding and sponsor information at the top
      of the page. */
 
+  &__logo {
+
+    width: 115px;
+    height: 115px;
+    fill: white;
+    transform: rotate(-25deg);
+
+
+    @media only screen and (min-width : 301px) {
+      position: absolute;
+      left: -60px;
+      top: -55px;
+    }
+
+    @media only screen and (min-width : 519px) {
+      left: -80px;
+      top: -40px;
+    }
+  }
+
   &__heading {
     padding: 40px 0;
+    display: inline-block;
+    position: relative;
   }
 
   &__title {
     font-weight: 600;
     font-size: 3em;
 
-    @media only screen and (min-width : 488px) {
+    @media only screen and (min-width : 519px) {
       font-size: 4.45em;
     }
 
