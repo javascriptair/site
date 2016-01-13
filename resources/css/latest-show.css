@@ -2,7 +2,8 @@
   color: #ffffff;
 
   &__container {
-    width: 1000px;
+    max-width: 1000px;
+    width: 90%;
     padding: 30px 0px;
     margin: 0 auto;
   }
@@ -21,6 +22,7 @@
     font-size: 1.9em;
     font-weight: bold;
     display: block;
+    line-height: 1.25em;
     margin-bottom: 15px;
   }
 
