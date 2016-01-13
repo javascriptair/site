@@ -3,7 +3,7 @@
 
   width: 270px;
   padding: 20px;
-  
+
   background-color: white;
   border-radius: 10px;
   text-align: center;
@@ -12,10 +12,10 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: -15px;
+    bottom: -22px;
     right: 50px;
     width: 0px;
-    border-width: 15px 15px 0;
+    border-width: 22px 20px 0;
     border-style: solid;
     border-color: white transparent;
   }
@@ -23,6 +23,6 @@
 
 .speech-bubble__heading {
   font-weight: bold;
-  font-size: 1.35em;
+  font-size: 1.65em;
   margin-bottom: 10px;
 }
