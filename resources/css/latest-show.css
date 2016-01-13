@@ -21,13 +21,12 @@
     color: #ffffff;
     font-size: 1.9em;
     font-weight: bold;
-    display: block;
     line-height: 1.25em;
     margin-bottom: 15px;
+    display: block;
   }
 
   &__date {
-    display: block;
     text-transform: uppercase;
     color: #606060;
     font-weight: bold;
