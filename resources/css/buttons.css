@@ -27,11 +27,47 @@
 
   /* Size Variations */
 
+  &--show {
+    height: 50px;
+  }
+
   &--large {
     width: 230px;
   }
 
   /* Stylistic (Color, Font, Transition) Variations */
+
+  &--monochrome-gray {
+    font-size: 1.2em;
+    font-weight: bold;
+
+    border: 5px solid gray;
+    background-color: gray;
+    color: white;
+
+    transition: 0.4s;
+
+    &:hover {
+      background-color: white;
+      color: gray;
+    }
+  }
+
+  &--monochrome {
+    font-size: 1.2em;
+    font-weight: bold;
+
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+
+    transition: 0.4s;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
 
   &--black {
     font-size: 1.2em;
