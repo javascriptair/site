@@ -11,6 +11,13 @@
 
 	color: #adadad;
 
+	&:hover {
+
+		.person__image {
+			clip-path: circle(44% at 50% 50%);
+		}
+	}
+
 	&__details {
 		display: flex;
 		flex-direction: column;
@@ -19,6 +26,7 @@
 		color: #adadad;
 
 		&__text {
+			transition: all 0.4s;
 			color: black;
 
 			&:visited {
@@ -31,6 +39,7 @@
 	}
 
 	&__image {
+		transition: all 0.4s;
 		width: 90px;
 		clip-path: circle(50% at 50% 50%);
 	}

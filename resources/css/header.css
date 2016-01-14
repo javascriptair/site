@@ -78,6 +78,10 @@
   &__sponsor-link {
     color: #8C8015;
     text-decoration: underline;
+
+    &:hover {
+      color: #61590F;
+    }
   }
 
   /* Hero -
