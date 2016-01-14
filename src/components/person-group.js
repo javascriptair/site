@@ -5,7 +5,7 @@ export default PersonGroup
 
 function PersonGroup({people = []}) {
   return (
-    <div className="person-group +space-children">
+    <div className="person-group">
       {people.map((person, index) => (
         <Person key={index} {...person} />
       ))}

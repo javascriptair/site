@@ -33,10 +33,13 @@ function Episode({episodeData}) {
         </small>
 
       </h3>
+
       <PersonGroup people={sortedGuests} />
+
       <div className="description">
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
+      
     </div>
   )
 }
