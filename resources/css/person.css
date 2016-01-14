@@ -1,4 +1,5 @@
 .person-group {
+	margin: 15px 0px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -8,16 +9,20 @@
 	flex-direction: row;
 	margin: 5px;
 
+	color: #adadad;
+
 	&__details {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 
+		color: #adadad;
+
 		&__text {
-			color: gray;
+			color: black;
 
 			&:visited {
-				color: gray;
+				color: #adadad;
 			}
 
 			padding: 5px 10px;

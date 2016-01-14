@@ -7,7 +7,7 @@ function Person({twitter, link, name, imgSrc, squareImage}) {
     <a className="person" href={link}>
 
       <img
-        className={squareImage ? 'square person__part' : "person__image person__part"}
+        className={squareImage ? 'square person__part' : 'person__image person__part'}
         src={imgSrc}
         alt={`${name} Profile Picture`}
       />

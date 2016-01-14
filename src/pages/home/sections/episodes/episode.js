@@ -20,6 +20,7 @@ function Episode({episodeData}) {
   const sortedGuests = sortPeople(guests)
   return (
     <div className="episode">
+    
       <h3>
 
         <a className="episode__title episode__title__part" href={`/episodes/${date}`}>
@@ -34,12 +35,12 @@ function Episode({episodeData}) {
 
       </h3>
 
-      <PersonGroup people={sortedGuests} />
-
       <div className="description">
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
-      
+
+      <PersonGroup people={sortedGuests} />
+
     </div>
   )
 }
