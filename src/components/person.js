@@ -4,22 +4,20 @@ export default Person
 
 function Person({twitter, link, name, imgSrc, squareImage}) {
   return (
-    <div className="person">
-      <a className="person__link" href={link}>
+    <a className="person" href={link}>
 
-        <img className="person__image"
-          src={imgSrc}
-          alt={`${name} Profile Picture`}
-          className={squareImage ? 'square' : ''}
-        />
+      <img
+        className={squareImage ? 'square person__part' : "person__image person__part"}
+        src={imgSrc}
+        alt={`${name} Profile Picture`}
+      />
 
-        <p>
-          <span className="person__name">{name}</span>
-          <span className="person__twitter">{twitter ? `@${twitter}` : ''}</span>
-        </p>
+      <div className="person__details person__part">
+        <p className="person__details__text">{name}</p>
+        <p className="person__details__text">{twitter ? `@${twitter}` : ''}</p>
+      </div>
 
-      </a>
-    </div>
+    </a>
   )
 }
 

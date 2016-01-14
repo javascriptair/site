@@ -1,0 +1,33 @@
+.person-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.person {
+	display: flex;
+	flex-direction: row;
+	margin: 5px;
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&__text {
+			color: gray;
+
+			&:visited {
+				color: gray;
+			}
+
+			padding: 5px 10px;
+			font-size: 1.00em;
+		}
+	}
+
+	&__image {
+		width: 90px;
+		clip-path: circle(50% at 50% 50%);
+	}
+
+}
