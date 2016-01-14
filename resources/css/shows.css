@@ -10,8 +10,18 @@
 }
 
 .episode {
+  margin-bottom: 30px;
   padding: 25px;
   background-color: white;
+
+  &__description {
+    margin-top: 15px;
+    font-size: 1.3em;
+  }
+
+  &__date {
+    margin-top: 7px;
+  }
 
   &__title {
     font-size: 2.1em;

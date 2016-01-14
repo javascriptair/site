@@ -15,12 +15,9 @@ function EpisodesSection({episodes = []}) {
 
         <div className="episodes">
           {
-            utils.intersperse(
-              episodes
-                .sort(utils.sortEpisodes)
-                .map((e, i) => <Episode episodeData={e} key={i} />),
-              (e, i) => <hr key={`hr${i}`} className="episode-separator" />
-            )
+            episodes
+              .sort(utils.sortEpisodes)
+              .map((e, i) => <Episode episodeData={e} key={i} />)
           }
         </div>
 
