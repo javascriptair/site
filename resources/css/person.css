@@ -9,6 +9,8 @@
 	flex-direction: row;
 	margin: 5px;
 
+	text-decoration: none;
+
 	color: #adadad;
 
 	&:hover {
@@ -22,12 +24,24 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
 		color: #adadad;
 
 		&__text {
 			transition: all 0.4s;
 			color: black;
+
+			&--name {
+				font-weight: bold;
+			}
+
+			&--twitter {
+				text-decoration: underline;
+				transition: all 0s;
+
+				&:hover {
+					color: gray;
+				}
+			}
 
 			&:visited {
 				color: #adadad;
@@ -40,7 +54,7 @@
 
 	&__image {
 		transition: all 0.4s;
-		width: 90px;
+		width: 80px;
 		clip-path: circle(50% at 50% 50%);
 	}
 

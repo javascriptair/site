@@ -13,8 +13,15 @@ function Person({twitter, link, name, imgSrc, squareImage}) {
       />
 
       <div className="person__details person__part">
-        <p className="person__details__text">{name}</p>
-        <p className="person__details__text">{twitter ? `@${twitter}` : ''}</p>
+
+        <p className="person__details__text person__details__text--name">
+          {name}
+        </p>
+
+        <p className="person__details__text person__details__text--twitter">
+          {twitter ? `@${twitter}` : ''}
+        </p>
+
       </div>
 
     </a>
