@@ -1,51 +1,51 @@
 .episodes {
-	width: 100%;
-	background-color: #e4e4e4;
+  width: 100%;
+  background-color: #e4e4e4;
 
-	&__container {
-		margin: 0 auto;
-		width: 1000px;
-		background-color: #e4e4e4;
-	}
+  &__container {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #e4e4e4;
+  }
 }
 
 .episode {
-	padding: 25px;
-	background-color: white;
+  padding: 25px;
+  background-color: white;
 
-	&__title {
-		font-size: 2.1em;
-		font-weight: bold;
-		color: #adadad;
-		text-decoration: none;
+  &__title {
+    font-size: 2.1em;
+    font-weight: bold;
+    color: #adadad;
+    text-decoration: none;
 
-		:visited {
-			color: #adadad;
-		}
+    :visited {
+      color: #adadad;
+    }
 
-		&:hover {
-			text-decoration: underline;
-		}
+    &:hover {
+      text-decoration: underline;
+    }
 
-		&__number {
-			color: gray;
-			text-decoration: none;
-		}
+    &__number {
+      color: gray;
+      text-decoration: none;
+    }
 
-		&__name {
-			color: black;
-		}
+    &__name {
+      color: black;
+    }
 
-		&__part {
-			display: block;
-		}
+    &__part {
+      display: block;
+    }
 
-	}
+  }
 }
 
 .title {
-	padding: 30px 0px;
-	font-size: 2.65em;
-	font-weight: bold;
-	color: black;
+  padding: 30px 0px;
+  font-size: 2.65em;
+  font-weight: bold;
+  color: black;
 }
