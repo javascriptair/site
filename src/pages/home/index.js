@@ -24,11 +24,13 @@ function Home(
 ) {
   return (
     <Page>
+
       <Header />
+      <EpisodesSection episodes={futureEpisodes} />
 
       <div className="container">
 
-        <EpisodesSection episodes={futureEpisodes} />
+        
 
         {futureEpisodes.length ? <hr /> : ''}
 
