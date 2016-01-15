@@ -49,7 +49,8 @@ export default {
   `,
   hangoutId: 'c06t5m6an80s3aracj7erm18lkc',
   youTubeId: 'wseL3Vl-Hh4',
-  podbeanId: '',
+  podbeanId: 'edvzg-5bc1f9',
+  shortUrl: 'http://jsair.io/ff-react-redux',
   past: true,
   host: {
     tips: [
