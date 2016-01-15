@@ -1,6 +1,6 @@
 import React from 'react'
 import PersonGroup from '../../../../components/person-group'
-import RSVPIcon from '../../../../components/rsvp-icon'
+// import RSVPIcon from '../../../../components/rsvp-icon'
 import {sortPeople} from '../../../../../shared/utils'
 
 
@@ -14,7 +14,7 @@ function Episode({episodeData}) {
     dateDisplay,
     guests = [],
     descriptionHTML,
-    hangoutUrl,
+    // hangoutUrl,
     numberDisplay,
   } = episodeData
   const sortedGuests = sortPeople(guests)
@@ -44,4 +44,3 @@ function Episode({episodeData}) {
     </div>
   )
 }
-
