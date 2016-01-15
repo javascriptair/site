@@ -1,11 +1,19 @@
 .latest-show {
   color: #ffffff;
 
+  @media only screen and (min-width : 970px) {
+    background-image: url(resources/icons/confetti-dark.svg);
+    background-repeat: no-repeat;
+  }
+
   &__container {
-    max-width: 1000px;
+    // max-width: 1000px;
     width: 90%;
     padding: 30px 0px;
     margin: 0 auto;
+    @media only screen and (min-width : 970px) {
+      padding-left: 270px;
+    }
   }
 
   &__heading {
