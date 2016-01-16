@@ -5,6 +5,8 @@
 }
 
 .subscribe-icon-list__item {
+  width: 70px;
+  height: 70px;
   display: inline-block;
   padding: 0 5px;
 }

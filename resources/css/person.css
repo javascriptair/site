@@ -60,6 +60,7 @@
   &__image {
     transition: all 0.4s;
     width: 80px;
+    height: 80px;
     clip-path: circle(50% at 50% 50%);
   }
 
