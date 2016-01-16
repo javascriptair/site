@@ -2,7 +2,7 @@ import React from 'react'
 
 export default SponsorsSection
 
-function SponsorsSection({basicSponsors = [], premierSponsor = {}}) {
+function SponsorsSection({goldSponsors = [], premierSponsor = {}}) {
   return (
     <section id="sponsors">
       <h2>Sponsors</h2>
@@ -10,7 +10,7 @@ function SponsorsSection({basicSponsors = [], premierSponsor = {}}) {
         <Sponsor {...premierSponsor} />
       </div>
       <div className="sponsor-group +space-children">
-        {basicSponsors.map((s, i) => <Sponsor key={i} {...s} />)}
+        {goldSponsors.map((s, i) => <Sponsor key={i} {...s} />)}
       </div>
       <p className="+text-center">
         JavaScript Air is <a href="mailto:javascriptair+sponsor@gmail.com">sponsored</a> by
