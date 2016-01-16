@@ -1,6 +1,6 @@
 import React from 'react'
 import PersonGroup from '../../../../components/person-group'
-// import RSVPIcon from '../../../../components/rsvp-icon'
+import RSVPIcon from '../../../../components/rsvp-icon'
 import {sortPeople} from '../../../../../shared/utils'
 
 
@@ -14,7 +14,7 @@ function Episode({episodeData}) {
     dateDisplay,
     guests = [],
     descriptionHTML,
-    // hangoutUrl,
+    hangoutUrl,
     numberDisplay,
   } = episodeData
   const sortedGuests = sortPeople(guests)
@@ -29,8 +29,9 @@ function Episode({episodeData}) {
         </a>
 
         <small className="episode__date episode__title__part">
-          {/* <RSVPIcon hangoutUrl={hangoutUrl} /> */}
-          {' ' + dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
+          <RSVPIcon className="rsvp-icon" hangoutUrl={hangoutUrl} />
+          <span className="episode__date__spacer" />
+          {dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
         </small>
 
       </h3>
@@ -39,7 +40,12 @@ function Episode({episodeData}) {
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
 
-      <PersonGroup people={sortedGuests} />
+      <PersonGroup
+        people={sortedGuests}
+        hangoutUrl={hangoutUrl}
+        dateDisplay={dateDisplay}
+        timeHTML={timeHTML}
+      />
 
     </div>
   )

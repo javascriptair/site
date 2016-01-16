@@ -9,6 +9,17 @@
   }
 }
 
+.rsvp-icon {
+  width: 20px;
+  height: 20px;
+
+  &--btn {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+}
+
 .episode {
   margin-bottom: 30px;
   padding: 25px;
@@ -20,7 +31,14 @@
   }
 
   &__date {
+    font-size: 1.17em;
     margin-top: 10px;
+
+    &__spacer {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
   }
 
   &__title {

@@ -1,62 +1,66 @@
 .person-group {
-	margin: 15px 0px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+  margin: 15px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__btn-container {
+    display: flex;
+  }
 }
 
 .person {
-	display: flex;
-	flex-direction: row;
-	margin: 5px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
 
-	text-decoration: none;
+  text-decoration: none;
 
-	color: #adadad;
+  color: #adadad;
 
-	&:hover {
+  &:hover {
 
-		.person__image {
-			clip-path: circle(44% at 50% 50%);
-		}
-	}
+    .person__image {
+      clip-path: circle(44% at 50% 50%);
+    }
+  }
 
-	&__details {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		color: #adadad;
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #adadad;
 
-		&__text {
-			transition: all 0.4s;
-			color: black;
+    &__text {
+      transition: all 0.4s;
+      color: black;
 
-			&--name {
-				font-weight: bold;
-			}
+      &--name {
+        font-weight: bold;
+      }
 
-			&--twitter {
-				text-decoration: underline;
-				transition: all 0s;
+      &--twitter {
+        text-decoration: underline;
+        transition: all 0s;
 
-				&:hover {
-					color: gray;
-				}
-			}
+        &:hover {
+          color: gray;
+        }
+      }
 
-			&:visited {
-				color: #adadad;
-			}
+      &:visited {
+        color: #adadad;
+      }
 
-			padding: 5px 10px;
-			font-size: 1.00em;
-		}
-	}
+      padding: 5px 10px;
+      font-size: 1.00em;
+    }
+  }
 
-	&__image {
-		transition: all 0.4s;
-		width: 80px;
-		clip-path: circle(50% at 50% 50%);
-	}
+  &__image {
+    transition: all 0.4s;
+    width: 80px;
+    clip-path: circle(50% at 50% 50%);
+  }
 
 }
