@@ -37,39 +37,59 @@
 
     &__spacer {
       display: inline-block;
-      width: 10px;
+      width: 15px;
       height: 10px;
+    }
+
+    &__link {
+      border: 2px solid #adadad;
+      padding: 4px 16px;
+      color: #adadad;
+      background-color: white;
+
+      font-size: 0.75em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2em;
+
+      transition: all 0.4s;
+
+      &:visited {
+        color: #adadad;
+      }
+
+      &:hover {
+        color: white;
+        background-color: #adadad;
+      }
+
     }
   }
 
   &__title {
-    font-size: 2.1em;
-    font-weight: bold;
-    color: #adadad;
-    text-decoration: none;
 
-    :visited {
-      color: #adadad;
-    }
-
-    &:hover {
-      text-decoration: underline;
+    &__part {
+      font-size: 2.1em;
+      font-weight: bold;
     }
 
     &__number {
-      color: gray;
-      text-decoration: none;
+      color: #adadad;
     }
 
     &__name {
+      padding-left: 10px;
       color: black;
-    }
+      text-decoration: none;
 
-    &__part {
-      display: block;
+      &:hover {
+        border-bottom: 3px solid #adadad;
+      }
     }
 
   }
+
 }
 
 .title {

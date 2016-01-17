@@ -23,16 +23,29 @@ function Episode({episodeData}) {
 
       <h3>
 
-        <a className="episode__title episode__title__part" href={`/episodes/${date}`}>
-          <span className="episode__title__number">{numberDisplay}</span>
-          <span className="episode__title__name"> {title}</span>
-        </a>
+        <div className="episode__title">
 
-        <small className="episode__date episode__title__part">
+          <span className="episode__title__part episode__title__number">
+            {numberDisplay}
+          </span>
+
+          <span className="episode__title__part">
+            <a className="episode__title__name" href={`/episodes/${date}`}>
+              {title}
+            </a>
+          </span>
+
+        </div>
+
+        <div className="episode__date">
+
           <RSVPIcon className="rsvp-icon" hangoutUrl={hangoutUrl} />
           <span className="episode__date__spacer" />
           {dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
-        </small>
+          <span className="episode__date__spacer" />
+          <a href="" className="episode__date__link">View Episode</a>
+
+        </div>
 
       </h3>
 
