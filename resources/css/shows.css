@@ -10,8 +10,9 @@
 }
 
 .rsvp-icon {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
+  fill: #848484;
 
   &--btn {
     width: 24px;
@@ -26,13 +27,13 @@
   background-color: white;
 
   &__description {
-    margin-top: 15px;
     font-size: 1.3em;
   }
 
   &__date {
     font-size: 1.17em;
-    margin-top: 10px;
+    margin: 18px 0px;
+    color: #848484;
 
     &__spacer {
       display: inline-block;

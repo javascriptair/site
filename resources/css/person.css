@@ -1,11 +1,14 @@
 .person-group {
-  margin: 15px 0px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-content: space-between;
 
   &__btn-container {
+    float: right;
     display: flex;
+    display: none;
   }
 }
 

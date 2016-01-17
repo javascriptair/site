@@ -43,8 +43,6 @@ function Episode({episodeData}) {
       <PersonGroup
         people={sortedGuests}
         hangoutUrl={hangoutUrl}
-        dateDisplay={dateDisplay}
-        timeHTML={timeHTML}
       />
 
     </div>
