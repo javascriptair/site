@@ -2,7 +2,7 @@
   color: #ffffff;
 
   @media only screen and (min-width : 970px) {
-    background-image: url(resources/icons/confetti-dark.svg);
+    background-image: url(resources/images/confetti-dark.svg);
     background-repeat: no-repeat;
   }
 
