@@ -27,6 +27,13 @@ export default {
       link: 'http://jsair.io/wallabyjs',
       tagline: 'Realtime code coverage',
       startDate: '2016-01-15',
-    }
+    },
+    {
+      imgSrc: '/sponsors/codecov.png',
+      name: 'Codecov.io',
+      link: 'http://jsair.io/codecov',
+      tagline: 'Code coverage done right',
+      startDate: '2016-01-15',
+    },
   ]
 }
