@@ -25,14 +25,16 @@ function EpisodePage({episode, sponsors}) {
       title={`JavaScript Air | ${title}`}
       description={getPageDescription(numberDisplay, description)}
     >
-      <Header
-        episode={episode}
-      />
-      {
-        past ?
-          <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
-          <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
-      }
+      <div className="container">
+        <Header
+          episode={episode}
+        />
+        {
+          past ?
+            <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
+            <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
+        }
+      </div>
     </Page>
   )
 }
