@@ -8,6 +8,10 @@
     text-align: center;
     padding-top: 80px;
 
+    @media only screen and (min-width : 1050px) {
+      padding-top: 120px;
+    }
+
     @media only screen and (min-width : 1242px) {
       background-image: url(resources/images/confetti-light.svg), url(resources/images/confetti-light-flipped.svg);
       background-repeat: no-repeat, no-repeat;
@@ -25,10 +29,10 @@
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 90px;
+    padding-bottom: 32px;
 
-    @media only screen and (max-width : 650px) {
-      padding-bottom: 130px;
+    @media only screen and (min-width : 1050px) {
+      padding-bottom: 60px;
     }
   }
 
