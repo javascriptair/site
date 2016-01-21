@@ -22,7 +22,7 @@
 }
 
 .btn--black:hover .btn__icon {
-  fill: white;
+  fill: #f7f7f7;
 }
 
 .btn {
@@ -96,7 +96,7 @@
 
     &:hover {
       background-color: #222;
-      color: white;
+      color: #f7f7f7;
     }
   }
 
