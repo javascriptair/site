@@ -1,5 +1,8 @@
 other/
 build/
+generate/
+shared/
+src/
 app/
-package.json/
+package.json
 
