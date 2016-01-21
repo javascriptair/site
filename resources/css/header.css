@@ -1,5 +1,7 @@
 .header {
   position: relative;
+  font-family: 'PT Sans', sans-serif;
+  color: #222;
 
   &__top-half {
     background-color: #EFDD4F;
@@ -39,7 +41,6 @@
      of the page. */
 
   &__logo {
-
     width: 115px;
     height: 115px;
     fill: white;
@@ -65,7 +66,8 @@
   }
 
   &__title {
-    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     font-size: 3em;
     letter-spacing: -1px;
 
@@ -80,8 +82,7 @@
   }
 
   &__subtext {
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.5em;
     color: #8C8015;
     margin-top: 10px;
     line-height: 1.35em;
@@ -106,7 +107,7 @@
 
   &__tagline {
     font-size: 2.2em;
-    font-weight: bold;
+    font-weight: 400;
   }
 
   &__bubble-container {

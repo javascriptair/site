@@ -75,9 +75,8 @@
 
   &--black {
     font-size: 1.2em;
-    font-weight: bold;
 
-    border: 5px solid black;
+    border: 3px solid black;
     color: black;
 
     transition: 0.4s;
