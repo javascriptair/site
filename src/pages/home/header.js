@@ -1,5 +1,6 @@
 import React from 'react'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
+import Icon from '../../components/icon'
 
 export default Header
 
@@ -34,12 +35,15 @@ function Hero() {
 
       <div className="btn-container header__btn-container">
         <a href="#" className="btn btn--large btn--black">
+          <Icon className="btn__icon" name='podcast' />
           Subscribe
         </a>
         <a href="#" className="btn btn--large btn--black">
+          <Icon className="btn__icon" name='youtube' />
           YouTube
         </a>
         <a href="#" className="btn btn--large btn--black">
+          <Icon className="btn__icon" name='apple' />
           iTunes
         </a>
       </div>

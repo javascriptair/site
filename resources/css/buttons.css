@@ -5,6 +5,8 @@
 
   .btn {
     margin: 0px 10px;
+    display: flex;
+    align-items: center;
   }
 
   @media only screen and (max-width : 515px) {
@@ -19,11 +21,22 @@
 
 }
 
+.btn--black:hover .btn__icon {
+  fill: white;
+}
+
 .btn {
 
   display: inline-block;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 8px;
+
+  &__icon {
+    fill: #222;
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+  }
 
   /* Size Variations */
 
@@ -32,7 +45,7 @@
   }
 
   &--large {
-    width: 160px;
+    width: 145px;
   }
 
   /* Stylistic (Color, Font, Transition) Variations */
@@ -76,14 +89,14 @@
   &--black {
     font-size: 1.2em;
 
-    border: 3px solid black;
-    color: black;
+    border: 3px solid #222;
+    color: #222;
 
     transition: 0.4s;
 
     &:hover {
-      background-color: black;
-      color: #F5DD00;
+      background-color: #222;
+      color: white;
     }
   }
 
