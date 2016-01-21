@@ -33,8 +33,15 @@ function Hero() {
       <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
 
       <div className="btn-container header__btn-container">
-        <a href="#" className="btn btn--large btn--black">Upcoming Shows</a>
-        <a href="#" className="btn btn--large btn--black">Past Shows</a>
+        <a href="#" className="btn btn--large btn--black">
+          Subscribe
+        </a>
+        <a href="#" className="btn btn--large btn--black">
+          YouTube
+        </a>
+        <a href="#" className="btn btn--large btn--black">
+          iTunes
+        </a>
       </div>
 
     </div>
