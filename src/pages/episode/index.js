@@ -67,9 +67,9 @@ function PastEpisodeStuff({episodeData, sponsors}) {
         ) : ''
       }
       <hr />
-      <ShowNotes episode={episodeData} />
-      <hr />
       <SponsorsSection {...sponsors} />
+      <hr />
+      <ShowNotes episode={episodeData} />
     </div>
   )
 }
