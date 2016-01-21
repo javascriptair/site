@@ -19,28 +19,31 @@
 
   &__heading {
     text-transform: uppercase;
-    color: #F5DD00;
-    font-size: 1.3em;
-    font-weight: bold;
+    color: #e2d046;
+    font-size: 1.2em;
     letter-spacing: 1.3px;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
   }
 
   &__link {
     color: #ffffff;
     font-size: 1.9em;
-    font-weight: bold;
     line-height: 1.25em;
-    margin-bottom: 15px;
-    display: block;
+    margin-bottom: 9px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    border-bottom: 1px white solid;
   }
 
   &__date {
+    display: block;
     text-transform: uppercase;
-    color: #606060;
-    font-weight: bold;
+    color: #999999;
     letter-spacing: 1.3px;
-    font-size: 1.1em;
+    font-weight: 400;
+    font-size: 1.0em;
   }
 
 }
