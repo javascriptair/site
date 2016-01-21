@@ -8,15 +8,15 @@
     flex-grow: 1;
 
     &--light {
-      background-color: #d4be13;
+      background-color: #f3df49;
     }
 
     &--medium {
-      background-color: #baa713;
+      background-color: #e2d046;
     }
 
     &--dark {
-      background-color: #98880c;
+      background-color: #e5cd1b;
     }
 
   }
