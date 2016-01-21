@@ -11,7 +11,6 @@ import SponsorsSection from '../../components/sponsors'
 import LinksSection from './sections/links'
 
 import SocialIconGroupSection from './sections/social-icon-group'
-import FeatureShowScript from './scripts/feature-show'
 
 export default Home
 
@@ -59,7 +58,6 @@ function Home(
 
       <LinksSection />
 
-      <FeatureShowScript />
     </Page>
   )
 }
