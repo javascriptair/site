@@ -8,7 +8,7 @@
     text-align: center;
     padding-top: 80px;
 
-    @media only screen and (min-width : 910px) {
+    @media only screen and (min-width : 1242px) {
       background-image: url(resources/images/confetti-light.svg), url(resources/images/confetti-light-flipped.svg);
       background-repeat: no-repeat, no-repeat;
       background-size: 420px 250px, 420px 250px;
