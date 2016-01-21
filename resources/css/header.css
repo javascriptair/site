@@ -127,6 +127,7 @@
      within the context of the header itself. */
 
   &__speech-bubble {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
