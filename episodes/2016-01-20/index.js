@@ -127,13 +127,13 @@ export default {
       `[First Timers Only](https://medium.com/@kentcdodds/first-timers-only-78281ea47455) - My original blogpost about the concept`,
     ],
     tips: [
-      `Take chances, make mistakes, and get messy! -Miss Frizzle, Magic School Bus`
+      `Take chances, make mistakes, and get messy! -Miss Frizzle, Magic School Bus`,
     ],
     picks: [
       `[Babel Service](https://github.com/bahmutov/babel-service) by [Gleb Bahmutov](https://twitter.com/bahmutov)`,
       `[The Magic School Bus](http://www.scholastic.com/magicschoolbus/) (warning! Video auto-plays)`,
     ],
-  }
+  },
 }
 
 
