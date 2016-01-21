@@ -4,7 +4,7 @@
   width: 100%;
 
   &__part {
-    height: 18px;
+    height: 12px;
     flex-grow: 1;
 
     &--light {
