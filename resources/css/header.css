@@ -8,11 +8,6 @@
     text-align: center;
     padding-top: 80px;
 
-    background-image: url(resources/images/vertical-confetti-light.svg), url(resources/images/vertical-confetti-light-flipped.svg);
-    background-repeat: no-repeat, no-repeat;;
-    background-size: 180px 333px, 180px 333px;
-    background-position: left bottom, right bottom;
-
     @media only screen and (min-width : 910px) {
       background-image: url(resources/images/confetti-light.svg), url(resources/images/confetti-light-flipped.svg);
       background-repeat: no-repeat, no-repeat;
