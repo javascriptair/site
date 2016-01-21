@@ -36,7 +36,7 @@ function EpisodeDescription({episode, sponsors}) {
   } = episode
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
-  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.basicSponsors]
+  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors]
   return (
     <div>
       <div>
