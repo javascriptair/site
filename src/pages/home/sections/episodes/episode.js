@@ -21,42 +21,111 @@ function Episode({episodeData}) {
   return (
     <div className="episode">
 
-      <h3>
+      {/*
 
-        <div className="episode__title">
+        EPISODE DATE
+        Information, Calendar, etc 
 
-          <span className="episode__title__part episode__title__number">
-            {numberDisplay}
-          </span>
+      */}
 
-          <span className="episode__title__part">
-            <a className="episode__title__name" href={`/episodes/${date}`}>
-              {title}
-            </a>
-          </span>
+      <div className="episode__date">
+
+        {/* DATE SECTION Number - Displays large, stylized episode number*/}
+        <div className="date-sec date-sec--num">
+          <h2>{numberDisplay}</h2>
+        </div>
+
+        {/* DATE SECTION Calendar - Displays date info and surrounding days */}
+        <div className="date-sec date-sec--cal">
+
+          {/* Calendar Month - Displays the full name of the month */}
+          <div className="cal-sec cal-sec--month">
+            <h3>January</h3>
+          </div>
+
+          {/* Calendar Dates - Displays the dates in a calendar-like row */}
+          <div className="cal-sec cal-sec--dates">
+
+            {/* Date Before - The date before the date of the episode */}
+            <div className="date date--secondary date--left">
+              <div className="date__name">Tue</div>
+              <div className="date__number">12</div>
+            </div>
+
+            {/* Date Episode- The date of the episode */}
+            <div className="date date--main">
+              <div className="date__name">Wed</div>
+              <div className="date__number">13</div>
+            </div>
+
+            {/* Date After - The date after the date of the episode */}
+            <div className="date date--secondary date--right">
+              <div className="date__name">Thur</div>
+              <div className="date__number">14</div>
+            </div>
+
+          </div>
+
+          {/* Calendar Time - Displays the air time of the episode*/}
+          <div className="cal-sec cal-sec--time">
+            <h3 dangerouslySetInnerHTML={timeHTML}></h3>
+          </div>
 
         </div>
 
-        <div className="episode__date">
-
-          <RSVPIcon className="rsvp-icon" hangoutUrl={hangoutUrl} />
-          <span className="episode__date__spacer" />
-          {dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
-          <span className="episode__date__spacer" />
-          <a href="" className="episode__date__link">View Episode</a>
+        {/* DATE SECTION Buttons - Episode options, such as add to calendar*/}
+        <div className="date-sec date-sec--btn">
 
         </div>
 
-      </h3>
-
-      <div className="episode__description">
-        <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
 
-      <PersonGroup
-        people={sortedGuests}
-        hangoutUrl={hangoutUrl}
-      />
+      {/*
+        
+        EPISODE CONTENT
+        Description, title, date, guests, etc
+
+      */}
+
+      <div className="episode__content">
+
+        {/* CONTENT SECTION - Clickable episode title */}
+        <div className="content-sec content-sec--title">
+
+          <h1 className="episode__title">
+            <a className="episode__title__link" href={`/episodes/${date}`}>
+              {title}
+            </a>
+          </h1>
+
+        </div>
+
+        {/* CONTENT SECTION - Description of the current episode*/}
+        <div className="content-sec content-sec--description">
+          <p dangerouslySetInnerHTML={descriptionHTML} />
+        </div>
+
+        {/* CONTENT SECTION - Call-to-acton buttons regarding the current episode*/}
+        <div className="content-sec content-sec--buttons">
+
+          <a className="btn--episode" href={`/episodes/${date}`}>
+            View Episode...
+          </a>
+
+          <a className="btn--episode" href={hangoutUrl}>
+            Add to Calendar...
+          </a>
+
+        </div>
+
+        {/* CONTENT SECTION - Grid display of the episode's guests*/}
+        <div className="content-sec content-sec--guests">
+
+          <PersonGroup people={sortedGuests} hangoutUrl={hangoutUrl} />
+
+        </div>
+
+      </div>
 
     </div>
   )
