@@ -32,12 +32,12 @@ function Episode({episodeData}) {
       <div className="episode__part episode__part--date">
 
         {/* DATE SECTION Number - Displays large, stylized episode number*/}
-        <div className="date-sec date-sec--num">
+        <div className="episode__part--date__section episode__part--date__section--number">
           <h2>{numberDisplay}</h2>
         </div>
 
         {/* DATE SECTION Calendar - Displays date info and surrounding days */}
-        <div className="date-sec date-sec--cal">
+        <div className="episode__part--date__section episode__part--date__section--calendar">
 
           {/* CALENDAR - The container element for the calendar display */}
           <div className="calendar">
@@ -77,8 +77,8 @@ function Episode({episodeData}) {
         </div>
 
         {/* DATE SECTION Buttons - Episode options, such as add to calendar*/}
-        <div className="date-sec date-sec--btn">
-
+        <div className="episode__part--date__section episode__part--date__section--buttons">
+          <a href={`/episodes/${date}`}>Add to Calendar</a>
         </div>
 
       </div>
