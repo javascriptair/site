@@ -130,12 +130,23 @@
 */
 
 .calendar {
+  overflow: hidden;
+  
+
+  /*
+    Date - One date block in the calendar display
+  */
 
   &__date {
-    display: inline-block;
+    overflow: auto;
 
-    width: 64px;
-    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
 
     background-color: #c4c4c4;
 
@@ -144,13 +155,13 @@
     */
 
     &__name {
-      font-size: 1.0em;
+      font-size: 1.2em;
       font-weight: bold;
       text-transform: uppercase;
     }
 
     &__number {
-      font-size: 2.5em;
+      font-size: 3em;
       font-weight: bold;
     }
 
@@ -172,9 +183,15 @@
 
   }
 
+  /*
+    Section - A sub-section of the entire calendar section
+  */
+
   &__section {
+    overflow: hidden;
 
     &--heading {
+      overflow: hidden;
       font-size: 1.1em;
       font-weight: bold;
       text-align: center;
@@ -183,7 +200,12 @@
     }
 
     &--dates {
+      position: absolute;
       overflow: hidden;
+
+      &__container {
+        display: flex;
+      }
     }
   
   }

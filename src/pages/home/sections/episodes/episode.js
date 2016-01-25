@@ -49,19 +49,23 @@ function Episode({episodeData}) {
             {/* SECTION - Dates - Shows the date of and the dates surrounding the episode*/}
             <div className="calendar__section calendar__section--dates">
 
-              <div className="calendar__date calendar__date--before">
-                <div className="calendar__date__name">Tue</div>
-                <div className="calendar__date__number">11</div>
-              </div>
+              <div className="calendar__section--dates__container">
 
-              <div className="calendar__date calendar__date--main">
-                <div className="calendar__date__name">Wed</div>
-                <div className="calendar__date__number">12</div>
-              </div>
+                <div className="calendar__date calendar__date--before">
+                  <div className="calendar__date__name">Tue</div>
+                  <div className="calendar__date__number">11</div>
+                </div>
+                
+                <div className="calendar__date calendar__date--main">
+                  <div className="calendar__date__name">Wed</div>
+                  <div className="calendar__date__number">12</div>
+                </div>
+                
+                <div className="calendar__date calendar__date--after">
+                  <div className="calendar__date__name">Thur</div>
+                  <div className="calendar__date__number">13</div>
+                </div>
 
-              <div className="calendar__date calendar__date--after">
-                <div className="calendar__date__name">Thur</div>
-                <div className="calendar__date__number">13</div>
               </div>
 
             </div>
