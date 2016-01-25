@@ -3,7 +3,6 @@ import PersonGroup from '../../../../components/person-group'
 import RSVPIcon from '../../../../components/rsvp-icon'
 import {sortPeople} from '../../../../../shared/utils'
 
-
 export default Episode
 
 function Episode({episodeData}) {
