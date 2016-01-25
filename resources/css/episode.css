@@ -131,18 +131,59 @@
 
 .calendar {
 
+  &__date {
+    display: inline-block;
+
+    width: 64px;
+    height: 64px;
+
+    background-color: #c4c4c4;
+
+    /*
+      Date Element Children - Name, Number
+    */
+
+    &__name {
+      font-size: 1.0em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &__number {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    /*
+      Date Element Modifiers - Before, Main, After
+    */
+
+    &--before {
+
+    }
+
+    &--main {
+
+    }
+
+    &--after {
+
+    }
+
+  }
+
   &__section {
 
-    &--month {
-
+    &--heading {
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     &--dates {
-
-    }
-
-    &--time {
-      
+      overflow: hidden;
     }
   
   }

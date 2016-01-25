@@ -42,7 +42,7 @@ function Episode({episodeData}) {
           <div className="calendar">
 
             {/* SECTION - Month - Shows the month the episode airs or aired */}
-            <div className="calendar__section calendar__section--month">
+            <div className="calendar__section calendar__section--heading">
               <h3>January</h3>
             </div>
 
@@ -67,7 +67,7 @@ function Episode({episodeData}) {
             </div>
 
             {/* SECTION - Time - Shows the time the episode airs or aired*/}
-            <div className="calendar__section calendar__section--time">
+            <div className="calendar__section calendar__section--heading">
               <h3 dangerouslySetInnerHTML={timeHTML}></h3>
             </div>
 
