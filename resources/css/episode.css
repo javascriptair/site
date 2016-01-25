@@ -40,7 +40,6 @@
       date and time that the episode aired or airs.
     */
     &--date {
-      width: auto;
       padding: 20px;
 
       /*
@@ -79,10 +78,36 @@
     &--content {
       float: none;
       overflow: hidden;
-      width: auto;
+
+      padding: 20px;
     }
 
   }
+
+  .content__section {
+
+    &--title {
+
+      &__header {
+        font-size: 2.3em;
+        font-weight: bold;
+        text-align: center;
+
+        &__link {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+    }
+
+    &--description {
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+  }
+
 }
 
 /*
@@ -95,6 +120,8 @@
 
 .calendar {
 
-  &__section {}
+  &__section {
+  
+  }
 
 }

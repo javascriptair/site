@@ -94,10 +94,10 @@ function Episode({episodeData}) {
       <div className="episode__part episode__part--content">
 
         {/* CONTENT SECTION - Clickable episode title */}
-        <div className="content-sec content-sec--title">
+        <div className="content__section content__section--title">
 
-          <h1 className="episode__title">
-            <a className="episode__title__link" href={`/episodes/${date}`}>
+          <h1 className="content__section--title__header">
+            <a className="content__section--title__header__link" href={`/episodes/${date}`}>
               {title}
             </a>
           </h1>
@@ -105,12 +105,12 @@ function Episode({episodeData}) {
         </div>
 
         {/* CONTENT SECTION - Description of the current episode*/}
-        <div className="content-sec content-sec--description">
+        <div className="content__section content__section--description">
           <p dangerouslySetInnerHTML={descriptionHTML} />
         </div>
 
         {/* CONTENT SECTION - Call-to-acton buttons regarding the current episode*/}
-        <div className="content-sec content-sec--buttons">
+        <div className="content__section content__section--buttons">
 
           <a className="btn--episode" href={`/episodes/${date}`}>
             View Episode...
@@ -123,7 +123,7 @@ function Episode({episodeData}) {
         </div>
 
         {/* CONTENT SECTION - Grid display of the episode's guests*/}
-        <div className="content-sec content-sec--guests">
+        <div className="content__section content__section--guests">
 
           <PersonGroup people={sortedGuests} hangoutUrl={hangoutUrl} />
 
