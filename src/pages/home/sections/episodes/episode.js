@@ -23,12 +23,13 @@ function Episode({episodeData}) {
 
       {/*
 
-        EPISODE DATE
+        DATE
+        EPISODE PART
         Information, Calendar, etc 
 
       */}
 
-      <div className="episode__date">
+      <div className="episode__part episode__part--date">
 
         {/* DATE SECTION Number - Displays large, stylized episode number*/}
         <div className="date-sec date-sec--num">
@@ -38,37 +39,39 @@ function Episode({episodeData}) {
         {/* DATE SECTION Calendar - Displays date info and surrounding days */}
         <div className="date-sec date-sec--cal">
 
-          {/* Calendar Month - Displays the full name of the month */}
-          <div className="cal-sec cal-sec--month">
-            <h3>January</h3>
-          </div>
+          {/* CALENDAR - The container element for the calendar display */}
+          <div className="calendar">
 
-          {/* Calendar Dates - Displays the dates in a calendar-like row */}
-          <div className="cal-sec cal-sec--dates">
-
-            {/* Date Before - The date before the date of the episode */}
-            <div className="date date--secondary date--left">
-              <div className="date__name">Tue</div>
-              <div className="date__number">12</div>
+            {/* SECTION - Month - Shows the month the episode airs or aired */}
+            <div className="calendar__section calendar__section--month">
+              <h3>January</h3>
             </div>
 
-            {/* Date Episode- The date of the episode */}
-            <div className="date date--main">
-              <div className="date__name">Wed</div>
-              <div className="date__number">13</div>
+            {/* SECTION - Dates - Shows the date of and the dates surrounding the episode*/}
+            <div className="calendar__section calendar__section--dates">
+
+              <div className="calendar__date calendar__date--before">
+                <div className="calendar__date__name">Tue</div>
+                <div className="calendar__date__number">11</div>
+              </div>
+
+              <div className="calendar__date calendar__date--main">
+                <div className="calendar__date__name">Wed</div>
+                <div className="calendar__date__number">12</div>
+              </div>
+
+              <div className="calendar__date calendar__date--after">
+                <div className="calendar__date__name">Thur</div>
+                <div className="calendar__date__number">13</div>
+              </div>
+
             </div>
 
-            {/* Date After - The date after the date of the episode */}
-            <div className="date date--secondary date--right">
-              <div className="date__name">Thur</div>
-              <div className="date__number">14</div>
+            {/* SECTION - Time - Shows the time the episode airs or aired*/}
+            <div className="calendar__section calendar__section--time">
+              <h3 dangerouslySetInnerHTML={timeHTML}></h3>
             </div>
 
-          </div>
-
-          {/* Calendar Time - Displays the air time of the episode*/}
-          <div className="cal-sec cal-sec--time">
-            <h3 dangerouslySetInnerHTML={timeHTML}></h3>
           </div>
 
         </div>
@@ -82,12 +85,13 @@ function Episode({episodeData}) {
 
       {/*
         
-        EPISODE CONTENT
+        CONTENT
+        EPISODE PART
         Description, title, date, guests, etc
 
       */}
 
-      <div className="episode__content">
+      <div className="episode__part episode__part--content">
 
         {/* CONTENT SECTION - Clickable episode title */}
         <div className="content-sec content-sec--title">

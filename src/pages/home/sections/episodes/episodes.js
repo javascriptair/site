@@ -11,9 +11,9 @@ function EpisodesSection({episodes = []}) {
     <section id="episodes" className="episodes">
       <div className="episodes__container">
 
-        <h2 className="title">Upcoming Episodes</h2>
+        <h2 className="episodes__title">Upcoming Episodes</h2>
 
-        <div className="episodes">
+        <div className="episodes-container">
           {
             episodes
               .sort(utils.sortEpisodes)
