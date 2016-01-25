@@ -18,6 +18,7 @@
   }
 
   &__heading {
+    font-weight: bold;
     text-transform: uppercase;
     color: #e2d046;
     font-size: 1.2em;
@@ -31,8 +32,6 @@
     line-height: 1.25em;
     margin-bottom: 9px;
     display: inline-block;
-    font-weight: 400;
-    font-family: 'Open Sans';
     text-decoration: none;
     border-bottom: 1px #BABABA dashed;
   }
@@ -42,7 +41,7 @@
     text-transform: uppercase;
     color: #999999;
     letter-spacing: 1.3px;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 1.0em;
   }
 

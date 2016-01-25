@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  font-family: 'PT Sans', sans-serif;
   color: #222;
 
   &__top-half {
@@ -66,8 +65,7 @@
   }
 
   &__title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 3em;
     letter-spacing: -1px;
 
@@ -106,8 +104,8 @@
   }
 
   &__tagline {
+    font-weight: bold;
     font-size: 2.4em;
-    font-weight: 400;
   }
 
   &__bubble-container {
