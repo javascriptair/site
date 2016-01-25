@@ -40,6 +40,7 @@
       date and time that the episode aired or airs.
     */
     &--date {
+      background-color: #dedede;
       padding: 20px;
 
       /*
@@ -102,7 +103,19 @@
     }
 
     &--description {
+      margin-top: 20px;
       font-size: 1.1em;
+      text-align: center;
+    }
+
+    &__button {
+      display: inline-block;
+      padding: 20px 25px;
+      font-size: 1.3em;
+      color: gray;
+    }
+
+    &--buttons {
       text-align: center;
     }
 

@@ -112,11 +112,11 @@ function Episode({episodeData}) {
         {/* CONTENT SECTION - Call-to-acton buttons regarding the current episode*/}
         <div className="content__section content__section--buttons">
 
-          <a className="btn--episode" href={`/episodes/${date}`}>
+          <a className="content__section__button" href={`/episodes/${date}`}>
             View Episode...
           </a>
 
-          <a className="btn--episode" href={hangoutUrl}>
+          <a className="content__section__button" href={hangoutUrl}>
             Add to Calendar...
           </a>
 
