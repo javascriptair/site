@@ -1,0 +1,9 @@
+.panelists {
+  background-color: #141414;
+
+  &__container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

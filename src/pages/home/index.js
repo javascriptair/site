@@ -27,10 +27,11 @@ function Home(
 
       <Header />
       <EpisodesSection episodes={futureEpisodes} />
+      <PanelistsSection panelists={panelists} />
 
       <div className="container">
 
-        
+
 
         {futureEpisodes.length ? <hr /> : ''}
 
@@ -46,7 +47,6 @@ function Home(
 
         <hr />
 
-        <PanelistsSection panelists={panelists} />
 
         <hr />
 
