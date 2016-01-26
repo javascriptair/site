@@ -131,14 +131,12 @@
 
 .calendar {
   overflow: hidden;
-  
 
   /*
     Date - One date block in the calendar display
   */
 
   &__date {
-    overflow: auto;
 
     display: flex;
     flex-direction: column;
@@ -161,7 +159,7 @@
     }
 
     &__number {
-      font-size: 3em;
+      font-size: 3.4em;
       font-weight: bold;
     }
 
@@ -170,7 +168,7 @@
     */
 
     &--before {
-
+      opacity: 0.4;
     }
 
     &--main {
@@ -178,7 +176,8 @@
     }
 
     &--after {
-
+      transform: rotateX(10deg) rotateY(40deg) rotateZ(0deg) scale3d(1.34, 1.02, 1) translate(0px, 7px);
+      opacity: 0.4;
     }
 
   }
@@ -188,23 +187,27 @@
   */
 
   &__section {
-    overflow: hidden;
+    clear: both;
 
     &--heading {
-      overflow: hidden;
-      font-size: 1.1em;
+      font-size: 1.15em;
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
+      color: gray;
+      padding: 10px;
     }
 
     &--dates {
-      position: absolute;
-      overflow: hidden;
+      width: 250px;
 
       &__container {
         display: flex;
+        width: 300px;
+        left: -25px;
+        position: relative;
+        float: left;
       }
     }
   
