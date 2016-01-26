@@ -86,6 +86,12 @@
             text-decoration: none;
             color: gray;
             padding: 10px;
+
+            transition: all 0.4s;
+
+            &:hover {
+              letter-spacing: 0.1em;
+            }
           }
 
         }
@@ -104,6 +110,7 @@
 
     &--title {
       padding: 10px 0px;
+      line-height: 2.8em;
 
       &__header {
         font-size: 2.3em;
@@ -121,14 +128,22 @@
     &--description {
       margin-top: 20px;
       font-size: 1.2em;
+      line-height: 1.55em;
       text-align: center;
     }
 
     &__button {
       display: inline-block;
       padding: 20px 25px;
-      font-size: 1.3em;
+      font-size: 1.4em;
+      text-decoration: none;
       color: gray;
+
+      transition: all 0.4s;
+
+      &:hover {
+        font-weight: bold;
+      }
     }
 
     &--buttons {
@@ -203,11 +218,12 @@
       height: 120px;
       bottom: -120px;
 
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: rgba(0, 0, 0, 0.1);
 
       a {
 
         svg {
+          fill: black;
           width: 40px;
           height: 40px;
           padding-bottom: 10px;
