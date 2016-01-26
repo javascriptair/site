@@ -2,7 +2,7 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   align-content: space-between;
 
   &__btn-container {
@@ -14,19 +14,13 @@
 
 .person {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin: 5px;
 
   text-decoration: none;
 
   color: #adadad;
-
-  &:hover {
-
-    .person__image {
-      clip-path: circle(44% at 50% 50%);
-    }
-  }
 
   &__details {
     display: flex;
@@ -44,6 +38,7 @@
 
       &--twitter {
         text-decoration: underline;
+        text-align: center;
         transition: all 0s;
 
         &:hover {
@@ -62,9 +57,8 @@
 
   &__image {
     transition: all 0.4s;
-    width: 80px;
-    height: 80px;
-    clip-path: circle(50% at 50% 50%);
+    width: 120px;
+    height: 120px;
   }
 
 }
