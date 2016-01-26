@@ -59,6 +59,10 @@ function Episode({episodeData}) {
                 <div className="calendar__date calendar__date--main">
                   <div className="calendar__date__name">Wed</div>
                   <div className="calendar__date__number">12</div>
+                  <div className="calendar__date__slide">
+                    <RSVPIcon hangoutUrl={hangoutUrl}/>
+                    <a href={`/episodes/${date}`}>Add to Calendar</a>
+                  </div>
                 </div>
                 
                 <div className="calendar__date calendar__date--after">

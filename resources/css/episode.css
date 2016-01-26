@@ -155,16 +155,72 @@
   */
 
   &__date {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    overflow: hidden;
+    position: relative;
+
     width: 120px;
     height: 120px;
 
     background-color: #c4c4c4;
+
+    &:hover {
+
+      .calendar__date {
+
+        &__name {
+          filter: blur(1px);
+          color: gray;
+          font-size: 1.3em;
+        }
+
+        &__number {
+          filter: blur(1px);
+          color: gray;
+          font-size: 4.5em;
+        }
+
+      }
+
+    }
+
+    &__slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      position: absolute;
+      box-sizing: border-box;
+
+      padding: 10px;
+      width: 120px;
+      height: 120px;
+      bottom: -120px;
+
+      background-color: rgba(0, 0, 0, 0.05);
+
+      a {
+
+        svg {
+          width: 40px;
+          height: 40px;
+          padding-bottom: 10px;
+        }
+
+        font-size: 1.3em;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
+
+      transition: all 0.6s ease;
+    }
 
     /*
       Date Element Children - Name, Number
@@ -174,11 +230,13 @@
       font-size: 1.4em;
       font-weight: bold;
       text-transform: uppercase;
+      transition: all 0.25s;
     }
 
     &__number {
       font-size: 4em;
       font-weight: bold;
+      transition: all 0.4s;
     }
 
     /*
@@ -191,6 +249,30 @@
     }
 
     &--main {
+
+      &:hover {
+
+        .calendar__date {
+
+          &__slide {
+            bottom: 0;
+          }
+
+          &__name {
+            filter: blur(5px);
+            color: gray;
+            font-size: 1.3em;
+          }
+
+          &__number {
+            filter: blur(5px);
+            color: gray;
+            font-size: 4.5em;
+          }
+
+        }
+
+      }
 
     }
 
