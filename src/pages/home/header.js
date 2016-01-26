@@ -1,6 +1,7 @@
 import React from 'react'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import Icon from '../../components/icon'
+import Decor from '../../components/decor'
 
 export default Header
 
@@ -83,11 +84,7 @@ function Header() {
 
         </div>
 
-        <div className="decor">
-          <span className="decor__part decor__part--dark"></span>
-          <span className="decor__part decor__part--medium"></span>
-          <span className="decor__part decor__part--light"></span>
-        </div>
+        <Decor />
 
       </div>
 

@@ -1,16 +1,13 @@
 import React from 'react'
 import Person from '../../../components/person'
+import Decor from '../../../components/decor'
 
 export default Panelists
 
 function Panelists({panelists}) {
   return (
     <section className="panelists" id="panelists">
-      <div className="decor">
-        <span className="decor__part decor__part--dark"></span>
-        <span className="decor__part decor__part--medium"></span>
-        <span className="decor__part decor__part--light"></span>
-      </div>
+      <Decor />
       <div className="panelists__container">
         <h2>Panelists</h2>
         <div className="person-group +space-children">
