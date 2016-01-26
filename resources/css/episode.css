@@ -26,6 +26,7 @@
 .episode {
   display: flex;
   margin-bottom: 50px;
+  min-height: 450px;
 
   background-color: white;
   box-shadow: 0px 17px 69px -12px rgba(0,0,0,0.42);
@@ -40,6 +41,11 @@
       date and time that the episode aired or airs.
     */
     &--date {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      box-shadow: inset -23px -1px 35px -15px rgba(0,0,0,0.12);
       background-color: #ebebeb;
 
       /*
@@ -54,6 +60,7 @@
         /* Section - NUMBER - Large, stylized episode number */
         &--number {
           padding: 20px 40px;
+          padding-bottom: 0;
 
           h2 {
             font-size: 6.25em;
@@ -69,6 +76,17 @@
 
         /* Section - BUTTONS - Displays call-to-action buttons and interactions */
         &--buttons {
+          padding: 20px;
+          justify-self: flex-end;
+          text-align: center;
+
+          a {
+            font-size: 1.05em;
+            font-weight: bold;
+            text-decoration: none;
+            color: gray;
+            padding: 10px;
+          }
 
         }
 
@@ -143,8 +161,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
     background-color: #c4c4c4;
 
@@ -153,13 +171,13 @@
     */
 
     &__name {
-      font-size: 1.2em;
+      font-size: 1.4em;
       font-weight: bold;
       text-transform: uppercase;
     }
 
     &__number {
-      font-size: 3.4em;
+      font-size: 4em;
       font-weight: bold;
     }
 
@@ -168,6 +186,7 @@
     */
 
     &--before {
+      transform: perspective(500px) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) scale(.935) scale3d(1, 1, 1) translate(9.4px, 0px);
       opacity: 0.4;
     }
 
@@ -176,7 +195,7 @@
     }
 
     &--after {
-      transform: rotateX(10deg) rotateY(40deg) rotateZ(0deg) scale3d(1.34, 1.02, 1) translate(0px, 7px);
+      transform: perspective(500px) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scale(.935) scale3d(1, 1, 1) translate(-9.4px, 0px);
       opacity: 0.4;
     }
 
@@ -190,13 +209,21 @@
     clear: both;
 
     &--heading {
-      font-size: 1.15em;
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      
       color: gray;
-      padding: 10px;
+      padding: 15px;
+    }
+
+    &--month {
+      font-size: 1.5em;
+    }
+
+    &--time {
+      letter-spacing: 0.06em;
+      font-size: 1.15em;
     }
 
     &--dates {
@@ -204,8 +231,8 @@
 
       &__container {
         display: flex;
-        width: 300px;
-        left: -25px;
+        width: 360px;
+        left: -54px;
         position: relative;
         float: left;
       }
