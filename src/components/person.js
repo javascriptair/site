@@ -2,9 +2,10 @@ import React from 'react'
 
 export default Person
 
-function Person({twitter, link, name, imgSrc, squareImage}) {
+function Person({className, twitter, link, name, imgSrc, squareImage}) {
+  className = className ? `${className} person` : 'person'
   return (
-    <a className="person" href={link}>
+    <a className={className} href={link}>
 
       <img
         className={squareImage ? 'square person__part' : 'person__image person__part'}
@@ -33,4 +34,3 @@ Person.propTypes = {
   name: React.PropTypes.string.isRequired,
   imgSrc: React.PropTypes.string.isRequired,
 }
-

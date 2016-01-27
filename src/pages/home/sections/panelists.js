@@ -4,16 +4,22 @@ import Decor from '../../../components/decor'
 
 export default Panelists
 
+function PanelistsList({panelists}) {
+  return (
+    <div className="panelists-list">
+      {panelists.map((p, i) => <Person className="panelists-list__panelist" {...p} key={i} />)}
+    </div>
+  )
+}
+
 function Panelists({panelists}) {
   return (
-    <section className="panelists" id="panelists">
+    <section className="panelists-section" id="panelists">
       <Decor />
-      <div className="panelists__container">
-        <h2>Panelists</h2>
-        <div className="person-group +space-children">
-          {panelists.map((p, i) => <Person {...p} key={i} />)}
-        </div>
-        <p className="+text-center">
+      <div className="panelists-section__container">
+        <h2 className="panelists-section__heading">Panelists</h2>
+        <PanelistsList panelists={panelists} />
+        <p className="panelists-section__caption">
           JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
           some of the finest people the community has to offer
         </p>
