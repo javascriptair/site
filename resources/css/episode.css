@@ -42,7 +42,7 @@
     flex-direction: column;
   }
 
-  @media only screen and (max-width : 500px) {
+  @media only screen and (max-width : 700px) {
     width: 90%;
   }
 
@@ -65,6 +65,10 @@
       background-color: #ebebeb;
 
       @media only screen and (max-width : 1100px) {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         box-shadow: none;
       }
 
@@ -77,20 +81,32 @@
       */
       &__section {
 
-        display: block;
-
         /* Section - NUMBER - Large, stylized episode number */
         &--number {
           padding: 20px 40px;
           padding-bottom: 0;
 
-          h2 {
+          &__h2 {
             display: block;
             font-size: 6.25em;
             font-weight: bold;
           }
 
         }
+
+        @media only screen and (max-width : 1100px) {
+
+          &--number {
+            padding: 0px;
+            padding-right: 15px;
+
+            &__h2 {
+              font-size: 1.7em;
+            }
+          }
+
+        }
+
 
         /* Section - CALENDAR - Displays nearby dates in a calendar format */
         &--calendar {
@@ -102,6 +118,10 @@
           padding: 20px;
           justify-self: flex-end;
           text-align: center;
+
+          @media only screen and (max-width : 1100px) {
+            display: none;
+          }
 
           a {
             font-size: 1.05em;
@@ -193,6 +213,7 @@
 
     @media only screen and (max-width : 1100px) {
       display: block;
+      font-size: 1.7em;
     }
   }
 

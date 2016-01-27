@@ -40,7 +40,7 @@ function Episode({episodeData}) {
 
         {/* DATE SECTION Number - Displays large, stylized episode number*/}
         <div className="episode__part--date__section episode__part--date__section--number">
-          <h2>{numberDisplay}</h2>
+          <h2 className="episode__part--date__section--number__h2">{numberDisplay}</h2>
         </div>
 
         {/* DATE SECTION Calendar - Displays date info and surrounding days */}
