@@ -6,7 +6,7 @@
 
   &__panelist {
     margin: 0;
-    padding: 20px;
+    margin-bottom: 30px;
 
 
     @media only screen and (min-width : 400px) {
