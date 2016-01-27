@@ -6,10 +6,11 @@
 
   &__panelist {
     margin: 0;
+    padding: 20px;
 
     .person__details__text--twitter,
     .person__details__text--name {
-      color: #f8f8f8; 
+      color: #f8f8f8;
     }
 
     @media only screen and (min-width : 400px) {

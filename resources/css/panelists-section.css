@@ -22,5 +22,12 @@
     text-transform: uppercase;
     margin-top: 20px;
     margin-bottom: 20px;
+    
+    @media only screen and (min-width : 800px) {
+      text-align: left;
+      font-size: 1.7em;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
 }
