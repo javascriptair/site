@@ -45,8 +45,8 @@
 
   &__link {
     color: #f0f0f0;
-    text-decoration: none;
     font-weight: bold;
     font-style: italic;
+    text-decoration: underline;
   }
 }
