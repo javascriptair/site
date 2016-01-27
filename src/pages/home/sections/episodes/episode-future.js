@@ -1,9 +1,9 @@
 import React from 'react'
 import {displayListify} from '../../../../../shared/utils'
 
-export default EpisodeMobile
+export default EpisodeFuture
 
-function EpisodeMobile({episodeData}) {
+function EpisodeFuture({episodeData}) {
 
   const {
     date,

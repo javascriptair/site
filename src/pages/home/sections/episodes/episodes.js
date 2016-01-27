@@ -1,6 +1,6 @@
 import React from 'react'
 import Episode from './episode'
-import EpisodeMobile from './episode-mobile'
+import EpisodeFuture from './episode-future'
 
 import * as utils from '../../../../../shared/utils'
 
@@ -31,7 +31,7 @@ function EpisodesSection({episodes = []}) {
 
         <div className="episodes-container--future">
           {
-            sortedEpisodes.splice(3, sortedEpisodes.length).map((e, i) => <EpisodeMobile episodeData={e} key={i} />)
+            sortedEpisodes.splice(3, sortedEpisodes.length).map((e, i) => <EpisodeFuture episodeData={e} key={i} />)
           }
         </div>
 
