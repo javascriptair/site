@@ -4,10 +4,10 @@ import Decor from '../../../components/decor'
 
 export default Panelists
 
-function PanelistsList({panelists}) {
+function PanelistList({panelists}) {
   return (
     <div className="panelists-list">
-      {panelists.map((p, i) => <Person className="panelists-list__panelist" {...p} key={i} />)}
+      {panelists.map((p, i) => <Person className="panelist-list__panelist" {...p} key={i} />)}
     </div>
   )
 }
@@ -18,7 +18,7 @@ function Panelists({panelists}) {
       <Decor />
       <div className="panelists-section__container">
         <h2 className="panelists-section__heading">Panelists</h2>
-        <PanelistsList panelists={panelists} />
+        <PanelistList panelists={panelists} />
         <p className="panelists-section__caption">
           JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
           some of the finest people the community has to offer
