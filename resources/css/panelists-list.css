@@ -1,5 +1,22 @@
+
 .panelists-list {
+  lost-utility: clearfix;
+  width: 80%;
+  margin: auto;
 
   &__panelist {
+    margin: 0;
+
+    @media only screen and (min-width : 400px) {
+      lost-column: 1/2;
+    }
+
+    @media only screen and (min-width : 600px) {
+      lost-column: 1/3;
+    }
+
+    @media only screen and (min-width : 800px) {
+      lost-column: 1/4;
+    }
   }
 }
