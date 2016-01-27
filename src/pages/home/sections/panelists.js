@@ -1,6 +1,7 @@
 import React from 'react'
 import Person from '../../../components/person'
 import Decor from '../../../components/decor'
+import Host from './host'
 
 export default Panelists
 
@@ -17,6 +18,8 @@ function Panelists({panelists}) {
     <section className="panelists-section" id="panelists">
       <Decor />
       <div className="panelists-section__container">
+        <h2 className="panelists-section__heading">Host</h2>
+        <Host />
         <h2 className="panelists-section__heading">Panelists</h2>
         <PanelistList panelists={panelists} />
         <p className="panelists-section__caption">

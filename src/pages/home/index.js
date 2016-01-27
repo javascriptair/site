@@ -4,7 +4,6 @@ import Page from '../../components/page'
 import Header from './header'
 import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
-import HostSection from './sections/host'
 import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
 import LinksSection from './sections/links'
@@ -42,8 +41,6 @@ function Home(
         <PreviousEpisodeSection episodes={pastEpisodes} />
 
         {pastEpisodes.length ? <hr /> : ''}
-
-        <HostSection />
 
         <hr />
 
