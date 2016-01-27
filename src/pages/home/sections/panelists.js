@@ -8,7 +8,7 @@ export default Panelists
 function PanelistList({panelists}) {
   return (
     <div className="panelist-list">
-      {panelists.map((p, i) => <Person className="panelist-list__panelist" {...p} key={i} />)}
+      {panelists.map((p, i) => <Person className="panelist panelist-list__panelist" {...p} key={i} />)}
     </div>
   )
 }

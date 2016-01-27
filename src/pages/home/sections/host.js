@@ -7,7 +7,7 @@ function Host() {
   return (
     <section id="host">
       <div className="person-group">
-        <Person name="Kent C. Dodds" twitter="kentcdodds" imgSrc="resources/kentcdodds.png"
+        <Person className="panelist" name="Kent C. Dodds" twitter="kentcdodds" imgSrc="resources/kentcdodds.png"
           link="https://twitter.com/kentcdodds"/>
       </div>
       <p className="panelists-section__caption">
