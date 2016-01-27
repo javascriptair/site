@@ -13,6 +13,11 @@ export default {
       imgSrc: '/episodes/2016-01-27/steveluc.png',
       link: 'https://www.linkedin.com/in/steve-lucco-b5084958',
     },
+    {
+      name: 'Ed Maurer',
+      imgSrc: '/episodes/2016-01-27/edmaurer.png',
+      link: 'https://www.linkedin.com/in/ed-maurer-6ab4a6',
+    },
   ],
   description: `
     Microsoft has been making some pretty awesome
