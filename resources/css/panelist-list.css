@@ -2,6 +2,9 @@
 .panelist-list {
   lost-utility: clearfix;
 
+  width: 90%;
+  margin: auto;
+
   &__panelist {
 
     @media only screen and (min-width: 730px) {
