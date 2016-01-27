@@ -12,11 +12,18 @@
     margin: 0 auto;
     width: 1000px;
     background-color: #e4e4e4;
+  }
 
     @media only screen and (max-width : 1100px) {
-      width: 100%;
+      &__title {
+        text-align: center;
+      }
+
+      &__container {
+        width: 100%;
+      }
     }
-  }
+
 }
 
 /*
