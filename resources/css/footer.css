@@ -8,4 +8,10 @@
     width: 90%;
     margin: 0 auto;
   }
+
+  &__col {
+    background-color: tomato;
+    float: left;
+    width: 50%;
+  }
 }
