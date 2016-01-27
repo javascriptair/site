@@ -30,26 +30,13 @@ function Home(
 
       <div className="container">
 
-
-
-        {futureEpisodes.length ? <hr /> : ''}
-
         <SponsorsSection {...sponsors} />
-
-        <hr />
 
         <PreviousEpisodeSection episodes={pastEpisodes} />
 
         {pastEpisodes.length ? <hr /> : ''}
 
-        <hr />
-
-
-        <hr />
-
         <SocialIconGroupSection />
-
-        <hr />
 
         <LinksSection />
 
