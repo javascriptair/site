@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: space-between;
+  justify-content: center;
 
   &__btn-container {
     float: right;

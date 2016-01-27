@@ -12,6 +12,10 @@
     margin: 0 auto;
     width: 1000px;
     background-color: #e4e4e4;
+
+    @media only screen and (max-width : 1100px) {
+      width: 100%;
+    }
   }
 }
 
@@ -30,6 +34,17 @@
 
   background-color: white;
   box-shadow: 0px 17px 69px -12px rgba(0,0,0,0.42);
+
+  @media only screen and (max-width : 1100px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width : 500px) {
+    width: 90%;
+  }
 
   &__part {
     float: left;

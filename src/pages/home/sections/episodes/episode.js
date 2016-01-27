@@ -2,10 +2,12 @@ import React from 'react'
 import PersonGroup from '../../../../components/person-group'
 import RSVPIcon from '../../../../components/rsvp-icon'
 import {sortPeople} from '../../../../../shared/utils'
+import moment from 'moment'
 
 export default Episode
 
 function Episode({episodeData}) {
+
   const {
     date,
     title,
@@ -16,7 +18,13 @@ function Episode({episodeData}) {
     hangoutUrl,
     numberDisplay,
   } = episodeData
+
   const sortedGuests = sortPeople(guests)
+
+  const dateCurrent = moment(date)
+  const dateAfter = moment(date).add(1, 'days')
+  const dateBefore = moment(date).subtract(1, 'days')
+
   return (
     <div className="episode">
 
@@ -43,7 +51,13 @@ function Episode({episodeData}) {
 
             {/* SECTION - Month - Shows the month the episode airs or aired */}
             <div className="calendar__section calendar__section--heading calendar__section--month">
-              <h3>January</h3>
+              <h3>{ dateCurrent.format('MMMM')}</h3>
+            </div>
+
+            {/* SECTION - Mobile Dates - Shows the date in fashion conducive to mobile devices */}
+
+            <div className="calendar__section calendar__section--mobile-dates">
+              { dateCurrent.format('ddd DD') }
             </div>
 
             {/* SECTION - Dates - Shows the date of and the dates surrounding the episode*/}
@@ -52,13 +66,13 @@ function Episode({episodeData}) {
               <div className="calendar__section--dates__container">
 
                 <div className="calendar__date calendar__date--before">
-                  <div className="calendar__date__name">Tue</div>
-                  <div className="calendar__date__number">11</div>
+                  <div className="calendar__date__name">{dateBefore.format('ddd')}</div>
+                  <div className="calendar__date__number">{dateBefore.format('D')}</div>
                 </div>
                 
                 <div className="calendar__date calendar__date--main">
-                  <div className="calendar__date__name">Wed</div>
-                  <div className="calendar__date__number">12</div>
+                  <div className="calendar__date__name">{dateCurrent.format('ddd')}</div>
+                  <div className="calendar__date__number">{dateCurrent.format('D')}</div>
                   <div className="calendar__date__slide">
                     <RSVPIcon hangoutUrl={hangoutUrl}/>
                     <a href={`/episodes/${date}`}>Add to Calendar</a>
@@ -66,8 +80,8 @@ function Episode({episodeData}) {
                 </div>
                 
                 <div className="calendar__date calendar__date--after">
-                  <div className="calendar__date__name">Thur</div>
-                  <div className="calendar__date__number">13</div>
+                  <div className="calendar__date__name">{dateAfter.format('ddd')}</div>
+                  <div className="calendar__date__number">{dateAfter.format('D')}</div>
                 </div>
 
               </div>
