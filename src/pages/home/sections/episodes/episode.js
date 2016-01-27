@@ -46,6 +46,10 @@ function Episode({episodeData}) {
         {/* DATE SECTION Calendar - Displays date info and surrounding days */}
         <div className="episode__part--date__section episode__part--date__section--calendar">
 
+          <div className="calendar--mobile">
+            { dateCurrent.format('ddd, MMM DD, YYYY') }
+          </div>
+
           {/* CALENDAR - The container element for the calendar display */}
           <div className="calendar">
 
@@ -55,10 +59,6 @@ function Episode({episodeData}) {
             </div>
 
             {/* SECTION - Mobile Dates - Shows the date in fashion conducive to mobile devices */}
-
-            <div className="calendar__section calendar__section--mobile-dates">
-              { dateCurrent.format('ddd DD') }
-            </div>
 
             {/* SECTION - Dates - Shows the date of and the dates surrounding the episode*/}
             <div className="calendar__section calendar__section--dates">
