@@ -12,7 +12,7 @@
     "build:episode": "./scripts/build-episode.sh",
     "prebuild:guests": "rm -rf guests && mkdir guests",
     "build:guests": "babel-node generate/guests > guests/index.html",
-    "build:css": "postcss -u postcss-import -u postcss-nested -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css",
+    "build:css": "postcss -u postcss-import -u postcss-nested -u lost -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css",
     "build": "npm run build:index && npm run build:episodes && npm run build:guests && npm run build:css",
     "prebuild": "npm run eslint",
     "deploy": "./scripts/deploy.sh",
@@ -70,6 +70,7 @@
     "read-glob": "2.1.0",
     "surge": "0.17.3",
     "trash": "3.4.0",
-    "uglify-js": "2.6.1"
+    "uglify-js": "2.6.1",
+    "lost": "^6.7.0"
   }
 }
