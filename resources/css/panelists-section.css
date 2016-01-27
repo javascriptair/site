@@ -2,7 +2,7 @@
   background-color: #141414;
   lost-utility: clearfix;
 
-  @media only screen and (min-width : 1400px) {
+  @media only screen and (min-width : 1000px) {
     background-image: url(resources/images/confetti-dark.svg);
     background-repeat: no-repeat;
     background-position: right top;
