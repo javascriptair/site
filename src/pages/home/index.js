@@ -7,7 +7,7 @@ import EpisodesSection from './sections/episodes'
 import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
 import LinksSection from './sections/links'
-import Footer from './sections/footer';
+import Footer from './sections/footer'
 
 import SocialIconGroupSection from './sections/social-icon-group'
 import FeatureShowScript from './scripts/feature-show'
