@@ -12,6 +12,7 @@
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 20px;
   }
 
   &__heading {
@@ -30,9 +31,21 @@
       margin-bottom: 30px;
     }
   }
-  
+
   .person__details__text--twitter,
   .person__details__text--name {
       color: #f8f8f8;
+  }
+
+  &__caption {
+    color: #f0f0f0;
+    text-align: center;
+  }
+
+  &__link {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
   }
 }

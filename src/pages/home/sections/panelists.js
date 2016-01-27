@@ -23,7 +23,8 @@ function Panelists({panelists}) {
         <h2 className="panelists-section__heading">Panelists</h2>
         <PanelistList panelists={panelists} />
         <p className="panelists-section__caption">
-          JavaScript Air has <a href="http://panelists.javascriptair.com">a panel</a> of
+          JavaScript Air has <a className="panelists-section__link"
+            href="http://panelists.javascriptair.com">a panel</a> of
           some of the finest people the community has to offer
         </p>
       </div>
