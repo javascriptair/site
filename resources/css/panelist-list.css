@@ -7,6 +7,11 @@
   &__panelist {
     margin: 0;
 
+    .person__details__text--twitter,
+    .person__details__text--name {
+      color: #f8f8f8; 
+    }
+
     @media only screen and (min-width : 400px) {
       lost-column: 1/2;
     }
