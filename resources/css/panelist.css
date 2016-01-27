@@ -16,4 +16,13 @@
     }
   }
 
+  &--host {
+    padding: 0 15px;
+    @media only screen and (min-width: 730px) {
+      width: 303px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
 }

@@ -25,7 +25,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
-    @media only screen and (min-width : 800px) {
+    @media only screen and (min-width : 900px) {
       text-align: left;
       font-size: 1.7em;
       margin-top: 30px;
@@ -40,7 +40,10 @@
 
   &__caption {
     color: #f0f0f0;
-    text-align: center;
+    line-height: 1.3em;
+    @media only screen and (min-width: 730px) {
+      text-align: center;
+    }
   }
 
   &__link {

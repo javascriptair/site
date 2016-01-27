@@ -2,8 +2,8 @@
 .panelist-list {
   lost-utility: clearfix;
 
-  width: 90%;
   margin: auto;
+  padding: 0 15px;
 
   &__panelist {
 
