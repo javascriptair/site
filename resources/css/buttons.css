@@ -26,7 +26,6 @@
 }
 
 .btn {
-
   display: inline-block;
   text-decoration: none;
   padding: 8px;
@@ -45,7 +44,7 @@
   }
 
   &--large {
-    width: 145px;
+    width: 240px;
   }
 
   /* Stylistic (Color, Font, Transition) Variations */
@@ -73,6 +72,7 @@
   &--monochrome {
     font-size: 1.2em;
     font-weight: bold;
+    text-align: center;
 
     border: 5px solid black;
     background-color: black;
@@ -87,16 +87,19 @@
   }
 
   &--black {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: bold;
+    justify-content: center;
+    padding: 10px;
 
-    border: 3px solid #222;
-    color: #222;
+    border: 5px solid #222;
+    color: black;
 
     transition: 0.4s;
 
     &:hover {
       background-color: #222;
-      color: #f7f7f7;
+      color: #efdd4f;
     }
   }
 

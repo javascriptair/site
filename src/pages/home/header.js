@@ -35,18 +35,30 @@ function Hero() {
       <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
 
       <div className="btn-container header__btn-container">
-        <a href="#" className="btn btn--large btn--black">
-          <Icon className="btn__icon" name='podcast' />
-          Subscribe
-        </a>
-        <a href="#" className="btn btn--large btn--black">
-          <Icon className="btn__icon" name='youtube' />
-          YouTube
-        </a>
-        <a href="#" className="btn btn--large btn--black">
-          <Icon className="btn__icon" name='apple' />
-          iTunes
-        </a>
+        <a href="#" className="btn btn--large btn--black">Upcoming Shows</a>
+        <a href="#" className="btn btn--large btn--black">Past Shows</a>
+      </div>
+
+      <div className="social__container">
+
+        <div className="social">
+
+            <div className="social__decor"></div>
+
+            <div className="social__bottom">
+
+              <div className="social__title">
+                <h2>Available On</h2>
+              </div>
+
+              <div className="social__actions">
+                <SubscribeIconGroupSection />
+              </div>
+
+            </div>
+            
+          </div>
+
       </div>
 
     </div>
@@ -77,10 +89,6 @@ function Header() {
 
           <Heading />
           <Hero />
-
-          <div className="header__bubble-container">
-            <SubscribeIconGroupSection />
-          </div>
 
         </div>
 
