@@ -44,8 +44,9 @@ export default {
     will be open sourced. Join us as we talk about
     Chakra with some of the subject matter experts!
     `,
-  podbeanId: '',
+  podbeanId: 'wgctq-5c219b',
   youTubeId: '0WdFvLSEX8c',
+  shortUrl: 'http://jsair.io/chakra',
   past: true,
   host: {
     links: [
