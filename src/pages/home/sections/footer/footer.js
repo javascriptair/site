@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from '../../../components/icon'
-import FooterLinks from './links'
+import Icon from '../../../../components/icon'
+import FooterLinks from './footer-links'
 
 export default Footer
 
