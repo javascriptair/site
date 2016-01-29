@@ -11,11 +11,15 @@
   }
 
   &__col {
-    float: left;
-    width: 50%;
+    @media only screen and (min-width : 900px) {
+      float: left;
+      width: 50%;
+    }
   }
 
   &__nav-footer-list{
-    float: right;
+    @media only screen and (min-width : 900px) {
+      float: right;
+    }
   }
 }
