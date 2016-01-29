@@ -1,18 +1,24 @@
 
 .panelist-list {
-  lost-utility: clearfix;
 
   margin: auto;
   padding: 0 15px;
 
+  @media only screen and (min-width: 730px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__panelist {
 
     @media only screen and (min-width: 730px) {
-      lost-column: 1/2;
+      width: 50%;
     }
 
     @media only screen and (min-width : 900px) {
-      lost-column: 1/3;
+      width: 33.3%;
     }
   }
 }
