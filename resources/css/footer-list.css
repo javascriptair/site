@@ -1,0 +1,10 @@
+.footer-list {
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+  }
+}
