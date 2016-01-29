@@ -25,17 +25,14 @@ function Home(
 
       <Header />
       <EpisodesSection episodes={futureEpisodes} />
+      <div className="container">
+        <PreviousEpisodeSection episodes={pastEpisodes} />
+        <SponsorsSection {...sponsors} />
+      </div>
       <PanelistsSection panelists={panelists} />
       <Footer />
 
-      <div className="container">
-
-        <SponsorsSection {...sponsors} />
-
-        <PreviousEpisodeSection episodes={pastEpisodes} />
-
-        <FeatureShowScript />
-      </div>
+      <FeatureShowScript />
     </Page>
   )
 }
