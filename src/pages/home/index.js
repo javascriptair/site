@@ -6,10 +6,8 @@ import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
-import LinksSection from './sections/footer/footer-links-list'
 import Footer from './sections/footer'
 
-import SocialIconGroupSection from './sections/footer/footer-social-links-list'
 import FeatureShowScript from './scripts/feature-show'
 
 export default Home
@@ -35,12 +33,6 @@ function Home(
         <SponsorsSection {...sponsors} />
 
         <PreviousEpisodeSection episodes={pastEpisodes} />
-
-        {pastEpisodes.length ? <hr /> : ''}
-
-        <SocialIconGroupSection />
-
-        <LinksSection />
 
         <FeatureShowScript />
       </div>
