@@ -2,13 +2,13 @@ import React from 'react'
 
 export default Person
 
-function Person({className, twitter, link, name, imgSrc, squareImage}) {
+function Person({className, twitter, link, name, imgSrc}) {
   className = className ? `${className} person` : 'person'
   return (
     <a className={className} href={link}>
 
       <img
-        className={squareImage ? 'square person__part' : 'person__image person__part'}
+        className='person__image person__part'
         src={imgSrc}
         alt={`${name} Profile Picture`}
       />
