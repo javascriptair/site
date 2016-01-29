@@ -14,4 +14,8 @@
     float: left;
     width: 50%;
   }
+
+  &__nav-footer-list{
+    float: right;
+  }
 }

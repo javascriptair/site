@@ -20,7 +20,7 @@ function Footer() {
           </ul>
         </div>
         <div className="footer__col">
-          <ul className="footer-list">
+          <ul className="footer__nav-footer-list footer-list">
             <li className="footer-list__item">
               <a className="footer-list__link" href="http://suggest.javascriptair.com/">Suggest an episode</a>
             </li>
