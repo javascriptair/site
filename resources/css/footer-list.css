@@ -3,7 +3,7 @@
   margin-bottom: 30px;
 
   @media only screen and (min-width : 490px) {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 
   @media only screen and (min-width : 900px) {
@@ -13,9 +13,11 @@
   &__item {
     display: block;
     margin-bottom: 10px;
+    line-height: 23px;
 
     @media only screen and (min-width : 490px) {
       display: inline-block;
+      margin-bottom: 0;
     }
   }
 
