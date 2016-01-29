@@ -7,6 +7,17 @@ function Footer() {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__col">
+          <ul className="footer-list">
+            <li className="footer-list__item">
+              <a className="footer-list__link" href="https://twitter.com/JavaScriptAir">Twitter</a>
+            </li>
+            <li className="footer-list__item">
+              <a className="footer-list__link" href="https://plus.google.com/105493143005968326308">Google+</a>
+            </li>
+            <li className="footer-list__item">
+              <a className="footer-list__link" href="https://facebook.com/JavaScriptAir">Facebook</a>
+            </li>
+          </ul>
         </div>
         <div className="footer__col">
           <ul className="footer-list">
