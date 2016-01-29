@@ -4,7 +4,15 @@
   }
   &__link {
     color: white;
-    padding-right: 10px;
+    margin-right: 15px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    fill: white;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
   }
 }
