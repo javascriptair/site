@@ -1,6 +1,5 @@
 import React from 'react'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
-import Icon from '../../components/icon'
 import Decor from '../../components/decor'
 
 export default Header
@@ -19,8 +18,8 @@ function Heading() {
       </h1>
 
       <p className="header__subtext">
-        Sponsored by <a className="header__sponsor-link" href="">Egghead.io</a>
-        , and <a className="header__sponsor-link" href="" >others</a>.
+        Sponsored by <a className="header__sponsor-link" href="http://jsair.io/eggheadio">Egghead.io</a>
+        , and <a className="header__sponsor-link" href="#sponsors">others</a>.
       </p>
 
     </div>

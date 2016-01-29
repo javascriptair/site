@@ -12,7 +12,6 @@ function Episode({episodeData}) {
     date,
     title,
     timeHTML,
-    dateDisplay,
     guests = [],
     descriptionHTML,
     hangoutUrl,
