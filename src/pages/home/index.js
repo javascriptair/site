@@ -6,10 +6,10 @@ import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
 import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
-import LinksSection from './sections/footer/footer-links'
+import LinksSection from './sections/footer/footer-links-list'
 import Footer from './sections/footer'
 
-import SocialIconGroupSection from './sections/social-icon-group'
+import SocialIconGroupSection from './sections/footer/footer-social-links-list'
 import FeatureShowScript from './scripts/feature-show'
 
 export default Home
