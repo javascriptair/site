@@ -12,7 +12,7 @@ const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
 export default getEpisodeData
 
 function getEpisodeData(episodePath) {
-  /* eslint complexity:[2,6] */
+  /* eslint complexity:[2,7] */
   const episode = require(episodePath).default
   const date = dateRegex.exec(episodePath)[1]
   const number = episode.number || episodes.indexOf(date)
@@ -58,6 +58,7 @@ function getEpisodeData(episodePath) {
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   const description = episode.description || getDefaultDescription()
+  const {transcript} = episode
 
   return {
     date,
@@ -67,6 +68,7 @@ function getEpisodeData(episodePath) {
     description,
     descriptionHTML: markdownToHTML(description),
     timeHTML: markdownToHTML(time, true),
+    transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
     number,
     numberDisplay,
@@ -95,6 +97,17 @@ function markdownToHTML(string, stripP) {
     html = html.slice(3, -4)
   }
   return {__html: html}
+}
+
+function transcriptToHTML(transcript) {
+  const html = transcript
+    .split('\n')
+    .map(t => t.trim()) // get rid extra whitespace
+    .filter(t => !!t) // get rid of whitespace only
+    .join('</p><p>')
+  const wrappedHTML = `<p>${html}</p>`
+  const noEmptyPTagsHTML = wrappedHTML.replace(/<p>\W{0,}<\/p>/g, '')
+  return {__html: noEmptyPTagsHTML}
 }
 
 

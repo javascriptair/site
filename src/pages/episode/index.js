@@ -12,6 +12,7 @@ import Header from './sections/header'
 import AudioSection from './sections/audio'
 import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
+import TranscriptSection from './sections/transcript'
 import SponsorsSection from '../../components/sponsors'
 
 
@@ -47,7 +48,7 @@ function getPageDescription(numberDisplay, description) {
 }
 
 function PastEpisodeStuff({episodeData, sponsors}) {
-  const {podbeanId, youTubeId} = episodeData
+  const {podbeanId, youTubeId, transcriptHTML} = episodeData
   return (
     <div>
       {
@@ -70,6 +71,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
       <SponsorsSection {...sponsors} />
       <hr />
       <ShowNotes episode={episodeData} />
+      <TranscriptSection transcriptHTML={transcriptHTML} />
     </div>
   )
 }
