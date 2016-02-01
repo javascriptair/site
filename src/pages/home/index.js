@@ -27,8 +27,8 @@ function Home(
       <EpisodesSection episodes={futureEpisodes} />
       <div className="container">
         <PreviousEpisodeSection episodes={pastEpisodes} />
-        <SponsorsSection {...sponsors} />
       </div>
+      <SponsorsSection {...sponsors} />
       <PanelistsSection panelists={panelists} />
       <Footer />
 
