@@ -38,5 +38,10 @@ function getLinks() {
       alt: 'Guests',
       title: 'All Show Guests',
     },
+    {
+      href: '/deals',
+      alt: 'Deals',
+      title: 'Deals',
+    },
   ]
 }

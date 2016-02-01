@@ -12,7 +12,7 @@ const panelists = sortPeople([
 ])
 
 panelists.forEach(p => {
-  p.link = `https://twitter.com/${p.twitter}`,
+  p.link = `https://twitter.com/${p.twitter}`
   p.imgSrc = `/resources/panelists/${p.twitter}.png`
 })
 

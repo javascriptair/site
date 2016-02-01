@@ -3,8 +3,7 @@ import path from 'path'
 
 import {panelists} from '../resources/panelists'
 import moment from 'moment'
-import deindent from 'deindent'
-import {markdown} from 'markdown'
+import {markdownToHTML} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
@@ -90,15 +89,6 @@ function getEpisodeData(episodePath) {
     thing.picksHTML = thing.picks.map(p => markdownToHTML(p, stripP))
   }
 }
-
-function markdownToHTML(string, stripP) {
-  let html = markdown.toHTML(deindent(string))
-  if (stripP) {
-    html = html.slice(3, -4)
-  }
-  return {__html: html}
-}
-
 function transcriptToHTML(transcript) {
   const html = transcript
     .split('\n')

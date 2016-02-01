@@ -1,8 +1,11 @@
 import moment from 'moment'
+import {markdown} from 'markdown'
+import deindent from 'deindent'
 
 export {
   displayListify, intersperse, sortEpisodes,
   isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
+  markdownToHTML,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -74,7 +77,13 @@ function isPastAndNotToday(date) {
   return isPast(date) && !isToday(date)
 }
 
-
+function markdownToHTML(string, stripP) {
+  let html = markdown.toHTML(deindent(string))
+  if (stripP) {
+    html = html.slice(3, -4)
+  }
+  return {__html: html}
+}
 
 function sortPeople(people = []) {
   return people.sort((a, b) => {

@@ -35,5 +35,5 @@ export default {
       tagline: 'Code coverage done right',
       startDate: '2016-01-15',
     },
-  ]
+  ],
 }
