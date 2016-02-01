@@ -384,6 +384,6 @@ export default {
     So that's our show. Thanks everybody for showing up! We really appreciate you, Ashley, especially, for coming on. And Kyle, always appreciate you, thank you. We'll see you all next week! 
 
     (EVERYONE): Bye!
-  `
+  `,
 }
 

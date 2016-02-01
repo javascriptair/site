@@ -65,6 +65,7 @@
     "react": "0.14.2",
     "react-dom": "0.14.2",
     "read-glob": "2.1.0",
+    "subtitles-parser": "0.0.2",
     "surge": "0.17.3",
     "trash": "3.4.0",
     "uglify-js": "2.6.1"
