@@ -34,8 +34,8 @@ function Hero() {
       <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
 
       <div className="btn-container header__btn-container">
-        <a href="#" className="btn btn--large btn--black">Upcoming Shows</a>
-        <a href="#" className="btn btn--large btn--black">Past Shows</a>
+        <a href="#episodes" className="btn btn--large btn--black">Upcoming Shows</a>
+        <a href="#previous-episodes" className="btn btn--large btn--black">Past Shows</a>
       </div>
 
       <div className="social__container">
