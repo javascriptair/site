@@ -1,4 +1,5 @@
 @import 'mixins/section-heading';
+@import 'mixins/container';
 
 @import 'reset.css';
 @import 'base.css';

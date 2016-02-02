@@ -9,10 +9,7 @@
   }
 
   &__container {
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    @mixin container;
   }
 
   &__heading {
