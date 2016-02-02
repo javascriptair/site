@@ -1,3 +1,8 @@
 .sponsors-section {
   background-color: #F2F2F2;
+
+  &__heading {
+    @mixin section-heading;
+    color: black;
+  }
 }
