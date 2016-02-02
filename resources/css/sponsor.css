@@ -1,0 +1,16 @@
+.sponsor {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  &__logo,
+  &__tagline,
+  &__name {
+    display: block;
+  }
+
+  &__tagline {
+    font-style: italic;
+  }
+
+}

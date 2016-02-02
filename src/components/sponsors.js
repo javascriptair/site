@@ -27,11 +27,10 @@ function SponsorsSection({basicSponsors = [], premierSponsor = {}}) {
 function Sponsor({name, link, tagline = '', imgSrc}) {
   imgSrc = imgSrc || `sponsors/${name}.png`
   return (
-    <div className="sponsor">
-      <a className="sponsor__link" href={link} alt={`${name} site`}>
-        <img className="sponsor__logo" src={imgSrc} />
-        <p className="sponsor__name">{name}<span className="sponsor__tagline">{tagline}</span></p>
-      </a>
-    </div>
+    <a className="sponsor" href={link} alt={`${name} site`}>
+      <img className="sponsor__logo" src={imgSrc} />
+      <span className="sponsor__name">{name}</span>
+      <span className="sponsor__tagline">{tagline}</span>
+    </a>
   )
 }
