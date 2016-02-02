@@ -61,20 +61,20 @@ function sortEpisodes(a, b) {
   return moment(a.date) > moment(b.date)
 }
 
-function isFuture(date) {
-  return moment().diff(date) < 0
+function isFuture(date, compare = new Date()) {
+  return moment(compare).diff(date) < 0
 }
 
-function isPast(date) {
-  return !isFuture(date)
+function isPast(date, compare = new Date()) {
+  return !isFuture(date, compare)
 }
 
 function isToday(date) {
   return moment(date).isSame(moment(), 'day')
 }
 
-function isPastAndNotToday(date) {
-  return isPast(date) && !isToday(date)
+function isPastAndNotToday(date, compare = new Date()) {
+  return isPast(date, compare) && !isToday(date)
 }
 
 function markdownToHTML(string, stripP) {

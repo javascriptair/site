@@ -15,12 +15,10 @@ function SponsorsSection({
       <div className="sponsor-group +space-children +margin-bottom-large">
         <Sponsor {...premierSponsor} />
       </div>
-      <hr />
       <SponsorGroup
         sponsors={goldSponsors}
         title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
       />
-      <hr />
       <SponsorGroup
         sponsors={silverSponsors}
         title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
@@ -47,11 +45,15 @@ function Sponsor({name, link, tagline = '', imgSrc}) {
 }
 
 function SponsorGroup({sponsors, title}) {
+  if (!sponsors.length) {
+    return <noscript />
+  }
   const sponsorsPerRow = sponsors.length === 4 ? 2 : 1
   const rows = Math.ceil(sponsors.length / sponsorsPerRow)
   const chunkedSponsors = chunk(sponsors, rows)
   return (
     <div>
+      <hr />
       <h3>{title}</h3>
       {
         chunkedSponsors.map((rowSponsors, index) => {

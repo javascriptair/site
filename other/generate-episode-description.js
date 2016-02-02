@@ -7,7 +7,7 @@ import ReactDOMServer from 'react-dom/server'
 import {markdown} from 'markdown'
 import deindent from 'deindent'
 
-import allSponsors from '../sponsors'
+import {getSponsorsForDate} from '../sponsors'
 
 import * as utils from '../shared/utils'
 import getEpisodeData from '../shared/get-episode-data'
@@ -15,11 +15,12 @@ import getEpisodeData from '../shared/get-episode-data'
 
 const episodePath = path.join(process.cwd(), process.argv[2])
 const episodeData = getEpisodeData(episodePath)
+const showSponsors = getSponsorsForDate(episodeData.date)
 
 const string = ReactDOMServer.renderToStaticMarkup(
   <EpisodeDescription
     episode={episodeData}
-    sponsors={allSponsors}
+    sponsors={showSponsors}
   />
 )
 
@@ -36,7 +37,7 @@ function EpisodeDescription({episode, sponsors}) {
   } = episode
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
-  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors]
+  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors, ...sponsors.silverSponsors]
   return (
     <div>
       <div>

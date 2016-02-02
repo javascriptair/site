@@ -1,11 +1,16 @@
-export default {
-  premierSponsor: {
-    imgSrc: '/sponsors/eggheadio.png',
-    name: 'Egghead.io',
-    link: 'http://jsair.io/eggheadio',
-    tagline: 'Bite-sized web development video training',
-    startDate: '2015-12-08',
-  },
+import moment from 'moment'
+import {isPast} from '../shared/utils'
+
+const sponsors = {
+  premierSponsors: [
+    {
+      imgSrc: '/sponsors/eggheadio.png',
+      name: 'Egghead.io',
+      link: 'http://jsair.io/eggheadio',
+      tagline: 'Bite-sized web development video training',
+      startDate: '2015-12-08',
+    },
+  ],
   goldSponsors: [
     {
       imgSrc: '/sponsors/frontendmasters.png',
@@ -46,3 +51,29 @@ export default {
     },
   ],
 }
+
+function getSponsorsForDate(date) {
+  const momentDate = moment(date)
+  const sponsorsForDate = Object.keys(sponsors).reduce((current, key) => {
+    const sponsorGroup = sponsors[key]
+    const dateGroup = sponsorGroup.filter(sponsor => {
+      const {startDate, endDate} = sponsor
+      const sponsorshipHasBegun = isPast(startDate, momentDate)
+      const sponsorshipHasEnded = endDate && isPast(endDate, momentDate)
+      return sponsorshipHasBegun && !sponsorshipHasEnded
+    })
+    if (key === 'premierSponsors') {
+      current.premierSponsor = dateGroup[0]
+    } else {
+      current[key] = dateGroup
+    }
+    return current
+  }, {})
+  return sponsorsForDate
+}
+
+const currentSponsors = getSponsorsForDate(new Date())
+
+export default sponsors
+
+export {currentSponsors, getSponsorsForDate}
