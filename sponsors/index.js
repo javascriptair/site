@@ -36,4 +36,13 @@ export default {
       startDate: '2016-01-15',
     },
   ],
+  silverSponsors: [
+    {
+      imgSrc: '/sponsors/fluent.png',
+      name: 'Fluent',
+      link: 'http://jsair.io/fluent',
+      tagline: 'Web Platform Training',
+      startDate: '2016-02-02',
+    },
+  ],
 }
