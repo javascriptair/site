@@ -12,7 +12,7 @@ function SponsorsSection({basicSponsors = [], premierSponsor = {}}) {
           <Sponsor {...premierSponsor} />
         </div>
         <h3 className="sponsors-section__subheading">Gold Sponsors</h3>
-        <div>
+        <div className="sponsors-section__basic-sponsors">
           {basicSponsors.map((s, i) => <Sponsor key={i} {...s} />)}
         </div>
         <p className="sponsors-section__footnote">
