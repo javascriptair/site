@@ -46,7 +46,7 @@ const sponsors = {
       imgSrc: '/sponsors/fluent.png',
       name: 'Fluent',
       link: 'http://jsair.io/fluent',
-      tagline: 'Web Platform Training',
+      tagline: 'Web development training',
       startDate: '2016-02-02',
     },
   ],
