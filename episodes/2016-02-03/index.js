@@ -68,7 +68,7 @@ export default {
   various tools and IDEs for debugging Node or mobile
   development make for a really interesting topic.
   `,
-  podbeanId: '',
+  podbeanId: 'gpe8z-5c5ad2',
   youTubeId: 'qlV-eNI5OsA',
   shortUrl: 'http://jsair.io/debugging',
   past: true,
