@@ -7,16 +7,19 @@
   flex-direction: column;
   padding: 20px 0;
 
+  &:hover {
+    background-color: #E8E8E8;
+  }
+
   &__logo {
     margin-bottom: 10px;
   }
 
   &__name {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 2px black solid;
+    line-height: 1.2em;
   }
-
-  &__tagline {
-    font-style: italic;
-  }
-
 }
