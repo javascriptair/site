@@ -6,7 +6,7 @@ export default RSVPIcon
 
 function RSVPIcon(props) {
   return (
-    <IconLink className="rsvp-icon" href={props.hangoutUrl} name="calendar" {...props} />
+    <IconLink className="episode-page__rsvp-icon" href={props.hangoutUrl} name="calendar" {...props} />
   )
 }
 
