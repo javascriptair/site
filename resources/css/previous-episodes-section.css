@@ -1,0 +1,6 @@
+.previous-episodes-section {
+  background-color: tomato;
+  &__container {
+    @mixin container;
+  }
+}

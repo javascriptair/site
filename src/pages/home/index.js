@@ -25,9 +25,7 @@ function Home(
 
       <Header />
       <EpisodesSection episodes={futureEpisodes} />
-      <div className="container">
-        <PreviousEpisodeSection episodes={pastEpisodes} />
-      </div>
+      <PreviousEpisodeSection episodes={pastEpisodes} />
       <SponsorsSection {...sponsors} />
       <PanelistsSection panelists={panelists} />
       <Footer />

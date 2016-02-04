@@ -1,0 +1,15 @@
+.previous-episodes-list {
+
+  &__item {
+    color: pink;
+  }
+
+  &__link {
+    color: red;
+  }
+
+  &__small {
+    font-style: italic;
+  }
+
+}
