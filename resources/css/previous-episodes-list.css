@@ -1,15 +1,15 @@
 .previous-episodes-list {
 
   &__item {
-    color: pink;
-  }
-
-  &__link {
-    color: red;
+    font-size: 1.3em;
+    line-height: 1.2em;
   }
 
   &__small {
-    font-style: italic;
+    font-size: .7em;
   }
 
+  &__small {
+    color: #303030;
+  }
 }

@@ -1,6 +1,11 @@
 .previous-episodes-section {
-  background-color: tomato;
   &__container {
     @mixin container;
+  }
+
+  &__heading {
+    font-size: 3em;
+    font-weight: 700;
+    padding: 30px 0;
   }
 }
