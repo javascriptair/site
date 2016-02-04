@@ -12,4 +12,8 @@
   &__episode-description {
     color: goldenrod;
   }
+  &__episode-notes-list {
+    list-style: disc;
+    padding-left: 40px;
+  }
 }
