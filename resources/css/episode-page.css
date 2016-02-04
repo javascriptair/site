@@ -1,16 +1,13 @@
 .episode-page {
-  background-color: red;
   &__header {
-    background-color: green;
   }
   &__episode-title {
-    color: orange;
+    margin: 30px 0;
   }
   &__episode-date {
-    color: pink;
   }
   &__episode-description {
-    color: goldenrod;
+    margin: 30px 0;
   }
   &__episode-notes-list {
     list-style: disc;
