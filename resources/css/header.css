@@ -36,9 +36,19 @@
   }
 
   @media only screen and (max-width : 650px) {
+    width: 70%;
+
+    .social__title {
+      display: none;
+    }
+
     .social__bottom {
       flex-direction: column;
     }
+  }
+
+  @media only screen and (max-width : 650px) {
+    width: 85%;
   }
 }
 
