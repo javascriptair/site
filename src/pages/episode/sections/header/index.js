@@ -19,13 +19,13 @@ function Header({episode}) {
   const past = episode.past || isPast(date)
   const sortedGuests = sortPeople(guests)
   return (
-    <div className="episode">
+    <div className="episode-page__header">
       <div className="+text-center">
         <h1>
           <a href="/">JavaScript Air</a>
         </h1>
-        <h2>
-          <strong>Episode {numberDisplay}: {title}</strong>
+        <h2 className="episode-page__episode-title">
+          <strong className="episode-page__episode-date">Episode {numberDisplay}: {title}</strong>
           <br />
           <small>
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}
@@ -34,10 +34,9 @@ function Header({episode}) {
         </h2>
         <PersonGroup people={sortedGuests} />
       </div>
-      <div className="description">
+      <div className="episode-page__episode-description">
         <p dangerouslySetInnerHTML={descriptionHTML}></p>
       </div>
     </div>
   )
 }
-

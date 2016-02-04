@@ -1,0 +1,15 @@
+.episode-page {
+  background-color: red;
+  &__header {
+    background-color: green;
+  }
+  &__episode-title {
+    color: orange;
+  }
+  &__episode-date {
+    color: pink;
+  }
+  &__episode-description {
+    color: goldenrod;
+  }
+}

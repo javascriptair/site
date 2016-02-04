@@ -25,7 +25,7 @@ function EpisodePage({episode, sponsors}) {
       title={`JavaScript Air | ${title}`}
       description={getPageDescription(numberDisplay, description)}
     >
-      <div className="container">
+      <div className="episode-page container">
         <Header
           episode={episode}
         />
