@@ -159,6 +159,10 @@ function ShowDescription() {
       Please visit the JavaScript Air website
       ([javascriptair.com](http://javascriptair.com))
       to see upcoming and past episodes.
+      Go to [suggest.jsair.io](http://suggest.jsair.io) to
+      suggest topics and guests for the show.
+      Go to [feedback.jsair.io](http://feedback.jsair.io) to
+      provide feedback on this and other episodes.
       Also be sure to follow JavaScript Air on
       [Twitter](https://twitter.com/JavaScriptAir)
       and [Google+](https://plus.google.com/105493143005968326308)
