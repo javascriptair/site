@@ -1,37 +1,48 @@
 import React from 'react'
 import Episode from './episode'
-import EpisodeFuture from './episode-future'
+import EpisodeSmall from './episode-small'
 
 import * as utils from '../../../../../shared/utils'
 
-
 export default EpisodesSection
 
-function EpisodesSection({episodes = []}) {
+function EpisodesSection({future, past}) {
 
-  const sortedEpisodes = episodes.sort(utils.sortEpisodes)
+  const futureEpisodes = future.sort(utils.sortEpisodes)
+  const pastEpisodes = past.sort(utils.sortEpisodes)
 
   return (
     <section id="episodes" className="episodes">
       <div className="episodes__container">
 
-        {/* Upcoming Episodes -  The first three upcoming episodes are displayed prominently */}
+        {/* Upcoming Episodes - The first three upcoming episodes are displayed prominently */}
 
         <h2 className="episodes__title">Upcoming Episodes</h2>
 
         <div className="episodes-container">
           {
-            sortedEpisodes.slice(0, 3).map((e, i) => <Episode episodeData={e} key={i} />)
+            futureEpisodes.slice(0, 3).map((e, i) => <Episode episodeData={e} key={i} />)
           }
         </div>
 
-        {/* Future Episodes - Anything after the first three is made concise*/}
+        {/* Future Episodes - Anything after the first three is made concise */}
 
         <h2 className="episodes__title">Future Episodes</h2>
 
         <div className="episodes-container--future">
           {
-            sortedEpisodes.splice(3, sortedEpisodes.length).map((e, i) => <EpisodeFuture episodeData={e} key={i} />)
+            futureEpisodes.splice(3, futureEpisodes.length)
+              .map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
+          }
+        </div>
+
+        {/* Past Episodes - All episodes that have happened in the past */}
+
+        <h2 className="episodes__title">Past Episodes</h2>
+
+        <div className="episodes-container--past">
+          {
+            pastEpisodes.map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
           }
         </div>
 

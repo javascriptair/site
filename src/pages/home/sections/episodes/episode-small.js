@@ -1,9 +1,9 @@
 import React from 'react'
 import {displayListify} from '../../../../../shared/utils'
 
-export default EpisodeFuture
+export default EpisodeSmall
 
-function EpisodeFuture({episodeData}) {
+function EpisodeSmall({episodeData}) {
 
   const {
     date,
@@ -13,7 +13,9 @@ function EpisodeFuture({episodeData}) {
 
   return (
     <div className="episode-mobile">
+
       <a href={`/episodes/${date}`} title={`${title}`}>{title}</a>
+      
       <small>
         {' with '}
         {
@@ -25,6 +27,7 @@ function EpisodeFuture({episodeData}) {
           )
         }
       </small>
+
     </div>
   )
 }
