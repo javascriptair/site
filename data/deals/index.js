@@ -27,4 +27,18 @@ export default [
       frameworks, check out Fluent Conf.
     `,
   },
+  {
+    imgSrc: '/data/deals/thoughtram.png',
+    organization: 'thoughtram',
+    tagline: 'Angular 2 Master Class',
+    link: 'https://www.eventbrite.de/e/angular-2-master-class-dusseldorf-tickets-21015847967?discount=JSAIR',
+    deal: 'Use code **JSAIR** for 50,00 € off your ticket!',
+    expires: '2016-03-09',
+    description: `
+      thoughtram helps people to get a deep understanding of
+      different technologies throughtrainings and code reviews.
+      Our next public training is the Angular 2 Master Class
+      in Düsseldorf, Germany. Join us and learn Angular 2 the right way!
+    `,
+  },
 ]
