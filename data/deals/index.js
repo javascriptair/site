@@ -36,7 +36,7 @@ export default [
     expires: '2016-03-09',
     description: `
       thoughtram helps people to get a deep understanding of
-      different technologies throughtrainings and code reviews.
+      different technologies through trainings and code reviews.
       Our next public training is the Angular 2 Master Class
       in Düsseldorf, Germany. Join us and learn Angular 2 the right way!
     `,
