@@ -29,7 +29,7 @@ function EpisodesSection({future, past}) {
 
         <h2 className="episodes__title">Future Episodes</h2>
 
-        <div className="episodes-container--future">
+        <div className="episodes-container--future episodes-container--small">
           {
             futureEpisodes.splice(3, futureEpisodes.length)
               .map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
@@ -40,7 +40,7 @@ function EpisodesSection({future, past}) {
 
         <h2 className="episodes__title">Past Episodes</h2>
 
-        <div className="episodes-container--past">
+        <div className="episodes-container--past episodes-container--small">
           {
             pastEpisodes.map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
           }

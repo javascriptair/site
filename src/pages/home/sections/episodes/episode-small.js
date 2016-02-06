@@ -12,11 +12,17 @@ function EpisodeSmall({episodeData}) {
   } = episodeData
 
   return (
-    <div className="episode-mobile">
+    <div className="episode--small">
 
-      <a href={`/episodes/${date}`} title={`${title}`}>{title}</a>
-      
-      <small>
+      <a
+        className="episode--small__title"
+        href={`/episodes/${date}`}
+        title={`${title}`}
+      >
+        {title}
+      </a>
+
+      <small className="episode--small__guests">
         {' with '}
         {
           displayListify(
