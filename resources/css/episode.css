@@ -11,6 +11,7 @@
   &__container {
     margin: 0 auto;
     width: 1000px;
+    padding-bottom: 50px;
     background-color: #e4e4e4;
   }
 
@@ -55,6 +56,29 @@
 
   @media only screen and (max-width : 700px) {
     width: 90%;
+  }
+
+  &--small {
+    padding: 5px 0px;
+
+    &__title {
+      font-size: 1.3em;
+      color: black;
+    }
+
+    &__guests {
+      font-size: 0.9em;
+      color: gray;
+    }
+
+    &__guests a {
+      color: gray;
+      text-decoration: underline;
+
+      &:hover {
+        color: black;
+      }
+    }
   }
 
   &__part {
