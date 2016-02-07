@@ -12,7 +12,7 @@
     "build:guests": "babel-node generate/guests > guests/index.html",
     "prebuild:deals": "rm -rf deals && mkdir deals",
     "build:deals": "babel-node generate/deals > deals/index.html",
-    "build:css": "postcss -u postcss-import -u autoprefixer -u cssnano styles.css > styles.dist.css",
+    "build:css": "postcss -u postcss-import -u postcss-nested -u postcss-mixins -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css",
     "build": "./scripts/build.sh",
     "prebuild": "npm run eslint",
     "deploy": "./scripts/deploy.sh",
@@ -21,7 +21,7 @@
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
     "dev:guests": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:guests -s",
     "dev:deals": "nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run build:deals -s",
-    "dev:css": "nodemon --watch styles.css --exec npm run build:css",
+    "dev:css": "nodemon --watch resources/css --ext css --exec npm run build:css",
     "description": "babel-node other/generate-episode-description",
     "eslint": "eslint .",
     "server": "http-server",
@@ -35,6 +35,11 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/javascriptair/javascriptair.github.io/issues"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run eslint"
+    }
   },
   "homepage": "https://github.com/javascriptair/javascriptair.github.io#readme",
   "devDependencies": {
@@ -53,6 +58,7 @@
     "eslint-loader": "1.1.1",
     "eslint-plugin-mocha": "1.1.0",
     "eslint-plugin-react": "3.9.0",
+    "ghooks": "1.0.3",
     "glob": "6.0.1",
     "http-server": "0.8.5",
     "inquirer": "0.11.0",
@@ -63,6 +69,8 @@
     "nodemon": "1.8.1",
     "postcss-cli": "2.3.2",
     "postcss-import": "7.1.3",
+    "postcss-mixins": "^4.0.0",
+    "postcss-nested": "^1.0.0",
     "qs": "6.0.1",
     "query-string": "3.0.0",
     "react": "0.14.2",

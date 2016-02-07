@@ -1,0 +1,66 @@
+.person-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+  justify-content: center;
+
+  &__btn-container {
+    float: right;
+    display: flex;
+    display: none;
+  }
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+
+  text-decoration: none;
+
+  color: #adadad;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #adadad;
+
+    &__text {
+      transition: all 0.4s;
+      color: black;
+
+      &--name {
+        font-weight: bold;
+      }
+
+      &--twitter {
+        text-decoration: underline;
+        text-align: center;
+        transition: all 0s;
+
+        &:hover {
+          color: gray;
+        }
+      }
+
+      &:visited {
+        color: #adadad;
+      }
+
+      padding: 5px 10px;
+      font-size: 1.00em;
+    }
+  }
+
+  &__image {
+    transition: all 0.4s;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+}

@@ -1,0 +1,35 @@
+.sponsors-section {
+  background-color: #F2F2F2;
+  overflow: hidden;
+
+  &__container {
+    @mixin container;
+    max-width: 700px;
+  }
+
+  &__heading {
+    @mixin section-heading;
+    color: black;
+  }
+
+  &__subheading {
+  }
+
+  @media only screen and (min-width: 530px) {
+    &__gold-sponsors, &__silver-sponsors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      >.sponsor {
+        width: 50%;
+      }
+    }
+  }
+
+  &__footnote {
+    line-height: 1.3em;
+    @media only screen and (min-width: 730px) {
+      text-align: center;
+    }
+  }
+}

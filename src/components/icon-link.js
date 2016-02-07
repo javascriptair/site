@@ -1,10 +1,12 @@
 import React from 'react'
+import Icon from './icon'
 
 export default IconLink
 
 function IconLink(props) {
   return (
-    <a {...props} className={`icon-${props.name}`}></a>
+    <a {...props}>
+      <Icon {...props}/>
+    </a>
   )
 }
-

@@ -1,0 +1,12 @@
+.subscribe-icon-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.subscribe-icon-list__item {
+  width: 70px;
+  height: 60px;
+  display: inline-block;
+  padding: 0 5px;
+}

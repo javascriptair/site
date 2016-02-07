@@ -1,24 +1,20 @@
 import React from 'react'
-import * as utils from '../../../../shared/utils'
 
 export default Links
 
 function Links() {
   return (
-    <section id="links" className="+text-center +font-smaller">
+    <ul className="footer__nav-footer-list footer-list">
       {
-        utils.intersperse(
-          getLinks().map((link, i) => {
-            return (
-              <a key={i} href={link.href} alt={link.alt || link.title}>
-                {link.title}
-              </a>
-            )
-          }),
-          ' | '
-        )
+        getLinks().map((link, i) => {
+          return (
+            <li key={i} className="footer-list__item">
+              <a className="footer-list__link" href={link.href} key={i} alt={link.alt || link.title}>{link.title}</a>
+            </li>
+          )
+        })
       }
-    </section>
+      </ul>
   )
 }
 

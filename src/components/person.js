@@ -2,21 +2,30 @@ import React from 'react'
 
 export default Person
 
-function Person({twitter, link, name, imgSrc, squareImage}) {
+function Person({className, twitter, link, name, imgSrc}) {
+  className = className ? `${className} person` : 'person'
   return (
-    <div className="person">
-      <a href={link}>
-        <img
-          src={imgSrc}
-          alt={`${name} Profile Picture`}
-          className={squareImage ? 'square' : ''}
-        />
-        <p>
-          {name}<br />
+    <a className={className} href={link}>
+
+      <img
+        className='person__image person__part'
+        src={imgSrc}
+        alt={`${name} Profile Picture`}
+      />
+
+      <div className="person__details person__part">
+
+        <p className="person__details__text person__details__text--name">
+          {name}
+        </p>
+
+        <p className="person__details__text person__details__text--twitter">
           {twitter ? `@${twitter}` : ''}
         </p>
-      </a>
-    </div>
+
+      </div>
+
+    </a>
   )
 }
 
@@ -25,4 +34,3 @@ Person.propTypes = {
   name: React.PropTypes.string.isRequired,
   imgSrc: React.PropTypes.string.isRequired,
 }
-

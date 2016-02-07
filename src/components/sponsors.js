@@ -9,38 +9,40 @@ function SponsorsSection({
   silverSponsors = [],
 }) {
   return (
-    <section id="sponsors">
-      <h2>Sponsors</h2>
-      <h3>Premier Sponsor</h3>
-      <div className="sponsor-group +space-children +margin-bottom-large">
-        <Sponsor {...premierSponsor} />
+    <section className="sponsors-section">
+      <div className="sponsors-section__container">
+        <h2 className="sponsors-section__heading">Sponsors</h2>
+        <h3 className="sponsors-section__subheading">Premier Sponsor</h3>
+        <div>
+          <Sponsor {...premierSponsor} />
+        </div>
+        <SponsorGroup
+          className="sponsors-section__gold-sponsors"
+          sponsors={goldSponsors}
+          title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
+        />
+        <SponsorGroup
+          className="sponsors-section__silver-sponsors"
+          sponsors={silverSponsors}
+          title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
+        />
+        <p className="sponsors-section__footnote">
+          JavaScript Air is <a href="mailto:javascriptair+sponsor@gmail.com">sponsored</a> by
+          some <a href="http://sponsors.javascriptair.com/">awesome companies</a>.
+        </p>
       </div>
-      <SponsorGroup
-        sponsors={goldSponsors}
-        title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
-      />
-      <SponsorGroup
-        sponsors={silverSponsors}
-        title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
-      />
-      <p className="+text-center">
-        JavaScript Air is <a href="mailto:javascriptair+sponsor@gmail.com">sponsored</a> by
-        some <a href="http://sponsors.javascriptair.com/">awesome companies</a>.
-      </p>
     </section>
   )
 }
 
-
 function Sponsor({name, link, tagline = '', imgSrc}) {
   imgSrc = imgSrc || `sponsors/${name}.png`
   return (
-    <div className="sponsor">
-      <a href={link} alt={`${name} site`}>
-        <img src={imgSrc} />
-        <p>{name}<br />{tagline}</p>
-      </a>
-    </div>
+    <a className="sponsor" href={link} alt={`${name} site`}>
+      <img className="sponsor__logo" src={imgSrc} />
+      <span className="sponsor__name">{name}</span>
+      <span className="sponsor__tagline">{tagline}</span>
+    </a>
   )
 }
 
@@ -54,7 +56,7 @@ function SponsorGroup({sponsors, title}) {
   return (
     <div>
       <hr />
-      <h3>{title}</h3>
+      <h3 className="sponsors-section__subheading">{title}</h3>
       {
         chunkedSponsors.map((rowSponsors, index) => {
           return (
