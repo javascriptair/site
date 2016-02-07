@@ -1,3 +1,4 @@
+/* eslint no-console:0 */
 import axios from 'axios'
 import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
@@ -5,9 +6,9 @@ import qs from 'qs'
 import {copy} from 'copy-paste'
 
 
-inquirer.registerPrompt('directory', inquirerDirectory);
+inquirer.registerPrompt('directory', inquirerDirectory)
 
- getCustomAlias()
+getCustomAlias()
   .then(getApiKey)
   .then(shortenUrl)
   .then(logFinished)

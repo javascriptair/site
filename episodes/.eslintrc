@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "max-len": 0,
+    "no-trailing-spaces": 0,
+  }
+}

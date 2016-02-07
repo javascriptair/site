@@ -34,5 +34,15 @@ function getLinks() {
       alt: 'Guests',
       title: 'All Show Guests',
     },
+    {
+      href: 'http://jsair.io/email',
+      alt: 'Show Notes Email Registration',
+      title: 'Show Notes Email Registration',
+    },
+    {
+      href: '/deals',
+      alt: 'Deals',
+      title: 'Deals',
+    },
   ]
 }

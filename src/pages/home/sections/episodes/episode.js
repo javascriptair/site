@@ -6,8 +6,7 @@ import moment from 'moment'
 
 export default Episode
 
-function Episode({episodeData}) {
-
+function Episode({episodeData, index}) {
   const {
     date,
     title,
@@ -25,7 +24,7 @@ function Episode({episodeData}) {
   const dateBefore = moment(date).subtract(1, 'days')
 
   return (
-    <div className="episode">
+    <div className={`episode episode-index-${index}`}>
 
       {/*
 

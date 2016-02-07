@@ -1,9 +1,11 @@
+/* eslint max-len:0 */
+
 export default {
-  title: `{{title}}`,
+  title: `JavaScript Utils & Lodash`,
   guests: [
     {
-      name: '',
-      twitter: '',
+      name: 'John Dalton',
+      twitter: 'jdalton',
       links: [
       ],
       tips: [
@@ -13,11 +15,12 @@ export default {
     },
   ],
   description: `
-    {{description}}
+    [Lodash](https://lodash.com/) v4 had been released (by the time this episode happens). This JavaScript library of utilities is one of the most widely used utility belts of the enormous JavaScript ecosystem. We're going to talk with John, the mastermind behind this utility (and fork of underscore) about his experience building such a ubiquitous tool and what it can do for you.
   `,
-  hangoutId: '{{hangoutId}}',
-  youTubeId: '{{youTubeId}}',
+  hangoutId: 'c143rgrflt08nui9n5h42morjbs',
+  youTubeId: 'pqZGVV35BPU',
   podbeanId: '',
+  shortUrl: 'http://jsair.io/lodash',
   host: {
     links: [
     ],

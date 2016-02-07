@@ -7,6 +7,7 @@ export default {
     {
       name: 'React Conf',
       twitter: 'reactjs',
+      squareImage: true,
       links: [
       ],
       tips: [
