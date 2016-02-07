@@ -7,7 +7,7 @@ import ReactDOMServer from 'react-dom/server'
 import {markdown} from 'markdown'
 import deindent from 'deindent'
 
-import allSponsors from '../sponsors'
+import {getSponsorsForDate} from '../sponsors'
 
 import * as utils from '../shared/utils'
 import getEpisodeData from '../shared/get-episode-data'
@@ -15,11 +15,12 @@ import getEpisodeData from '../shared/get-episode-data'
 
 const episodePath = path.join(process.cwd(), process.argv[2])
 const episodeData = getEpisodeData(episodePath)
+const showSponsors = getSponsorsForDate(episodeData.date)
 
 const string = ReactDOMServer.renderToStaticMarkup(
   <EpisodeDescription
     episode={episodeData}
-    sponsors={allSponsors}
+    sponsors={showSponsors}
   />
 )
 
@@ -36,7 +37,7 @@ function EpisodeDescription({episode, sponsors}) {
   } = episode
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
-  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.basicSponsors]
+  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors, ...sponsors.silverSponsors]
   return (
     <div>
       <div>
@@ -158,6 +159,10 @@ function ShowDescription() {
       Please visit the JavaScript Air website
       ([javascriptair.com](http://javascriptair.com))
       to see upcoming and past episodes.
+      Go to [suggest.jsair.io](http://suggest.jsair.io) to
+      suggest topics and guests for the show.
+      Go to [feedback.jsair.io](http://feedback.jsair.io) to
+      provide feedback on this and other episodes.
       Also be sure to follow JavaScript Air on
       [Twitter](https://twitter.com/JavaScriptAir)
       and [Google+](https://plus.google.com/105493143005968326308)

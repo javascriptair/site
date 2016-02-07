@@ -1,8 +1,11 @@
 import moment from 'moment'
+import {markdown} from 'markdown'
+import deindent from 'deindent'
 
 export {
   displayListify, intersperse, sortEpisodes,
   isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
+  markdownToHTML,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -58,23 +61,29 @@ function sortEpisodes(a, b) {
   return moment(a.date) > moment(b.date)
 }
 
-function isFuture(date) {
-  return moment().diff(date) < 0
+function isFuture(date, compare = new Date()) {
+  return moment(compare).diff(date) < 0
 }
 
-function isPast(date) {
-  return !isFuture(date)
+function isPast(date, compare = new Date()) {
+  return !isFuture(date, compare)
 }
 
 function isToday(date) {
   return moment(date).isSame(moment(), 'day')
 }
 
-function isPastAndNotToday(date) {
-  return isPast(date) && !isToday(date)
+function isPastAndNotToday(date, compare = new Date()) {
+  return isPast(date, compare) && !isToday(date)
 }
 
-
+function markdownToHTML(string, stripP) {
+  let html = markdown.toHTML(deindent(string))
+  if (stripP) {
+    html = html.slice(3, -4)
+  }
+  return {__html: html}
+}
 
 function sortPeople(people = []) {
   return people.sort((a, b) => {

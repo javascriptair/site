@@ -7,8 +7,6 @@ import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
 import Footer from './sections/footer'
 
-import FeatureShowScript from './scripts/feature-show'
-
 export default Home
 
 function Home(
@@ -28,7 +26,6 @@ function Home(
       <PanelistsSection panelists={panelists} />
       <Footer />
 
-      <FeatureShowScript />
     </Page>
   )
 }
