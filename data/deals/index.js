@@ -55,6 +55,6 @@ export default sortBy([
       will happen on December 5th in Paris at the Théâtre Mogador. A lot of
       amazing speakers will be announced soon. Meanwhile you can check the
       dotJS 2015 talks [here](http://www.thedotpost.com/conference/dotjs-2015).
-    `
+    `,
   },
 ], i => i.organization.toLowerCase())
