@@ -51,9 +51,9 @@ export default sortBy([
     deal: 'Use code JSAIR for 20% off your ticket',
     expires: '2016-12-05',
     description: `
-      dotJS is the largest JavaScript conference in Europe. Its 5th edition
-      will happen on December 5th in Paris at the Théâtre Mogador. A lot of
-      amazing speakers will be announced soon. Meanwhile you can check the
+    [dotJS](http://dotjs.io) is the largest JavaScript conference in Europe.
+    Its 5th edition will happen on December 5th in Paris at the Théâtre Mogador.
+      A lot of amazing speakers will be announced soon. Meanwhile you can check the
       dotJS 2015 talks [here](http://www.thedotpost.com/conference/dotjs-2015).
     `,
   },
