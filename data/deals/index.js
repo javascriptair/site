@@ -1,4 +1,6 @@
-export default [
+import {sortBy} from 'lodash'
+
+export default sortBy([
   {
     imgSrc: '/data/deals/forwardJS.png',
     organization: 'ForwardJS',
@@ -31,7 +33,7 @@ export default [
     imgSrc: '/data/deals/thoughtram.png',
     organization: 'thoughtram',
     tagline: 'Angular 2 Master Class',
-    link: 'https://www.eventbrite.de/e/angular-2-master-class-dusseldorf-tickets-21015847967?discount=JSAIR',
+    link: 'http://jsair.io/cOG3C',
     deal: 'Use code **JSAIR** for 50,00 € off your ticket!',
     expires: '2016-03-09',
     description: `
@@ -41,4 +43,18 @@ export default [
       in Düsseldorf, Germany. Join us and learn Angular 2 the right way!
     `,
   },
-]
+  {
+    imgSrc: '/data/deals/dotjs.png',
+    organization: 'dotJS',
+    tagline: 'The largest JavaScript conference in Europe',
+    link: 'http://jsair.io/dotjs-discount',
+    deal: 'Use code JSAIR for 20% off your ticket',
+    expires: '2016-12-05',
+    description: `
+      dotJS is the largest JavaScript conference in Europe. Its 5th edition
+      will happen on December 5th in Paris at the Théâtre Mogador. A lot of
+      amazing speakers will be announced soon. Meanwhile you can check the
+      dotJS 2015 talks [here](http://www.thedotpost.com/conference/dotjs-2015).
+    `
+  },
+], i => i.organization.toLowerCase())

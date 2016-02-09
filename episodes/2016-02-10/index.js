@@ -11,7 +11,7 @@ export default {
     },
   ],
   description: `
-    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll talk with speakers and workshop instructors about the awesome stuff going on the conference.
+    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll chat with 
   `,
   hangoutId: 'cs8p8a6fgmlrl490siif59emci0',
   youTubeId: '7wb0gwjk1aY',
