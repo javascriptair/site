@@ -15,6 +15,7 @@ export default {
   `,
   youTubeId: 'BKOaJ1Wbng0',
   podbeanId: '',
+  shortUrl: 'http://jsair.io/forward',
   host: {
     links: [
     ],
