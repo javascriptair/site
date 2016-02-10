@@ -68,7 +68,7 @@ function getEpisodeData(episodePath) {
     descriptionHTML: markdownToHTML(description),
     timeHTML: markdownToHTML(time, true),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
-    hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
+    hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
     number,
     numberDisplay,
     ...episode,

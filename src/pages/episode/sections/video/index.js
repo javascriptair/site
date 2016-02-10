@@ -26,6 +26,9 @@ VideoSection.propTypes = {
 }
 
 function Rsvp({hangoutUrl}) {
+  if (!hangoutUrl) {
+    return <noscript />
+  }
   return (
     <span>
       <RSVPIcon hangoutUrl={hangoutUrl} />
