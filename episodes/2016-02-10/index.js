@@ -2,7 +2,7 @@
 
 export default {
   title: `JavaScript Forward: ES6 and ES7`,
-  time: '12:00 PM **PST**',
+  time: '11:20 PM **PST**',
   guests: [
     {
       name: 'Allen Wirfs-Brock',
