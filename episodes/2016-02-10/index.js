@@ -1,20 +1,19 @@
 /* eslint max-len:0 */
 
 export default {
-  title: `Forward 4 Web Technology Summit`,
+  title: `JavaScript Forward: ES6 and ES7`,
   time: '12:00 PM **PST**',
   guests: [
     {
-      name: 'ForwardJS',
-      twitter: 'forwardJS',
-      squareImage: true,
+      name: 'Allen Wirfs-Brock',
+      twitter: 'awbjs',
     },
   ],
   description: `
-    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll chat with 
+    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll chat with Allen Wirfs-Brock,
+    project editor of the ES2015 specification about the future of the JavaScript spec.
   `,
-  hangoutId: 'cs8p8a6fgmlrl490siif59emci0',
-  youTubeId: '7wb0gwjk1aY',
+  youTubeId: 'BKOaJ1Wbng0',
   podbeanId: '',
   host: {
     links: [
