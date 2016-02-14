@@ -18,7 +18,7 @@ export default {
     project editor of the ES2015 specification about the future of the JavaScript spec.
   `,
   youTubeId: '',
-  podbeanId: '',
+  podbeanId: 'sqmnj-5ca6ed',
   shortUrl: 'http://jsair.io/forward',
   host: {},
   panelists: [
