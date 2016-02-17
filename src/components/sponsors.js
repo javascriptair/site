@@ -38,7 +38,7 @@ function Sponsor({name, link, tagline = '', imgSrc}) {
     <div className="sponsor">
       <a href={link} alt={`${name} site`}>
         <img src={imgSrc} />
-        <p>{name}<br />{tagline}</p>
+        <p>{name}<br /><small>{tagline}</small></p>
       </a>
     </div>
   )

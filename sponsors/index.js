@@ -49,6 +49,13 @@ const sponsors = {
       tagline: 'Web development training',
       startDate: '2016-02-02',
     },
+    {
+      imgSrc: '/sponsors/auth0.png',
+      name: 'Auth0',
+      link: 'http://jsair.io/auth0',
+      tagline: 'Authentication Made Simple',
+      startDate: '2016-02-17',
+    },
   ],
 }
 
