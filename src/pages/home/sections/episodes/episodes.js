@@ -4,6 +4,8 @@ import EpisodeSmall from './episode-small'
 
 import * as utils from '../../../../../shared/utils'
 
+import Title from '../../../../components/title.js'
+
 export default EpisodesSection
 
 function EpisodesSection({future, past}) {
@@ -17,7 +19,11 @@ function EpisodesSection({future, past}) {
 
         {/* Upcoming Episodes - The first three upcoming episodes are displayed prominently */}
 
-        <h2 className="episodes__title">Upcoming Episodes</h2>
+        <Title
+          name="Upcoming Episodes"
+          buttonText="Suggest Episode"
+          buttonUrl="#"
+        />
 
         <div className="episodes-container">
           {
