@@ -3,6 +3,14 @@
   justify-content: space-between;
   padding: 30px 0px;
 
+  &--yellow {
+    color: #e2d046;
+  }
+
+  &--black {
+    color: black;
+  }
+
   &__text {
     font-size: 3em;
     font-weight: bold;

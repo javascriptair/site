@@ -1,6 +1,8 @@
 import React from 'react'
 import {chunk} from 'lodash'
 
+import Title from './title.js'
+
 export default SponsorsSection
 
 function SponsorsSection({
@@ -11,7 +13,7 @@ function SponsorsSection({
   return (
     <section className="sponsors-section">
       <div className="sponsors-section__container">
-        <h2 className="episodes__title">Sponsors</h2>
+        <Title name="Sponsors" />
         <h3 className="sponsors-section__subheading">Premier Sponsor</h3>
         <div>
           <Sponsor {...premierSponsor} />

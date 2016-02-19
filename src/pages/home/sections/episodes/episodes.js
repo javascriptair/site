@@ -33,7 +33,7 @@ function EpisodesSection({future, past}) {
 
         {/* Future Episodes - Anything after the first three is made concise */}
 
-        <h2 className="episodes__title">Future Episodes</h2>
+        <Title name="Future Episodes" />
 
         <div className="episodes-container--future episodes-container--small">
           {
@@ -44,7 +44,7 @@ function EpisodesSection({future, past}) {
 
         {/* Past Episodes - All episodes that have happened in the past */}
 
-        <h2 className="episodes__title">Past Episodes</h2>
+        <Title name="Past Episodes" />
 
         <div className="episodes-container--past episodes-container--small">
           {

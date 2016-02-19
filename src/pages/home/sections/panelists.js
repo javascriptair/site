@@ -3,6 +3,8 @@ import Person from '../../../components/person'
 import Decor from '../../../components/decor'
 import Host from './host'
 
+import Title from '../../../components/title.js'
+
 export default Panelists
 
 function PanelistList({panelists}) {
@@ -18,9 +20,10 @@ function Panelists({panelists}) {
     <section className="panelists-section" id="panelists">
       <Decor />
       <div className="panelists-section__container">
-        <h2 className="episodes__title sponsors-section__heading">Host</h2>
+        
+        <Title name="Host" yellow />
         <Host />
-        <h2 className="episodes__title sponsors-section__heading">Panelists</h2>
+        <Title name="Panelists" yellow />
         <PanelistList panelists={panelists} />
         <p className="panelists-section__caption">
           JavaScript Air has <a className="panelists-section__link"
