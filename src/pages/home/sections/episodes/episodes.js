@@ -44,7 +44,7 @@ function EpisodesSection({future, past}) {
 
         {/* Past Episodes - All episodes that have happened in the past */}
 
-        <Title name="Past Episodes" />
+        <Title name="Past Episodes" id="previous-episodes" />
 
         <div className="episodes-container--past episodes-container--small">
           {

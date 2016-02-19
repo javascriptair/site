@@ -2,9 +2,9 @@ import React from 'react'
 
 export default Title
 
-function Title({name, buttonText, buttonUrl, yellow}) {
+function Title({name, buttonText, buttonUrl, yellow, id}) {
   return (
-    <div className={"title title--" + (yellow ? 'yellow' : 'black')}>
+    <div className={'title title--' + (yellow ? 'yellow' : 'black')} id={id}>
 
       <h2 className="title__text">
         {name}
