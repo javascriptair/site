@@ -79,6 +79,25 @@
         color: black;
       }
     }
+
+    @media only screen and (max-width : 1100px) {
+      padding: 16px 20px;
+
+      &__title {
+        display: block;
+        font-size: 1.6em;
+        text-align: center;
+      }
+
+      &__guests {
+        font-size: 1.2em;
+        padding-top: 10px;
+        display: block;
+        text-align: center;
+      }
+
+    }
+
   }
 
   &__part {
