@@ -20,7 +20,7 @@ function Home(
   return (
     <Page>
 
-      <Header />
+      <Header show={futureEpisodes[0]}/>
       <EpisodesSection future={futureEpisodes} past={pastEpisodes} />
       <SponsorsSection {...sponsors} />
       <PanelistsSection panelists={panelists} />

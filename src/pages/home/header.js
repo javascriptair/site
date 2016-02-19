@@ -64,21 +64,26 @@ function Hero() {
   )
 }
 
-function LatestShow() {
+function LatestShow({show}) {
+
   return (
     <div className="latest-show">
+
       <div className="latest-show__container">
 
         <h2 className="latest-show__heading">Latest Show:</h2>
-        <a className="latest-show__link" href="#">Episode 003: Functional JavaScript</a>
-        <time className="latest-show__date" dateTime="2016-01-1">Recorded Wed, Jan 6th 2016 @ 12.00PM (CT)</time>
+        <a className="latest-show__link" href={show.hangoutUrl}>{show.title}</a>
+        <time className="latest-show__date" dateTime="2016-01-1">
+          {show.dateDisplay + " at " + show.time.replace(/\*/g, "")}
+        </time>
 
       </div>
+
     </div>
   )
 }
 
-function Header() {
+function Header({ show }) {
   return (
     <header className="header">
 
@@ -96,7 +101,7 @@ function Header() {
       </div>
 
       <div className="header__bottom-half">
-        <LatestShow />
+        <LatestShow show={show} />
       </div>
 
     </header>
