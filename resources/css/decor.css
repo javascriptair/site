@@ -4,19 +4,19 @@
   width: 100%;
 
   &__part {
-    height: 12px;
+    height: 15px;
     flex-grow: 1;
 
     &--light {
-      background-color: #f3df49;
+      background-color: #d4c33f;
     }
 
     &--medium {
-      background-color: #e2d046;
+      background-color: #baab38;
     }
 
     &--dark {
-      background-color: #e5cd1b;
+      background-color: #8e832b;
     }
 
   }
