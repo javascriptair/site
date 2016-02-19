@@ -27,4 +27,15 @@
     border-bottom: 2px black solid;
     line-height: 1.2em;
   }
+
+  &__tagline {
+    text-align: center;
+  }
+
+  @media only screen and (max-width : 500px) {
+    &__logo {
+      width: 120px;
+      height: 120px;
+    }
+  }
 }
