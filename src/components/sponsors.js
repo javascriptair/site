@@ -11,7 +11,7 @@ function SponsorsSection({
   return (
     <section className="sponsors-section">
       <div className="sponsors-section__container">
-        <h2 className="sponsors-section__heading">Sponsors</h2>
+        <h2 className="episodes__title">Sponsors</h2>
         <h3 className="sponsors-section__subheading">Premier Sponsor</h3>
         <div>
           <Sponsor {...premierSponsor} />

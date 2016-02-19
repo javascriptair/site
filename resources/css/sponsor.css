@@ -3,12 +3,17 @@
   text-decoration: none;
 
   display: flex;
+  flex-grow: 1;
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
 
   &:hover {
     background-color: #E8E8E8;
+  }
+
+  &-group {
+    display: flex;
   }
 
   &__logo {
