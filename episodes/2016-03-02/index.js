@@ -4,7 +4,7 @@ export default {
   title: `JavaScript Utils & Lodash`,
   guests: [
     {
-      name: 'John Dalton',
+      name: 'John-David Dalton',
       twitter: 'jdalton',
       links: [
       ],
