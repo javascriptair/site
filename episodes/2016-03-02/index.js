@@ -27,7 +27,7 @@ export default {
   shortUrl: 'http://jsair.io/lodash',
   host: {
     tips: [
-      `Do open source`
+      `Do open source`,
     ],
     picks: [
       `[ReactJS Program](http://www.reactjsprogram.com/)`,

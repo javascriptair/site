@@ -3,7 +3,7 @@ import marked from 'marked'
 import deindent from 'deindent'
 
 export {
-  displayListify, intersperse, sortEpisodes,
+  displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
   markdownToHTML,
 }
@@ -55,10 +55,6 @@ function displayListify(arr) {
     }
     return xs.concat(concat)
   }, [])
-}
-
-function sortEpisodes(a, b) {
-  return moment(a.date) > moment(b.date)
 }
 
 function isFuture(date, compare = new Date()) {

@@ -1,8 +1,7 @@
 import React from 'react'
 import Episode from './episode'
 import EpisodeSmall from './episode-small'
-
-import * as utils from '../../../../../shared/utils'
+import {sortBy} from 'lodash'
 
 import Title from '../../../../components/title.js'
 
@@ -10,8 +9,11 @@ export default EpisodesSection
 
 function EpisodesSection({future, past}) {
 
-  const futureEpisodes = future.sort(utils.sortEpisodes)
-  const pastEpisodes = past.sort(utils.sortEpisodes)
+  const futureEpisodes = sortBy(future, 'date')
+  const nearFutureEpisodes = futureEpisodes.slice(0, 3)
+  const farFutureEpisodes = futureEpisodes.splice(3, futureEpisodes.length)
+
+  const pastEpisodes = sortBy(past, 'date')
 
   return (
     <section id="episodes" className="episodes">
@@ -20,39 +22,60 @@ function EpisodesSection({future, past}) {
         {/* Upcoming Episodes - The first three upcoming episodes are displayed prominently */}
 
         <Title
-          name="Upcoming Episodes"
-          buttonText="Suggest Episode"
-          buttonUrl="#"
+          name={lamePlural('Upcoming Episode', nearFutureEpisodes)}
+          buttonText="Suggest an Episode"
+          buttonUrl="http://suggest.javascriptair.com"
         />
 
         <div className="episodes-container">
           {
-            futureEpisodes.slice(0, 3).map((e, i) => <Episode episodeData={e} key={i} />)
+            nearFutureEpisodes.map((e, i) => <Episode episodeData={e} key={i} />)
           }
         </div>
 
-        {/* Future Episodes - Anything after the first three is made concise */}
-
-        <Title name="Future Episodes" />
-
-        <div className="episodes-container--future episodes-container--small">
-          {
-            futureEpisodes.splice(3, futureEpisodes.length)
-              .map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
-          }
-        </div>
-
-        {/* Past Episodes - All episodes that have happened in the past */}
-
-        <Title name="Past Episodes" id="previous-episodes" />
-
-        <div className="episodes-container--past episodes-container--small">
-          {
-            pastEpisodes.map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
-          }
-        </div>
+        <FutureEpisodes episodes={farFutureEpisodes} />
+        <PastEpisodes episodes={pastEpisodes} />
 
       </div>
     </section>
   )
 }
+
+function FutureEpisodes({episodes = []}) {
+  if (!episodes.length) {
+    return <noscript />
+  }
+  return (
+    <div>
+      <Title name={lamePlural('Future Episodes', episodes)} />
+
+      <div className="episodes-container--future episodes-container--small">
+        {mapToSmallEpisodes(episodes)}
+      </div>
+    </div>
+  )
+}
+
+function PastEpisodes({episodes = []}) {
+  if (!episodes.length) {
+    return <noscript />
+  }
+  return (
+    <div>
+      <Title name="Past Episodes" id="previous-episodes" />
+
+      <div className="episodes-container--past episodes-container--small">
+        {mapToSmallEpisodes(episodes)}
+      </div>
+    </div>
+  )
+}
+
+function mapToSmallEpisodes(episodes) {
+  return episodes.map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
+}
+
+function lamePlural(string, array) {
+  return string + (array.length === 1 ? '' : 's')
+}
+

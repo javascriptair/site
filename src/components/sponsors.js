@@ -11,7 +11,7 @@ function SponsorsSection({
   silverSponsors = [],
 }) {
   return (
-    <section className="sponsors-section">
+    <section className="sponsors-section" id="sponsors">
       <div className="sponsors-section__container">
         <Title name="Sponsors" />
         <h3 className="sponsors-section__subheading">Premier Sponsor</h3>

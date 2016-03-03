@@ -7,7 +7,7 @@ function Transcript({transcriptHTML}) {
     return <noscript />
   } else {
     return (
-      <section id="transcript">
+      <section id="transcript" className="episode-page__episode-transcript">
         <h3 className="+margin-bottom-large">Transcript</h3>
         <div dangerouslySetInnerHTML={transcriptHTML}></div>
       </section>

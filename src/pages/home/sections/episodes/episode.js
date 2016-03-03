@@ -15,6 +15,7 @@ function Episode({episodeData, index}) {
     descriptionHTML,
     hangoutUrl,
     numberDisplay,
+    page,
   } = episodeData
 
   const sortedGuests = sortPeople(guests)
@@ -97,7 +98,7 @@ function Episode({episodeData, index}) {
 
         {/* DATE SECTION Buttons - Episode options, such as add to calendar*/}
         <div className="episode__part--date__section episode__part--date__section--buttons">
-          <a href={`/episodes/${date}`}>Add to Calendar</a>
+          <a href={page}>Add to Calendar</a>
         </div>
 
       </div>

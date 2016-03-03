@@ -57,6 +57,6 @@ export default sortBy([
       Start with the pre-configured NodeJS one-click to get up and running in 55 seconds,
       or build the exact infrastructure you need, with root access to servers running 100%
       SSD's in state-of-the-art datacenters around the world.
-    `
+    `,
   },
 ], i => i.organization.toLowerCase())

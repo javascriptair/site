@@ -341,7 +341,7 @@ export default {
     KENT: Well, thank you. I actually wanted to add one more pick. This thing is amazing, I love it. It's called NPM Run All, and it basically allows you to run multiple npm scripts in parallel. And so, if you have, like the Validate script that I talked about earlier, building and linting and running code coverage, or tests in general, those are three things that can run at the same time, and really speed things up. And so, I use npm run all to run all those things at the same time and it's awesome. 
 
     Okay, I think that's our show. So yeah, I'll just go ahead and close this up. So, remember next week is Live at React Conf. And it's on Tuesday, not Wednesday, and it's at 12:45 PM PST, So, almost three hours later than normal. And just a quick shout out to our silver sponsors, O'reilly Fluent Conf and Office Zero, new silver sponsor. And then check out suggest.javascriptair.com if you have suggestions for the show and guests and feedback.javascriptair.com to give us feedback for this show. Tell us what you thought about, like tweeting during the show, like, handling the Twitter questions during the show. Experimenting with that. And, yeah I think that's it. So, thanks everybody for coming on the show. I really appreciate it, and really sorry. Shout out to Feross. I think there was some technical difficulties and he was booted. So, I'm super, super sorry about that. But Standard is awesome, go check it out. And thanks everybody for coming. We'll see you all next week! 
-  `
+  `,
 }
 
 

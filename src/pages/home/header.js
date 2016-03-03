@@ -72,18 +72,16 @@ function LatestShow({show}) {
       <div className="latest-show__container">
 
         <h2 className="latest-show__heading">Latest Show:</h2>
-        <a className="latest-show__link" href={show.hangoutUrl}>{show.title}</a>
-        <time className="latest-show__date" dateTime="2016-01-1">
-          {show.dateDisplay + " at " + show.time.replace(/\*/g, "")}
+        <a className="latest-show__link" href={show.page}>{show.title}</a>
+        <time className="latest-show__date" dateTime={show.dateDisplay}>
+          {`${show.dateDisplay} at ${show.time.replace(/\*/g, '')}`}
         </time>
-
       </div>
-
     </div>
   )
 }
 
-function Header({ show }) {
+function Header({show}) {
   return (
     <header className="header">
 

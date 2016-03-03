@@ -1,3 +1,5 @@
+import {writeFileSync} from 'fs'
+import {resolve} from 'path'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
@@ -18,6 +20,6 @@ const string = ReactDOMServer.renderToStaticMarkup(
   <DealsPage deals={theDeals} />
 )
 
-console.log(string) // eslint-disable-line no-console
+writeFileSync(resolve(__dirname, '../deals/index.html'), string)
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import {last} from 'lodash'
 import Page from '../../components/page'
 import Header from './header'
 import EpisodesSection from './sections/episodes'
@@ -20,7 +21,7 @@ function Home(
   return (
     <Page>
 
-      <Header show={futureEpisodes[0]}/>
+      <Header show={last(pastEpisodes)}/>
       <EpisodesSection future={futureEpisodes} past={pastEpisodes} />
       <SponsorsSection {...sponsors} />
       <PanelistsSection panelists={panelists} />
