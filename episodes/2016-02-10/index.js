@@ -1,102 +1,30 @@
 /* eslint max-len:0 */
 
 export default {
-  title: `Forward 4 Web Technology Summit`,
-  time: '12:00 PM **PST**',
+  title: `JavaScript Forward: ES6 and ES7`,
+  time: '11:20 PM **PST**',
   guests: [
     {
-      name: 'ForwardJS',
-      twitter: 'forwardJS',
-      squareImage: true,
+      name: 'Allen Wirfs-Brock',
+      twitter: 'awbjs',
+    },
+    {
+      name: 'Kassandra Perch',
+      twitter: 'nodebotanist',
     },
   ],
   description: `
-    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll talk with speakers and workshop instructors about the awesome stuff going on the conference.
+    Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll chat with Allen Wirfs-Brock,
+    project editor of the ES2015 specification about the future of the JavaScript spec.
   `,
-  hangoutId: 'cs8p8a6fgmlrl490siif59emci0',
-  youTubeId: '7wb0gwjk1aY',
-  podbeanId: '',
-  host: {
-    links: [
-    ],
-    tips: [
-    ],
-    picks: [
-    ],
-  },
+  youTubeId: '',
+  podbeanId: 'sqmnj-5ca6ed',
+  shortUrl: 'http://jsair.io/forward',
+  host: {},
   panelists: [
-    {
-      twitter: 'dan_abramov',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'drboolean',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'getify',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
+    {twitter: 'drboolean'},
+    {twitter: 'getify'},
+    {twitter: 'tylermcginnis33'},
   ],
 }
 

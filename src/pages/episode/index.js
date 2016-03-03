@@ -113,8 +113,26 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
           </div>
         ) : ''
       }
+      {
+        hasShowNotes(episodeData) ? (
+          <div>
+            <hr />
+            <ShowNotes episode={episodeData} />
+          </div>
+        ) : null
+      }
       <hr />
       <SponsorsSection {...sponsors} />
     </div>
   )
 }
+
+function hasShowNotes(episodeData) {
+  const {guests, host, panelists} = episodeData
+  const guestsHostAndPanelists = [...guests, host, ...panelists]
+  return guestsHostAndPanelists.some(p => {
+    const {links, tips, picks} = p
+    return links.length + tips.length + picks.length > 0
+  })
+}
+

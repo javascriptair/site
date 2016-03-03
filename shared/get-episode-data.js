@@ -11,7 +11,7 @@ const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
 export default getEpisodeData
 
 function getEpisodeData(episodePath) {
-  /* eslint complexity:[2,7] */
+  /* eslint complexity:[2,8] */
   const episode = require(episodePath).default
   const date = dateRegex.exec(episodePath)[1]
   const number = episode.number || episodes.indexOf(date)
@@ -68,7 +68,7 @@ function getEpisodeData(episodePath) {
     descriptionHTML: markdownToHTML(description),
     timeHTML: markdownToHTML(time, true),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
-    hangoutUrl: `https://plus.google.com/events/${episode.hangoutId}`,
+    hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
     number,
     numberDisplay,
     ...episode,

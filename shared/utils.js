@@ -1,5 +1,5 @@
 import moment from 'moment'
-import {markdown} from 'markdown'
+import marked from 'marked'
 import deindent from 'deindent'
 
 export {
@@ -78,9 +78,9 @@ function isPastAndNotToday(date, compare = new Date()) {
 }
 
 function markdownToHTML(string, stripP) {
-  let html = markdown.toHTML(deindent(string))
+  let html = marked(deindent(string))
   if (stripP) {
-    html = html.slice(3, -4)
+    html = html.slice(3, -5)
   }
   return {__html: html}
 }

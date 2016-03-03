@@ -1,17 +1,6 @@
-export default [
-  {
-    imgSrc: '/data/deals/forwardJS.png',
-    organization: 'ForwardJS',
-    tagline: 'Web Technology Summit',
-    link: 'http://jsair.io/forward4-discount',
-    deal: 'Use code **jsair** for $40 off your ticket!',
-    expires: '2016-02-10',
-    description: `
-      Forward 4 is a professional web technology conference
-      on February 10th, 2016 with workshops before and after
-      the conference in downtown San Francisco.
-    `,
-  },
+import {sortBy} from 'lodash'
+
+export default sortBy([
   {
     imgSrc: '/data/deals/fluent.png',
     organization: 'Fluent',
@@ -31,7 +20,7 @@ export default [
     imgSrc: '/data/deals/thoughtram.png',
     organization: 'thoughtram',
     tagline: 'Angular 2 Master Class',
-    link: 'https://www.eventbrite.de/e/angular-2-master-class-dusseldorf-tickets-21015847967?discount=JSAIR',
+    link: 'http://jsair.io/cOG3C',
     deal: 'Use code **JSAIR** for 50,00 € off your ticket!',
     expires: '2016-03-09',
     description: `
@@ -41,4 +30,33 @@ export default [
       in Düsseldorf, Germany. Join us and learn Angular 2 the right way!
     `,
   },
-]
+  {
+    imgSrc: '/data/deals/dotjs.png',
+    organization: 'dotJS',
+    tagline: 'The largest JavaScript conference in Europe',
+    link: 'http://jsair.io/dotjs-discount',
+    deal: 'Use code JSAIR for 20% off your ticket',
+    expires: '2016-12-05',
+    description: `
+      [dotJS](http://dotjs.io) is the largest JavaScript conference in Europe.
+      Its 5th edition will happen on December 5th in Paris at the Théâtre Mogador.
+      A lot of amazing speakers will be announced soon. Meanwhile you can check the
+      dotJS 2015 talks [here](http://www.thedotpost.com/conference/dotjs-2015).
+    `,
+  },
+  {
+    imgSrc: '/data/deals/digitalocean.png',
+    organization: 'Digital Ocean',
+    tagline: 'Simple Cloud Infrastructure for Developers',
+    link: 'http://jsair.io/digitalocean',
+    deal: '**JSAIR10** - good for $10 credit on a new DigitalOcean account.',
+    expires: '',
+    description: `
+      DigitalOcean is the best place to get your application off the ground quickly,
+      and the easiest to scale when you find success.
+      Start with the pre-configured NodeJS one-click to get up and running in 55 seconds,
+      or build the exact infrastructure you need, with root access to servers running 100%
+      SSD's in state-of-the-art datacenters around the world.
+    `
+  },
+], i => i.organization.toLowerCase())

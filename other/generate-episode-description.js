@@ -4,7 +4,7 @@ import process from 'process'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-import {markdown} from 'markdown'
+import marked from 'marked'
 import deindent from 'deindent'
 
 import {getSponsorsForDate} from '../sponsors'
@@ -174,8 +174,8 @@ function ShowDescription() {
 }
 
 function Markdown({children}) {
-  let html = markdown.toHTML(deindent(children))
+  let html = marked(deindent(children))
   // get rid of <p> and </p>
-  html = html.substring(3, html.length - 4)
+  html = html.substring(3, html.length - 5)
   return <span dangerouslySetInnerHTML={({__html: html})} />
 }
