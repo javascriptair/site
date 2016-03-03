@@ -14,7 +14,7 @@
 | 2016-03-02 | [JavaScript Utils & Lodash](/../../issues/40) |
 | 2016-03-09 | [Fluent Conf](/../../issues/39) |
 | 2016-03-16 | [End to End Testing](/../../issues/15) |
-| 2016-03-23 | [](/../../issues/) |
+| 2016-03-23 | [AVA: Futuristic test runner 🚀](/../../issues/47) |
 | 2016-03-30 | [](/../../issues/) |
 | 2016-04-06 | [](/../../issues/) |
 | 2016-04-13 | [](/../../issues/) |
