@@ -242,7 +242,7 @@ export default {
     And then, just in general, next week is a live conference show. It's live at Fluent Conf, and really excited about this one. It's going to be March 9th at 12:45pm PST, and John is showing off his Thunder plane shirt there. Hopefully maybe we can get a live show at that conference this year too. That would be sweet. Yeah, and then remember to follow us on Twitter and Google+ and Facebook to keep up with the latest. And I think that's it. Oh, one other thing. So, if you want to join an email, a weekly email list with the show notes and things like that, we're planning on actually doing this. Go to jsair.io/email and register yourself to be on the email list. And I think that's it. So, thank you so much, John and we'll catch everybody later!
 
     JOHN: Alright, thank you! Bye.
-  `
+  `,
 }
 
 

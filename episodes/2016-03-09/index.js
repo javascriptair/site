@@ -375,7 +375,7 @@ export default {
     KENT: Thank you. So that's our show, JavaScript Air is a wrap here at Fluent Conf. So I'll just close out with a couple of things. First our sponsors, our silver sponsors, we have, Fluent Conf actually is a sponsor, so thanks Fluent Conf, for sponsoring the show! And Auth0 is also a sponsor. They do super simple authentication for us developers. Thank you to Auth0. 
 
     And so with that, I think I'll just wrap us up with a couple of announcements and general things. So remember, if you have any suggestions for the show, for the guests or the type of topics that you'd like us to explore, go to Suggest.JavaScriptAir.com. And if you have feedback for this show or any other past show that we've had, or the show in general, go to Feedback.JavaScriptAir.com, and you can submit feedback there. And then again, if you want to sign up for the newsletter, just like Peter said, that URL is not JavaScriptWeekly.com, but it's jsair.io/email. And with that, I think we're good to wrap things up. Thanks, everybody, for watching and we'll catch you next week on our End to End Testing show. Thank you, goodbye!
-  `
+  `,
 }
 
 
