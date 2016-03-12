@@ -10,17 +10,23 @@ function Guests({guests}) {
     <Page
       title="JavaScript Air show guests"
     >
-      <div className="container">
-        <header className="+text-center">
-          <h1>
+      <div className="container guests-page">
+        <header className="guests-page__header">
+          <h1 className="guests-page__header__title">
             <a href="/" alt="home">JavaScript Air</a>
           </h1>
-          <a href="http://guests.javascriptair.com">
+          <a href="http://guests.javascriptair.com" className="guests-page__header__subtitle">
             Show Guests
           </a>
         </header>
         <hr />
         <PersonGroup people={guests} />
+        <hr />
+        <div className="guests-page__suggest-link">
+          If you would like to suggest a guest or topic,
+          please fill
+          out <a href="http://suggest.javascriptair.com">this form</a>
+        </div>
       </div>
     </Page>
   )
@@ -29,3 +35,4 @@ function Guests({guests}) {
 Guests.propTypes = {
   guests: React.PropTypes.array,
 }
+
