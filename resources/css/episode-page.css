@@ -14,8 +14,8 @@
     padding-left: 40px;
   }
   &__rsvp-icon {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     fill: #318cb7;
   }
   &__episode-transcript p {

@@ -1,0 +1,45 @@
+.deals-page {
+  &__header {
+    text-align: center;
+  }
+  &__title {
+  }
+  &__subtitle {
+    margin-top: 40px;
+  }
+  &__email {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+  #deals {
+    text-align: center;
+
+    .deal {
+      &__org-name {
+      }
+      &__org-tagline {
+        display: block;
+        margin-top: 10px;
+      }
+      &__org-image {
+        margin-top: 30px;
+      }
+      &__description {
+      }
+      &__deal {
+        p {
+          margin-top: 18px;
+          margin-bottom: 18px;
+        }
+      }
+      &__link {
+      }
+      &__expiration {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
