@@ -1,9 +1,29 @@
 export default {
-  title: `{{title}}`,
+  title: `AVA: Futuristic test runner 🚀`,
   guests: [
     {
-      name: '',
-      twitter: '',
+      name: 'James Talmage',
+      twitter: 'jamestalmage',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Mark Wubben',
+      twitter: 'novemberborn',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Vadim Demedes',
+      twitter: 'vdemedes',
       links: [
       ],
       tips: [
@@ -13,12 +33,12 @@ export default {
     },
   ],
   description: `
-    {{description}}
+    [AVA](http://npm.im/ava) is a relatively new testing framework for JavaScript that promises some really unique and exciting benefits over some of the existing testing frameworks.
   `,
-  hangoutId: '{{hangoutId}}',
-  youTubeId: '{{youTubeId}}',
+  hangoutId: 'cjeb8ka1hu66uapqkrk40j5bjk4',
+  youTubeId: 'YRvrPkXBwdo',
   podbeanId: '',
-  shortUrl: '',
+  shortUrl: 'http://jsair.io/ava',
   host: {
     links: [
     ],
