@@ -14,25 +14,36 @@ function SponsorsSection({
   return (
     <section className="sponsors-section" id="sponsors">
       <div className="sponsors-section__container">
-        <Title name="Sponsors" />
+
+        <Title
+          name="Sponsors"
+          buttonText="Become a Sponsor"
+          buttonUrl="http://jsair.io/sponsor-info"
+        />
+
         <h3 className="sponsors-section__subheading">Premier Sponsor</h3>
+
         <div>
           <Sponsor {...premierSponsor} />
         </div>
+
         <SponsorGroup
           className="sponsors-section__gold-sponsors"
           sponsors={goldSponsors}
           title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
         />
+
         <SponsorGroup
           className="sponsors-section__silver-sponsors"
           sponsors={silverSponsors}
           title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
         />
+
         <p className="sponsors-section__footnote">
           JavaScript Air is supported by
           some <a href="/contributors">awesome contributors</a>.
         </p>
+        
       </div>
     </section>
   )
