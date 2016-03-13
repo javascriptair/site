@@ -1,4 +1,5 @@
 import moment from 'moment'
+import {sortBy} from 'lodash'
 import {isPast} from '../shared/utils'
 
 const sponsors = {
@@ -57,26 +58,51 @@ const sponsors = {
       startDate: '2016-02-17',
     },
   ],
+  appreciationSponsors: [
+    {
+      twitter: '_jwngr',
+      name: 'Jacob Wenger',
+      startDate: '2016-03-11',
+    },
+    {
+      twitter: 'nyrosmith',
+      name: 'Martin Schmid',
+      startDate: '2016-03-11',
+    },
+  ].map(s => {
+    return {
+      imgSrc: `/sponsors/appreciation/${s.twitter}.png`,
+      link: `https://twitter.com/${s.twitter}`,
+      squareImage: false,
+      ...s,
+    }
+  }),
 }
 
 function getSponsorsForDate(date) {
-  const momentDate = moment(date)
+  const filterSponsor = getSponsorFilter(date)
   const sponsorsForDate = Object.keys(sponsors).reduce((current, key) => {
     const sponsorGroup = sponsors[key]
-    const dateGroup = sponsorGroup.filter(sponsor => {
-      const {startDate, endDate} = sponsor
-      const sponsorshipHasBegun = isPast(startDate, momentDate)
-      const sponsorshipHasEnded = endDate && isPast(endDate, momentDate)
-      return sponsorshipHasBegun && !sponsorshipHasEnded
-    })
+    const filteredSponsors = sponsorGroup.filter(filterSponsor)
+    const sortedSponsors = sortBy(filteredSponsors, 'date')
     if (key === 'premierSponsors') {
-      current.premierSponsor = dateGroup[0]
+      current.premierSponsor = sortedSponsors[0]
     } else {
-      current[key] = dateGroup
+      current[key] = sortedSponsors
     }
     return current
   }, {})
   return sponsorsForDate
+}
+
+function getSponsorFilter(date) {
+  const momentDate = moment(date)
+  return function filter(sponsor) {
+    const {startDate, endDate} = sponsor
+    const sponsorshipHasBegun = isPast(startDate, momentDate)
+    const sponsorshipHasEnded = endDate && isPast(endDate, momentDate)
+    return sponsorshipHasBegun && !sponsorshipHasEnded
+  }
 }
 
 const currentSponsors = getSponsorsForDate(new Date())

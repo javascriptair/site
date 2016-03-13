@@ -1,6 +1,5 @@
 import React from 'react'
 import Person from './person'
-//import {renderGraphic} from './icon-link'
 import Icon from './icon'
 
 export default PersonGroup
