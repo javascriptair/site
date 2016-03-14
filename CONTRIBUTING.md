@@ -18,6 +18,9 @@ Thanks for your interest in contributing to the JavaScript Air website!
 12. Create a pull request from your branch on your fork to master on this repo
 13. Get merged! 🎉 🎊
 
+If this is your first contribution, feel free to add yourself to the contributor's list in the `data` folder.
+Make sure to follow the instructions below to size your image properly :-)
+
 ## npm scritps
 
 Most of everything you do with the website you can do with the npm scripts you find in the `package.json` file.
