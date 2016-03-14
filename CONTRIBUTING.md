@@ -82,7 +82,7 @@ Simply run:
 npm run compressImage -- /path/to/the/image
 ```
 
-And you'll get a compressed, resized, and converted (if needed) image to use for the site.
+And you'll get a compressed, resized, and converted (if needed) image to use for the site. This image will have the original filename, but with "resized" in the middle of it. Before committing, make sure to replace your original image with the compressed one by deleting the original and renaming the compressed one to the original's filename.
 
 ## Deploying
 
