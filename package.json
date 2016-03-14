@@ -18,6 +18,7 @@
     "prebuild": "npm run eslint",
     "deploy": "./scripts/deploy.sh",
     "getShortUrl": "babel-node ./scripts/shorten-url",
+    "compressImage": "babel-node ./scripts/compress-image",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build -s",
     "dev:home": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:home -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
@@ -28,7 +29,8 @@
     "description": "babel-node other/generate-episode-description",
     "eslint": "eslint .",
     "server": "http-server",
-    "test": "echo \"Error: no test specified.\""
+    "test": "echo \"Error: no test specified.\"",
+    "validate": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -64,6 +66,7 @@
     "ghooks": "1.0.3",
     "glob": "6.0.1",
     "http-server": "0.8.5",
+    "imagina": "0.1.4",
     "inquirer": "0.11.0",
     "inquirer-directory": "1.1.3",
     "lodash": "3.10.1",
