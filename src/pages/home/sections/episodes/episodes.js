@@ -13,7 +13,7 @@ function EpisodesSection({future, past}) {
   const nearFutureEpisodes = futureEpisodes.slice(0, 3)
   const farFutureEpisodes = futureEpisodes.splice(3, futureEpisodes.length)
 
-  const pastEpisodes = sortBy(past, 'date')
+  const pastEpisodes = sortBy(past, 'date').reverse()
 
   return (
     <section id="episodes" className="episodes">
