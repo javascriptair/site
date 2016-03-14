@@ -14,6 +14,11 @@ const contributors = [
     twitter: 'adamjwolf',
     contributions: 'SVG logo',
   },
+  {
+    name: 'Juan Soto',
+    twitter: '_hooan',
+    contributions: 'Site PRs',
+  },
 ].map(c => {
   return {
     imgSrc: `/data/contributors/${c.twitter}.png`,
