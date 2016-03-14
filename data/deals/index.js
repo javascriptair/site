@@ -1,6 +1,7 @@
 import {sortBy} from 'lodash'
+import {isFuture} from '../../shared/utils'
 
-export default sortBy([
+const deals = [
   {
     imgSrc: '/data/deals/fluent.png',
     organization: 'Fluent',
@@ -57,6 +58,12 @@ export default sortBy([
       Start with the pre-configured NodeJS one-click to get up and running in 55 seconds,
       or build the exact infrastructure you need, with root access to servers running 100%
       SSD's in state-of-the-art datacenters around the world.
-    `
+    `,
   },
-], i => i.organization.toLowerCase())
+]
+
+const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())
+const filteredDeals = sortedDeals.filter(d => d.expires ? isFuture(d.expires) : true)
+
+export default filteredDeals
+

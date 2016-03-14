@@ -1,0 +1,23 @@
+.guests-page {
+  &__header {
+    text-align: center;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+    }
+  }
+  &__suggest-link {
+    text-align: center;
+  }
+  .person {
+    &__image {
+      width: inherit;
+      height: inherit;
+      margin: 18px 10px 4px 10px;
+    }
+    &__details__text {
+      font-size: 0.8em;
+    }
+  }
+}

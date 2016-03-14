@@ -1,0 +1,53 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+
+  &--yellow {
+    color: #e2d046;
+  }
+
+  &--black {
+    color: black;
+  }
+
+  &__text {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  &__btn {
+    padding: 10px 40px;
+
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: black;
+    border: 5px solid black;
+
+    transition: all 0.4s;
+    
+    &:hover {
+      color: #e4e4e4;
+      background: black;
+    }
+
+    &--invisible {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width : 1100px) {
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      text-align: center;
+    }
+
+    &__btn {
+      margin-top: 30px;
+    }
+  }
+}

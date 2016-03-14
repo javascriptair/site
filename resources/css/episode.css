@@ -1,0 +1,453 @@
+.episodes {
+  width: 100%;
+  background-color: #e4e4e4;
+
+  &__title {
+    font-size: 3.0em;
+    font-weight: bold;
+    padding: 30px 0;
+  }
+
+  &__container {
+    margin: 0 auto;
+    width: 1000px;
+    padding-bottom: 50px;
+    background-color: #e4e4e4;
+  }
+
+  @media only screen and (max-width : 1100px) {
+    &__title {
+      text-align: center;
+    }
+
+    &__container {
+      width: 100%;
+    }
+  }
+
+  &--small {
+
+  }
+
+}
+
+/*
+  Episode Card
+
+  A singular episode card on the home page.
+  Gives information about and allows  users
+  to perform actions on episodes. Typically
+  displayed in a row of many.
+*/
+.episode {
+  display: flex;
+  margin-bottom: 50px;
+  min-height: 450px;
+
+  background-color: white;
+  box-shadow: 0px 17px 69px -12px rgba(0,0,0,0.42);
+
+  @media only screen and (max-width : 1100px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width : 700px) {
+    width: 90%;
+  }
+
+  &--small {
+    padding: 5px 0px;
+
+    &__title {
+      font-size: 1.3em;
+      color: black;
+    }
+
+    &__guests {
+      font-size: 0.9em;
+      color: gray;
+    }
+
+    &__guests a {
+      color: gray;
+      text-decoration: underline;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    @media only screen and (max-width : 1100px) {
+      padding: 16px 20px;
+
+      &__title {
+        display: block;
+        font-size: 1.6em;
+        text-align: center;
+      }
+
+      &__guests {
+        font-size: 1.2em;
+        padding-top: 10px;
+        display: block;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  &__part {
+    float: left;
+
+    /*
+      Episode Card Part - DATE
+
+      This card part contains information regarding the
+      date and time that the episode aired or airs.
+    */
+    &--date {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-width: 250px;
+
+      box-shadow: inset -23px -1px 35px -15px rgba(0,0,0,0.12);
+      background-color: #ebebeb;
+
+      @media only screen and (max-width : 1100px) {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+      }
+
+      /*
+       Sections
+
+        Sections within the  DATE episode card  part are sub-areas
+        of the component, handling specific separated information,
+        such as time, date, month, etc.
+      */
+      &__section {
+
+        /* Section - NUMBER - Large, stylized episode number */
+        &--number {
+          padding: 20px 40px;
+          padding-bottom: 0;
+
+          &__h2 {
+            display: block;
+            font-size: 6.25em;
+            font-weight: bold;
+          }
+
+        }
+
+        @media only screen and (max-width : 1100px) {
+
+          &--number {
+            padding: 0px;
+            padding-right: 15px;
+
+            &__h2 {
+              font-size: 1.7em;
+            }
+          }
+
+        }
+
+
+        /* Section - CALENDAR - Displays nearby dates in a calendar format */
+        &--calendar {
+
+        }
+
+        /* Section - BUTTONS - Displays call-to-action buttons and interactions */
+        &--buttons {
+          padding: 20px;
+          justify-self: flex-end;
+          text-align: center;
+
+          @media only screen and (max-width : 1100px) {
+            display: none;
+          }
+
+          a {
+            font-size: 1.05em;
+            font-weight: bold;
+            text-decoration: none;
+            color: gray;
+            padding: 10px;
+
+            transition: all 0.4s;
+
+            &:hover {
+              letter-spacing: 0.1em;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    &--content {
+      padding: 20px;
+    }
+
+  }
+
+  .content__section {
+
+    &--title {
+      padding: 10px 0px;
+      line-height: 2.8em;
+
+      &__header {
+        font-size: 2.3em;
+        font-weight: bold;
+        text-align: center;
+
+        &__link {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+    }
+
+    &--description {
+      margin-top: 20px;
+      font-size: 1.2em;
+      line-height: 1.55em;
+      text-align: center;
+    }
+
+    &__button {
+      display: inline-block;
+      padding: 20px 25px;
+      font-size: 1.4em;
+      text-decoration: none;
+      color: gray;
+
+      transition: all 0.4s;
+
+      &:hover {
+        letter-spacing: 0.1em;
+      }
+    }
+
+    &--buttons {
+      text-align: center;
+    }
+
+  }
+
+}
+
+/*
+  Calendar
+  
+  Displays the date date of the current episode as well
+  the two dates flanking it. This gives the user visual
+  information regarding the date of the show.
+*/
+
+.calendar {
+  overflow: hidden;
+
+  &--mobile {
+    display: none;
+
+    @media only screen and (max-width : 1100px) {
+      display: block;
+      font-size: 1.7em;
+    }
+  }
+
+  @media only screen and (max-width : 1100px) {
+    display: none;
+  }
+
+  /*
+    Date - One date block in the calendar display
+  */
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+
+    width: 120px;
+    height: 120px;
+
+    background-color: #c4c4c4;
+
+    &:hover {
+
+      .calendar__date {
+
+        &__name {
+          filter: blur(1px);
+          color: gray;
+          font-size: 1.3em;
+        }
+
+        &__number {
+          filter: blur(1px);
+          color: gray;
+          font-size: 4.5em;
+        }
+
+      }
+
+    }
+
+    &__slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      position: absolute;
+      box-sizing: border-box;
+
+      padding: 10px;
+      width: 120px;
+      height: 120px;
+      bottom: -120px;
+      left: 0;
+
+      background-color: rgba(0, 0, 0, 0.1);
+
+      a {
+
+        svg {
+          fill: black;
+          width: 40px;
+          height: 40px;
+          padding-bottom: 10px;
+        }
+
+        font-size: 1.3em;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
+
+      transition: all 0.6s ease;
+    }
+
+    /*
+      Date Element Children - Name, Number
+    */
+
+    &__name {
+      font-size: 1.4em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.25s;
+    }
+
+    &__number {
+      display: block;
+      font-size: 4em;
+      font-weight: bold;
+      transition: all 0.4s;
+    }
+
+    /*
+      Date Element Modifiers - Before, Main, After
+    */
+
+    &--before {
+      transform: perspective(500px) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) scale(.935) scale3d(1, 1, 1) translate(9.4px, 0px);
+      opacity: 0.4;
+    }
+
+    &--main {
+
+      &:hover {
+
+        .calendar__date {
+
+          &__slide {
+            bottom: 0;
+          }
+
+          &__name {
+            filter: blur(5px);
+            color: gray;
+            font-size: 1.3em;
+          }
+
+          &__number {
+            filter: blur(5px);
+            color: gray;
+            font-size: 4.5em;
+          }
+
+        }
+
+      }
+
+    }
+
+    &--after {
+      transform: perspective(500px) rotateX(0deg) rotateY(30deg) rotateZ(0deg) scale(.935) scale3d(1, 1, 1) translate(-9.4px, 0px);
+      opacity: 0.4;
+    }
+
+  }
+
+  /*
+    Section - A sub-section of the entire calendar section
+  */
+
+  &__section {
+    clear: both;
+
+    &--heading {
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      
+      color: gray;
+      padding: 15px;
+    }
+
+    &--month {
+      font-size: 1.5em;
+    }
+
+    &--time {
+      letter-spacing: 0.06em;
+      font-size: 1.15em;
+    }
+
+    &--dates {
+      width: 250px;
+
+      &__container {
+        display: flex;
+        width: 360px;
+        left: -54px;
+        position: relative;
+        float: left;
+      }
+    }
+  
+  }
+
+}

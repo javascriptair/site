@@ -1,0 +1,25 @@
+.footer{
+  padding: 20px 0;
+  background-color: #0a0a0a;
+  color: white;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__col {
+    @media only screen and (min-width : 900px) {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  &__nav-footer-list{
+    @media only screen and (min-width : 900px) {
+      float: right;
+    }
+  }
+}

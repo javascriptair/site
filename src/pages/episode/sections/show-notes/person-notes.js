@@ -41,7 +41,7 @@ function Notes({notes, label}) {
   return (
     <div className="notes">
       <strong>{label}</strong>
-      <ul>
+      <ul className="episode-page__episode-notes-list">
         {
           notes.map((note, index) => (
             <li key={index} dangerouslySetInnerHTML={note} />

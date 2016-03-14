@@ -1,0 +1,24 @@
+.episode-page {
+  &__header {
+  }
+  &__episode-title {
+    margin: 30px 0;
+  }
+  &__episode-date {
+  }
+  &__episode-description {
+    margin: 30px 0;
+  }
+  &__episode-notes-list {
+    list-style: disc;
+    padding-left: 40px;
+  }
+  &__rsvp-icon {
+    width: 20px;
+    height: 20px;
+    fill: #318cb7;
+  }
+  &__episode-transcript p {
+    margin-bottom: 20px
+  }
+}

@@ -10,21 +10,23 @@ function DealsPage({deals}) {
     <Page
       title="JavaScript Air Deals"
     >
-      <header className="+text-center">
-        <h1>
-          <a href="/deals" alt="home">JavaScript Air Deals</a>
-        </h1>
-        <p>
-          <a href="/">JavaScript Air</a> is the live broadcast podcast all about JavaScript.
-        </p>
-        <small>
-          If you wish to add a deal to this list, please{' '}
-          <a href="mailto:javascriptair+deals@gmail.com">contact Kent</a>
-        </small>
-      </header>
-      <hr />
-      <Deals deals={deals} />
-      <hr />
+      <div className="deals-page container">
+        <header className="deals-page__header">
+          <h1 className="deals-page__title">
+            <a href="/deals" alt="home">JavaScript Air Deals</a>
+          </h1>
+          <p className="deals-page__subtitle">
+            <a href="/">JavaScript Air</a> is the live broadcast podcast all about JavaScript.
+          </p>
+          <small className="deals-page__email">
+            If you wish to add a deal to this list, please{' '}
+            <a href="mailto:javascriptair+deals@gmail.com">contact Kent</a>
+          </small>
+        </header>
+        <hr />
+        <Deals deals={deals} />
+        <hr />
+      </div>
     </Page>
   )
 }
@@ -36,7 +38,7 @@ DealsPage.propTypes = {
 
 function Deals({deals}) {
   return (
-    <section id="deals" className="+text-center">
+    <section id="deals">
       {
         intersperse(
           deals.map((d, i) => <Deal deal={d} key={i} />),
@@ -60,11 +62,11 @@ function Deal({deal}) {
   return (
     <div className="deal">
       <h3>
-        {organization}
+        <span className="deal__org-name">{organization}</span>
         <br />
-        <small>{tagline}</small>
+        <small className="deal__org-tagline">{tagline}</small>
       </h3>
-      <div className="deal__organization">
+      <div className="deal__org-image">
         <a href={link}>
           <img
             src={imgSrc}
@@ -75,12 +77,14 @@ function Deal({deal}) {
       <div className="deal__description">
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
-      <div className="deal__link">
-        <p dangerouslySetInnerHTML={dealHTML} />
-        <a href={link}>Click here to use this deal</a>
+      <div>
+        <div className="deal__deal">
+          <p dangerouslySetInnerHTML={dealHTML} />
+        </div>
+        <a className="deal__link" href={link}>Click here to use this deal</a>
         <br />
         { expires ? (
-          <small>
+          <small className="deal__expiration">
             Expires {expires}
           </small>
         ) : null }

@@ -1,8 +1,9 @@
+import {writeFileSync} from 'fs'
+import {resolve} from 'path'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import {flatten, unique} from 'lodash'
-
 
 import episodes from '../episodes'
 import Guests from '../src/pages/guests'
@@ -21,5 +22,5 @@ const string = ReactDOMServer.renderToStaticMarkup(
   <Guests guests={guests} />
 )
 
-console.log(string) // eslint-disable-line no-console
+writeFileSync(resolve(__dirname, '../guests/index.html'), string)
 

@@ -622,7 +622,7 @@ export default {
     And that is our show. So thank you for watching. Just a quick shout out to our silver sponsors, Fluent Conf and Auth0. You can check them out on our website. And next week, we're going to be meeting with John-David Dalton about JavaScript utilities and Lodash, in particular. Really excited about that. John is awesome. And so tune in next week. It'll be at our regular time. And then the week after that we're actually going to be at Fluent Conf doing another live show, so really appreciate feedback on these live shows that we do, so that we can make sure that we're providing the value that you're looking for out of a show at a conference. Like I said, I promise the audio quality will be better next time. I really apologize about that. 
 
     If you have suggestions for us, please go to Suggest.JavascriptAir.com, and can fill out a form, suggestions about the show in general or this specific episode. And then if you have, actually sorry, that was Feedback.JavascriptAir.com. If you have suggestions for upcoming shows and topics, go to Suggest.JavascriptAir.com. And then our deals page, make sure you check that out, JavascriptAir.com/deals. We have a couple of discount codes and stuff on there. I just pushed up another one this morning. And so yeah, I think that's it. So thank you very much for watching, and we'll see you next week. Buh-bye! Ah, and I can't stop the broadcast. Goodbye! (laughs)
-  `
+  `,
 }
 
 

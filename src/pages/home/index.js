@@ -1,16 +1,12 @@
 import React from 'react'
 
+import {last} from 'lodash'
 import Page from '../../components/page'
 import Header from './header'
-import SubscribeIconGroupSection from './sections/subscribe-icon-group'
-import PreviousEpisodeSection from './sections/previous-episodes'
 import EpisodesSection from './sections/episodes'
-import HostSection from './sections/host'
 import PanelistsSection from './sections/panelists'
 import SponsorsSection from '../../components/sponsors'
-import LinksSection from './sections/links'
-
-import SocialIconGroupSection from './sections/social-icon-group'
+import Footer from './sections/footer'
 
 export default Home
 
@@ -24,41 +20,13 @@ function Home(
 ) {
   return (
     <Page>
-      <Header />
 
-      <hr />
-
-      <SubscribeIconGroupSection />
-
-      <hr />
-
-      <EpisodesSection episodes={futureEpisodes} />
-
-      {futureEpisodes.length ? <hr /> : ''}
-
+      <Header show={last(pastEpisodes)}/>
+      <EpisodesSection future={futureEpisodes} past={pastEpisodes} />
       <SponsorsSection {...sponsors} />
-
-      <hr />
-
-      <PreviousEpisodeSection episodes={pastEpisodes} />
-
-      {pastEpisodes.length ? <hr /> : ''}
-
-      <HostSection />
-
-      <hr />
-
       <PanelistsSection panelists={panelists} />
-
-      <hr />
-
-      <SocialIconGroupSection />
-
-      <hr />
-
-      <LinksSection />
+      <Footer />
 
     </Page>
   )
 }
-

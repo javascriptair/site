@@ -22,7 +22,6 @@ function Page({
         <meta name="description" content={description} />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
         <link rel="stylesheet" href="/styles.dist.css" />
-        <link rel="stylesheet" href="/resources/font/font.css" />
       </head>
       <body>
         {children}
