@@ -68,6 +68,7 @@
 
     &__guests {
       font-size: 0.9em;
+      line-height: 1.3;
       color: gray;
     }
 
@@ -253,7 +254,7 @@
 
 /*
   Calendar
-  
+
   Displays the date date of the current episode as well
   the two dates flanking it. This gives the user visual
   information regarding the date of the show.
@@ -422,7 +423,7 @@
       font-weight: bold;
       text-align: center;
       text-transform: uppercase;
-      
+
       color: gray;
       padding: 15px;
     }
@@ -447,7 +448,7 @@
         float: left;
       }
     }
-  
+
   }
 
 }
