@@ -13,6 +13,7 @@
 
   &__subheading {
     font-size: 1.6em;
+    line-height: 1.3;
 
     @media only screen and (max-width: 530px) {
       text-align: center;
