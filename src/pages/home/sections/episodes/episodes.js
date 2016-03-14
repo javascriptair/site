@@ -1,7 +1,7 @@
 import React from 'react'
 import Episode from './episode'
 import EpisodeSmall from './episode-small'
-import {sortBy} from 'lodash'
+import {sortBy, reverse} from 'lodash'
 
 import Title from '../../../../components/title.js'
 
@@ -13,7 +13,7 @@ function EpisodesSection({future, past}) {
   const nearFutureEpisodes = futureEpisodes.slice(0, 3)
   const farFutureEpisodes = futureEpisodes.splice(3, futureEpisodes.length)
 
-  const pastEpisodes = sortBy(past, 'date')
+  const pastEpisodes = reverse(sortBy(past, 'date'))
 
   return (
     <section id="episodes" className="episodes">
