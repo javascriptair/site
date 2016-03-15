@@ -1,6 +1,6 @@
 import React from 'react'
 import GoogleAnalyticsScript from './scripts/google-analytics'
-
+import Functionize from './scripts/functionize'
 
 export default Page
 
@@ -17,7 +17,7 @@ function Page({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
-        <meta name="theme-color" content="#155674" />
+        <meta name="theme-color" content="#efdd4f" />
         <meta name="author" content="Kent C. Dodds" />
         <meta name="description" content={description} />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
@@ -27,6 +27,7 @@ function Page({
         {children}
 
         <GoogleAnalyticsScript />
+        <Functionize />
       </body>
     </html>
   )
