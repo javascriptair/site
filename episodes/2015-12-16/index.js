@@ -17,7 +17,8 @@ export default {
       ],
       picks: [
         `[Javascript Allonge](https://leanpub.com/javascript-allonge)`,
-        `[Hello Declarative World!](http://codon.com/hello-declarative-world)[my ES6 implementation](https://github.com/ashleygwilliams/relational-node)`,
+        `[Hello Declarative World!](http://codon.com/hello-declarative-world)`,
+        `[My ES6 implementation](https://github.com/ashleygwilliams/relational-node)`,
         `[Simple Made Easy, Rich Hickey](http://www.infoq.com/presentations/Simple-Made-Easy)`,
         `[Growing a Language, Guy Steele](https://www.youtube.com/watch?v=_ahvzDzKdB0)`,
       ],
