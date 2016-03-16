@@ -29,7 +29,7 @@ console.log(string) // eslint-disable-line no-console
 function EpisodeDescription({episode, sponsors}) {
   const {
     date,
-    title,
+    titleHTML,
     descriptionHTML,
     guests,
     host,
@@ -43,7 +43,7 @@ function EpisodeDescription({episode, sponsors}) {
       <div>
         <Title
           date={date}
-          title={title}
+          titleHTML={titleHTML}
           guests={guests}
         />
       </div>

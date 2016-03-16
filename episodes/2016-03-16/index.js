@@ -7,8 +7,10 @@ export default {
       links: [
       ],
       tips: [
+        `[Protractor Styleguide](https://github.com/CarmenPopoviciu/protractor-styleguide)`,
       ],
       picks: [
+        `GitHub is on a roll with new features - [emoji support](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments), [better reviews](https://github.com/blog/2123-more-code-review-tools)`,
       ],
     },
   ],
@@ -17,87 +19,49 @@ export default {
   `,
   hangoutId: 'c7h4gafbmpo00gc5llo6v737g3o',
   youTubeId: 'yoPIsrhaNGU',
-  podbeanId: '',
+  podbeanId: '67rvv-5d98e5',
   shortUrl: 'http://jsair.io/e2e',
+  past: true,
   host: {
     links: [
+      `[aXeCore](https://github.com/dequelabs/axe-core) - [Marcy Sutton](https://twitter.com/marcysutton) [tweeted](https://twitter.com/marcysutton/status/710153834874544128) this during the show.`,
     ],
     tips: [
+      `Use all forms of testing`,
     ],
     picks: [
+      `[How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)`,
+      `[Ghost Inspector](https://ghostinspector.com/)`,
     ],
   },
   panelists: [
     {
-      twitter: 'dan_abramov',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
       twitter: 'drboolean',
-      links: [
-      ],
       tips: [
+        `If you use karma + mocha. Set the mocha timeout to 20+ seconds, wrap your assertion in a setTimeout and you’ll have time to inspect the screen and click around (if you’re not using a headless browser)`,
       ],
       picks: [
+        `[Amazing Scope tool from Shape Security](http://shift-ast.org/scope.html)`,
+        `[Parser Combinator library from Bodil Stokke](https://github.com/bodil/eulalie)`,
       ],
     },
     {
       twitter: 'getify',
-      links: [
-      ],
       tips: [
+        `Use [TrueCaller app](http://truecaller.com) for your phone to cut down on spam calls`,
+        `Reserve your npm username as a package name -- they are separate!`,
       ],
       picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
+        `[kentcdodds npm package](https://www.npmjs.com/package/kentcdodds)`,
+        `[getify npm package](https://www.npmjs.com/package/getify): hint this is NOT mine :*(`,
+        `[Hactar](https://github.com/Hactar-js/hactar) the tool that builds every other tool for you.`,
       ],
     },
     {
       twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
       picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
+        `[peach-register](https://www.npmjs.com/package/peach-register) to register your name on Peach without downloading the app`,
+        `Reading in general, but in particular: [All the Light We Cannot See](http://smile.amazon.com/gp/product/B00DPM7TIG/)`,
       ],
     },
   ],
