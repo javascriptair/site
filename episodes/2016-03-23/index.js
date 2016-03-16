@@ -1,5 +1,5 @@
 export default {
-  title: `AVA: Futuristic test runner 🚀`,
+  title: `AVA: Futuristic test runner <span style="font-weight:normal">🚀</span>`,
   guests: [
     {
       name: 'James Talmage',
