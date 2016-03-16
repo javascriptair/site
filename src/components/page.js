@@ -1,6 +1,7 @@
 import React from 'react'
 import GoogleAnalyticsScript from './scripts/google-analytics'
 import Functionize from './scripts/functionize'
+import striptags from 'striptags'
 
 export default Page
 
@@ -13,13 +14,13 @@ function Page({
   return (
     <html>
       <head lang="en">
-        <title>{title}</title>
+        <title>{striptags(title)}</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
         <meta name="theme-color" content="#efdd4f" />
         <meta name="author" content="Kent C. Dodds" />
-        <meta name="description" content={description} />
+        <meta name="description" content={striptags(description)} />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
         <link rel="stylesheet" href="/styles.dist.css" />
       </head>

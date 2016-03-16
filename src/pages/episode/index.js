@@ -1,5 +1,6 @@
 import React from 'react'
 import deindent from 'deindent'
+import marked from 'marked'
 
 import {isPastAndNotToday} from '../../../shared/utils'
 
@@ -21,10 +22,11 @@ export default EpisodePage
 function EpisodePage({episode, sponsors}) {
   const past = episode.past || isPastAndNotToday(episode.date)
   const {numberDisplay, title, description} = episode
+  const descriptionHTMLString = marked(deindent(description))
   return (
     <Page
       title={`JavaScript Air | ${title}`}
-      description={getPageDescription(numberDisplay, description)}
+      description={getPageDescription(numberDisplay, descriptionHTMLString)}
     >
       <div className="episode-page container">
         <Header
@@ -40,8 +42,8 @@ function EpisodePage({episode, sponsors}) {
   )
 }
 
-function getPageDescription(numberDisplay, description) {
-  description = deindent(description)
+function getPageDescription(numberDisplay, descriptionHTML) {
+  const description = descriptionHTML
     .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
     .replace(/\n/g, ' ')
     .replace(/DOUBLE_NEW_LINE/g, '\n\n')
