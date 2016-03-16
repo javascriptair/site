@@ -8,6 +8,7 @@ function EpisodeSmall({episodeData}) {
   const {
     date,
     title,
+    titleHTML,
     guests = [],
   } = episodeData
 
@@ -18,9 +19,8 @@ function EpisodeSmall({episodeData}) {
         className="episode--small__title"
         href={`/episodes/${date}`}
         title={`${title}`}
-      >
-        {title}
-      </a>
+        dangerouslySetInnerHTML={titleHTML}
+      />
 
       <small className="episode--small__guests">
         {' with '}

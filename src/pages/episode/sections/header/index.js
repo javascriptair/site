@@ -7,7 +7,7 @@ export default Header
 
 function Header({episode}) {
   const {
-    title,
+    titleHTML,
     timeHTML,
     dateDisplay,
     date,
@@ -25,7 +25,10 @@ function Header({episode}) {
           <a href="/">JavaScript Air</a>
         </h1>
         <h2 className="episode-page__episode-title">
-          <strong className="episode-page__episode-date">Episode {numberDisplay}: {title}</strong>
+          <strong className="episode-page__episode-date">
+            Episode {numberDisplay}:
+            <span dangerouslySetInnerHTML={titleHTML} />
+          </strong>
           <br />
           <small>
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}

@@ -84,12 +84,10 @@ function EpisodeDescription({episode, sponsors}) {
   )
 }
 
-function Title({date, title, guests}) {
+function Title({date, titleHTML, guests}) {
   return (
     <span>
-      <a href={`http://javascriptair.com/episodes/${date}`}>
-        {title}
-      </a>
+      <a href={`http://javascriptair.com/episodes/${date}`} dangerouslySetInnerHTML={titleHTML} />
       {' with '}
       <People people={guests} />
     </span>

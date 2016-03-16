@@ -9,7 +9,7 @@ export default Episode
 function Episode({episodeData, index}) {
   const {
     date,
-    title,
+    titleHTML,
     timeHTML,
     guests = [],
     descriptionHTML,
@@ -117,9 +117,11 @@ function Episode({episodeData, index}) {
         <div className="content__section content__section--title">
 
           <h1 className="content__section--title__header">
-            <a className="content__section--title__header__link" href={`/episodes/${date}`}>
-              {title}
-            </a>
+            <a
+              className="content__section--title__header__link"
+              href={`/episodes/${date}`}
+              dangerouslySetInnerHTML={titleHTML}
+            />
           </h1>
 
         </div>

@@ -57,13 +57,14 @@ function getEpisodeData(episodePath) {
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   const description = episode.description || getDefaultDescription()
-  const {transcript} = episode
+  const {transcript, title = 'TBA'} = episode
 
   return {
     date,
     time,
     dateDisplay,
-    title: 'TBA',
+    title,
+    titleHTML: markdownToHTML(title),
     description,
     page: `/episodes/${date}`,
     descriptionHTML: markdownToHTML(description),
