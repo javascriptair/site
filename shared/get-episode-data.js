@@ -64,7 +64,7 @@ function getEpisodeData(episodePath) {
     time,
     dateDisplay,
     title,
-    titleHTML: markdownToHTML(title),
+    titleHTML: markdownToHTML(title, true),
     description,
     page: `/episodes/${date}`,
     descriptionHTML: markdownToHTML(description),
