@@ -1,6 +1,7 @@
 # Contributing
 
 Thanks for your interest in contributing to the JavaScript Air website!
+Join [gitter](https://gitter.im/javascriptair/site) channel for discussion.
 
 ## Setup
 

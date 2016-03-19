@@ -17,4 +17,6 @@ but you can find things in progress in [schedule.md](other/schedule.md).
 You can also track episode suggestions on
 [waffle.io](https://waffle.io/javascriptair/site)
 
+## Discussion
 
+Join [gitter](https://gitter.im/javascriptair/site) channel for discussion.
