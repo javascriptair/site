@@ -14,11 +14,11 @@ function Functionize() {
 
 function runScript() {
   /* eslint-disable */
-  var functionizeProt = (("https:" == document.location.protocol) ? "https:" : "http:");
-  var functioniseToken = '762ce8eaa006b9725d6ee081b6fdd9f1';
-  var functionizePid = 3827;
+  window.functionizeProt = (("https:" == document.location.protocol) ? "https:" : "http:");
+  window.functioniseToken = '5384ec96677469c3f7fd50fbdb1a3830';
+  window.functionizePid = 3879;
   if (typeof window.functionizePluginInstalled == "undefined" || !window.functionizePluginInstalled) {
-    document.write(unescape('%3Cscript src="' + functionizeProt + '//storage-download.googleapis.com/functionize-collector/762ce8eaa006b9725d6ee081b6fdd9f1/functionize-collector.js" type="text/javascript"%3E%3C/script%3E'));
+    document.write(unescape('%3Cscript src="' + functionizeProt + '//storage-download.googleapis.com/functionize-collector/5384ec96677469c3f7fd50fbdb1a3830/functionize-collector.js" type="text/javascript"%3E%3C/script%3E'));
   }
   /* eslint-enable */
 }
