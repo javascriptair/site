@@ -3,6 +3,7 @@
 # [JavaScript Air](http://javascriptair.com)
 
 [![Build Status](https://img.shields.io/travis/javascriptair/site.svg?style=flat-square)](https://travis-ci.org/javascriptair/site)
+[![Join Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg?style=flat-square)](https://gitter.im/javascriptair/site)
 
 ## Suggest Episode topic/guest
 
