@@ -17,7 +17,7 @@
 | 2016-03-23 | [AVA: Futuristic test runner 🚀](/../../issues/47) |
 | 2016-03-30 | [](/../../issues/) |
 | 2016-04-06 | [JavaScript Frameworks: Angular](/../../issues/49) |
-| 2016-04-13 | [](/../../issues/) |
+| 2016-04-13 | [Transitioning from REST to GraphQL](/../../issues/21) |
 | 2016-04-20 | [](/../../issues/) |
 | 2016-04-27 | [](/../../issues/) |
 | 2016-05-05 | [ng-conf](/../../issues/42) |
