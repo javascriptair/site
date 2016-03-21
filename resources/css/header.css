@@ -1,6 +1,9 @@
-.social {
+.social-home {
   width: 45%;
   margin: 0 auto;
+}
+
+.social {
   background: linear-gradient(to right, rgba(245,243,231,1) 0%, rgba(232,227,190,1) 100%);
   background-color: #ece8c3;
   box-shadow: 0px 14px 22px -6px rgba(0,0,0,0.38);

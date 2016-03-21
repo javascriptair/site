@@ -2,6 +2,7 @@
   background-color: #EFDD4F;
 
   &__top {
+    display: flex;
     padding: 20px 35px;
 
     background-image: url(resources/images/confetti-light-flipped.svg);
@@ -71,4 +72,20 @@
       color: white;
     }
   }
+
+  &__show__body {
+    
+    &__top {
+      h2 {
+        font-size: 1.95em;
+        font-weight: bold;
+      }
+      p {
+        font-weight: 1em;
+        color: gray;
+      }
+    }
+
+  }
+
 }

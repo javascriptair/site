@@ -28,6 +28,27 @@ function HeaderBar({isEpisode}) {
 
         <div className={'header-bar__show' + episodeClass}>
 
+          <div className="social">
+
+            <div className="social__decor"></div>
+
+            <div className="header-bar__show__body">
+
+              <div className="header-bar__show__body__top">
+                <h2>View Next Show</h2>
+                <p>Show name here...</p>
+              </div>
+
+              <div className="header-bar__show__body__bottom">
+                <div className="header-bar__show__body__bottom__arrow">
+                >
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
