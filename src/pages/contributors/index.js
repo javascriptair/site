@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react'
 
 import Page from '../../components/page.js'
 import Person from '../../components/person'
+import HeaderBar from '../../components/header'
 
 export default ContributorsPage
 
@@ -10,8 +11,12 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
     <Page
       title="JavaScript Air Contributors"
     >
+
+      <HeaderBar />
+
       <div className="container contributors-page">
-        <header className="contributors-page__header">
+
+        {/*<header className="contributors-page__header">
           <h1 className="contributors-page__header__title">
             <a href="/" alt="home">JavaScript Air</a>
           </h1>
@@ -22,7 +27,8 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
             This show would not be possible without the financial and non-financial contributions from the
             following individuals/companies.
           </small>
-        </header>
+        </header>*/}
+
         <hr />
         <div>
           <h3>Financial contributors</h3>
