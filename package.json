@@ -26,7 +26,7 @@
     "dev:episodes": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episodes -s",
     "dev:guests": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:guests -s",
     "dev:deals": "nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run build:deals -s",
-    "dev:contributors": "nodemon --watch src/pages/contributors --watch sponsors --watch data/contributors --watch shared --exec npm run build:contributors -s",
+    "dev:contributors": "nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run build:contributors -s",
     "dev:css": "nodemon --watch resources/css --ext css --exec npm run build:css",
     "dev:data": "npm-run-all --parallel dev:home dev:episodes dev:guests server",
     "description": "babel-node other/generate-episode-description",

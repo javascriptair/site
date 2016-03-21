@@ -1,0 +1,74 @@
+.header-bar {
+  background-color: #EFDD4F;
+
+  &__top {
+    padding: 20px 35px;
+
+    background-image: url(resources/images/confetti-light-flipped.svg);
+    background-repeat: no-repeat;
+    background-size: 280px 166px;
+    background-position: right bottom;
+    background-position: 100% -5px;
+  }
+
+  &__logo {
+
+    a {
+      display: flex;
+      align-items: center;
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+
+        .header-bar__logo__image {
+          transform: rotate(-30deg);
+        }
+
+      }
+    }
+
+    &__image {
+      transform: rotate(-20deg);
+      fill: white;
+      width: 90px;
+      transition: all 0.4s;
+    }
+
+    &__name {
+      padding-left: 20px;
+      font-size: 3.5em;
+      letter-spacing: -1.3px;
+
+      &--bold {
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  &__bottom {
+    background-color: black;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      padding: 16px 15px;
+
+      &:hover {
+        background-color: #262626;
+      }
+    }
+
+    a {
+      font-family: Helvetica;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
