@@ -1,4 +1,5 @@
 import React from 'react'
+import IconLink from './icon-link'
 
 export default HeaderBar
 
@@ -26,7 +27,7 @@ function HeaderBar({isEpisode}) {
 
         </div>
 
-        <div className={'header-bar__show' + episodeClass}>
+        <div className={'header-bar__show ' + episodeClass}>
 
           <div className="social">
 
@@ -40,9 +41,17 @@ function HeaderBar({isEpisode}) {
               </div>
 
               <div className="header-bar__show__body__bottom">
+
                 <div className="header-bar__show__body__bottom__arrow">
-                >
+
+                  <svg viewBox="0 0 300 330">
+                    <g id="chevron-right">
+                      <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"/>
+                    </g>
+                  </svg>
+
                 </div>
+
               </div>
 
             </div>
