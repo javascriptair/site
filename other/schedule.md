@@ -15,7 +15,7 @@
 | 2016-03-09 | [Fluent Conf](/../../issues/39) |
 | 2016-03-16 | [End to End Testing](/../../issues/15) |
 | 2016-03-23 | [AVA: Futuristic test runner 🚀](/../../issues/47) |
-| 2016-03-30 | [Vue.js: Reactive Components for Modern Web Interfaces](/../../issues/75) |
+| 2016-03-30 | [JavaScript Frameworks: Vue.js](/../../issues/75) |
 | 2016-04-06 | [JavaScript Frameworks: Angular](/../../issues/49) |
 | 2016-04-13 | [Transitioning from REST to GraphQL](/../../issues/21) |
 | 2016-04-20 | [](/../../issues/) |
