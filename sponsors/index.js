@@ -57,6 +57,13 @@ const sponsors = {
       tagline: 'Authentication Made Simple',
       startDate: '2016-02-17',
     },
+    {
+      imgSrc: '/sponsors/trading-tech.png',
+      name: 'Trading Technologies',
+      link: 'http://jsair.io/trading-technologies',
+      tagline: `Building For What's Next`,
+      startDate: '2016-03-22',
+    },
   ],
   appreciationSponsors: [
     {

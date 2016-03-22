@@ -1,12 +1,18 @@
 /* eslint no-console:0 */
 import Imagina from 'imagina'
 import path from 'path'
+import mv from 'mv'
 
 const inputImagePath = process.argv[2]
+if (!inputImagePath) {
+  throw new Error('Must provide an input image')
+}
+const outputFilePath = process.argv[3]
 const imageDir = path.dirname(inputImagePath)
 const imageExtension = path.extname(inputImagePath).substring(1)
 const imageFilename = path.basename(inputImagePath, '.' + imageExtension)
 const resizedImagePath = path.join(imageDir, imageFilename + '.resized.' + imageExtension)
+const finalImagePath = path.join(imageDir, imageFilename + '.resized.png')
 
 const im = new Imagina()
 
@@ -21,9 +27,11 @@ resize(function onResizeDone(err) {
         throw doneErr
       }
       console.log('Conversion done')
+      move()
     })
   } else {
     console.log('no conversion necessary')
+    move()
   }
 })
 
@@ -42,3 +50,15 @@ function resize(cb) {
   im.resize(inputImagePath, resizedImagePath, '180x180', params, cb)
 }
 
+function move() {
+  if (outputFilePath) {
+    mv(finalImagePath, outputFilePath, function onMoveDone(err) {
+      if (err) {
+        throw err
+      }
+      console.log(`Resulting file at: ${outputFilePath}`)
+    })
+  } else {
+    console.log(`Resulting file at: ${finalImagePath}`)
+  }
+}
