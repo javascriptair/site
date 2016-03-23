@@ -11,6 +11,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Taylor Otwell',
+      twitter: 'taylorotwell',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     Vue.js is a JavaScript Framework for building reactive components for modern web interfaces. It allows you to write your JS, HTML, and CSS in a single file, has powerful data bindings, focuses on composability, is small, and is insanely fast. Join us with the author for this show!
