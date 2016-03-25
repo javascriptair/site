@@ -21,7 +21,7 @@ export default EpisodePage
 
 function EpisodePage({episode, sponsors}) {
   const past = episode.past || isPastAndNotToday(episode.date)
-  const {numberDisplay, title, description} = episode
+  const {numberDisplay, title, description, podbeanId} = episode
   const descriptionHTMLString = marked(deindent(description))
   return (
     <Page
@@ -33,7 +33,7 @@ function EpisodePage({episode, sponsors}) {
           episode={episode}
         />
         {
-          past ?
+          (past || podbeanId) ?
             <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
             <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
         }

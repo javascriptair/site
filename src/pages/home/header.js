@@ -72,7 +72,9 @@ function LatestShow({show}) {
       <div className="latest-show__container">
 
         <h2 className="latest-show__heading">Latest Show:</h2>
-        <a className="latest-show__link" href={show.page}>{show.title}</a>
+        <a className="latest-show__link" href={show.page} dangero>
+          <span dangerouslySetInnerHTML={show.titleHTML} />
+        </a>
         <time className="latest-show__date" dateTime={show.dateDisplay}>
           {`${show.dateDisplay} at ${show.time.replace(/\*/g, '')}`}
         </time>
