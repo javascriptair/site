@@ -1,5 +1,4 @@
 import React from 'react'
-import IconLink from './icon-link'
 
 export default HeaderBar
 

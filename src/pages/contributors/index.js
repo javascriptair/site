@@ -16,20 +16,6 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
 
       <div className="container contributors-page">
 
-        {/*<header className="contributors-page__header">
-          <h1 className="contributors-page__header__title">
-            <a href="/" alt="home">JavaScript Air</a>
-          </h1>
-          <a href="http://javascriptair.com/contributors" className="contributors-page__header__subtitle">
-            Show Contributors
-          </a>
-          <small className="contributors-page__header__description">
-            This show would not be possible without the financial and non-financial contributions from the
-            following individuals/companies.
-          </small>
-        </header>*/}
-
-        <hr />
         <div>
           <h3>Financial contributors</h3>
           <Contributors contributors={sponsors} />
