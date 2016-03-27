@@ -20,12 +20,16 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
           <h3>Financial contributors</h3>
           <Contributors contributors={sponsors} />
         </div>
+        
         <hr />
+
         <div>
           <h3>Non-financial contributors</h3>
           <Contributors contributors={[host, ...panelists, ...contributors]} />
         </div>
+
         <hr />
+
         <div className="contributors-page__links">
           <p>
             If you or your company is interested in contributing financially,
@@ -36,6 +40,7 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
             feel free to peruse <a href="https://github.com/javascriptair/site">the github repo</a>.
           </p>
         </div>
+
       </div>
     </Page>
   )

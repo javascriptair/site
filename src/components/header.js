@@ -2,9 +2,62 @@ import React from 'react'
 
 export default HeaderBar
 
-function HeaderBar({isEpisode}) {
+function EpisodeBox({isEpisode}) {
 
   const episodeClass = 'header-bar__show--' + (isEpisode ? 'active' : 'inactive')
+
+  return (
+    <a className="social__link" href="#">
+      <div className={'header-bar__show ' + episodeClass}>
+        <div className="social">
+
+          <div className="social__decor"></div>
+
+          <div className="header-bar__show__body">
+
+            {/* Body Top - Header and show title information*/}
+            <div className="header-bar__show__body__top">
+              <h2>View Next Show</h2>
+              <p>Show name here...</p>
+            </div>
+
+            {/* Body Bottom - Arrow button*/}
+            <div className="header-bar__show__body__bottom">
+
+              <div className="header-bar__show__body__bottom__arrow">
+                <svg viewBox="0 0 300 330">
+                  <g id="chevron-right">
+                    <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"/>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+
+          </div> {/* End of body div */}
+
+        </div> {/* End of social div */}
+      </div>
+    </a>
+  )
+}
+
+function Navigation() {
+  return (
+    <div className="header-bar__bottom">
+      <nav className="header__nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#episodes">Shows</a></li>
+          <li><a href="/#host">Panel</a></li>
+          <li><a href="/contributors">Sponsors</a></li>
+        </ul>
+      </nav>
+    </div>
+  )
+}
+
+function HeaderBar({isEpisode}) {
 
   /*eslint-disable max-len, camelcase*/
   return (
@@ -26,51 +79,11 @@ function HeaderBar({isEpisode}) {
 
         </div>
 
-        <div className={'header-bar__show ' + episodeClass}>
-
-          <div className="social">
-
-            <div className="social__decor"></div>
-
-            <div className="header-bar__show__body">
-
-              <div className="header-bar__show__body__top">
-                <h2>View Next Show</h2>
-                <p>Show name here...</p>
-              </div>
-
-              <div className="header-bar__show__body__bottom">
-
-                <div className="header-bar__show__body__bottom__arrow">
-
-                  <svg viewBox="0 0 300 330">
-                    <g id="chevron-right">
-                      <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"/>
-                    </g>
-                  </svg>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
+      <EpisodeBox isEpisode={isEpisode}/>
 
       </div>
 
-      <div className="header-bar__bottom">
-        <nav className="header__nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#episodes">Shows</a></li>
-            <li><a href="/#host">Panel</a></li>
-            <li><a href="/contributors">Sponsors</a></li>
-          </ul>
-        </nav>
-      </div>
+      <Navigation />
 
     </div>
   )
