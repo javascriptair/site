@@ -40,7 +40,7 @@ function Hero() {
 
       <div className="social__container">
 
-        <div className="social">
+        <div className="social social-home">
 
             <div className="social__decor"></div>
 

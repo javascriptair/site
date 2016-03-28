@@ -1,0 +1,118 @@
+
+.header-bar {
+  background-color: #EFDD4F;
+
+    background-image: url(resources/images/confetti-light-flipped.svg);
+    background-repeat: no-repeat;
+    background-size: 280px 166px;
+    background-position: right bottom;
+    background-position: 103% -5px;
+
+  &__top {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+
+  &__logo {
+
+    a {
+      display: flex;
+      align-items: center;
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+
+        .header-bar__logo__image {
+          transform: rotate(-30deg);
+        }
+
+      }
+    }
+
+    &__image {
+      transform: rotate(-20deg);
+      fill: white;
+      width: 90px;
+      transition: all 0.4s;
+    }
+
+    &__name {
+      padding-left: 20px;
+      font-size: 3.5em;
+      letter-spacing: -1.3px;
+
+      &--bold {
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  &__bottom {
+    background-color: black;
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      padding: 16px 15px;
+
+      &:hover {
+        background-color: #262626;
+      }
+    }
+
+    a {
+      font-family: Helvetica;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+  }
+
+  &__show__body {
+    display: flex;
+    padding: 15px 15px;
+    
+    &__top {
+
+      h2 {
+        font-size: 1.55em;
+        font-weight: bold;
+      }
+
+      p {
+        padding-top: 3px;
+        font-weight: 1em;
+        color: gray;
+      }
+
+      padding-right: 20px;
+
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 30px;
+      }
+    }
+
+  }
+
+}
+
+.social__link {
+  text-decoration: none;
+  color: black;
+}

@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react'
 
 import Page from '../../components/page.js'
 import Person from '../../components/person'
+import HeaderBar from '../../components/header'
 
 export default ContributorsPage
 
@@ -10,30 +11,25 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
     <Page
       title="JavaScript Air Contributors"
     >
+
+      <HeaderBar />
+
       <div className="container contributors-page">
-        <header className="contributors-page__header">
-          <h1 className="contributors-page__header__title">
-            <a href="/" alt="home">JavaScript Air</a>
-          </h1>
-          <a href="http://javascriptair.com/contributors" className="contributors-page__header__subtitle">
-            Show Contributors
-          </a>
-          <small className="contributors-page__header__description">
-            This show would not be possible without the financial and non-financial contributions from the
-            following individuals/companies.
-          </small>
-        </header>
-        <hr />
+
         <div>
           <h3>Financial contributors</h3>
           <Contributors contributors={sponsors} />
         </div>
+        
         <hr />
+
         <div>
           <h3>Non-financial contributors</h3>
           <Contributors contributors={[host, ...panelists, ...contributors]} />
         </div>
+
         <hr />
+
         <div className="contributors-page__links">
           <p>
             If you or your company is interested in contributing financially,
@@ -44,6 +40,7 @@ function ContributorsPage({sponsors, contributors, panelists, host}) {
             feel free to peruse <a href="https://github.com/javascriptair/site">the github repo</a>.
           </p>
         </div>
+
       </div>
     </Page>
   )
