@@ -29,7 +29,7 @@ function EpisodesSection({future, past}) {
 
         <div className="episodes-container">
           {
-            nearFutureEpisodes.map((e, i) => <Episode episodeData={e} key={i} />)
+            nearFutureEpisodes.map((e, i) => <Episode episodeData={e} key={i} index={i} />)
           }
         </div>
 

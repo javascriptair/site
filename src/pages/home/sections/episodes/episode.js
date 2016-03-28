@@ -25,7 +25,7 @@ function Episode({episodeData, index}) {
   const dateBefore = moment(date).subtract(1, 'days')
 
   return (
-    <div className={`episode episode-index-${index}`}>
+    <div className={`episode episode-index-${index} episode-${date}`}>
 
       {/*
 

@@ -1,9 +1,29 @@
 export default {
-  title: `{{title}}`,
+  title: `Internet of Things with JavaScript`,
   guests: [
     {
-      name: '',
-      twitter: '',
+      name: 'Peter Hoddie',
+      twitter: 'phoddie',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Kassandra Perch',
+      twitter: 'nodebotanist',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Kristina Durivage',
+      twitter: 'gelicia',
       links: [
       ],
       tips: [
@@ -13,12 +33,12 @@ export default {
     },
   ],
   description: `
-    {{description}}
+    The world is becoming more and more interconnected with more devices joining and communicating on the network every day. The space of hardware hacking is exciting! It's becoming even more welcoming to developers as the barrier to entry has been decreased significantly with JavaScript.
   `,
-  hangoutId: '{{hangoutId}}',
-  youTubeId: '{{youTubeId}}',
+  hangoutId: 'c46nrh7d108hnt81d4pdmbd00as',
+  youTubeId: 'oUBbfYUzaAI',
   podbeanId: '',
-  shortUrl: '{{shortUrl}}',
+  shortUrl: 'iot',
   host: {
     links: [
     ],

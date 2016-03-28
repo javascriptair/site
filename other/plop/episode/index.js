@@ -1,3 +1,5 @@
+import shortenUrl from '../../shorten-url'
+
 export default ({addFile}) => {
   return {
     description: 'Add an episode file',
@@ -32,6 +34,11 @@ export default ({addFile}) => {
         type: 'input',
         message: 'YouTube ID',
       },
+      {
+        name: 'shortUrl',
+        type: 'input',
+        message: 'What do you want the shortURL to be?',
+      },
     ]
   }
 
@@ -45,6 +52,10 @@ export default ({addFile}) => {
       path: 'episodes/{{date}}/index.js',
       templateFile: 'other/plop/episode/index-template.js.handlebars',
     }))
+
+    actions.push(({shortUrl: alias, date}) => {
+      return shortenUrl({alias, date})
+    })
 
     // todo, look for guest images on the desktop and
     // move run the image converter on them and move

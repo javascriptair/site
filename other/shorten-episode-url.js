@@ -1,17 +1,12 @@
-/* eslint no-console:0 */
-import axios from 'axios'
 import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
-import qs from 'qs'
-import {copy} from 'copy-paste'
-
+import shortenUrl from './shorten-url'
 
 inquirer.registerPrompt('directory', inquirerDirectory)
 
 getCustomAlias()
   .then(getApiKey)
   .then(shortenUrl)
-  .then(logFinished)
   .catch(logFailure)
 
 function getCustomAlias(data = {}) {
@@ -85,24 +80,8 @@ function getApiKey(data = {}) {
   })
 }
 
-function shortenUrl({alias: custom, apiKey: api, date}) {
-  const url = `http://javascriptair.com/episodes/${date}`
-  const query = qs.stringify({custom, url, api})
-  return axios.get(`https://hive.am/api?${query}`)
-}
-
-function logFinished(response) {
-  const {data: {error, short}} = response
-  const NO_ERROR = 0
-  if (error !== NO_ERROR) {
-    logFailure(response)
-  }
-  copy(short, () => {
-    console.log(`short url created. ${short} copied to your clipboard`)
-  })
-}
-
 function logFailure(rejection) {
   console.error('There was a failure :-(')
   console.error(rejection)
 }
+
