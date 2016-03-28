@@ -6,13 +6,13 @@ import HeaderBar from '../../components/header'
 
 export default ContributorsPage
 
-function ContributorsPage({sponsors, contributors, panelists, host}) {
+function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}) {
   return (
     <Page
       title="JavaScript Air Contributors"
     >
 
-      <HeaderBar />
+      <HeaderBar nextEpisode={nextEpisode} />
 
       <div className="container contributors-page">
 

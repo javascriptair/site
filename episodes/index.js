@@ -22,6 +22,7 @@ const episodeGroups = groupBy(episodes, e => {
 })
 
 const {future, past} = episodeGroups
+const nextEpisode = future[0]
 
 export default episodes
-export {future, past, episodes}
+export {future, past, episodes, nextEpisode}

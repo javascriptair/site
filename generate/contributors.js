@@ -6,6 +6,7 @@ import ReactDOMServer from 'react-dom/server'
 import sponsors from '../sponsors'
 import contributors from '../data/contributors'
 import {panelists} from '../resources/panelists'
+import {nextEpisode} from '../episodes'
 
 import Contributors from '../src/pages/contributors'
 
@@ -43,6 +44,7 @@ const string = ReactDOMServer.renderToStaticMarkup(
     contributors={contributors}
     panelists={panelistContributors}
     host={host}
+    nextEpisode={nextEpisode}
   />
 )
 
