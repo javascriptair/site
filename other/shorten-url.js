@@ -8,7 +8,7 @@ function shortenUrl({
   apiKey: api = getApiKey(),
   date,
 }) {
-  const url = `http://javascriptair.com/episodes/${date}`
+  const url = `https://javascriptair.com/episodes/${date}`
   const query = qs.stringify({custom, url, api})
   return axios.get(`https://hive.am/api?${query}`).then(onFinished, onFailure)
 }
