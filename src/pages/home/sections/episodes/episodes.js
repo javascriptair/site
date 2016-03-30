@@ -47,7 +47,7 @@ function FutureEpisodes({episodes = []}) {
   }
   return (
     <div>
-      <Title name={lamePlural('Future Episodes', episodes)} />
+      <Title name={lamePlural('Future Episode', episodes)} />
 
       <div className="episodes-container--future episodes-container--small">
         {mapToSmallEpisodes(episodes)}

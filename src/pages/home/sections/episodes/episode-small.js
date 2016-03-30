@@ -28,7 +28,10 @@ function EpisodeSmall({episodeData}) {
           displayListify(
             (guests || [])
               .map((g, gI) => {
-                return <a key={gI} href={`https://twitter.com/${g.twitter}`}>{g.name}</a>
+                if (!g.link) {
+                  return <span key={gI}>{g.name}</span>
+                }
+                return <a key={gI} href={g.link}>{g.name}</a>
               })
           )
         }

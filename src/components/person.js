@@ -5,7 +5,7 @@ export default Person
 function Person({className, twitter, link, name, imgSrc, squareImage}) {
   className = className ? `${className} person` : 'person'
   return (
-    <a className={className} href={link}>
+    <AncorOrDiv className={className} href={link}>
 
       <img
         className={`person__image person__part${squareImage ? ' person__image--square square' : ''}`}
@@ -25,8 +25,15 @@ function Person({className, twitter, link, name, imgSrc, squareImage}) {
 
       </div>
 
-    </a>
+    </AncorOrDiv>
   )
+}
+
+function AncorOrDiv(props) {
+  if (!props.href) {
+    return <div {...props}>{props.children}</div>
+  }
+  return <a {...props}>{props.children}</a>
 }
 
 Person.propTypes = {

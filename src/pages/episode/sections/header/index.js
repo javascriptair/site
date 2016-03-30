@@ -26,8 +26,7 @@ function Header({episode}) {
         </h1>
         <h2 className="episode-page__episode-title">
           <strong className="episode-page__episode-date">
-            Episode {numberDisplay}:
-            <span dangerouslySetInnerHTML={titleHTML} />
+            Episode {numberDisplay}: <span dangerouslySetInnerHTML={titleHTML} />
           </strong>
           <br />
           <small>
