@@ -21,8 +21,9 @@ function Page({
         <meta name="theme-color" content="#efdd4f" />
         <meta name="author" content="Kent C. Dodds" />
         <meta name="description" content={striptags(description)} />
-        <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.dist.css" />
+        <link rel="manifest" href="/resources/manifest/manifest.json" />
       </head>
       <body>
         {children}

@@ -20,7 +20,7 @@ function Home(
   }
 ) {
   return (
-    <Page>
+    <Page includeManifest={true}>
 
       <Header show={last(pastEpisodes)}/>
       <EpisodesSection future={futureEpisodes} past={pastEpisodes} />
