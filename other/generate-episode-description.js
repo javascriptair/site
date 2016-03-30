@@ -4,6 +4,7 @@ import process from 'process'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
+import {copy} from 'copy-paste'
 import marked from 'marked'
 import deindent from 'deindent'
 
@@ -24,7 +25,12 @@ const string = ReactDOMServer.renderToStaticMarkup(
   />
 )
 
-console.log(string) // eslint-disable-line no-console
+copy(string, err => {
+  if (err) {
+    throw err
+  }
+  console.log(`Podcast description for "${episodeData.title}" copied to your clipboard`)
+})
 
 function EpisodeDescription({episode, sponsors}) {
   const {
