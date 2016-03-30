@@ -5,20 +5,31 @@ export default {
       name: 'Evan You',
       twitter: 'youyuxi',
       links: [
+        `[vue-loader](https://www.npmjs.com/package/vue-loader)`,
+        `[vueify](https://github.com/vuejs/vueify)`,
+        `[browserify-hmr](https://github.com/AgentME/browserify-hmr)`,
+        `[watchify](https://github.com/substack/watchify)`,
+        `[prerender-spa-plugon](https://www.npmjs.com/package/prerender-spa-plugin)`,
       ],
       tips: [
+        `Take a break from your project from time to time`,
       ],
       picks: [
+        `[<CSS Secrets>](http://amzn.com/B0131MQ1NS) by [Lea Verou](http://lea.verou.me/)`,
+        `[Dark Souls 3](http://www.darksouls3.com/)`,
       ],
     },
     {
       name: 'Taylor Otwell',
       twitter: 'taylorotwell',
       links: [
+        `[laravel-elixir-vueify](https://github.com/JeffreyWay/laravel-elixir-vueify)`,
       ],
       tips: [
+        `Don’t be the smartest person in the room.`,
       ],
       picks: [
+        `[Star Wars Headspace](https://play.spotify.com/album/6oJnwRad77TohXQ683Rlw6)`,
       ],
     },
   ],
@@ -33,81 +44,20 @@ export default {
     links: [
     ],
     tips: [
+      `Build things to learn things`,
     ],
     picks: [
+      `[Progressive JavaScript Air](https://youtu.be/T8KoeTHpd90) (demo video)`,
+      `[repeat-todo](https://github.com/kentcdodds/repeat-todo) Progressive Enhancement App`,
     ],
   },
   panelists: [
     {
       twitter: 'dan_abramov',
       links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'drboolean',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'getify',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
+        `[mobx](https://github.com/mobxjs/mobx)`,
+        `[Add ReactDataTracker to addons](https://github.com/facebook/react/pull/3920)`,
+        `[Finish Your Stuff](http://250bpm.com/blog:50)`,
       ],
     },
   ],
