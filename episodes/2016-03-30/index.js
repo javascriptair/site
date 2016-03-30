@@ -40,6 +40,7 @@ export default {
   youTubeId: 'i3ET71ZCW_E',
   podbeanId: '',
   shortUrl: 'http://jsair.io/vuejs',
+  past: true,
   host: {
     links: [
     ],

@@ -18,7 +18,7 @@ const episodes = episodeDirectories.map(getEpisodeData)
 const today = moment()
 const yesterday = today.subtract(1, 'day')
 const episodeGroups = groupBy(episodes, e => {
-  return yesterday.diff(e.date) < 0 ? 'future' : 'past'
+  return !e.past && yesterday.diff(e.date) < 0 ? 'future' : 'past'
 })
 
 const {future, past} = episodeGroups
