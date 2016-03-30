@@ -28,6 +28,6 @@ function getSource(podbeanId) {
     fonts: 'Helvetica',
     auth: 0,
   }
-  const url = `http://www.podbean.com/media/player/${podbeanId}`
+  const url = `https://www.podbean.com/media/player/${podbeanId}`
   return `${url}?${queryify(query)}`
 }
