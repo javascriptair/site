@@ -1,6 +1,7 @@
 import React from 'react'
 import GoogleAnalyticsScript from './scripts/google-analytics'
 import Functionize from './scripts/functionize'
+import StartServiceWorker from './scripts/start-service-worker'
 import striptags from 'striptags'
 
 export default Page
@@ -30,6 +31,7 @@ function Page({
 
         <GoogleAnalyticsScript />
         <Functionize />
+        <StartServiceWorker />
       </body>
     </html>
   )
