@@ -38,7 +38,7 @@ export default {
   `,
   hangoutId: 'ctmiq58p34btmpqe4b1p8flq8a0',
   youTubeId: 'i3ET71ZCW_E',
-  podbeanId: '',
+  podbeanId: 'ysfta-5dfb9d',
   shortUrl: 'http://jsair.io/vuejs',
   past: true,
   host: {
