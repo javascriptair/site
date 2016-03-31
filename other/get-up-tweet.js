@@ -1,6 +1,7 @@
 import path from 'path'
 import inquirer from 'inquirer'
 import {copy} from 'copy-paste'
+import {sample} from 'lodash'
 import {past as episodes} from '../episodes'
 import {displayListify, sortPeople} from '../shared/utils'
 import getEpisodeData from '../shared/get-episode-data'
@@ -9,7 +10,7 @@ import shortenEpisodeUrl from './shorten-episode-url/logic'
 getEpisodeDirectory()
   .then(episodePathToEpisodeData)
   .then(generateMessage)
-  .then(validateMessage)
+  .then(validateMessageAndAddEmojiIfOk)
   .then(copyMessage)
   .then(result => console.log(result))
   .catch(err => console.error(err))
@@ -51,11 +52,14 @@ function generateMessage({title, guests, shortUrl}) {
   return `"${title}" w/ ${displayListify(twitterHandles).join('')} is up!${url}`
 }
 
-function validateMessage(message) {
+function validateMessageAndAddEmojiIfOk(message) {
+  const emoji = sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻'])
   const MAX_TWEET_LENGTH = 140
   const LENGTH_OF_IMAGE = 24
   const AVAILABLE_TWEET_LENGTH = MAX_TWEET_LENGTH - LENGTH_OF_IMAGE
-  if (message.length > AVAILABLE_TWEET_LENGTH) {
+  if (AVAILABLE_TWEET_LENGTH - message.length >= emoji.length) {
+    return `${message} ${emoji}`
+  } else if (message.length > AVAILABLE_TWEET_LENGTH) {
     console.warn('**The tweet is too long**')
   }
   return message
