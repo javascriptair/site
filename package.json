@@ -20,6 +20,7 @@
     "create-short-url": "babel-node ./other/shorten-episode-url",
     "screenshot-episode": "babel-node ./other/screenshot-episode",
     "compress-image": "babel-node ./other/compress-image",
+    "get-up-tweet": "babel-node ./other/get-up-tweet",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build -s",
     "dev:home": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:home -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",

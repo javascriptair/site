@@ -2,7 +2,6 @@ import path from 'path'
 import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
 import Pageres from 'pageres'
-import {find} from 'lodash'
 import {future as episodes} from '../episodes'
 
 inquirer.registerPrompt('directory', inquirerDirectory)
@@ -14,14 +13,13 @@ inquirer.prompt([
     default: 'http://javascriptair.com',
   },
   {
-    name: 'episodeTitle',
+    name: 'episode',
     type: 'list',
-    choices: episodes.map(e => e.title),
+    choices: episodes.map(e => ({name: e.title, value: e})),
     message: 'Which episode?',
     default: 0,
   },
-], ({url, episodeTitle}) => {
-  const episode = find(episodes, {title: episodeTitle})
+], ({url, episode}) => {
   const dest = path.resolve(getUserHome(), 'Desktop')
 
   const urlToScreenshot = `${url}/?feature-show=${episode.date}`

@@ -49,6 +49,7 @@ export default {
   `,
   youTubeId: 'tfkUN8Jr9zY',
   podbeanId: 'yr8s4-5b8aee',
+  shortUrl: 'http://jsair.io/unit-testing',
   host: {
     links: [
     ],
