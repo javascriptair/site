@@ -2,6 +2,7 @@ import path from 'path'
 import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
 import Pageres from 'pageres'
+import userHome from 'user-home'
 import {future as episodes} from '../episodes'
 
 inquirer.registerPrompt('directory', inquirerDirectory)
@@ -20,7 +21,7 @@ inquirer.prompt([
     default: 0,
   },
 ], ({url, episode}) => {
-  const dest = path.resolve(getUserHome(), 'Desktop')
+  const dest = path.resolve(userHome, 'Desktop')
 
   const urlToScreenshot = `${url}/?feature-show=${episode.date}`
   console.log(`Taking a screenshot of ${urlToScreenshot}`)
@@ -35,8 +36,4 @@ inquirer.prompt([
       console.error(`Problems saving screenshot: \n${err}`)
     })
 })
-
-function getUserHome() {
-  return process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']
-}
 

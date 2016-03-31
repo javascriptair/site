@@ -21,6 +21,7 @@
     "screenshot-episode": "babel-node ./other/screenshot-episode",
     "compress-image": "babel-node ./other/compress-image",
     "get-up-tweet": "babel-node ./other/get-up-tweet",
+    "podcastify": "babel-node ./other/podcastify-youtube-video",
     "dev": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build -s",
     "dev:home": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:home -s",
     "dev:episode": "nodemon --watch src --watch sponsors --watch episodes --watch shared --watch generate --exec npm run build:episode -s",
@@ -96,6 +97,9 @@
     "subtitles-parser": "0.0.2",
     "surge": "0.17.3",
     "trash": "3.4.0",
-    "uglify-js": "2.6.1"
+    "uglify-js": "2.6.1",
+    "user-home": "2.0.0",
+    "which": "1.2.4",
+    "youtube-mp3-downloader": "0.4.2"
   }
 }
