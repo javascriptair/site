@@ -46,7 +46,7 @@ export default {
   `,
   hangoutId: 'cjeb8ka1hu66uapqkrk40j5bjk4',
   youTubeId: 'YRvrPkXBwdo',
-  podbeanId: 'hc342-5dcdf6',
+  podbeanId: 'fzvtc-5ddf13',
   shortUrl: 'http://jsair.io/ava',
   host: {
     links: [
