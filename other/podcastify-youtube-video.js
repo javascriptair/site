@@ -32,6 +32,7 @@ try {
 
 getEpisode()
   .then(downloadVideoToMp3)
+  .then(analyzeAudio)
   .then(optimizeAudio)
   .catch(err => console.error(err))
 
@@ -95,7 +96,46 @@ function downloadVideoToMp3(episode) {
   })
 }
 
-function optimizeAudio({file, episode}) {
+function analyzeAudio({file, episode}) {
+  console.log('Analyzing audio levels')
+  return new Promise((resolve, reject) => {
+    const command = shellEscape([
+      ffmpegPath,
+      '-ss', '00:05:00.00',
+      '-t', '00:15:00.00',
+      '-i', file,
+      '-af', 'volumedetect',
+      '-f', 'null', '/dev/null',
+    ])
+    console.log(`Running: ${command}`)
+
+    let buffer = ''
+    const options = {stdio: [process.stdin, process.stdout, 'pipe']}
+    spawn(command, options)
+    .stderr.on('data', (data) => {
+      const chunk = data.toString()
+      buffer += chunk
+      console.log(chunk)
+    })
+    .on('error', (err) => {
+      reject(err)
+    })
+    .on('close', () => {
+      const maxVol = /max_volume: (-?[\d\.]+) dB/.exec(buffer)
+
+      if (!maxVol) {
+        return resolve({file, episode, gain: 0})
+      }
+
+      console.log(`Detected max volume: ${maxVol[1]}dB`)
+      const gain = -parseFloat(maxVol[1])
+
+      resolve({file, episode, gain})
+    })
+  })
+}
+
+function optimizeAudio({file, episode, gain}) {
   const {numberDisplay, title, number, date, shortUrl} = episode
   const outputFilename = transliteration(`${numberDisplay} jsAir - ${title}.mp3`)
   const outputPath = path.resolve(file, '../', outputFilename)
@@ -107,6 +147,7 @@ function optimizeAudio({file, episode}) {
     '-ac', '1',
     '-id3v2_version', '3',
     '-write_id3v1', '1',
+    '-af', `volume=${gain}dB`,
     '-metadata', `title=${title}`,
     '-metadata', 'artist=JavaScript Air',
     '-metadata', `track=${number}`,
