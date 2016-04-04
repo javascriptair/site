@@ -11,9 +11,8 @@ import {sortPeople} from '../shared/utils'
 
 const guests = sortPeople(
   unique(
-    flatten(
-      episodes.map(e => e.guests)
-    ),
+    flatten(episodes.map(e => e.guests))
+      .filter(g => g.name !== 'TBA'),
     g => (g.twitter || g.name)
   )
 )

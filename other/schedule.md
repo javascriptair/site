@@ -17,13 +17,13 @@
 | 2016-03-23 | [AVA: Futuristic test runner 🚀](/../../issues/47) |
 | 2016-03-30 | [JavaScript Frameworks: Vue.js](/../../issues/75) |
 | 2016-04-06 | [JavaScript Frameworks: Angular](/../../issues/49) |
-| 2016-04-13 | [Transitioning from REST to GraphQL](/../../issues/21) |
+| 2016-04-13 | [](/../../issues/) |
 | 2016-04-20 | [Internet of Things with JavaScript](/../../issues/72) |
 | 2016-04-27 | [JavaScript Frameworks: Ember](/../../issues/76) |
 | 2016-05-05 | [ng-conf](/../../issues/42) |
 | 2016-05-11 | [Inclusiveness](/../../issues/74) |
-| 2016-05-18 | [](/../../issues/) |
-| 2016-05-25 | [](/../../issues/) |
+| 2016-05-18 | [Transitioning from REST to GraphQL](/../../issues/21) |
+| 2016-05-25 | [webpack](/../../issues/82) |
 | 2016-06-01 | [](/../../issues/) |
 | 2016-06-08 | [](/../../issues/) |
 | 2016-06-15 | [](/../../issues/) |
