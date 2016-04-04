@@ -1,10 +1,19 @@
 export default {
-  title: `TBA`,
+  title: `Reactive Programming in JavaScript`,
   guests: [
     {
-      name: 'TBA',
-      imgSrc: '/resources/images/guest-tba.png',
-      link: null,
+      name: 'Andre Staltz',
+      twitter: 'staltz',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Ben Lesh',
+      twitter: 'BenLesh',
       links: [
       ],
       tips: [
@@ -14,12 +23,12 @@ export default {
     },
   ],
   description: `
-    This show will be announced soon
+    Object oriented programming, functional programming, reactive programming, reactive functional programming. There are so many different ways to think about the system you're building and different design patterns to follow. Join us as we talk about reactive programming in JavaScript.
   `,
   hangoutId: 'cbu3fh4too4a6iot5psgo9cl4d4',
   youTubeId: 'RFvwLifhxDg',
   podbeanId: '',
-  shortUrl: '',
+  shortUrl: 'http://jsair.io/reactive',
   host: {
     links: [
     ],
@@ -103,5 +112,3 @@ export default {
     },
   ],
 }
-
-
