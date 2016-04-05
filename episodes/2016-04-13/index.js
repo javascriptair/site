@@ -21,6 +21,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Matthew Podwysocki',
+      twitter: 'mattpodwysocki',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     Object oriented programming, functional programming, reactive programming, reactive functional programming. There are so many different ways to think about the system you're building and different design patterns to follow. Join us as we talk about reactive programming in JavaScript.
