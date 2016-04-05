@@ -64,6 +64,13 @@ const sponsors = {
       tagline: `Building For What's Next`,
       startDate: '2016-03-22',
     },
+    {
+      imgSrc: '/sponsors/sparkpost.png',
+      name: 'SparkPost',
+      link: 'http://jsair.io/sparkpost',
+      tagline: `Email. We Got It Down.`,
+      startDate: '2016-04-05',
+    },
   ],
   appreciationSponsors: [
     {
