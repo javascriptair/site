@@ -23,8 +23,8 @@
 | 2016-05-05 | [ng-conf](/../../issues/42) |
 | 2016-05-11 | [Inclusiveness](/../../issues/74) |
 | 2016-05-18 | [Transitioning from REST to GraphQL](/../../issues/21) |
-| 2016-05-25 | [webpack](/../../issues/82) |
-| 2016-06-01 | [](/../../issues/) |
+| 2016-05-25 | [Progressive Web Apps](/../../issues/79) |
+| 2016-06-01 | [webpack](/../../issues/82) |
 | 2016-06-08 | [](/../../issues/) |
 | 2016-06-15 | [](/../../issues/) |
 | 2016-06-22 | [KCDC](/../../issues/48) |
