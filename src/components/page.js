@@ -28,6 +28,7 @@ function Page({
         />
         <link rel="stylesheet" href="/styles.dist.css" />
         <link rel="manifest" href="/resources/manifest/manifest.json" />
+        <style>/* aphrodite-content */</style>
       </head>
       <body>
         {children}

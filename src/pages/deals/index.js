@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 
 import Page from '../../components/page.js'
 import {intersperse} from '../../../shared/utils'
@@ -6,19 +7,20 @@ import {intersperse} from '../../../shared/utils'
 export default DealsPage
 
 function DealsPage({deals}) {
+  const {styles} = DealsPage
   return (
     <Page
       title="JavaScript Air Deals"
     >
       <div className="deals-page container">
-        <header className="deals-page__header">
-          <h1 className="deals-page__title">
+        <header className={css(styles.header)}>
+          <h1>
             <a href="/deals" alt="home">JavaScript Air Deals</a>
           </h1>
-          <p className="deals-page__subtitle">
+          <p className={css(styles.subtitle)}>
             <a href="/">JavaScript Air</a> is the live broadcast podcast all about JavaScript.
           </p>
-          <small className="deals-page__email">
+          <small className={css(styles.email)}>
             If you wish to add a deal to this list, please{' '}
             <a href="mailto:javascriptair+deals@gmail.com">contact Kent</a>
           </small>
@@ -34,6 +36,12 @@ function DealsPage({deals}) {
 DealsPage.propTypes = {
   deals: PropTypes.array,
 }
+
+DealsPage.styles = StyleSheet.create({
+  header: {textAlign: 'center'},
+  subtitle: {marginTop: 40},
+  email: {display: 'block', marginTop: 20, fontSize: '0.8em'},
+})
 
 
 function Deals({deals}) {

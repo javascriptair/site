@@ -1,17 +1,4 @@
 .deals-page {
-  &__header {
-    text-align: center;
-  }
-  &__title {
-  }
-  &__subtitle {
-    margin-top: 40px;
-  }
-  &__email {
-    display: block;
-    margin-top: 20px;
-    font-size: 0.8em;
-  }
   #deals {
     text-align: center;
 

@@ -53,6 +53,7 @@
   },
   "homepage": "https://github.com/javascriptair/javascriptair.github.io#readme",
   "devDependencies": {
+    "aphrodite": "0.2.0",
     "autoprefixer": "6.2.1",
     "axios": "0.8.1",
     "babel-cli": "6.2.0",
