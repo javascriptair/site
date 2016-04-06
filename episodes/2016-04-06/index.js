@@ -5,30 +5,27 @@ export default {
       name: 'Brad Green',
       twitter: 'bradlygreen',
       links: [
+        `[ngUpgrade](https://angular.io/docs/ts/latest/guide/upgrade.html)`,
       ],
       tips: [
-      ],
-      picks: [
+        `[Webstorm](https://www.jetbrains.com/webstorm/) + Angular 2 is awesome`,
       ],
     },
     {
       name: 'Igor Minar',
       twitter: 'IgorMinar',
       links: [
-      ],
-      tips: [
+        `[angular-cli](https://github.com/angular/angular-cli)`,
       ],
       picks: [
+        `[Flat.io](https://flat.io/)`,
       ],
     },
     {
       name: 'Miško Hevery',
       twitter: 'mhevery',
-      links: [
-      ],
-      tips: [
-      ],
       picks: [
+        `[Polyfill.io](https://cdn.polyfill.io/v2/docs/)`,
       ],
     },
   ],
@@ -37,91 +34,33 @@ export default {
   `,
   hangoutId: 'cikahchraiqcname9ghsi5j1bh0',
   youTubeId: 'naDNy5VBQuA',
-  podbeanId: '',
+  podbeanId: 'xrg68-5e3062',
   shortUrl: 'http://jsair.io/angular',
   past: true,
   host: {
     links: [
     ],
     tips: [
+      `Don’t confine your sharing of knowledge to one-on-one! Make your conversations public. 📻 Make the world a better place 🌎`,
     ],
     picks: [
+      `[PayPal](https://www.paypal.com/us/webapps/mpp/jobs), for being so awesome to let me do this podcast 👍`,
+      `[Soft Skills Engineering](https://twitter.com/SoftSkillsEng) episode 4: [Should I build my “personal brand?”](https://twitter.com/SoftSkillsEng/status/715565229971615745)`,
     ],
   },
   panelists: [
     {
-      twitter: 'dan_abramov',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'drboolean',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'getify',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
       twitter: 'pamasaur',
       links: [
+        `RxJS 5 (https://github.com/ReactiveX/rxjs)`,
       ],
       tips: [
+        `Use f for fixup in git rebase rather than squash to merge smaller commits into a major one!`,
       ],
       picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
+        `[Git tips](http://git.io/git-tips)`,
+        `[How to Make Programming More Accessible Series](https://lunacodes.wordpress.com/category/how-to-make-programming-more-accessible/)`,
       ],
     },
   ],
 }
-
-
