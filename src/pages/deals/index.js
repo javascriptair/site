@@ -45,8 +45,9 @@ DealsPage.styles = StyleSheet.create({
 
 
 function Deals({deals}) {
+  const {styles} = Deals
   return (
-    <section id="deals">
+    <section id="deals" className={css(styles.root)}>
       {
         intersperse(
           deals.map((d, i) => <Deal deal={d} key={i} />),
@@ -61,7 +62,12 @@ Deals.propTypes = {
   deals: PropTypes.array,
 }
 
+Deals.styles = StyleSheet.create({
+  root: {textAlign: 'center'},
+})
+
 function Deal({deal}) {
+  const {styles} = Deal
   const {
     organization,
     imgSrc,
@@ -74,11 +80,11 @@ function Deal({deal}) {
   return (
     <div className="deal">
       <h3>
-        <span className="deal__org-name">{organization}</span>
+        {organization}
         <br />
-        <small className="deal__org-tagline">{tagline}</small>
+        <small className={css(styles.tagline)}>{tagline}</small>
       </h3>
-      <div className="deal__org-image">
+      <div className={css(styles.image)}>
         <a href={link}>
           <img
             src={imgSrc}
@@ -86,17 +92,17 @@ function Deal({deal}) {
           />
         </a>
       </div>
-      <div className="deal__description">
+      <div>
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
       <div>
-        <div className="deal__deal">
+        <div className={css(styles.deal)}>
           <p dangerouslySetInnerHTML={dealHTML} />
         </div>
-        <a className="deal__link" href={link}>Click here to use this deal</a>
+        <a href={link}>Click here to use this deal</a>
         <br />
         {expires ? (
-          <small className="deal__expiration">
+          <small className={css(styles.expiration)}>
             Expires {expires}
           </small>
         ) : null}
@@ -108,3 +114,10 @@ function Deal({deal}) {
 Deal.propTypes = {
   deal: PropTypes.object,
 }
+
+Deal.styles = StyleSheet.create({
+  tagline: {display: 'block', marginTop: 10},
+  image: {marginTop: 30},
+  deal: {marginTop: 18, marginBottom: 18},
+  expiration: {display: 'block', marginTop: 8, fontSize: '0.8em'},
+})
