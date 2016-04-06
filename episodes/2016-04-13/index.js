@@ -2,8 +2,8 @@ export default {
   title: `Reactive Programming in JavaScript`,
   guests: [
     {
-      name: 'Andre Staltz',
-      twitter: 'staltz',
+      name: 'André Staltz',
+      twitter: 'andrestaltz',
       links: [
       ],
       tips: [
