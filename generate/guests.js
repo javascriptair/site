@@ -1,6 +1,5 @@
-import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import ReactDOMServer from 'react-dom/server'
+import renderComponentToFile from './renderComponentToFile'
 
 import {flatten, unique} from 'lodash'
 
@@ -16,8 +15,7 @@ const guests = sortPeople(
   )
 )
 
-const string = ReactDOMServer.renderToStaticMarkup(
-  <Guests guests={guests} />
+renderComponentToFile(
+  <Guests guests={guests} />,
+  resolve(__dirname, '../guests/index.html')
 )
-
-writeFileSync(resolve(__dirname, '../guests/index.html'), string)

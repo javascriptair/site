@@ -1,7 +1,5 @@
-import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import ReactDOMServer from 'react-dom/server'
-import {StyleSheetServer} from 'aphrodite'
+import renderComponentToFile from './renderComponentToFile'
 
 import deals from '../data/deals'
 import DealsPage from '../src/pages/deals'
@@ -16,12 +14,7 @@ const theDeals = deals.map(d => {
   }
 })
 
-const {html, css} = StyleSheetServer.renderStatic(() => {
-  return ReactDOMServer.renderToStaticMarkup(
-    <DealsPage deals={theDeals} />
-  )
-})
-
-const string = html.replace('/* aphrodite-content */', css.content)
-
-writeFileSync(resolve(__dirname, '../deals/index.html'), string)
+renderComponentToFile(
+  <DealsPage deals={theDeals} />,
+  resolve(__dirname, '../deals/index.html')
+)
