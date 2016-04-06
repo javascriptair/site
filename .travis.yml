@@ -16,6 +16,6 @@ node_js:
 before_install:
   - npm i -g npm@^3.0.0
 before_script:
-  - npm run prune
+  - npm prune
 script:
   - time npm run build && time npm run deploy
