@@ -13,5 +13,9 @@ branches:
     - master
 node_js:
   - "4.2.1"
+before_install:
+  - npm i -g npm@^3.0.0
+before_script:
+  - npm run prune
 script:
   - time npm run build && time npm run deploy
