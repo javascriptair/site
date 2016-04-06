@@ -4,12 +4,16 @@ import Icon from './icon'
 
 export default PersonGroup
 
-function PersonGroup({people = [], hangoutUrl}) {
+function PersonGroup({people = [], hangoutUrl, personClassNames}) {
   return (
     <div className="person-group">
 
       {people.map((person, index) => (
-        <Person key={index} {...person} />
+        <Person
+          key={index}
+          {...person}
+          personClassNames={personClassNames}
+        />
       ))}
 
       <div className="person-group__btn-container">
@@ -29,4 +33,5 @@ function PersonGroup({people = [], hangoutUrl}) {
 PersonGroup.propTypes = {
   people: PropTypes.array,
   hangoutUrl: PropTypes.string,
+  personClassNames: PropTypes.object,
 }

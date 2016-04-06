@@ -2,24 +2,36 @@ import {PropTypes} from 'react'
 
 export default Person
 
-function Person({className, twitter, link, name, imgSrc, squareImage}) {
+function Person({
+  className,
+  twitter,
+  link,
+  name,
+  imgSrc,
+  squareImage,
+  personClassNames = {name: '', twitter: '', image: ''},
+}) {
   className = className ? `${className} person` : 'person'
+  const nameClassName = `person__details__text person__details__text--name ${personClassNames.name}`
+  const twitterClassName = `person__details__text person__details__text--twitter ${personClassNames.twitter}`
+  const squareClassName = `person__part${squareImage ? ' person__image--square square' : ''}`
+  const imageClassName = `person__image ${squareClassName} ${personClassNames.image}`
   return (
     <AncorOrDiv className={className} href={link}>
 
       <img
-        className={`person__image person__part${squareImage ? ' person__image--square square' : ''}`}
+        className={imageClassName}
         src={imgSrc}
         alt={`${name} Profile Picture`}
       />
 
       <div className="person__details person__part">
 
-        <p className="person__details__text person__details__text--name">
+        <p className={nameClassName}>
           {name}
         </p>
 
-        <p className="person__details__text person__details__text--twitter">
+        <p className={twitterClassName}>
           {twitter ? `@${twitter}` : ''}
         </p>
 
@@ -36,6 +48,7 @@ Person.propTypes = {
   className: PropTypes.string,
   link: PropTypes.string,
   squareImage: PropTypes.bool,
+  personClassNames: PropTypes.object,
 }
 
 function AncorOrDiv(props) {
