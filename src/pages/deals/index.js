@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 import Page from '../../components/page.js'
 import {intersperse} from '../../../shared/utils'
@@ -32,7 +32,7 @@ function DealsPage({deals}) {
 }
 
 DealsPage.propTypes = {
-  deals: React.PropTypes.array,
+  deals: PropTypes.array,
 }
 
 
@@ -47,6 +47,10 @@ function Deals({deals}) {
       }
     </section>
   )
+}
+
+Deals.propTypes = {
+  deals: PropTypes.array,
 }
 
 function Deal({deal}) {
@@ -83,13 +87,16 @@ function Deal({deal}) {
         </div>
         <a className="deal__link" href={link}>Click here to use this deal</a>
         <br />
-        { expires ? (
+        {expires ? (
           <small className="deal__expiration">
             Expires {expires}
           </small>
-        ) : null }
+        ) : null}
       </div>
     </div>
   )
 }
 
+Deal.propTypes = {
+  deal: PropTypes.object,
+}

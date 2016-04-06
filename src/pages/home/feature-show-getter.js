@@ -1,5 +1,4 @@
 import InlineScript from '../../components/scripts/inline-script'
-import React from 'react'
 
 export default FeatureShowGetter
 
@@ -18,4 +17,3 @@ function runScript() {
     document.body.appendChild(script)
   }
 }
-

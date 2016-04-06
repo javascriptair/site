@@ -1,7 +1,5 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import process from 'process'
-import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import getEpisodeData from '../shared/get-episode-data'
 import {getSponsorsForDate} from '../sponsors'
@@ -19,4 +17,3 @@ const string = ReactDOMServer.renderToStaticMarkup(
 )
 
 writeFileSync(resolve(episodePath, './index.html'), string)
-

@@ -9,7 +9,11 @@ function RSVPIcon(props) {
     return <noscript />
   }
   return (
-    <IconLink className="episode-page__rsvp-icon" href={props.hangoutUrl} name="calendar" {...props} />
+    <IconLink
+      className="episode-page__rsvp-icon"
+      href={props.hangoutUrl}
+      name="calendar" {...props}
+    />
   )
 }
 

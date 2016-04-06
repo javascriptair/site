@@ -1,3 +1,8 @@
 {
-  extends: "./other/app.eslintrc"
+  "extends": "kentcdodds/react",
+  "rules": {
+    "comma-dangle": [1, "always-multiline"], // I got tired of this breaking the build ¯\_(ツ)_/¯
+    "react/react-in-jsx-scope": 0,
+    "quotes": 0, // my actual preference is to use either single quotes or backticks (but prefer backtick for interpolation)
+  },
 }

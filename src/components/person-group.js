@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import Person from './person'
 import Icon from './icon'
 
@@ -15,7 +15,7 @@ function PersonGroup({people = [], hangoutUrl}) {
       <div className="person-group__btn-container">
 
         <a href={hangoutUrl} className="btn btn--monochrome-gray btn--show">
-          <Icon name='calendar'/>
+          <Icon name="calendar"/>
         </a>
 
         <a className="btn btn--monochrome btn--show" href="#">  View Show</a>
@@ -24,4 +24,9 @@ function PersonGroup({people = [], hangoutUrl}) {
 
     </div>
   )
+}
+
+PersonGroup.propTypes = {
+  people: PropTypes.array,
+  hangoutUrl: PropTypes.string,
 }

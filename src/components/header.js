@@ -1,7 +1,15 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import Icon from './icon'
 
 export default HeaderBar
+
+const commonPropTypes = {
+  isEpisode: PropTypes.bool,
+  nextEpisode: PropTypes.shape({
+    titleHTML: PropTypes.object,
+    page: PropTypes.string,
+  }),
+}
 
 function EpisodeBox({isEpisode, nextEpisode}) {
   const {titleHTML, page} = nextEpisode
@@ -42,6 +50,8 @@ function EpisodeBox({isEpisode, nextEpisode}) {
     </a>
   )
 }
+
+EpisodeBox.propTypes = commonPropTypes
 
 function Navigation() {
   return (
@@ -94,3 +104,5 @@ function HeaderBar({isEpisode, nextEpisode}) {
     </div>
   )
 }
+
+HeaderBar.propTypes = commonPropTypes

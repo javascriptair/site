@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 import Title from '../title.js'
 import SponsorGroup from './sponsor-group'
@@ -43,10 +43,14 @@ function SponsorsSection({
           JavaScript Air is supported by
           some <a href="/contributors">awesome contributors</a>.
         </p>
-        
+
       </div>
     </section>
   )
 }
 
-
+SponsorsSection.propTypes = {
+  goldSponsors: PropTypes.array,
+  premierSponsor: PropTypes.object,
+  silverSponsors: PropTypes.array,
+}

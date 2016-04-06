@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import {chunk} from 'lodash'
 
 import Sponsor from './sponsor'
@@ -27,4 +27,9 @@ function SponsorGroup({sponsors, title}) {
       }
     </div>
   )
+}
+
+SponsorGroup.propTypes = {
+  sponsors: PropTypes.array,
+  title: PropTypes.string,
 }

@@ -1,7 +1,6 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 import Person from '../../../../components/person'
-
 
 export default PersonNotes
 
@@ -34,6 +33,10 @@ function PersonNotes({person}) {
   )
 }
 
+PersonNotes.propTypes = {
+  person: PropTypes.object,
+}
+
 function Notes({notes, label}) {
   if (!notes.length) {
     return <span></span>
@@ -50,4 +53,9 @@ function Notes({notes, label}) {
       </ul>
     </div>
   )
+}
+
+Notes.propTypes = {
+  notes: PropTypes.array,
+  label: PropTypes.string,
 }

@@ -55,7 +55,7 @@ function downloadVideoToMp3(episode) {
     const bar = new ProgressBar()
     const youTubeUrl = `https://youtube.com/${youTubeId}`
     let currentEmoji = getRandomEmoji()
-    const emojiUpdateInterval = setInterval(() => currentEmoji = getRandomEmoji(), 1000)
+    const emojiUpdateInterval = setInterval(() => currentEmoji = getRandomEmoji(), 1000) // eslint-disable-line
 
     updateProgress()
     const pulsBarInterval = setInterval(() => bar.pulse(currentEmoji), 60)

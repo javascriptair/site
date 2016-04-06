@@ -1,6 +1,5 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import sponsors from '../sponsors'
@@ -49,4 +48,3 @@ const string = ReactDOMServer.renderToStaticMarkup(
 )
 
 writeFileSync(resolve(__dirname, '../contributors/index.html'), string)
-

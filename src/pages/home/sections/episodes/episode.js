@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import PersonGroup from '../../../../components/person-group'
 import RSVPIcon from '../../../../components/rsvp-icon'
 import {sortPeople} from '../../../../../shared/utils'
@@ -46,7 +46,7 @@ function Episode({episodeData, index}) {
         <div className="episode__part--date__section episode__part--date__section--calendar">
 
           <div className="calendar--mobile">
-            { dateCurrent.format('ddd, MMM DD, YYYY') }
+            {dateCurrent.format('ddd, MMM DD, YYYY')}
           </div>
 
           {/* CALENDAR - The container element for the calendar display */}
@@ -54,7 +54,7 @@ function Episode({episodeData, index}) {
 
             {/* SECTION - Month - Shows the month the episode airs or aired */}
             <div className="calendar__section calendar__section--heading calendar__section--month">
-              <h3>{ dateCurrent.format('MMMM')}</h3>
+              <h3>{dateCurrent.format('MMMM')}</h3>
             </div>
 
             {/* SECTION - Mobile Dates - Shows the date in fashion conducive to mobile devices */}
@@ -68,7 +68,7 @@ function Episode({episodeData, index}) {
                   <div className="calendar__date__name">{dateBefore.format('ddd')}</div>
                   <div className="calendar__date__number">{dateBefore.format('D')}</div>
                 </div>
-                
+
                 <div className="calendar__date calendar__date--main">
                   <div className="calendar__date__name">{dateCurrent.format('ddd')}</div>
                   <div className="calendar__date__number">{dateCurrent.format('D')}</div>
@@ -77,7 +77,7 @@ function Episode({episodeData, index}) {
                     <a href={`/episodes/${date}`}>Add to Calendar</a>
                   </div>
                 </div>
-                
+
                 <div className="calendar__date calendar__date--after">
                   <div className="calendar__date__name">{dateAfter.format('ddd')}</div>
                   <div className="calendar__date__number">{dateAfter.format('D')}</div>
@@ -104,7 +104,7 @@ function Episode({episodeData, index}) {
       </div>
 
       {/*
-        
+
         CONTENT
         EPISODE PART
         Description, title, date, guests, etc
@@ -155,4 +155,9 @@ function Episode({episodeData, index}) {
 
     </div>
   )
+}
+
+Episode.propTypes = {
+  episodeData: PropTypes.object,
+  index: PropTypes.number,
 }

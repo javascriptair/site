@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 import {last} from 'lodash'
 import Page from '../../components/page'
@@ -31,4 +31,11 @@ function Home(
 
     </Page>
   )
+}
+
+Home.propTypes = {
+  futureEpisodes: PropTypes.array,
+  pastEpisodes: PropTypes.array,
+  sponsors: PropTypes.object,
+  panelists: PropTypes.array,
 }

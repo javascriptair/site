@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import deindent from 'deindent'
 import marked from 'marked'
 
@@ -42,6 +42,11 @@ function EpisodePage({episode, sponsors}) {
   )
 }
 
+EpisodePage.propTypes = {
+  episode: PropTypes.object,
+  sponsors: PropTypes.object,
+}
+
 function getPageDescription(numberDisplay, descriptionHTML) {
   const description = descriptionHTML
     .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
@@ -78,6 +83,11 @@ function PastEpisodeStuff({episodeData, sponsors}) {
       <TranscriptSection transcriptHTML={transcriptHTML} />
     </div>
   )
+}
+
+PastEpisodeStuff.propTypes = {
+  episodeData: PropTypes.object,
+  sponsors: PropTypes.object,
 }
 
 function FutureEpisodeStuff({episodeData, sponsors}) {
@@ -129,6 +139,11 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
   )
 }
 
+FutureEpisodeStuff.propTypes = {
+  episodeData: PropTypes.object,
+  sponsors: PropTypes.object,
+}
+
 function hasShowNotes(episodeData) {
   const {guests, host, panelists} = episodeData
   const guestsHostAndPanelists = [...guests, host, ...panelists]
@@ -137,4 +152,3 @@ function hasShowNotes(episodeData) {
     return links.length + tips.length + picks.length > 0
   })
 }
-

@@ -47,7 +47,7 @@ function analyzeAudio({file, episode}) {
       console.log(`Detected max volume: ${maxVol[1]}dB`)
       const gain = -parseFloat(maxVol[1])
 
-      resolve({file, episode, gain})
+      return resolve({file, episode, gain})
     })
   })
 }

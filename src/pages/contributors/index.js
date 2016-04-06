@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import {PropTypes} from 'react'
 
 import Page from '../../components/page.js'
 import Person from '../../components/person'
@@ -20,7 +20,7 @@ function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}
           <h3>Financial contributors</h3>
           <Contributors contributors={sponsors} />
         </div>
-        
+
         <hr />
 
         <div>
@@ -46,6 +46,14 @@ function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}
   )
 }
 
+ContributorsPage.propTypes = {
+  sponsors: PropTypes.array.isRequired,
+  contributors: PropTypes.array.isRequired,
+  panelists: PropTypes.array.isRequired,
+  host: PropTypes.object.isRequired,
+  nextEpisode: PropTypes.object.isRequired,
+}
+
 function Contributors({contributors}) {
   return (
     <div className="person-group">
@@ -59,11 +67,6 @@ function Contributors({contributors}) {
   )
 }
 
-ContributorsPage.propTypes = {
-  sponsors: PropTypes.array.isRequired,
+Contributors.propTypes = {
   contributors: PropTypes.array.isRequired,
-  panelists: PropTypes.array.isRequired,
-  host: PropTypes.object.isRequired,
 }
-
-

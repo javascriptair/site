@@ -1,30 +1,23 @@
-import React from 'react'
 import Icon from '../../../../components/icon'
-
 
 export default SocialIconGroup
 
 function SocialIconGroup() {
+  const itemList = [
+    {href: 'https://twitter.com/JavaScriptAir', name: 'twitter', text: 'Twitter'},
+    {href: 'https://plus.google.com/105493143005968326308', name: 'googlePlus', text: 'Google+'},
+    {href: 'https://facebook.com/JavaScriptAir', name: 'facebook', text: 'Facebook'},
+  ]
   return (
     <ul className="footer-list">
-      <li className="footer-list__item">
-        <a className="footer-list__link" href="https://twitter.com/JavaScriptAir">
-          <Icon className="footer-list__icon"className="footer-list__icon" name="twitter"/>
-          Twitter
-        </a>
-      </li>
-      <li className="footer-list__item">
-        <a className="footer-list__link" href="https://plus.google.com/105493143005968326308">
-          <Icon className="footer-list__icon"name="google-plus"/>
-          Google+
-        </a>
-      </li>
-      <li className="footer-list__item">
-        <a className="footer-list__link" href="https://facebook.com/JavaScriptAir">
-          <Icon className="footer-list__icon"name="facebook2"/>
-          Facebook
-        </a>
-      </li>
+      {itemList.map((item, index) => (
+        <li className="footer-list__item" key={index}>
+          <a className="footer-list__link" href={item.href}>
+            <Icon className="footer-list__icon" name={item.name} />
+            {item.text}
+          </a>
+        </li>
+      ))}
     </ul>
   )
 }

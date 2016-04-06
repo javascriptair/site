@@ -1,6 +1,5 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import {stringify as queryify} from 'query-string'
-
 
 export default AudioPlayer
 
@@ -16,6 +15,10 @@ function AudioPlayer({podbeanId}) {
       data-name="pb-iframe-player"
     />
   )
+}
+
+AudioPlayer.propTypes = {
+  podbeanId: PropTypes.string.isRequired,
 }
 
 function getSource(podbeanId) {

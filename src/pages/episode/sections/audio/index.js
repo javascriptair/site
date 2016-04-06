@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import AudioPlayer from './audio-player'
 
 export default AudioSection
@@ -12,5 +12,6 @@ function AudioSection({podbeanId}) {
   )
 }
 
-
-
+AudioSection.propTypes = {
+  podbeanId: PropTypes.string.isRequired,
+}

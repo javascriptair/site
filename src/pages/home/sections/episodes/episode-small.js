@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import {displayListify} from '../../../../../shared/utils'
 
 export default EpisodeSmall
@@ -39,4 +39,8 @@ function EpisodeSmall({episodeData}) {
 
     </div>
   )
+}
+
+EpisodeSmall.propTypes = {
+  episodeData: PropTypes.object,
 }

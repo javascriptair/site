@@ -1,5 +1,4 @@
 import InlineScript from './inline-script'
-import React from 'react'
 
 export default Functionize
 
@@ -22,4 +21,3 @@ function runScript() {
   }
   /* eslint-enable */
 }
-

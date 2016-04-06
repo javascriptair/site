@@ -1,5 +1,5 @@
+import {PropTypes} from 'react'
 import UglifyJS from 'uglify-js'
-import React from 'react'
 
 export default InlineScript
 
@@ -9,7 +9,10 @@ function InlineScript({fn}) {
   return <script dangerouslySetInnerHTML={innerHtml} />
 }
 
+InlineScript.propTypes = {
+  fn: PropTypes.func.isRequired,
+}
+
 function toStringFn(fn) {
   return `(function(){${fn.toString()};${fn.name}()})()`
 }
-

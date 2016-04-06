@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import RSVPIcon from '../../../../components/rsvp-icon'
 
 import VideoPlayer from './video-player'
@@ -20,9 +20,9 @@ function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
 }
 
 VideoSection.propTypes = {
-  youTubeId: React.PropTypes.string.isRequired,
-  hangoutUrl: React.PropTypes.string,
-  label: React.PropTypes.string,
+  youTubeId: PropTypes.string.isRequired,
+  hangoutUrl: PropTypes.string,
+  label: PropTypes.string,
 }
 
 function Rsvp({hangoutUrl}) {
@@ -42,3 +42,6 @@ function Rsvp({hangoutUrl}) {
   )
 }
 
+Rsvp.propTypes = {
+  hangoutUrl: PropTypes.string,
+}

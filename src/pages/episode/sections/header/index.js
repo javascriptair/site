@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import PersonGroup from '../../../../components/person-group'
 import {sortPeople, isPast} from '../../../../../shared/utils'
 import RSVPIcon from '../../../../components/rsvp-icon'
@@ -41,4 +41,8 @@ function Header({episode}) {
       </div>
     </div>
   )
+}
+
+Header.propTypes = {
+  episode: PropTypes.object.isRequired,
 }

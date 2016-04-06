@@ -1,5 +1,4 @@
 import InlineScript from './inline-script'
-import React from 'react'
 
 export default GoogleAnalytics
 
@@ -22,5 +21,3 @@ function runScript() {
   ga('send', 'pageview');
   /* eslint-enable */
 }
-
-

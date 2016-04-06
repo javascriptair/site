@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 export default Title
 
@@ -19,4 +19,12 @@ function Title({name, buttonText, buttonUrl, yellow, id}) {
 
     </div>
   )
+}
+
+Title.propTypes = {
+  name: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonUrl: PropTypes.string,
+  yellow: PropTypes.bool,
+  id: PropTypes.string,
 }

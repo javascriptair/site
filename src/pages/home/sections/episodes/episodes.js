@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import Episode from './episode'
 import EpisodeSmall from './episode-small'
 import {sortBy} from 'lodash'
@@ -28,9 +28,13 @@ function EpisodesSection({future, past}) {
         />
 
         <div className="episodes-container">
-          {
-            nearFutureEpisodes.map((e, i) => <Episode episodeData={e} key={i} index={i} />)
-          }
+          {nearFutureEpisodes.map((e, i) => (
+            <Episode
+              episodeData={e}
+              key={i}
+              index={i}
+            />
+          ))}
         </div>
 
         <FutureEpisodes episodes={farFutureEpisodes} />
@@ -39,6 +43,11 @@ function EpisodesSection({future, past}) {
       </div>
     </section>
   )
+}
+
+EpisodesSection.propTypes = {
+  future: PropTypes.array.isRequired,
+  past: PropTypes.array.isRequired,
 }
 
 function FutureEpisodes({episodes = []}) {
@@ -56,6 +65,10 @@ function FutureEpisodes({episodes = []}) {
   )
 }
 
+FutureEpisodes.propTypes = {
+  episodes: PropTypes.array,
+}
+
 function PastEpisodes({episodes = []}) {
   if (!episodes.length) {
     return <noscript />
@@ -71,6 +84,10 @@ function PastEpisodes({episodes = []}) {
   )
 }
 
+PastEpisodes.propTypes = {
+  episodes: PropTypes.array,
+}
+
 function mapToSmallEpisodes(episodes) {
   return episodes.map((e, i) => <EpisodeSmall episodeData={e} key={i} />)
 }
@@ -78,4 +95,3 @@ function mapToSmallEpisodes(episodes) {
 function lamePlural(string, array) {
   return string + (array.length === 1 ? '' : 's')
 }
-

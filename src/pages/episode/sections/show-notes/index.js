@@ -1,7 +1,6 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import PersonNotes from './person-notes'
 import {sortPeople, intersperse} from '../../../../../shared/utils'
-
 
 export default ShowNotes
 
@@ -22,6 +21,10 @@ function ShowNotes({episode}) {
   )
 }
 
+ShowNotes.propTypes = {
+  episode: PropTypes.object.isRequired,
+}
+
 function PeopleNotes({people = []}) {
   return (
     <div>
@@ -32,4 +35,8 @@ function PeopleNotes({people = []}) {
       }
     </div>
   )
+}
+
+PeopleNotes.propTypes = {
+  people: PropTypes.array,
 }

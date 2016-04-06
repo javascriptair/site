@@ -1,6 +1,5 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import {future as futureEpisodes, past as pastEpisodes} from '../episodes'
@@ -20,4 +19,3 @@ const string = ReactDOMServer.renderToStaticMarkup(
 )
 
 writeFileSync(resolve(__dirname, '../index.html'), string)
-

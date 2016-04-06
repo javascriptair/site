@@ -1,4 +1,3 @@
-import React from 'react'
 import FooterLinks from './footer-links-list'
 import FooterSocialLinks from './footer-social-links-list'
 

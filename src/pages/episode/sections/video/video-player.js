@@ -1,6 +1,8 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
-export default function VideoPlayer({youTubeId}) {
+export default VideoPlayer
+
+function VideoPlayer({youTubeId}) {
   return (
     <iframe
       width="640"
@@ -14,3 +16,6 @@ export default function VideoPlayer({youTubeId}) {
   )
 }
 
+VideoPlayer.propTypes = {
+  youTubeId: PropTypes.string.isRequired,
+}

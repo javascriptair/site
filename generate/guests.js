@@ -1,11 +1,10 @@
 import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import {flatten, unique} from 'lodash'
 
-import episodes from '../episodes'
+import {episodes} from '../episodes'
 import Guests from '../src/pages/guests'
 import {sortPeople} from '../shared/utils'
 
@@ -22,4 +21,3 @@ const string = ReactDOMServer.renderToStaticMarkup(
 )
 
 writeFileSync(resolve(__dirname, '../guests/index.html'), string)
-

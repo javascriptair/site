@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 export default Transcript
 
@@ -13,4 +13,8 @@ function Transcript({transcriptHTML}) {
       </section>
     )
   }
+}
+
+Transcript.propTypes = {
+  transcriptHTML: PropTypes.object,
 }

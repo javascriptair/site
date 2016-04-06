@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 
 export default Person
 
@@ -29,6 +29,15 @@ function Person({className, twitter, link, name, imgSrc, squareImage}) {
   )
 }
 
+Person.propTypes = {
+  twitter: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  link: PropTypes.string,
+  squareImage: PropTypes.bool,
+}
+
 function AncorOrDiv(props) {
   if (!props.href) {
     return <div {...props}>{props.children}</div>
@@ -36,8 +45,7 @@ function AncorOrDiv(props) {
   return <a {...props}>{props.children}</a>
 }
 
-Person.propTypes = {
-  twitter: React.PropTypes.string,
-  name: React.PropTypes.string.isRequired,
-  imgSrc: React.PropTypes.string.isRequired,
+AncorOrDiv.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.element),
 }

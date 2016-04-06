@@ -1,7 +1,5 @@
+/* eslint react/prop-types: 0 */
 import path from 'path'
-import process from 'process'
-
-import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
 import {copy} from 'copy-paste'
@@ -145,7 +143,11 @@ function People({people}) {
       {
         utils.displayListify(
           people.map(({twitter, name}, i) => (
-            <Person key={i} twitter={twitter} name={name} />
+            <Person
+              key={i}
+              twitter={twitter}
+              name={name}
+            />
           ))
         )
       }
