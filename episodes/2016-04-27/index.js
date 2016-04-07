@@ -11,6 +11,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Gavin Joyce',
+      twitter: 'gavinjoyce',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     Ember is one of the most widely used JavaScript frameworks in the world and has some pretty amazing features. It's focus is on giving you everything you need to build web applications and delivers on that promise for many applications in the world today!
@@ -102,5 +112,3 @@ export default {
     },
   ],
 }
-
-
