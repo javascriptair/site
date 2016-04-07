@@ -3,35 +3,6 @@ import {isFuture} from '../../shared/utils'
 
 const deals = [
   {
-    imgSrc: '/data/deals/fluent.png',
-    organization: 'Fluent',
-    tagline: 'Web Platform Training',
-    link: 'http://jsair.io/fluent-discount',
-    deal: 'Use code **JSAIR** for 20% off any pass',
-    expires: '2016-03-10',
-    description: `
-      Flunet is a professional web platform training conference
-      on March 7th-10th, 2016 with 2-day trainings, tutorials,
-      keynotes, and sessions. For practical training in JavaScript,
-      HTML5, CSS, and the latest web development technologies and
-      frameworks, check out Fluent Conf.
-    `,
-  },
-  {
-    imgSrc: '/data/deals/thoughtram.png',
-    organization: 'thoughtram',
-    tagline: 'Angular 2 Master Class',
-    link: 'http://jsair.io/cOG3C',
-    deal: 'Use code **JSAIR** for 50,00 € off your ticket!',
-    expires: '2016-03-09',
-    description: `
-      thoughtram helps people to get a deep understanding of
-      different technologies through trainings and code reviews.
-      Our next public training is the Angular 2 Master Class
-      in Düsseldorf, Germany. Join us and learn Angular 2 the right way!
-    `,
-  },
-  {
     imgSrc: '/data/deals/dotjs.png',
     organization: 'dotJS',
     tagline: 'The largest JavaScript conference in Europe',
@@ -60,10 +31,33 @@ const deals = [
       SSD's in state-of-the-art datacenters around the world.
     `,
   },
+  {
+    imgSrc: '/data/deals/dinosaurjs.png',
+    organization: 'Dinosaur.js',
+    tagline: 'JavaScript Conference in Denver, Colorado on June 24, 2016',
+    link: 'http://jsair.io/dinosaurjs',
+    deal: 'You can use code "jsonair" for 10% off tickets 10 tickets',
+    expires: '2016-04-30',
+    description: `
+      A non-profit, community-driven JavaScript conference happening in Denver, Colorado on Friday, June 24, 2016.
+      One day. One track.
+    `,
+  },
+  {
+    imgSrc: '/data/deals/turing.png',
+    organization: 'Turing School of Software and Design',
+    tagline: 'Seven month developer training program in Denver, Colorado',
+    link: 'http://jsair.io/turing',
+    deal: 'Refer a student with the code FEE2016. You get $500 cash & the student gets $500 off their tuition.',
+    expires: '2016-04-30',
+    description: `
+      A non-profit, community-driven JavaScript conference happening in Denver, Colorado on Friday, June 24, 2016.
+      One day. One track.
+    `,
+  },
 ]
 
 const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())
 const filteredDeals = sortedDeals.filter(d => d.expires ? isFuture(d.expires) : true)
 
 export default filteredDeals
-
