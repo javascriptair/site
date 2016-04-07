@@ -1,6 +1,5 @@
-import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import ReactDOMServer from 'react-dom/server'
+import renderComponentToFile from './renderComponentToFile'
 
 import sponsors from '../sponsors'
 import contributors from '../data/contributors'
@@ -37,14 +36,13 @@ const sponsorContributors = Object.keys(sponsors).reduce((array, sponsorGroupKey
 }, [])
 
 
-const string = ReactDOMServer.renderToStaticMarkup(
+renderComponentToFile(
   <Contributors
     sponsors={sponsorContributors}
     contributors={contributors}
     panelists={panelistContributors}
     host={host}
     nextEpisode={nextEpisode}
-  />
+  />,
+  resolve(__dirname, '../contributors/index.html'),
 )
-
-writeFileSync(resolve(__dirname, '../contributors/index.html'), string)

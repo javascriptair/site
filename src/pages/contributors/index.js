@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 
 import Page from '../../components/page.js'
 import Person from '../../components/person'
@@ -7,6 +8,7 @@ import HeaderBar from '../../components/header'
 export default ContributorsPage
 
 function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}) {
+  const {styles} = ContributorsPage
   return (
     <Page
       title="JavaScript Air Contributors"
@@ -30,12 +32,12 @@ function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}
 
         <hr />
 
-        <div className="contributors-page__links">
-          <p>
+        <div className={css(styles.links)}>
+          <p className={css(styles.linksP)}>
             If you or your company is interested in contributing financially,
             please see <a href="http://jsair.io/sponsor-info">this document</a>.
           </p>
-          <p>
+          <p className={css(styles.linksP)}>
             If you're interested in contributing non-financially,
             feel free to peruse <a href="https://github.com/javascriptair/site">the github repo</a>.
           </p>
@@ -54,11 +56,22 @@ ContributorsPage.propTypes = {
   nextEpisode: PropTypes.object.isRequired,
 }
 
+ContributorsPage.styles = StyleSheet.create({
+  links: {
+    textAlign: 'center',
+    fontSize: '0.8em',
+  },
+  linksP: {
+    marginBottom: 12,
+  },
+})
+
 function Contributors({contributors}) {
+  const {styles} = Contributors
   return (
     <div className="person-group">
       {contributors.map((person, index) => (
-        <div key={index} className="contributors-page__contributor">
+        <div key={index} className={css(styles.contributor)}>
           <Person {...person} />
           {person.contributions}
         </div>
@@ -70,3 +83,7 @@ function Contributors({contributors}) {
 Contributors.propTypes = {
   contributors: PropTypes.array.isRequired,
 }
+
+Contributors.styles = StyleSheet.create({
+  contributor: {margin: '0 10px 18px 10px'},
+})
