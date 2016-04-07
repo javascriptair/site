@@ -1,7 +1,7 @@
 import path from 'path'
 import spawn from 'spawn-command'
 import shellEscape from 'shell-escape'
-import transliteration from 'transliteration'
+import filenamify from 'filenamify'
 import ffmpegPath from './ffmpeg-path'
 
 export {podcastifyAudio as default, analyzeAudio, optimizeAudio}
@@ -62,7 +62,7 @@ function optimizeAudio({file, episode, gain}) {
     artist = 'JavaScript Air',
     shortArtist = episode.artist || 'jsAir',
   } = episode
-  const outputFilename = transliteration(`${numberDisplay} ${shortArtist} - ${title}.mp3`)
+  const outputFilename = filenamify(`${numberDisplay} ${shortArtist} - ${title}.mp3`, {replacement: '-'})
   const outputPath = path.resolve(file, '../', outputFilename)
   const command = shellEscape([
     ffmpegPath,
