@@ -1,18 +1,20 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 
 export default Sponsor
 
 function Sponsor({name, link, tagline = '', imgSrc}) {
   imgSrc = imgSrc || `sponsors/${name}.png`
+  const {styles} = Sponsor
   return (
     <a
-      className="sponsor"
+      className={css(styles.sponsor)}
       href={link}
       alt={`${name} site`}
     >
-      <img className="sponsor__logo" src={imgSrc} />
-      <span className="sponsor__name">{name}</span>
-      {tagline ? <span className="sponsor__tagline">{tagline}</span> : null}
+      <img className={css(styles.logo)} src={imgSrc} />
+      <span className={css(styles.name)}>{name}</span>
+      {tagline ? <span className={css(styles.tagline)}>{tagline}</span> : null}
     </a>
   )
 }
@@ -23,3 +25,33 @@ Sponsor.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   tagline: PropTypes.string,
 }
+
+Sponsor.styles = StyleSheet.create({
+  sponsor: {
+    color: 'inherit',
+    textDecoration: 'none',
+    display: 'flex',
+    flexGrow: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    padding: '20px 0',
+    ':hover': {
+      backgroundColor: '#E8E8E8',
+    },
+  },
+  logo: {
+    marginBottom: 10,
+    '@media only screen and (max-width : 500px)': {
+      width: 120,
+      height: 120,
+    },
+  },
+  name: {
+    marginBottom: 6,
+    fontSize: '1.1em',
+    fontWeight: 'bold',
+    borderBottom: '2px black solid',
+    lineHeight: '1.2em',
+  },
+  tagline: {textAlign: 'center'},
+})
