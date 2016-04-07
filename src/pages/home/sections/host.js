@@ -1,12 +1,15 @@
 import Person from '../../../components/person'
+import {StyleSheet, css} from 'aphrodite'
+import sharedStyles from './shared-styles'
 
 export default Host
 
 function Host() {
+  const {styles} = Host
   return (
     <section id="host">
       <Person
-        className="panelist panelist--host"
+        className={css(styles.host, sharedStyles.panelist)}
         name="Kent C. Dodds"
         twitter="kentcdodds"
         imgSrc="resources/kentcdodds.png"
@@ -25,3 +28,14 @@ function Host() {
     </section>
   )
 }
+
+Host.styles = StyleSheet.create({
+  host: {
+    padding: '0 15px',
+    '@media only screen and (min-width: 730px)': {
+      width: 303,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
+})
