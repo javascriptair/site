@@ -1,11 +1,12 @@
 import moment from 'moment'
 import marked from 'marked'
 import deindent from 'deindent'
+import {css} from 'aphrodite'
 
 export {
   displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
-  markdownToHTML,
+  markdownToHTML, getClassNames,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -89,3 +90,6 @@ function sortPeople(people = []) {
   })
 }
 
+function getClassNames(styles) {
+  return Object.keys(styles).map(k => css(styles[k]))
+}

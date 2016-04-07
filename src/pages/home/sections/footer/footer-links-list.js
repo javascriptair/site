@@ -1,12 +1,14 @@
+import {css} from 'aphrodite'
+import sharedStyles from './shared-styles'
 export default Links
 
 function Links() {
   return (
-    <ul className="footer__nav-footer-list footer-list">
+    <ul className={css(sharedStyles.list)}>
       {getLinks().map((link, i) => (
-        <li key={i} className="footer-list__item">
+        <li key={i} className={css(sharedStyles.item)}>
           <a
-            className="footer-list__link"
+            className={css(sharedStyles.link)}
             href={link.href}
             key={i}
             alt={link.alt || link.title}
