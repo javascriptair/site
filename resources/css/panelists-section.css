@@ -1,13 +1,4 @@
 .panelists-section {
-  background-color: #141414;
-
-  @media only screen and (min-width : 1000px) {
-    background-image: url(resources/images/confetti-dark.svg);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 400px 220px;
-  }
-
   &__container {
     @mixin container;
   }

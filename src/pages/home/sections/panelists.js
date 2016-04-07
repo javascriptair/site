@@ -10,8 +10,9 @@ import Title from '../../../components/title.js'
 export default Panelists
 
 function Panelists({panelists}) {
+  const {styles} = Panelists
   return (
-    <section className="panelists-section" id="panelists">
+    <section className={`${css(styles.section)} panelists-section`} id="panelists">
       <Decor />
       <div className="panelists-section__container">
 
@@ -32,6 +33,18 @@ function Panelists({panelists}) {
 Panelists.propTypes = {
   panelists: PropTypes.array,
 }
+
+Panelists.styles = StyleSheet.create({
+  section: {
+    backgroundColor: '#141414',
+    '@media only screen and (min-width : 1000px)': {
+      backgroundImage: 'url(resources/images/confetti-dark.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right top',
+      backgroundSize: '400px 200px',
+    },
+  },
+})
 
 function PanelistList({panelists}) {
   const {styles} = PanelistList
