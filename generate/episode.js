@@ -1,6 +1,6 @@
-import {writeFileSync} from 'fs'
 import {resolve} from 'path'
-import ReactDOMServer from 'react-dom/server'
+import renderComponentToFile from './renderComponentToFile'
+
 import getEpisodeData from '../shared/get-episode-data'
 import {getSponsorsForDate} from '../sponsors'
 import EpisodePage from '../src/pages/episode'
@@ -9,11 +9,10 @@ const episodePath = resolve(__dirname, '../', process.argv[2])
 const episodeData = getEpisodeData(episodePath)
 const sponsors = getSponsorsForDate(episodeData.date)
 
-const string = ReactDOMServer.renderToStaticMarkup(
+renderComponentToFile(
   <EpisodePage
     episode={episodeData}
     sponsors={sponsors}
-  />
+  />,
+  resolve(episodePath, './index.html'),
 )
-
-writeFileSync(resolve(episodePath, './index.html'), string)
