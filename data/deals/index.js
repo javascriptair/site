@@ -51,8 +51,11 @@ const deals = [
     deal: 'Refer a student with the code FEE2016. You get $500 cash & the student gets $500 off their tuition.',
     expires: '2016-04-30',
     description: `
-      A non-profit, community-driven JavaScript conference happening in Denver, Colorado on Friday, June 24, 2016.
-      One day. One track.
+      We turn great people into outstanding developers. Turing believes in community-driven education. Our community is
+      built on three core values which guide our work: love, respect, and curiosity.
+      We believe in community-driven education. We're not a co-working space, and we're not a handful of folks in a
+      conference room. Turing is a growing, thriving community of over a hundred people helping each other become more
+      than what they thought to be possible.
     `,
   },
 ]
