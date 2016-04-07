@@ -49,7 +49,7 @@ const deals = [
     tagline: 'Seven month developer training program in Denver, Colorado',
     link: 'http://jsair.io/turing',
     deal: 'Refer a student with the code FEE2016. You get $500 cash & the student gets $500 off their tuition.',
-    expires: '2016-04-30',
+    expires: '2016-12-31',
     description: `
       We turn great people into outstanding developers. Turing believes in community-driven education. Our community is
       built on three core values which guide our work: love, respect, and curiosity.
