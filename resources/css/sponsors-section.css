@@ -11,15 +11,6 @@
     color: #e2d046;
   }
 
-  &__subheading {
-    font-size: 1.6em;
-    line-height: 1.3;
-
-    @media only screen and (max-width: 530px) {
-      text-align: center;
-    }
-  }
-
   @media only screen and (min-width: 530px) {
     &__gold-sponsors, &__silver-sponsors {
       display: flex;

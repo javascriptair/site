@@ -1,6 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import {chunk} from 'lodash'
+import SponsorSubheading from './sponsor-subheading'
 
 import Sponsor from './sponsor'
 
@@ -17,7 +18,7 @@ function SponsorGroup({sponsors, title}) {
   return (
     <div>
       <hr />
-      <h3 className="sponsors-section__subheading">{title}</h3>
+      <SponsorSubheading title={title} />
       {
         chunkedSponsors.map((rowSponsors, index) => {
           return (
