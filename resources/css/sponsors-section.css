@@ -1,16 +1,4 @@
 .sponsors-section {
-  background-color: #F2F2F2;
-  overflow: hidden;
-
-  &__container {
-    @mixin container;
-    max-width: 1000px;
-  }
-
-  &__heading {
-    color: #e2d046;
-  }
-
   @media only screen and (min-width: 530px) {
     &__gold-sponsors, &__silver-sponsors {
       display: flex;
@@ -19,13 +7,6 @@
       >.sponsor {
         width: 50%;
       }
-    }
-  }
-
-  &__footnote {
-    line-height: 1.3em;
-    @media only screen and (min-width: 730px) {
-      text-align: center;
     }
   }
 }

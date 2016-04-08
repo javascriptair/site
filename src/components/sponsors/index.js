@@ -1,4 +1,7 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
+
+import {container as containerStyles} from '../../styles'
 
 import Title from '../title.js'
 import SponsorGroup from './sponsor-group'
@@ -12,9 +15,10 @@ function SponsorsSection({
   premierSponsor = {},
   silverSponsors = [],
 }) {
+  const {styles} = SponsorsSection
   return (
-    <section className="sponsors-section" id="sponsors">
-      <div className="sponsors-section__container">
+    <section className={css(styles.section)} id="sponsors">
+      <div className={css(styles.container)}>
         <Title
           name="Sponsors"
           buttonText="Become a Sponsor"
@@ -34,7 +38,7 @@ function SponsorsSection({
           sponsors={silverSponsors}
           title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
         />
-        <p className="sponsors-section__footnote">
+        <p className={css(styles.footnote)}>
           JavaScript Air is supported by
           some <a href="/contributors">awesome contributors</a>.
         </p>
@@ -48,3 +52,14 @@ SponsorsSection.propTypes = {
   premierSponsor: PropTypes.object,
   silverSponsors: PropTypes.array,
 }
+
+SponsorsSection.styles = StyleSheet.create({
+  section: {backgroundColor: '#F2F2F2', overflow: 'hidden'},
+  container: containerStyles,
+  footnote: {
+    lineHeight: '1.3em',
+    '@media only screen and (min-width: 730px)': {
+      textAlign: 'center',
+    },
+  },
+})
