@@ -31,7 +31,7 @@ const max1100 = '@media only screen and (max-width : 1100px)'
 Title.styles = StyleSheet.create({
   title: {
     display: 'flex',
-    jusifyContent: 'space-between',
+    justifyContent: 'space-between',
     padding: '30px 0',
     [max1100]: {
       flexDirection: 'column',
