@@ -25,7 +25,9 @@ const twitterParams = {screen_name: guestTwitterHandle}
 TW.get('users/show.json', twitterParams, parseTWData)
 
 function parseTWData(error, data) {
-  getImage(data.profile_image_url)
+  const fullImage = data.profile_image_url.replace('_normal', '')
+
+  getImage(fullImage)
 }
 
 function getImage(imgUrl) {
