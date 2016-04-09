@@ -1,5 +1,4 @@
 import GoogleAnalyticsScript from './scripts/google-analytics'
-import Functionize from './scripts/functionize'
 import StartServiceWorker from './scripts/start-service-worker'
 import striptags from 'striptags'
 
@@ -39,7 +38,6 @@ function Page({
         {children}
 
         <GoogleAnalyticsScript />
-        <Functionize />
         <StartServiceWorker />
       </body>
     </html>
