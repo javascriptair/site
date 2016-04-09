@@ -44,9 +44,6 @@
   .person {
     text-align: center;
   }
-  .person img:not(.square) {
-    border-radius: 50%;
-  }
   .person a {
     text-decoration: none;
   }

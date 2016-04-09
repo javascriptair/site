@@ -32,5 +32,5 @@ export default StyleSheet.create({
     color: '#f8f8f8',
     textDecoration: 'underline',
   },
-  personName: {color: '#f8f8f8', fontWeight: 'bold'},
+  personName: {color: '#f8f8f8', textAlign: 'left'},
 })
