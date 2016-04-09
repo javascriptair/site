@@ -12,8 +12,8 @@ function Person({
   personClassNames = {name: '', twitter: '', image: ''},
 }) {
   className = className ? `${className} person` : 'person'
-  const nameClassName = `person__details__text person__details__text--name ${personClassNames.name}`
-  const twitterClassName = `person__details__text person__details__text--twitter ${personClassNames.twitter}`
+  const nameClassName = `person__details__text ${personClassNames.name}`
+  const twitterClassName = `person__details__text ${personClassNames.twitter}`
   const squareClassName = `person__part${squareImage ? ' person__image--square square' : ''}`
   const imageClassName = `person__image ${squareClassName} ${personClassNames.image}`
   return (

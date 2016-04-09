@@ -6,6 +6,10 @@ export default Host
 
 function Host() {
   const {styles} = Host
+  const personClassNames = {
+    twitter: css(sharedStyles.personTwitter),
+    name: css(sharedStyles.personName),
+  }
   return (
     <section id="host">
       <Person
@@ -14,10 +18,11 @@ function Host() {
         twitter="kentcdodds"
         imgSrc="resources/kentcdodds.png"
         link="https://twitter.com/kentcdodds"
+        personClassNames={personClassNames}
       />
-      <p className="panelists-section__caption">
+      <p className={css(sharedStyles.caption)}>
         <a
-          className="panelists-section__link"
+          className={css(sharedStyles.link)}
           href="https://egghead.io/instructors/kentcdodds"
           title="Egghead.io instructor page"
         >

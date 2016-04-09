@@ -4,25 +4,25 @@ import Person from '../../../components/person'
 import Decor from '../../../components/decor'
 import Host from './host'
 import sharedStyles from './shared-styles'
+import {container as containerStyle} from '../../../styles'
 
-import Title from '../../../components/title.js'
+import Title from '../../../components/title'
 
 export default Panelists
 
 function Panelists({panelists}) {
   const {styles} = Panelists
   return (
-    <section className={`${css(styles.section)} panelists-section`} id="panelists">
+    <section className={css(styles.section)} id="panelists">
       <Decor />
-      <div className="panelists-section__container">
-
+      <div className={css(styles.container)}>
         <Title name="Host" yellow />
         <Host />
         <Title name="Panelists" yellow />
         <PanelistList panelists={panelists} />
-        <p className="panelists-section__caption">
+        <p className={css(sharedStyles.caption)}>
           JavaScript Air has{' '}
-          <a className="panelists-section__link" href="http://panelists.javascriptair.com">a panel</a>
+          <a className={css(sharedStyles.link)} href="http://panelists.javascriptair.com">a panel</a>
           {' '}of some of the finest people the community has to offer
         </p>
       </div>
@@ -44,11 +44,15 @@ Panelists.styles = StyleSheet.create({
       backgroundSize: '400px 200px',
     },
   },
+  container: containerStyle,
 })
 
 function PanelistList({panelists}) {
   const {styles} = PanelistList
-  const personClassNames = {twitter: css(styles.personTwitter)}
+  const personClassNames = {
+    twitter: css(sharedStyles.personTwitter),
+    name: css(sharedStyles.personName),
+  }
   return (
     <div className={css(styles.list)}>
       {panelists.map((p, i) => (
@@ -85,9 +89,5 @@ PanelistList.styles = StyleSheet.create({
     '@media only screen and (min-width : 900px)': {
       width: '33.3%',
     },
-  },
-  personTwitter: {
-    textAlign: 'left',
-    fontStyle: 'italic',
   },
 })
