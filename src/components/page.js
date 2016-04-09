@@ -26,7 +26,11 @@ function Page({
           type="image/png"
           href="/favicon.ico"
         />
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,100,600,700,700italic,600italic,400italic,300italic,100italic" rel="stylesheet" type="text/css" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,100,600,700,700italic,600italic,400italic,300italic,100italic"
+          rel="stylesheet"
+          type="text/css"
+        />
         <link rel="stylesheet" href="/styles.dist.css" />
         <link rel="manifest" href="/resources/manifest/manifest.json" />
         <style>/* aphrodite-content */</style>
