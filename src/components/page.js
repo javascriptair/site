@@ -1,5 +1,7 @@
 import GoogleAnalyticsScript from './scripts/google-analytics'
 import StartServiceWorker from './scripts/start-service-worker'
+import InsertLinkTag from './scripts/insert-link-tag'
+
 import striptags from 'striptags'
 
 export default Page
@@ -25,18 +27,24 @@ function Page({
           type="image/png"
           href="/favicon.ico"
         />
-        <link
-          href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,100,600,700,700italic,600italic,400italic,300italic,100italic"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link rel="stylesheet" href="/styles.dist.css" />
         <link rel="manifest" href="/resources/manifest/manifest.json" />
+        <style>{'#main {display: none;}'}</style>
         <style>/* aphrodite-content */</style>
       </head>
       <body>
-        {children}
+        <div id="loading">
+          JavaScript Air Loading...
+        </div>
+        <div id="main">
+          {children}
+        </div>
 
+        <InsertLinkTag
+          href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,100,600,700,700italic,600italic,400italic,300italic,100italic"
+        />
+        <InsertLinkTag
+          href="/styles.dist.css"
+        />
         <GoogleAnalyticsScript />
         <StartServiceWorker />
       </body>

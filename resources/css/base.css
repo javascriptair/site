@@ -6,6 +6,16 @@ body {
   margin: 0;
 }
 
+#main {
+  /* override the inline style that hides this until the site loads */
+  display: block !important;
+}
+
+#loading {
+  /* now that the css has loaded, hide the loading indicator */
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
