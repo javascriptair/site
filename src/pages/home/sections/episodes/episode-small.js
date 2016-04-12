@@ -10,17 +10,19 @@ function EpisodeSmall({episodeData}) {
     title,
     titleHTML,
     guests = [],
+    number,
   } = episodeData
 
   return (
     <div className="episode--small">
-
       <a
         className="episode--small__title"
         href={`/episodes/${date}`}
         title={`${title}`}
-        dangerouslySetInnerHTML={titleHTML}
-      />
+      >
+        {`${number}. `}
+        <span dangerouslySetInnerHTML={titleHTML} />
+      </a>
 
       <small className="episode--small__guests">
         {' with '}
