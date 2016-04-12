@@ -146,13 +146,9 @@ function Episode({episodeData, index}) {
 
         {/* CONTENT SECTION - Grid display of the episode's guests*/}
         <div className="content__section content__section--guests">
-
-          <PersonGroup people={sortedGuests} hangoutUrl={hangoutUrl} />
-
+          <PersonGroup people={sortedGuests} />
         </div>
-
       </div>
-
     </div>
   )
 }
