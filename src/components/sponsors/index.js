@@ -29,12 +29,10 @@ function SponsorsSection({
           <Sponsor {...premierSponsor} />
         </div>
         <SponsorGroup
-          className="sponsors-section__gold-sponsors"
           sponsors={goldSponsors}
           title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
         />
         <SponsorGroup
-          className="sponsors-section__silver-sponsors"
           sponsors={silverSponsors}
           title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
         />
