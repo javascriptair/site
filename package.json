@@ -48,7 +48,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "./scripts/lint-changed.sh"
     }
   },
   "homepage": "https://github.com/javascriptair/javascriptair.github.io#readme",
