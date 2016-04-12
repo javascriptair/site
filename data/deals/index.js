@@ -7,7 +7,7 @@ const deals = [
     organization: 'dotJS',
     tagline: 'The largest JavaScript conference in Europe',
     link: 'http://jsair.io/dotjs-discount',
-    deal: 'Use code JSAIR for 20% off your ticket',
+    deal: 'Use code **JSAIR** for 20% off your ticket',
     expires: '2016-12-05',
     description: `
       [dotJS](http://dotjs.io) is the largest JavaScript conference in Europe.
@@ -36,7 +36,7 @@ const deals = [
     organization: 'Dinosaur.js',
     tagline: 'JavaScript Conference in Denver, Colorado on June 24, 2016',
     link: 'http://jsair.io/dinosaurjs',
-    deal: 'You can use code "jsonair" for 10% off tickets 10 tickets',
+    deal: 'Get a 10% discount with the code **jsonair** (click the link to have it automatically applied)',
     expires: '2016-04-30',
     description: `
       A non-profit, community-driven JavaScript conference happening in Denver, Colorado on Friday, June 24, 2016.
@@ -48,7 +48,7 @@ const deals = [
     organization: 'Turing School of Software and Design',
     tagline: 'Seven month developer training program in Denver, Colorado',
     link: 'http://jsair.io/turing',
-    deal: 'Refer a student with the code FEE2016. You get $500 cash & the student gets $500 off their tuition.',
+    deal: 'Refer a student with the code **FEE2016**. You get $500 cash & the student gets $500 off their tuition.',
     expires: '2016-12-31',
     description: `
       We turn great people into outstanding developers. Turing believes in community-driven education. Our community is
@@ -56,6 +56,18 @@ const deals = [
       We believe in community-driven education. We're not a co-working space, and we're not a handful of folks in a
       conference room. Turing is a growing, thriving community of over a hundred people helping each other become more
       than what they thought to be possible.
+    `,
+  },
+  {
+    imgSrc: '/data/deals/full-stack-fest.png',
+    organization: 'Full Stack Fest',
+    tagline: 'Problems of today, ideas from the future',
+    link: 'http://jsair.io/full-stack-fest',
+    deal: 'Get a 5% discount with the code is **JSAIR** (click the link to have it automatically applied)',
+    expires: '2016-09-09',
+    description: `
+      A week-long full stack development conference with a focus on solving current problems with new & inspiring
+      perspectives. Barcelona 5-9 September.
     `,
   },
 ]
