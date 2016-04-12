@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 import PersonGroup from '../../../../components/person-group'
 import {sortPeople, isPast} from '../../../../../shared/utils'
 import RSVPIcon from '../../../../components/rsvp-icon'
@@ -16,16 +17,17 @@ function Header({episode}) {
     hangoutUrl,
     numberDisplay,
   } = episode
+  const {styles} = Header
   const past = episode.past || isPast(date)
   const sortedGuests = sortPeople(guests)
   return (
-    <div className="episode-page__header">
-      <div className="+text-center">
+    <div>
+      <div className={css(styles.titleContainer)}>
         <h1>
           <a href="/">JavaScript Air</a>
         </h1>
-        <h2 className="episode-page__episode-title">
-          <strong className="episode-page__episode-date">
+        <h2 className={css(styles.title)}>
+          <strong>
             Episode {numberDisplay}: <span dangerouslySetInnerHTML={titleHTML} />
           </strong>
           <br />
@@ -36,7 +38,7 @@ function Header({episode}) {
         </h2>
         <PersonGroup people={sortedGuests} />
       </div>
-      <div className="episode-page__episode-description">
+      <div className={css(styles.description)}>
         <p dangerouslySetInnerHTML={descriptionHTML}></p>
       </div>
     </div>
@@ -46,3 +48,9 @@ function Header({episode}) {
 Header.propTypes = {
   episode: PropTypes.object.isRequired,
 }
+
+Header.styles = StyleSheet.create({
+  title: {margin: '30px 0'},
+  titleContainer: {textAlign: 'center'},
+  description: {margin: '30px 0'},
+})

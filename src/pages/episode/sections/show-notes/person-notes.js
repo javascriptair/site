@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 
 import Person from '../../../../components/person'
 
@@ -41,10 +42,11 @@ function Notes({notes, label}) {
   if (!notes.length) {
     return <span></span>
   }
+  const {styles} = Notes
   return (
-    <div className="notes">
+    <div>
       <strong>{label}</strong>
-      <ul className="episode-page__episode-notes-list">
+      <ul className={css(styles.list)}>
         {
           notes.map((note, index) => (
             <li key={index} dangerouslySetInnerHTML={note} />
@@ -59,3 +61,10 @@ Notes.propTypes = {
   notes: PropTypes.array,
   label: PropTypes.string,
 }
+
+Notes.styles = StyleSheet.create({
+  list: {
+    listStyle: 'disc',
+    paddingLeft: 40,
+  },
+})
