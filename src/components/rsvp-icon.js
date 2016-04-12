@@ -1,6 +1,6 @@
 import React from 'react'
 import IconLink from './icon-link'
-
+import {StyleSheet, css} from 'aphrodite'
 
 export default RSVPIcon
 
@@ -8,9 +8,10 @@ function RSVPIcon(props) {
   if (!props.hangoutUrl) {
     return <noscript />
   }
+  const {styles} = RSVPIcon
   return (
     <IconLink
-      className="episode-page__rsvp-icon"
+      className={css(styles.iconLink)}
       href={props.hangoutUrl}
       name="calendar" {...props}
     />
@@ -20,3 +21,11 @@ function RSVPIcon(props) {
 RSVPIcon.propTypes = {
   hangoutUrl: React.PropTypes.string.isRequired,
 }
+
+RSVPIcon.styles = StyleSheet.create({
+  iconLink: {
+    width: 20,
+    height: 20,
+    fill: '#318cb7',
+  },
+})
