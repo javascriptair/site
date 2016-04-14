@@ -1,4 +1,3 @@
-import {exec} from 'child_process'
 import request from 'request'
 import fs from 'fs'
 import path from 'path'
@@ -6,6 +5,7 @@ import inquirer from 'inquirer'
 import {episodes} from '../episodes'
 
 import {getProfileImageURL} from './utils/twitter'
+import compressImage from './utils/compress-image'
 
 inquirer.prompt([
   {
@@ -31,20 +31,17 @@ inquirer.prompt([
 
   function downloadImage(imgUrl) {
     request(imgUrl)
-      .pipe(fs.createWriteStream(imgPath).on('close', compressImage))
+      .pipe(fs.createWriteStream(imgPath).on('close', compress))
   }
 
-  function compressImage() {
-    return new Promise((resolve, reject) => {
-      exec(`babel-node ./other/compress-image ${imgPath} ${episodePath}`, imgCompressionResult)
-      function imgCompressionResult(error) {
-        if (error !== null) {
-          reject(error)
-        } else {
-          fs.unlink(imgPath, () => resolve(imgPath))
-        }
-      }
-    })
+  function compress() {
+    return compressImage(imgPath, episodePath).then(unlinkImgPath)
+  }
+
+  function unlinkImgPath() {
+    return new Promise(
+      resolve => fs.unlink(imgPath, () => resolve(imgPath))
+    )
   }
 
   function logError(error) {
