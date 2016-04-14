@@ -21,6 +21,7 @@ inquirer.prompt([
     default: episodes.length - 1,
   },
 ], ({twitter, episodeDate}) => {
+  twitter = cleanTwitter(twitter)
   const imageName = `${twitter}.png`
   const imgPath = path.join(__dirname, imageName)
   const episodePath = path.join(process.cwd(), 'episodes', episodeDate, imageName)
@@ -48,3 +49,7 @@ inquirer.prompt([
     console.error('There was an error with adding the guest', error)
   }
 })
+
+function cleanTwitter(twitter) {
+  return twitter.replace('@', '').trim()
+}
