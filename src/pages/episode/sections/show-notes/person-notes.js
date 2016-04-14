@@ -13,15 +13,17 @@ function PersonNotes({person}) {
     {label: 'Tips', notes: tipsHTML},
     {label: 'Picks', notes: picksHTML},
   ]
+  const {styles} = PersonNotes
+  const personClassNames = {root: css(styles.personRoot)}
 
   return (
     <div className="person-notes +display-flex +space-children">
-      <Person {...person} />
+      <Person {...person} personClassNames={personClassNames} />
       {
         nothing ?
           <p>No links, tips, or picks this week</p> :
-          (
-            <div>
+        (
+          <div className={css(styles.notesContainer)}>
             {
               notesSections.map((section, index) => (
                 <Notes {...section} key={index} />
@@ -37,6 +39,16 @@ function PersonNotes({person}) {
 PersonNotes.propTypes = {
   person: PropTypes.object,
 }
+
+PersonNotes.styles = StyleSheet.create({
+  notesContainer: {flex: 1},
+  personRoot: {
+    minWidth: 220,
+    '@media only screen and (max-width: 500px)': {
+      minWidth: 150,
+    },
+  },
+})
 
 function Notes({notes, label}) {
   if (!notes.length) {

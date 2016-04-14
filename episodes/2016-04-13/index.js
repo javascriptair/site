@@ -38,8 +38,8 @@ export default {
       tips: [
       ],
       picks: [
-        `React Native on Windows Phone`,
-        `Node on mobile for P2P interaction`,
+        `[React Native on the Universal Windows Platform](https://blogs.windows.com/buildingapps/2016/04/13/react-native-on-the-universal-windows-platform/)`,
+        `[thali project](http://thaliproject.org/) Node on mobile for P2P interaction`,
         `[Interactive Extensions for JavaScript](https://github.com/Reactive-Extensions/IxJS)`,
       ],
     },

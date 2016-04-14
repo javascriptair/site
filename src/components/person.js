@@ -10,11 +10,12 @@ function Person({
   name,
   imgSrc,
   squareImage,
-  personClassNames = {name: '', twitter: '', image: ''},
+  personClassNames = {root: '', name: '', twitter: '', image: ''},
 }) {
   const {styles} = Person
   const personClassName = css(styles.person)
   className = className ? `${className} ${personClassName}` : personClassName
+  className += ' ' + personClassNames.root
   const nameClassName = `${personClassNames.name} ${css(styles.name)}`
   const twitterClassName = `${personClassNames.twitter} ${css(styles.twitter)}`
   const circularImageClassName = squareImage ? '' : css(styles.circular)
