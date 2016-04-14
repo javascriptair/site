@@ -1,17 +1,12 @@
-/* eslint camelcase:0 */
-
 import Twitter from 'twitter'
 
-const TW = new Twitter({
-  consumer_key: process.env.TW_CONSUMER_KEY,
-  consumer_secret: process.env.TW_CONSUMER_SECRET,
-  access_token_key: process.env.TW_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.TW_ACCESS_TOKEN_SECRET,
-})
+const TW = new Twitter(getTwitterConfig())
+export {getProfileImageURL, sendTweet}
 
 function getProfileImageURL(handle) {
   return new Promise((resolve, reject) => {
-    TW.get('users/show.json', {screen_name: handle}, (error, data) => {
+    const options = {screen_name: handle} // eslint-disable-line camelcase
+    TW.get('users/show.json', options, (error, data) => {
       if (!error) {
         resolve(data.profile_image_url.replace('_normal', ''))
       } else {
@@ -33,4 +28,10 @@ function sendTweet(message) {
   })
 }
 
-export {getProfileImageURL, sendTweet}
+function getTwitterConfig() {
+  try {
+    return require('./twitter.api.ignored.json')
+  } catch (e) {
+    throw new Error('you must provide Twitter API info with a twitter.api.ignored.json')
+  }
+}
