@@ -29,6 +29,11 @@ const contributors = [
     twitter: 'akupila',
     contributions: 'Automation',
   },
+  {
+    name: 'Juan Pablo Osorio Ospina',
+    twitter: 'jpoo90',
+    contributions: 'Automation',
+  },
 ].map(c => {
   return {
     imgSrc: `/data/contributors/${c.twitter}.png`,
@@ -38,4 +43,3 @@ const contributors = [
 })
 
 export default contributors
-
