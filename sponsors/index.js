@@ -33,6 +33,7 @@ const sponsors = {
       link: 'http://jsair.io/wallabyjs',
       tagline: 'Realtime code coverage',
       startDate: '2016-01-15',
+      endDate: '2016-04-18',
     },
     {
       imgSrc: '/sponsors/codecov.png',
@@ -40,6 +41,21 @@ const sponsors = {
       link: 'http://jsair.io/codecov',
       tagline: 'Code coverage done right',
       startDate: '2016-01-15',
+      endDate: '2016-04-19',
+    },
+    {
+      imgSrc: '/sponsors/sparkpost.png',
+      name: 'SparkPost',
+      link: 'http://jsair.io/sparkpost',
+      tagline: `Email. We've Got It Down.`,
+      startDate: '2016-04-19',
+    },
+    {
+      imgSrc: '/sponsors/webstorm.png',
+      name: 'WebStorm',
+      link: 'http://jsair.io/webstorm',
+      tagline: 'Smart JavaScript IDE',
+      startDate: '2016-04-20',
     },
   ],
   silverSponsors: [
@@ -70,6 +86,7 @@ const sponsors = {
       link: 'http://jsair.io/sparkpost',
       tagline: `Email. We've Got It Down.`,
       startDate: '2016-04-05',
+      endDate: '2016-04-19',
     },
   ],
   appreciationSponsors: [
