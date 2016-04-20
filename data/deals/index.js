@@ -70,6 +70,24 @@ const deals = [
       perspectives. Barcelona 5-9 September.
     `,
   },
+  {
+    imgSrc: '/data/deals/nodeconflondon.png',
+    organization: 'Node Conf London',
+    tagline: 'Conference all about Node in London',
+    link: 'http://jsair.io/nodeconflondon-25',
+    deal: `
+      Get a 50% discount (while they last) with the code [**jsair-50**](http://jsair.io/nodeconflondon-50)
+      or a 25% discount with the code [**jsair-25**](http://jsair.io/nodeconflondon-25).
+    `,
+    expires: '2016-05-11',
+    description: `
+      NodeConf London is a one-day, single-track conference with a laser focus on what people need to know about
+      Node.js.
+
+      It brings together the sharpest minds from the enterprise with the industry’s leading software development
+      heavyweights and the finest talent that London has to offer.
+    `,
+  },
 ]
 
 const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())
