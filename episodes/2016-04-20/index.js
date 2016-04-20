@@ -2,8 +2,8 @@ export default {
   title: `Internet of Things with JavaScript`,
   guests: [
     {
-      name: 'Peter Hoddie',
-      twitter: 'phoddie',
+      name: 'Andy Carle',
+      twitter: 'PrototypingAndy',
       links: [
       ],
       tips: [
@@ -122,5 +122,3 @@ export default {
     },
   ],
 }
-
-
