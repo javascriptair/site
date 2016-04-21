@@ -5,7 +5,7 @@ import {css} from 'aphrodite'
 
 export {
   displayListify, intersperse,
-  isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
+  isPast, isFuture, isToday, sortPeople,
   markdownToHTML, getClassNames,
 }
 
@@ -68,10 +68,6 @@ function isPast(date, compare = new Date()) {
 
 function isToday(date) {
   return moment(date).isSame(moment(), 'day')
-}
-
-function isPastAndNotToday(date, compare = new Date()) {
-  return isPast(date, compare) && !isToday(date)
 }
 
 function markdownToHTML(string, stripP) {

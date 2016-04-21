@@ -3,7 +3,7 @@ import path from 'path'
 
 import {panelists} from '../resources/panelists'
 import moment from 'moment'
-import {markdownToHTML} from './utils'
+import {markdownToHTML, isPast} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
@@ -71,6 +71,7 @@ function getEpisodeData(episodePath) {
     timeHTML: markdownToHTML(time, true),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
+    past: episodeHasHappened(episode, date),
     number,
     numberDisplay,
     ...episode,
@@ -115,3 +116,7 @@ function pad(n, width, z) {
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
 }
 
+function episodeHasHappened(episodeRaw, date) {
+  const {past, podbeanId, transcript, host: {picks = []} = {}} = episodeRaw // eslint-disable-line no-shadow
+  return !!past || !!podbeanId || !!transcript || !!picks.length || isPast(date)
+}

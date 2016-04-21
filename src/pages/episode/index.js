@@ -2,8 +2,6 @@ import {PropTypes} from 'react'
 import deindent from 'deindent'
 import marked from 'marked'
 
-import {isPastAndNotToday} from '../../../shared/utils'
-
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
 
 import Page from '../../components/page'
@@ -20,8 +18,7 @@ import SponsorsSection from '../../components/sponsors'
 export default EpisodePage
 
 function EpisodePage({episode, sponsors}) {
-  const past = episode.past || isPastAndNotToday(episode.date)
-  const {numberDisplay, title, description, podbeanId} = episode
+  const {numberDisplay, title, description, past} = episode
   const descriptionHTMLString = marked(deindent(description))
   return (
     <Page
@@ -33,9 +30,9 @@ function EpisodePage({episode, sponsors}) {
           episode={episode}
         />
         {
-          (past || podbeanId) ?
+          past ?
             <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
-            <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
+              <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
         }
       </div>
     </Page>
