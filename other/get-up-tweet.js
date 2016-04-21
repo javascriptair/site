@@ -6,6 +6,8 @@ import {displayListify, sortPeople} from '../shared/utils'
 import shortenEpisodeUrl from './shorten-episode-url/logic'
 import episodeList from './utils/episode-list'
 
+export {validateMessageAndAddEmojiIfOk}
+
 getEpisodeDirectory()
   .then(episodePathToEpisodeData)
   .then(generateMessage)
