@@ -36,7 +36,6 @@ export default {
   youTubeId: 'naDNy5VBQuA',
   podbeanId: 'xrg68-5e3062',
   shortUrl: 'http://jsair.io/angular',
-  past: true,
   host: {
     links: [
     ],

@@ -51,7 +51,6 @@ export default {
   youTubeId: 'RFvwLifhxDg',
   podbeanId: 'yn6zw-5e65e8',
   shortUrl: 'http://jsair.io/reactive',
-  past: true,
   host: {
     tips: [
       `If you’re feeling overwhelmed, make a Todo list and focus on one task at a time.`,

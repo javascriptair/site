@@ -3,7 +3,7 @@ import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
 import Pageres from 'pageres'
 import userHome from 'user-home'
-import {future as episodes} from '../episodes'
+import episodeList from './utils/episode-list'
 
 inquirer.registerPrompt('directory', inquirerDirectory)
 inquirer.prompt([
@@ -13,13 +13,7 @@ inquirer.prompt([
     message: `What's the base URL to screenshot?`,
     default: 'http://javascriptair.com',
   },
-  {
-    name: 'episode',
-    type: 'list',
-    choices: episodes.map(e => ({name: e.title, value: e})),
-    message: 'Which episode?',
-    default: 0,
-  },
+  episodeList,
 ], ({url, episode}) => {
   const dest = path.resolve(userHome, 'Desktop')
 
@@ -36,4 +30,3 @@ inquirer.prompt([
       console.error(`Problems saving screenshot: \n${err}`)
     })
 })
-

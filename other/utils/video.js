@@ -16,8 +16,7 @@ import ProgressBar from 'cli-progress-bar'
 import {random as randomEmoji} from 'random-emoji'
 import ffmpegPath from './ffmpeg-path'
 import podcastifyAudio from './audio'
-
-import {past as episodes} from '../../episodes'
+import episodeList from './episode-list'
 
 export default podcastifyVideo
 
@@ -31,13 +30,7 @@ function podcastifyVideo() {
 function getEpisode() {
   return new Promise(resolve => {
     inquirer.prompt([
-      {
-        name: 'episode',
-        type: 'list',
-        choices: episodes.map(e => ({name: e.title, value: e})),
-        message: 'Which episode?',
-        default: episodes.length - 1,
-      },
+      episodeList,
     ], ({episode}) => resolve({
       url: episode.shortUrl || 'https://javascriptair.com',
       number: episode.number,

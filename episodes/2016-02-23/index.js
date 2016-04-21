@@ -28,12 +28,12 @@ export default {
   hangoutId: 'c6kdirtpl5i76am6mlhuqis490o',
   youTubeId: 'rgoyT95ce2U',
   podbeanId: 'hwwwv-5cf025',
-  past: true,
+  shortUrl: 'http://jsair.io/react-conf',
   hideShowNotes: true,
   transcript: `
-    KENT: And we're live with JavaScript Air. Hello, everyone! First, I need to apologize. React Conf had created, or had provided a ton of awesome technology, microphones and stuff for me to be able to do this show with really great quality. Unfortunately, there were some technical difficulties with that, and so we're just using the microphone from my computer. And so if it sounds bad, I'm really sorry about that and I'll try to make sure that's not a problem in the future. So we're live at React Conf right now in the Grand Hyatt in San Francisco. And this is the second day. We've had a ton of awesome talks, we have some more talks this afternoon. And for this show, we're going to have some people on who are speakers who will talk with us for like lightning interviews for about five minutes apiece. And so it should be fast-paced and interesting and fun. 
+    KENT: And we're live with JavaScript Air. Hello, everyone! First, I need to apologize. React Conf had created, or had provided a ton of awesome technology, microphones and stuff for me to be able to do this show with really great quality. Unfortunately, there were some technical difficulties with that, and so we're just using the microphone from my computer. And so if it sounds bad, I'm really sorry about that and I'll try to make sure that's not a problem in the future. So we're live at React Conf right now in the Grand Hyatt in San Francisco. And this is the second day. We've had a ton of awesome talks, we have some more talks this afternoon. And for this show, we're going to have some people on who are speakers who will talk with us for like lightning interviews for about five minutes apiece. And so it should be fast-paced and interesting and fun.
 
-    Before we get into the show too much, I want to give a shout out to our sponsors. So first we have Egghead.io. They are a library of tons of bite-sized videos about JavaScript development and the web platform in general. And Frontend Masters is an expert-led workshop with a lot of training courses on JavaScript from functional JavaScript to synchronous programming, those kinds of things. So check them out for that. TrackJS is a monitoring platform, error-tracking platform for your application, so check them out to keep track of errors before your customers notice them. And then WallabyJS runs your code coverage as you're coding, in your editor. It's amazing, very, very cool technology. So I recommend that you check them out for that awesome stuff at WallabyJS.com. And CodeCov is coverage done right. They have a lot of really awesome integration and tools for GitHub and other things. And so check out CodeCov.io for information about them. 
+    Before we get into the show too much, I want to give a shout out to our sponsors. So first we have Egghead.io. They are a library of tons of bite-sized videos about JavaScript development and the web platform in general. And Frontend Masters is an expert-led workshop with a lot of training courses on JavaScript from functional JavaScript to synchronous programming, those kinds of things. So check them out for that. TrackJS is a monitoring platform, error-tracking platform for your application, so check them out to keep track of errors before your customers notice them. And then WallabyJS runs your code coverage as you're coding, in your editor. It's amazing, very, very cool technology. So I recommend that you check them out for that awesome stuff at WallabyJS.com. And CodeCov is coverage done right. They have a lot of really awesome integration and tools for GitHub and other things. And so check out CodeCov.io for information about them.
 
     Awesome, so let's go ahead and start our interviews. Ben, why don't you come on down? It's good to meet you.
 
@@ -57,7 +57,7 @@ export default {
 
     KENT: Good, good. So what are some ways that people can get involved in some of the ideas that you propose?
 
-    BEN: Well, I mean like honestly, when we look at the community, like obviously there are hundreds, thousands of people using React. And that's really great, but you know, I look at some of these awesome projects that people have made. People make projects like Redux and React Hot Loader and Material UI, React Router, and design all of these great projects, which do a really great job of just solving entire classes of problems. And then that means that on the React team, we don't have to worry about those as much. And as much as possible, when we're building React, we're trying to make it so that it is possible to build all of this stuff in, you know, userspace, where you don't need to make changes to React Core in order to build the libraries. 
+    BEN: Well, I mean like honestly, when we look at the community, like obviously there are hundreds, thousands of people using React. And that's really great, but you know, I look at some of these awesome projects that people have made. People make projects like Redux and React Hot Loader and Material UI, React Router, and design all of these great projects, which do a really great job of just solving entire classes of problems. And then that means that on the React team, we don't have to worry about those as much. And as much as possible, when we're building React, we're trying to make it so that it is possible to build all of this stuff in, you know, userspace, where you don't need to make changes to React Core in order to build the libraries.
 
     And there are still a few areas where we're a little bit lacking right there and I think it's hard to build some of this stuff and user space, but for most of the stuff that I outlined in my talk, it should be possible to just build your own components that do these things. The one thing I talked about was just making it easier to get started with a new project. And that's absolutely something that we don't have to integrate into the actual React itself. React shouldn't have to change to let you do that. So really I'm just hoping that people can start new projects that solve some of these problems and build on top of what we have with React.
 
@@ -215,7 +215,7 @@ export default {
 
     KENT: Four in total.
 
-    ERIC FLORENZANO: That's pretty good, I like that name. 
+    ERIC FLORENZANO: That's pretty good, I like that name.
 
     KENT: (mumbles) I'll sit here next to you. So sorry, how do you pronounce your last name?
 
@@ -227,13 +227,13 @@ export default {
 
     KENT: We are live, yes. You've got the live right there. So Eric, you like VR.
 
-    ERIC FLORENZANO: I do like VR, could you tell? 
+    ERIC FLORENZANO: I do like VR, could you tell?
 
     (both laugh)
 
     KENT: Why don't you give us a quick introduction to yourself a little bit, and then we can talk a little bit about VR and JavaScript.
 
-    ERIC FLORENZANO: Sure, so I'm doing web development for about 10 years, started in the Django community, briefly took a couple years and did an app startup, which I ended up at Twitter from that. Was doing a bunch more web stuff when I found out about React and did a bunch of blog posts about that. And then sort of burned out a little bit and was trying to figure out, how am I gonna get excited about the next decade of, you know, this industry? Where is it going? Where is the most exciting to me really about programming these days? 
+    ERIC FLORENZANO: Sure, so I'm doing web development for about 10 years, started in the Django community, briefly took a couple years and did an app startup, which I ended up at Twitter from that. Was doing a bunch more web stuff when I found out about React and did a bunch of blog posts about that. And then sort of burned out a little bit and was trying to figure out, how am I gonna get excited about the next decade of, you know, this industry? Where is it going? Where is the most exciting to me really about programming these days?
 
     And I realized that it's actually virtual reality. This is last year. It's just, I've been following with what's been going on with virtual reality for years. I had developer kits, I never knew how to sort of use them. I'm a web developer, so I'm not a game developer. So I undertook a project to sort of build up a little game engine or virtual reality engine and use JavaScript to manipulate that engine. And it ended up being a great project both for learning and for exploring and for really diving in and getting an understanding of all this virtual reality stuff.
 
@@ -251,13 +251,13 @@ export default {
 
     KENT: So if you haven't watched the talk, you needed to build Spider Monkey, but there was nothing that you could find to build it except something is SDM that was dated six years ago to actually build it for VR, I just think that's...
 
-    ERIC FLORENZANO: There are probably better ways to do it than the way I did it. Actually, pro tip, if you wanna get Spider Monkey build, just build Firefox, and it spits out a static of Spider Monkey copy and paste. Found that out later. 
+    ERIC FLORENZANO: There are probably better ways to do it than the way I did it. Actually, pro tip, if you wanna get Spider Monkey build, just build Firefox, and it spits out a static of Spider Monkey copy and paste. Found that out later.
 
     (both laugh)
 
     KENT: That, yeah, good pro tip. Anybody wanting to build Spider Monkey, there you go. (laughs) Cool. So can you talk a little bit about what you see as the future of the web and specifically the VR space, how is that going to change our culture and change the world that we live in today?
 
-    ERIC FLORENZANO: Well, I don't know. It's hard to predict things far in the future, but I think actually in the pretty near term, we're gonna see VR used for obviously games are the big use case. Games are sort of the Trojan, I think of it as the Trojan horse to get into people's homes. But I think beyond that, there's, like I talked about creative activities, where you're being creative in virtual space. It's so natural that that's quickly moving into production. So architecture and 3D modeling and things like texturing and all the stuff that is content creation is gonna start happening in virtual reality because you can always craft the perfect tool to do exactly what you wanna do at any given point. That's something that you don't get in real life.So it's in some cases, it can be better than reality because you can sort of use the reality that you can create to your advantage. 
+    ERIC FLORENZANO: Well, I don't know. It's hard to predict things far in the future, but I think actually in the pretty near term, we're gonna see VR used for obviously games are the big use case. Games are sort of the Trojan, I think of it as the Trojan horse to get into people's homes. But I think beyond that, there's, like I talked about creative activities, where you're being creative in virtual space. It's so natural that that's quickly moving into production. So architecture and 3D modeling and things like texturing and all the stuff that is content creation is gonna start happening in virtual reality because you can always craft the perfect tool to do exactly what you wanna do at any given point. That's something that you don't get in real life.So it's in some cases, it can be better than reality because you can sort of use the reality that you can create to your advantage.
 
     Beyond that, I think multiplayer experiences, this feeling that you get when you're in a virtual experience, when you're in virtual reality with someone else, you feel this sense that you're really there with them. And it's hard to describe and it's hard to make sense if you're just looking on a screen, but there's this real sense of togetherness that you get. People like to say social experiences, but when you think of social, you think of you know, Facebook and Twitter and all these things. I like to think of it as togetherness because you really get this sense of like you and I are sitting here. You know, so if I do something weird, like I get embarrassed in VR, but online I could say something weird and not feel bad at all. (laughs)
 
@@ -275,7 +275,7 @@ export default {
 
     KENT: So you know, on the web, we have to think about accessibility, we have to think about a bunch of different things, but now with VR we have to actually think about whether people are going to get sick using our applications. So can you talk a little bit about why is that a problem and how do you do overcome that?
 
-    ERIC FLORENZANO: So it all has to do with latency, so however long it takes for you? you move your body and your brain expects to get the reaction from that movement right away. In reality, it's zero, you know, it's zero delay. So in virtual reality, we found that the longer that it takes for that sort of movement to be translated into what your senses perceive, so the light that hits your eyes, it's 150 milliseconds, for example, for you to move your head (which isn't all that much time, 150 milliseconds is pretty quick), most people will feel sick from that. But as you get that down to, you know, 30, 20, 10, eight milliseconds, you start to get to the point where almost, virtually nobody gets sick from that. And the thing that's difficult about that is a lot of times, there's difficulties where you might drop a frame here and there, you might drop below. 
+    ERIC FLORENZANO: So it all has to do with latency, so however long it takes for you? you move your body and your brain expects to get the reaction from that movement right away. In reality, it's zero, you know, it's zero delay. So in virtual reality, we found that the longer that it takes for that sort of movement to be translated into what your senses perceive, so the light that hits your eyes, it's 150 milliseconds, for example, for you to move your head (which isn't all that much time, 150 milliseconds is pretty quick), most people will feel sick from that. But as you get that down to, you know, 30, 20, 10, eight milliseconds, you start to get to the point where almost, virtually nobody gets sick from that. And the thing that's difficult about that is a lot of times, there's difficulties where you might drop a frame here and there, you might drop below.
 
     In video games, for example, on complex scenes, you know, if it's a big action scene, sometimes these things drop down to 15, 20 frames per second. And in virtual reality, it's not just about like on an app if you're scrolling and it starts to be a little janky, it's annoying. In virtual reality, if you drop some frames and starts to slow, you feel sick. So it's just such a more important thing to be able to hit these frame rates. That being said, all these companies are building techniques for sort of interpolating between frames if you happen to drop one or two. So it's not quite as dire as I'm making it sound, but it's just something you need to be thinking about the whole way through building these experiences. It's just the performance and making sure that latency is so low. Because yeah, like I say, it's not annoying, it's nauseating. (laughs)
 
@@ -321,7 +321,7 @@ export default {
 
     KENT: So in your talk you kind of went from, "We need to start the conversation. I need to be able to find you." And then you explained at least Facebook's process. And I've actually discovered personally that Facebook's process is similar in some ways to many companies. So I think that what you talked about was really enlightening for people, even if they don't interview at Facebook specifically. So can you talk about some of the process that you mentioned in your talk?
 
-    HELENA: Yeah, I, when I was putting together the talk I was trying to, you know, for people to see what's important, what should this talk be about? I wanted it to be informative, not especially for Facebook, but other technology companies. And not only for the engineers as well. What I wanted, the message that I wanted to give out is that, don't be afraid to talk to a recruiter. I know sometimes people don't have really great experiences with recruiters but it's really completely informative. And if you're just randomly thinking that this company or this recruiter has something to say and offer and share, and they're doing something great in the community, you should definitely connect. 
+    HELENA: Yeah, I, when I was putting together the talk I was trying to, you know, for people to see what's important, what should this talk be about? I wanted it to be informative, not especially for Facebook, but other technology companies. And not only for the engineers as well. What I wanted, the message that I wanted to give out is that, don't be afraid to talk to a recruiter. I know sometimes people don't have really great experiences with recruiters but it's really completely informative. And if you're just randomly thinking that this company or this recruiter has something to say and offer and share, and they're doing something great in the community, you should definitely connect.
 
     And a lot of times people don't want to move forward because they're not sure what to expect. Sometimes recruiters are secretive. Not intentionally, 'cause we know the process. For us it's really easy, you know, you finish one step and then the recruiter says, "Now we go to the next step. I'm gonna tell you about the step after that when we get there." And people feel like they're kept in the dark. And it's, most of the time, not intentional on the recruiter side. It's just, for us, it's really natural how everything goes. And I've found out that a lot of engineers who are interviewing at Facebook, interviewers don't really know what happens behind the scenes. And we do, and the hiring manager does and it's really good to shed some light so people are a little more comfortable moving forward.
 
@@ -339,7 +339,7 @@ export default {
 
     KENT: Very good, yeah, I think you hit the nail on the head. We just have so many different pieces of our industry, that it's easy to specialize in something and then the terms kind of get mixed up a little bit. So one other thing before we wrap up, I want to ask about how junior developers or entry-level developers can maximize their marketability. Is there anything, like any tips that you can give for people just graduating or just getting into software development to help them be marketable and find a good job?
 
-    HELENA: Yeah, be out there. Come to tech talks, come to happy hours, see meetups, see what the community is like. Understand what the job is that what you want to go to is. Connect with a recruiter. Keep connecting. It doesn't mean that we need to move forward right now. But you know, I know some other technologies companies might approach it differently. We, at Facebook, especially in frontend because it's so new and JavaScript used to be not very a fancy language as it right now and now it really is. And from the shortage of people that are actually working with JavaScript, now we have a lot of people that are working different places in JavaScript. Just being out there really helps. 
+    HELENA: Yeah, be out there. Come to tech talks, come to happy hours, see meetups, see what the community is like. Understand what the job is that what you want to go to is. Connect with a recruiter. Keep connecting. It doesn't mean that we need to move forward right now. But you know, I know some other technologies companies might approach it differently. We, at Facebook, especially in frontend because it's so new and JavaScript used to be not very a fancy language as it right now and now it really is. And from the shortage of people that are actually working with JavaScript, now we have a lot of people that are working different places in JavaScript. Just being out there really helps.
 
     Sometimes I have engineers, it's really hard for me to find junior and senior because I have engineers that go through development boot camps, and I know a few of my engineers are gonna watch this and they're going to be nodding. They have, you know, a few years of experience and they're not, by industry standards, they're not considered senior, but they do really well in the interviews and they join the company. And it's really, it's depends on where your passion comes out. And it really does. And you can code for a year and you can, you know, that talent can come out and be awesome.
 
@@ -389,7 +389,7 @@ export default {
 
     KENT: Yes.
 
-    ISAAC: So lots of problems with that, especially when it came to just positioning things correctly (mumbles) sort of off, the highlighter that doesn't know (inaudible) it's kind of a mess. So another option is to do kind of a Google Docs approach, with (mumbles) cursor position absolutely, you're trying to position it within the DOM, but then you're dealing with more DOM attributions. You have to measure how much, like how big the characters are (mumbles) in that case. So that opens up a different set of problems. 
+    ISAAC: So lots of problems with that, especially when it came to just positioning things correctly (mumbles) sort of off, the highlighter that doesn't know (inaudible) it's kind of a mess. So another option is to do kind of a Google Docs approach, with (mumbles) cursor position absolutely, you're trying to position it within the DOM, but then you're dealing with more DOM attributions. You have to measure how much, like how big the characters are (mumbles) in that case. So that opens up a different set of problems.
 
     So we looked at contentEditable enlarged because we got that cursor to (mumbles) for free, so it's like, "Okay, let's see if this works. Let's give this a try." And certainly trying to do a control contentEditable opens up different problems, but it was, every kind of approach has its tradeoffs, and this approach we went, decided, "Okay, this is the approach." Yes, there are going to be tradeoffs, but we felt good about that direction. You know, in large part because we're dealing with that cursor behavior. It was also important to us to be able to handle accessibility which is a big thing. The auto-growing aspect, as you type more, the wrapper div just goes with it. I made that for free. I guess you would get that with rendering everything. But anyway, but so I don't know. Weighing tradeoffs, it seemed like, "Okay, let's see if we can do this contentEditable." And it worked pretty well for what we were trying to accomplish.
 
@@ -405,9 +405,9 @@ export default {
 
     ISAAC: Well, so the thing that probably excites me the most, yesterday my talk was very much about the web and what we did with contentEditable, but really, one of the key things about it, about what we open sourced is that the model is completely independent of (mumbles). So you can represent a really complex and rich document without even caring how you actually rendered it (inaudible). So we want to build that Google Docs approach of like moving the cursor manually with that model, sure, we can totally do it. But then the really cool thing I think is (mumbles) how to react to interpretations. I think that, I mean, you could do something that doesn't even use React if you want to, but I'm really excited about being able to use this model and integrate it with React native solution. Actually, the Facebook Groups app on iOS (mumbles) React Native. And Spencer Aarons, one of the product engineers on that product basically forked what I had built very early version of Draft, and built a React (mumbles) implementation for it. So super excited about the things that can be done with that. And that's the kind of thing where it's like, because the model is just JavaScript, you can do whatever you want with it, (mumbles) like I'm excited to see something come of that.
 
-    KENT: That's awesome. It's really cool when something that you've built enables something even cooler. 
+    KENT: That's awesome. It's really cool when something that you've built enables something even cooler.
 
-    ISAAC: Yeah, it's awesome. 
+    ISAAC: Yeah, it's awesome.
 
     KENT: Well Isaac, thank you for coming on the show.
 
@@ -533,7 +533,7 @@ export default {
 
     JAMISON: Thanks man.
 
-    KENT: Thank you. I'll see you around. Good luck on your talk. 
+    KENT: Thank you. I'll see you around. Good luck on your talk.
 
     JAMISON: Thank you!
 
@@ -601,7 +601,7 @@ export default {
 
     MARIA: I think the most important thing it's based on JavaScript. You write mobile applications with JavaScript. I come from a (inaudible) background, so I've never written a mobile app except in 2011 for (mumbles) mobile, which was pretty bad, but at least I tried it. And that was the first time. And since then I was just, I had so much respect with Objective-C, and I did not want to touch that.
 
-    KENT: (laughs) 
+    KENT: (laughs)
 
     MARIA: So I thought, "Okay, let's try it out with JavaScript," and it's really awesome. You get started, you understand right away, you can find such a great community online. And I think that's the thing about React Native and React. A lot of people here that (inaudible).
 
@@ -609,20 +609,18 @@ export default {
 
     MARIA: Probably one thing about tech conferences in general, when you're meeting a woman in tech at a tech conference, don't ask the woman why she's in tech, ask her what projects she's done.
 
-    KENT: Yeah! 
+    KENT: Yeah!
 
     MARIA: That's super (mumbles), in my opinion.
 
-    KENT: Well, what project are you on? (laughs) We'll chat later. 
+    KENT: Well, what project are you on? (laughs) We'll chat later.
 
-    MARIA: Yeah. (laughs) 
+    MARIA: Yeah. (laughs)
 
-    KENT: Very good, yeah. I think that's a really good thing to close on, so thank you for that. And I'll see you around the rest of the conference. Thank you so much for coming on the show. I'll see you. 
+    KENT: Very good, yeah. I think that's a really good thing to close on, so thank you for that. And I'll see you around the rest of the conference. Thank you so much for coming on the show. I'll see you.
 
-    And that is our show. So thank you for watching. Just a quick shout out to our silver sponsors, Fluent Conf and Auth0. You can check them out on our website. And next week, we're going to be meeting with John-David Dalton about JavaScript utilities and Lodash, in particular. Really excited about that. John is awesome. And so tune in next week. It'll be at our regular time. And then the week after that we're actually going to be at Fluent Conf doing another live show, so really appreciate feedback on these live shows that we do, so that we can make sure that we're providing the value that you're looking for out of a show at a conference. Like I said, I promise the audio quality will be better next time. I really apologize about that. 
+    And that is our show. So thank you for watching. Just a quick shout out to our silver sponsors, Fluent Conf and Auth0. You can check them out on our website. And next week, we're going to be meeting with John-David Dalton about JavaScript utilities and Lodash, in particular. Really excited about that. John is awesome. And so tune in next week. It'll be at our regular time. And then the week after that we're actually going to be at Fluent Conf doing another live show, so really appreciate feedback on these live shows that we do, so that we can make sure that we're providing the value that you're looking for out of a show at a conference. Like I said, I promise the audio quality will be better next time. I really apologize about that.
 
     If you have suggestions for us, please go to Suggest.JavascriptAir.com, and can fill out a form, suggestions about the show in general or this specific episode. And then if you have, actually sorry, that was Feedback.JavascriptAir.com. If you have suggestions for upcoming shows and topics, go to Suggest.JavascriptAir.com. And then our deals page, make sure you check that out, JavascriptAir.com/deals. We have a couple of discount codes and stuff on there. I just pushed up another one this morning. And so yeah, I think that's it. So thank you very much for watching, and we'll see you next week. Buh-bye! Ah, and I can't stop the broadcast. Goodbye! (laughs)
   `,
 }
-
-

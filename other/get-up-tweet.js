@@ -2,10 +2,9 @@ import path from 'path'
 import inquirer from 'inquirer'
 import {copy} from 'copy-paste'
 import {sample} from 'lodash'
-import {past as episodes} from '../episodes'
 import {displayListify, sortPeople} from '../shared/utils'
-import getEpisodeData from '../shared/get-episode-data'
 import shortenEpisodeUrl from './shorten-episode-url/logic'
+import episodeList from './utils/episode-list'
 
 getEpisodeDirectory()
   .then(episodePathToEpisodeData)
@@ -15,8 +14,7 @@ getEpisodeDirectory()
   .then(result => console.log(result))
   .catch(err => console.error(err))
 
-function episodePathToEpisodeData(episodePath) {
-  const episodeData = getEpisodeData(episodePath)
+function episodePathToEpisodeData(episodeData) {
   const {title, shortUrl, guests} = episodeData
   if (shortUrl) {
     return {title, shortUrl, guests}
@@ -83,14 +81,11 @@ function getEpisodeDirectory() {
   return new Promise(resolve => {
     inquirer.prompt([
       {
-        name: 'episodeDate',
-        type: 'list',
-        choices: episodes.map(e => ({name: e.title, value: e.date})),
+        ...episodeList,
         message: 'Which episode is this tweet for?',
-        default: episodes.length - 1,
       },
-    ], ({episodeDate}) => {
-      resolve(here(`episodes/${episodeDate}`))
+    ], ({episode}) => {
+      resolve(episode)
     })
   })
 }

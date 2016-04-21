@@ -1,6 +1,7 @@
 import inquirer from 'inquirer'
 import inquirerDirectory from 'inquirer-directory'
 import shortenUrl from '../shorten-url'
+import episodeList from '../utils/episode-list'
 
 export default beginPrompt
 
@@ -52,13 +53,10 @@ function beginPrompt(episodeData, noCopy) {
       return new Promise(resolve => {
         inquirer.prompt([
           {
-            name: 'date',
-            type: 'directory',
+            ...episodeList,
             message: 'Which episode are you short-linking?',
-            basePath: './episodes',
           },
-        ], ({date}) => {
-          const {title} = require(`../../episodes/${date}`).default
+        ], ({episode: {title, date}}) => {
           resolve({title, date})
         })
       })
@@ -91,4 +89,3 @@ function beginPrompt(episodeData, noCopy) {
     console.error(rejection)
   }
 }
-
