@@ -36,7 +36,7 @@ export default {
   `,
   hangoutId: 'c46nrh7d108hnt81d4pdmbd00as',
   youTubeId: 'oUBbfYUzaAI',
-  podbeanId: '',
+  podbeanId: 'sgtax-5e9e3d',
   shortUrl: 'http://jsair.io/iot',
   host: {
     tips: [

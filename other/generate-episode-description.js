@@ -1,5 +1,4 @@
 /* eslint react/prop-types: 0 */
-import path from 'path'
 import ReactDOMServer from 'react-dom/server'
 
 import {copy} from 'copy-paste'
@@ -9,26 +8,29 @@ import deindent from 'deindent'
 import {getSponsorsForDate} from '../sponsors'
 
 import * as utils from '../shared/utils'
-import getEpisodeData from '../shared/get-episode-data'
+import episodeList from './utils/episode-list'
+import inquirer from 'inquirer'
 
+inquirer.prompt([
+  episodeList,
+], ({episode}) => {
+  const showSponsors = getSponsorsForDate(episode.date)
 
-const episodePath = path.join(process.cwd(), process.argv[2])
-const episodeData = getEpisodeData(episodePath)
-const showSponsors = getSponsorsForDate(episodeData.date)
+  const string = ReactDOMServer.renderToStaticMarkup(
+    <EpisodeDescription
+      episode={episode}
+      sponsors={showSponsors}
+    />
+  )
 
-const string = ReactDOMServer.renderToStaticMarkup(
-  <EpisodeDescription
-    episode={episodeData}
-    sponsors={showSponsors}
-  />
-)
-
-copy(string, err => {
-  if (err) {
-    throw err
-  }
-  console.log(`Podcast description for "${episodeData.title}" copied to your clipboard`)
+  copy(string, err => {
+    if (err) {
+      throw err
+    }
+    console.log(`Podcast description for "${episode.title}" copied to your clipboard`)
+  })
 })
+
 
 function EpisodeDescription({episode, sponsors}) {
   const {
