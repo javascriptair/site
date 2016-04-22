@@ -4,6 +4,8 @@ import {StyleSheet, css} from 'aphrodite'
 
 export default HeaderBar
 
+const smallScreen = '@media only screen and (max-width: 530px)'
+
 const nextEpisodePropTypes = PropTypes.shape({
   titleHTML: PropTypes.object,
   page: PropTypes.string,
@@ -41,6 +43,7 @@ EpisodeBox.styles = StyleSheet.create({
   socialLink: {
     textDecoration: 'none',
     color: 'black',
+    [smallScreen]: {display: 'none'},
   },
   showBody: {
     display: 'flex',
@@ -105,6 +108,7 @@ Navigation.styles = StyleSheet.create({
     fontWeight: 'bold',
     textDecoration: 'none',
     color: 'white',
+    [smallScreen]: {fontSize: '1em'},
   },
 })
 
@@ -147,6 +151,7 @@ HeaderBar.styles = StyleSheet.create({
     backgroundRepeat: 'no-repeat',
     backgroundSize: '280px 166px',
     backgroundPosition: '103% -5px',
+    [smallScreen]: {backgroundImage: 'inherit'},
   },
   headerTop: {
     maxWidth: 1100,
@@ -154,6 +159,9 @@ HeaderBar.styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-between',
     padding: '20px 40px',
+    [smallScreen]: {
+      padding: '5px 10px',
+    },
   },
   logoAnchor: {
     display: 'flex',
@@ -164,16 +172,21 @@ HeaderBar.styles = StyleSheet.create({
   logoImage: {
     transform: 'rotate(-20deg)',
     fill: 'white',
-    width: '90px',
+    width: 90,
     transition: 'all 0.4s',
     ':hover': {
       transform: 'rotate(-30deg)',
     },
+    [smallScreen]: {width: 60},
   },
   podcastName: {
     paddingLeft: 20,
     fontSize: '3.5em',
     letterSpacing: '-1.3px',
+    [smallScreen]: {
+      fontSize: '2.5em',
+      paddingLeft: 10,
+    },
   },
   bold: {fontWeight: 'bold'},
 })
