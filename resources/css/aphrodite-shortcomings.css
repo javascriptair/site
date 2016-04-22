@@ -1,3 +1,23 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:before, :after {
+  box-sizing:border-box;
+}
+
+strong {
+  font-weight: bold;
+}
+
 .episode-page {
   &__episode-transcript p {
     margin-bottom: 20px
