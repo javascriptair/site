@@ -3,8 +3,9 @@ import {StyleSheet, css} from 'aphrodite'
 import SubscribeIconGroupSection from './sections/subscribe-icon-group'
 import Icon from '../../components/icon'
 import Decor from '../../components/decor'
+import {social as socialStyles, socialDecor as socialDecorStyles} from '../../styles'
+import {upToMedium, upToSmall} from '../../styles/media-queries'
 
-const smallScreen = '@media only screen and (max-width : 515px)'
 export default Header
 
 function Heading() {
@@ -36,18 +37,16 @@ function Hero() {
         <a href="#episodes" className={buttonClassName}>Upcoming Shows</a>
         <a href="#previous-episodes" className={buttonClassName}>Past Shows</a>
       </div>
-      <div className="social__container">
-        <div className="social social-home">
-            <div className="social__decor"></div>
-            <div className="social__bottom">
-              <div className="social__title">
-                <h2>Available On</h2>
-              </div>
-              <div className="social__actions">
-                <SubscribeIconGroupSection />
-              </div>
+      <div className={css(styles.socialContainer)}>
+        <div className={css(styles.social)}>
+          <div className={css(styles.socialDecor)}></div>
+          <div className={css(styles.socialBottom)}>
+            <div className={css(styles.socialTitle)}>
+              <h2>Available On</h2>
             </div>
+            <SubscribeIconGroupSection />
           </div>
+        </div>
       </div>
     </div>
   )
@@ -58,7 +57,7 @@ Hero.styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     marginTop: 22,
-    [smallScreen]: {
+    [upToSmall]: {
       flexDirection: 'column',
       alignItems: 'center',
     },
@@ -68,7 +67,7 @@ Hero.styles = StyleSheet.create({
     display: 'flex',
     textDecoration: 'none',
     alignItems: 'center',
-    [smallScreen]: {
+    [upToSmall]: {
       margin: '5px 0px',
     },
     width: 240,
@@ -83,6 +82,30 @@ Hero.styles = StyleSheet.create({
       backgroundColor: '#222',
       color: '#efdd4f',
     },
+  },
+  socialContainer: {
+    marginTop: 50,
+  },
+  social: {
+    width: '45%',
+    margin: '0 auto',
+    ...socialStyles,
+  },
+  socialDecor: socialDecorStyles,
+  socialBottom: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '15px 15px',
+    [upToMedium]: {
+      flexDirection: 'column',
+    },
+  },
+  socialTitle: {
+    paddingLeft: 8,
+    fontSize: '1.8em',
+    fontWeight: 'bold',
+    [upToMedium]: {display: 'none'},
   },
 })
 

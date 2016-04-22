@@ -1,6 +1,7 @@
 import {PropTypes} from 'react'
 import Icon from './icon'
 import {StyleSheet, css} from 'aphrodite'
+import {social, socialDecor} from '../styles'
 
 export default HeaderBar
 
@@ -17,8 +18,8 @@ function EpisodeBox({nextEpisode}) {
   return (
     <a className={css(styles.socialLink)} href={page}>
       <div>
-        <div className="social">
-          <div className="social__decor"></div>
+        <div className={css(styles.social)}>
+          <div className={css(styles.socialDecor)}></div>
           <div className={css(styles.showBody)}>
             <div className={css(styles.bodyTop)}>
               <h2 className={css(styles.bodyTopH2)}>View Next Show</h2>
@@ -45,6 +46,8 @@ EpisodeBox.styles = StyleSheet.create({
     color: 'black',
     [smallScreen]: {display: 'none'},
   },
+  social,
+  socialDecor,
   showBody: {
     display: 'flex',
     padding: 15,
