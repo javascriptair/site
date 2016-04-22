@@ -1,23 +1,16 @@
+/* there's no reasonable way to apply these kinds of styles using Aphrodite */
+/* it's technically a different kind of style. It's not a component style */
+/* it's a global style, which is not the problem Aphrodite is meant to solve */
 body {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
-  margin: 0;
 }
+*, :before, :after {box-sizing: border-box;}
+strong {font-weight: bold;}
 
-* {
-  box-sizing: border-box;
-}
-
-:before, :after {
-  box-sizing:border-box;
-}
-
-strong {
-  font-weight: bold;
-}
-
+/* See https://github.com/Khan/aphrodite/issues/30 */
 .episode-page {
   &__episode-transcript p {
     margin-bottom: 20px
