@@ -69,7 +69,7 @@ ContributorsPage.styles = StyleSheet.create({
 function Contributors({contributors}) {
   const {styles} = Contributors
   return (
-    <div className="person-group">
+    <div className={css(styles.personGroup)}>
       {contributors.map((person, index) => (
         <div key={index} className={css(styles.contributor)}>
           <Person {...person} />
@@ -85,5 +85,11 @@ Contributors.propTypes = {
 }
 
 Contributors.styles = StyleSheet.create({
+  personGroup: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'row wrap',
+    textAlign: 'center',
+  },
   contributor: {margin: '0 10px 18px 10px'},
 })

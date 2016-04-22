@@ -17,7 +17,7 @@ function PersonNotes({person}) {
   const personClassNames = {root: css(styles.personRoot)}
 
   return (
-    <div className="person-notes +display-flex +space-children">
+    <div className={`${css(styles.personNotes)} +space-children`}>
       <Person {...person} personClassNames={personClassNames} />
       {
         nothing ?
@@ -41,6 +41,9 @@ PersonNotes.propTypes = {
 }
 
 PersonNotes.styles = StyleSheet.create({
+  personNotes: {
+    display: 'flex',
+  },
   notesContainer: {flex: 1},
   personRoot: {
     minWidth: 220,

@@ -12,7 +12,7 @@ function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
         {label + ' '}
         {hangoutUrl ? <Rsvp hangoutUrl={hangoutUrl} /> : ''}
       </h3>
-      <div className="+text-center">
+      <div style={{textAlign: 'center'}}>
         <VideoPlayer youTubeId={youTubeId} />
       </div>
     </section>

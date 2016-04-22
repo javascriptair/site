@@ -14,9 +14,6 @@
   a:hover, a:focus, a:active {
     color: #318CB7;
   }
-  a[class^="icon-"], [class*=" icon-"] {
-    text-decoration: none;
-  }
   h3 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -25,35 +22,11 @@
     color: #7c7c7c;
     font-size: 65%;
   }
-  #logo img {
-    max-width: 220px;
-    width: 90%;
-  }
-  .group-of-icons {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    text-align: center;
-  }
-  .person-group, .sponsor-group {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    text-align: center;
-  }
   .person {
     text-align: center;
   }
   .person a {
     text-decoration: none;
-  }
-  .episode .person-group {
-    margin-top: 30px;
-  }
-  .twitter-timeline-rendered {
-    margin: auto;
-    margin-bottom: 25px !important;
-    display: block !important;
   }
   hr {
     border: 0;
@@ -61,21 +34,12 @@
     height: 0;
     box-sizing: content-box;
   }
-  hr.episode-separator {
-    width: 80%;
-  }
   hr.person-note-separator {
     width: 90%;
   }
   /* utilities */
-  .\+text-center {
-    text-align: center;
-  }
   .\+margin-bottom-large {
     margin-bottom: 40px;
-  }
-  .\+display-flex {
-    display: flex;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -94,14 +58,8 @@
       margin-top: 34px;
       margin-bottom: 34px;
     }
-    #sub-title {
-      font-size: 23px;
-    }
     .person img, .sponsor img {
       max-width: 120px;
-    }
-    .group-of-icons {
-      font-size: 60px;
     }
     .\+space-children>* {
       margin-left: 10px;
@@ -113,17 +71,6 @@
     hr.person-note-separator {
       margin-top: 20px;
       margin-bottom: 20px;
-    }
-  }
-}
-@media only screen and (min-width: 803px) {
-  .container {
-    .twitter-feed-container {
-      display: flex;
-    }
-    .twitter-timeline-rendered {
-      margin-left: 28px;
-      margin-right: 28px;
     }
   }
 }
@@ -143,14 +90,8 @@
       margin-top: 70px;
       margin-bottom: 70px;
     }
-    #sub-title {
-      font-size: 30px;
-    }
     .person img, .sponsor img {
       max-width: 180px;
-    }
-    .group-of-icons {
-      font-size: 80px;
     }
     .\+space-children>* {
       margin-left: 28px;

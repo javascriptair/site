@@ -1,6 +1,7 @@
 import {PropTypes} from 'react'
 import deindent from 'deindent'
 import marked from 'marked'
+import {StyleSheet, css} from 'aphrodite'
 
 import TwitterWidgetScript from '../../components/scripts/twitter-widget'
 
@@ -88,6 +89,7 @@ PastEpisodeStuff.propTypes = {
 }
 
 function FutureEpisodeStuff({episodeData, sponsors}) {
+  const {styles} = FutureEpisodeStuff
   const {youTubeId, hangoutUrl} = episodeData
   return (
     <div>
@@ -103,7 +105,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
               />
             </div>
 
-            <div className="twitter-feed-container">
+            <div className={css(styles.twitterFeedContainer)}>
               <TwitterFeed
                 widgetId="675885424049393664"
                 linkTo="https://twitter.com/hashtag/JavaScriptAir"
@@ -140,6 +142,14 @@ FutureEpisodeStuff.propTypes = {
   episodeData: PropTypes.object,
   sponsors: PropTypes.object,
 }
+
+FutureEpisodeStuff.styles = StyleSheet.create({
+  twitterFeedContainer: {
+    '@media only screen and (min-width: 803px)': {
+      display: 'flex',
+    },
+  },
+})
 
 function hasShowNotes(episodeData) {
   const {guests, host, panelists} = episodeData
