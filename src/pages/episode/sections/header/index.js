@@ -3,6 +3,7 @@ import {StyleSheet, css} from 'aphrodite'
 import PersonGroup from '../../../../components/person-group'
 import {sortPeople, isPast} from '../../../../../shared/utils'
 import RSVPIcon from '../../../../components/rsvp-icon'
+import TweetLink from './tweet-link'
 
 export default Header
 
@@ -20,6 +21,7 @@ function Header({episode}) {
   const {styles} = Header
   const past = episode.past || isPast(date)
   const sortedGuests = sortPeople(guests)
+
   return (
     <div>
       <div className={css(styles.titleContainer)}>
@@ -35,6 +37,12 @@ function Header({episode}) {
             {past ? '' : <RSVPIcon hangoutUrl={hangoutUrl} />}
             {' ' + dateDisplay} at <span dangerouslySetInnerHTML={timeHTML} />
           </small>
+          <br />
+          <TweetLink
+            episode={episode}
+            guests={sortedGuests}
+            isPast={past}
+          />
         </h2>
         <PersonGroup people={sortedGuests} />
       </div>
