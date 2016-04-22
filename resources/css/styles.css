@@ -1,6 +1,3 @@
-@import 'mixins/section-heading';
-@import 'mixins/container';
-
 @import 'reset.css';
 @import 'legacy.css';
 @import 'episode.css';
