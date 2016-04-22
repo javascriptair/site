@@ -9,8 +9,8 @@ function Hero() {
   const {styles} = Hero
   const buttonClassName = css(styles.button)
   return (
-    <div className="header__hero">
-      <p className="header__tagline">The live broadcast podcast all about JavaScript</p>
+    <div className={css(styles.hero)}>
+      <p className={css(styles.tagline)}>The live broadcast podcast all about JavaScript</p>
       <div className={css(styles.buttonContainer)}>
         <a href="#episodes" className={buttonClassName}>Upcoming Shows</a>
         <a href="#previous-episodes" className={buttonClassName}>Past Shows</a>
@@ -31,6 +31,14 @@ function Hero() {
 }
 
 Hero.styles = StyleSheet.create({
+  hero: {
+    width: '100%',
+    paddingBottom: 20,
+  },
+  tagline: {
+    fontWeight: 'bold',
+    fontSize: '2.4em',
+  },
   buttonContainer: {
     display: 'flex',
     justifyContent: 'center',
