@@ -1,12 +1,14 @@
 import moment from 'moment'
 import marked from 'marked'
 import deindent from 'deindent'
+import {sample} from 'lodash'
 import {css} from 'aphrodite'
 
 export {
   displayListify, intersperse,
   isPast, isFuture, isToday, sortPeople,
   markdownToHTML, getClassNames,
+  validateMessageAndAddEmojiIfOk,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -88,4 +90,17 @@ function sortPeople(people = []) {
 
 function getClassNames(styles) {
   return Object.keys(styles).map(k => css(styles[k]))
+}
+
+function validateMessageAndAddEmojiIfOk(message) {
+  const emoji = sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻'])
+  const MAX_TWEET_LENGTH = 140
+  const LENGTH_OF_IMAGE = 24
+  const AVAILABLE_TWEET_LENGTH = MAX_TWEET_LENGTH - LENGTH_OF_IMAGE
+  if (AVAILABLE_TWEET_LENGTH - message.length >= emoji.length) {
+    return `${message} ${emoji}`
+  } else if (message.length > AVAILABLE_TWEET_LENGTH) {
+    console.warn('**The tweet is too long**') // eslint-disable-line no-console
+  }
+  return message
 }

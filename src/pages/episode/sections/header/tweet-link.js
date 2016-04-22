@@ -1,6 +1,5 @@
 import React from 'react'
-import {displayListify} from '../../../../../shared/utils'
-import {validateMessageAndAddEmojiIfOk} from '../../../../../other/get-up-tweet'
+import {displayListify, validateMessageAndAddEmojiIfOk} from '../../../../../shared/utils'
 
 export default TweetLink
 
