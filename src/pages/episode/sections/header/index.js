@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import PersonGroup from '../../../../components/person-group'
-import {sortPeople, isPast} from '../../../../../shared/utils'
+import {isPast} from '../../../../../shared/utils'
 import RSVPIcon from '../../../../components/rsvp-icon'
 import TweetLink from './tweet-link'
 
@@ -13,14 +13,12 @@ function Header({episode}) {
     timeHTML,
     dateDisplay,
     date,
-    guests = [],
     descriptionHTML,
     hangoutUrl,
     numberDisplay,
   } = episode
   const {styles} = Header
   const past = episode.past || isPast(date)
-  const sortedGuests = sortPeople(guests)
 
   return (
     <div>
@@ -40,11 +38,9 @@ function Header({episode}) {
           <br />
           <TweetLink
             episode={episode}
-            guests={sortedGuests}
-            isPast={past}
           />
         </h2>
-        <PersonGroup people={sortedGuests} />
+        <PersonGroup people={episode.sortedGuests} />
       </div>
       <div className={css(styles.description)}>
         <p dangerouslySetInnerHTML={descriptionHTML}></p>

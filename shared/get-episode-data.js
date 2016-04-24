@@ -3,7 +3,7 @@ import path from 'path'
 
 import {panelists} from '../resources/panelists'
 import moment from 'moment'
-import {markdownToHTML, isPast} from './utils'
+import {markdownToHTML, isPast, sortPeople} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
@@ -29,6 +29,7 @@ function getEpisodeData(episodePath) {
     htmlifyLinksPicksAndTips(guest)
     return guest
   })
+  episode.sortedGuests = sortPeople(episode.guests)
 
   episode.panelists = (episode.panelists || []).map(panelist => {
     panelist = {
