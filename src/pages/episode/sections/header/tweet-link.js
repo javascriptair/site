@@ -2,7 +2,6 @@ import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import striptags from 'striptags'
 import IconLink from '../../../../components/icon-link'
-import {linkColor, linkHoverColor} from '../../../../styles/variables'
 import {displayListify, getRandomPositiveEmoji} from '../../../../../shared/utils'
 
 export default TweetLink
@@ -35,10 +34,6 @@ TweetLink.styles = StyleSheet.create({
     height: 40,
     display: 'inline-block',
     padding: '0 5px',
-  },
-  icon: {
-    fill: linkColor,
-    ':hover': {fill: linkHoverColor},
   },
 })
 

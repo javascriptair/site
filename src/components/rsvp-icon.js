@@ -1,7 +1,6 @@
 import React from 'react'
 import IconLink from './icon-link'
 import {StyleSheet, css} from 'aphrodite'
-import {linkColor, linkHoverColor} from '../styles/variables'
 
 export default RSVPIcon
 
@@ -28,7 +27,5 @@ RSVPIcon.styles = StyleSheet.create({
   iconLink: {
     width: 20,
     height: 20,
-    fill: linkColor,
-    ':hover': {fill: linkHoverColor},
   },
 })
