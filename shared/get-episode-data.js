@@ -3,7 +3,7 @@ import path from 'path'
 
 import {panelists} from '../resources/panelists'
 import moment from 'moment'
-import {markdownToHTML, isPast, sortPeople} from './utils'
+import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
@@ -119,5 +119,5 @@ function pad(n, width, z) {
 
 function episodeHasHappened(episodeRaw, date) {
   const {past, podbeanId, transcript, host: {picks = []} = {}} = episodeRaw // eslint-disable-line no-shadow
-  return !!past || !!podbeanId || !!transcript || !!picks.length || isPast(date)
+  return !!past || !!podbeanId || !!transcript || !!picks.length || isPastAndNotToday(date)
 }
