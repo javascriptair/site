@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import striptags from 'striptags'
-import {displayListify, validateMessageAndAddEmojiIfOk} from '../../../../../shared/utils'
+import {displayListify, validateMessageAndAddEmojiIfOk} from '<shared>/utils'
 
 export default TweetLink
 

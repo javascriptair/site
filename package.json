@@ -60,6 +60,7 @@
     "babel-cli": "6.2.0",
     "babel-core": "6.1.21",
     "babel-eslint": "6.0.2",
+    "babel-plugin-namespaces": "0.2.3",
     "babel-plugin-react-require": "2.1.0",
     "babel-preset-es2015": "6.1.18",
     "babel-preset-react": "6.1.18",
