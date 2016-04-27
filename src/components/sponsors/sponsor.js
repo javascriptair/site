@@ -42,8 +42,8 @@ Sponsor.styles = StyleSheet.create({
   logo: {
     marginBottom: 10,
     '@media only screen and (max-width : 500px)': {
-      width: 120,
-      height: 120,
+      width: '100%',
+      maxWidth: 120
     },
   },
   name: {
