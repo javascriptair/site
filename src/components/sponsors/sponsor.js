@@ -43,7 +43,7 @@ Sponsor.styles = StyleSheet.create({
     marginBottom: 10,
     '@media only screen and (max-width : 500px)': {
       width: '100%',
-      maxWidth: 120
+      maxWidth: 120,
     },
   },
   name: {
