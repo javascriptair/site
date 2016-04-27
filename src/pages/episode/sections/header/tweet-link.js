@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import striptags from 'striptags'
-import {displayListify, validateMessageAndAddEmojiIfOk} from '../../../../../shared/utils'
+import {displayListify, getRandomPositiveEmoji} from '../../../../../shared/utils'
 
 export default TweetLink
 
@@ -31,5 +31,5 @@ function getMessage({past, titleHTML, sortedGuests, shortUrl, date}) {
   const message = past ?
     `Check out "${title}" w/ ${displayListify(guestList).join('')} ${shortUrl}` :
     `Watch "${title}" live w/ ${displayListify(guestList).join('')} on ${date} ${shortUrl}`
-  return validateMessageAndAddEmojiIfOk(message)
+  return message + ' ' + getRandomPositiveEmoji()
 }

@@ -1,14 +1,14 @@
 import path from 'path'
 import inquirer from 'inquirer'
 import {copy} from 'copy-paste'
-import {displayListify, sortPeople, validateMessageAndAddEmojiIfOk} from '../shared/utils'
+import {displayListify, sortPeople, getRandomPositiveEmoji} from '../shared/utils'
 import shortenEpisodeUrl from './shorten-episode-url/logic'
 import episodeList from './utils/episode-list'
 
 getEpisodeDirectory()
   .then(episodePathToEpisodeData)
   .then(generateMessage)
-  .then(validateMessageAndAddEmojiIfOk)
+  .then(message => message + ' ' + getRandomPositiveEmoji())
   .then(copyMessage)
   .then(result => console.log(result))
   .catch(err => console.error(err))

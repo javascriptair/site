@@ -8,7 +8,7 @@ export {
   displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
   markdownToHTML, getClassNames,
-  validateMessageAndAddEmojiIfOk,
+  getRandomPositiveEmoji,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -96,15 +96,6 @@ function getClassNames(styles) {
   return Object.keys(styles).map(k => css(styles[k]))
 }
 
-function validateMessageAndAddEmojiIfOk(message) {
-  const emoji = sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻'])
-  const MAX_TWEET_LENGTH = 140
-  const LENGTH_OF_IMAGE = 24
-  const AVAILABLE_TWEET_LENGTH = MAX_TWEET_LENGTH - LENGTH_OF_IMAGE
-  if (AVAILABLE_TWEET_LENGTH - message.length >= emoji.length) {
-    return `${message} ${emoji}`
-  } else if (message.length > AVAILABLE_TWEET_LENGTH) {
-    console.warn('**The tweet is too long**') // eslint-disable-line no-console
-  }
-  return message
+function getRandomPositiveEmoji() {
+  return sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻'])
 }
