@@ -1,5 +1,6 @@
 export default {
   title: `On site at ng-conf`,
+  time: '2:00 PM **MDT**',
   guests: [
     {
       name: 'ng-conf',
@@ -15,6 +16,10 @@ export default {
   ],
   description: `
     We'll be on site at one of the biggest and most exciting conferences in the world: ng-conf.
+    <br />
+    Guests include: [samuel john saccone](https://twitter.com/samccone), [Tero Parviainen](https://twitter.com/teropa),
+    [Mike Brocchi](https://twitter.com/brocco), [Jules Kremer](https://twitter.com/jules_kremer),
+    [John Papa](https://twitter.com/John_Papa), and [Aysegul Yonet](https://twitter.com/AysegulYonet)
   `,
   hangoutId: 'cbjlovqo30a8qlgnofngrcvoecg',
   youTubeId: 'Q9aL9kmdmIE',
@@ -103,5 +108,3 @@ export default {
     },
   ],
 }
-
-
