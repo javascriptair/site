@@ -14,7 +14,7 @@ function SubscribeIconGroup() {
     <ul className={css(styles.list)}>
       {iconList.map((item, index) => (
         <li className={css(styles.item)} key={index}>
-          <IconLink {...item} />
+          <IconLink {...item} iconStyles={styles.icon} />
         </li>
       ))}
     </ul>
@@ -32,5 +32,9 @@ SubscribeIconGroup.styles = StyleSheet.create({
     height: 60,
     display: 'inline-block',
     padding: '0 5px',
+  },
+  icon: {
+    fill: 'black',
+    ':hover': {fill: '#2B2B2B'},
   },
 })

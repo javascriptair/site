@@ -26,9 +26,16 @@ function Host() {
           href="https://egghead.io/instructors/kentcdodds"
           title="Egghead.io instructor page"
         >
-          Egghead.io
+          Egghead.io instructor
         </a>
-        {' '}instructor Kent C. Dodds is your host
+        {' - '}
+        <a
+          className={css(sharedStyles.link)}
+          href="https://developers.google.com/experts/people/kent-c-dodds"
+          title="Google Developer Expert Page"
+        >
+          Google Developer Expert
+        </a>
       </p>
     </section>
   )

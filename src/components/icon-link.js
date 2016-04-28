@@ -1,5 +1,4 @@
 import {PropTypes} from 'react'
-import classNames from 'classnames'
 import {StyleSheet, css} from 'aphrodite'
 import {linkColor, linkHoverColor} from '../styles/variables'
 import Icon from './icon'
@@ -8,16 +7,16 @@ export default IconLink
 
 function IconLink(props) {
   const {styles} = IconLink
-  const iconClassName = css(styles.icon)
+  const iconClassName = css(styles.icon, props.iconStyles)
   return (
     <a {...props}>
-      <Icon {...props} className={classNames(iconClassName, props.className)}/>
+      <Icon {...props} className={iconClassName}/>
     </a>
   )
 }
 
 IconLink.propTypes = {
-  className: PropTypes.string,
+  iconStyles: PropTypes.object,
 }
 
 IconLink.styles = StyleSheet.create({
