@@ -240,6 +240,7 @@
     align-items: center;
 
     overflow: hidden;
+    z-index: 1;
     position: relative;
 
     width: 120px;
