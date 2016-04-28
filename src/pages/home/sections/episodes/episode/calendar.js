@@ -73,7 +73,7 @@ function MainDate({page, date, hangoutUrl}) {
   return (
     <DateSquare side="main" date={date}>
       <div className="calendar__date__slide">
-        <RSVPIcon hangoutUrl={hangoutUrl} className="calendar__date__icon" />
+        <RSVPIcon hangoutUrl={hangoutUrl} black={true} />
         <a href={page}>Add to Calendar</a>
       </div>
     </DateSquare>
