@@ -1,4 +1,4 @@
-import React from 'react'
+import {PropTypes} from 'react'
 import IconLink from './icon-link'
 import {StyleSheet, css} from 'aphrodite'
 
@@ -9,9 +9,10 @@ function RSVPIcon(props) {
     return <noscript />
   }
   const {styles} = RSVPIcon
+  const {iconStyles} = props
   return (
     <IconLink
-      className={css(styles.iconLink)}
+      className={css(styles.iconLink, iconStyles)}
       href={props.hangoutUrl}
       name="calendar"
       {...props}
@@ -20,7 +21,8 @@ function RSVPIcon(props) {
 }
 
 RSVPIcon.propTypes = {
-  hangoutUrl: React.PropTypes.string.isRequired,
+  hangoutUrl: PropTypes.string.isRequired,
+  iconStyles: PropTypes.object,
 }
 
 RSVPIcon.styles = StyleSheet.create({

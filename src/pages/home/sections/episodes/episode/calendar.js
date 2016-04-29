@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet} from 'aphrodite'
 import moment from 'moment'
 import RSVPIcon from '../../../../../components/rsvp-icon'
 
@@ -70,10 +71,15 @@ ShowDays.propTypes = {
 }
 
 function MainDate({page, date, hangoutUrl}) {
+  const {styles} = MainDate
   return (
     <DateSquare side="main" date={date}>
       <div className="calendar__date__slide">
-        <RSVPIcon hangoutUrl={hangoutUrl} black={true} />
+        <RSVPIcon
+          hangoutUrl={hangoutUrl}
+          black={true}
+          iconStyles={styles.mainDateRSVPIcon}
+        />
         <a href={page}>Add to Calendar</a>
       </div>
     </DateSquare>
@@ -85,6 +91,14 @@ MainDate.propTypes = {
   hangoutUrl: PropTypes.string.isRequired,
   page: PropTypes.string.isRequired,
 }
+
+MainDate.styles = StyleSheet.create({
+  mainDateRSVPIcon: {
+    width: 40,
+    height: 40,
+    paddingBottom: 10,
+  },
+})
 
 function DateSquare({side, date, children}) {
   return (

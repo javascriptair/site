@@ -13,7 +13,9 @@ function runScript() {
     const script = document.createElement('script')
     script.setAttribute('type', 'text/javascript')
     script.setAttribute('src', '/resources/feature-show.js')
-    script.onload = () => window.featureShow(showToFeature)
+    script.onload = function onLoad() {
+      window.featureShow(showToFeature)
+    }
     document.body.appendChild(script)
   }
 }
