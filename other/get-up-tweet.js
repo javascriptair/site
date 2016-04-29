@@ -19,26 +19,24 @@ function episodePathToEpisodeData(episodeData) {
     return {title, shortUrl, guests}
   }
   console.warn('This episode has no short URL.')
-  return new Promise(resolve => {
-    inquirer.prompt([
-      {
-        name: 'createShortUrl',
-        type: 'confirm',
-        message: 'Would you like to create one right now?',
-        default: true,
-      },
-    ], ({createShortUrl}) => {
-      if (createShortUrl) {
-        const noCopy = true
-        const result = shortenEpisodeUrl(episodeData, noCopy)
-          .then(createdShortUrl => {
-            return {title, guests, shortUrl: createdShortUrl}
-          })
-        resolve(result)
-      } else {
-        resolve({title, guests})
-      }
-    })
+  return inquirer.prompt([
+    {
+      name: 'createShortUrl',
+      type: 'confirm',
+      message: 'Would you like to create one right now?',
+      default: true,
+    },
+  ]).then(({createShortUrl}) => {
+    if (createShortUrl) {
+      const noCopy = true
+      const result = shortenEpisodeUrl(episodeData, noCopy)
+        .then(createdShortUrl => {
+          return {title, guests, shortUrl: createdShortUrl}
+        })
+      return result
+    } else {
+      return {title, guests}
+    }
   })
 }
 
@@ -64,16 +62,12 @@ function getEpisodeDirectory() {
   if (process.argv[2]) {
     return Promise.resolve(here(process.argv[2]))
   }
-  return new Promise(resolve => {
-    inquirer.prompt([
-      {
-        ...episodeList,
-        message: 'Which episode is this tweet for?',
-      },
-    ], ({episode}) => {
-      resolve(episode)
-    })
-  })
+  return inquirer.prompt([
+    {
+      ...episodeList,
+      message: 'Which episode is this tweet for?',
+    },
+  ]).then(({episode}) => episode)
 }
 
 function here(d) {

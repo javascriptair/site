@@ -28,18 +28,16 @@ function podcastifyVideo() {
 }
 
 function getEpisode() {
-  return new Promise(resolve => {
-    inquirer.prompt([
-      episodeList,
-    ], ({episode}) => resolve({
-      url: episode.shortUrl || 'https://javascriptair.com',
-      number: episode.number,
-      numberDisplay: episode.numberDisplay,
-      title: episode.title,
-      year: new Date(episode.date).getFullYear(),
-      youTubeId: episode.youTubeId,
-    }))
-  })
+  return inquirer.prompt([
+    episodeList,
+  ]).then(({episode}) => ({
+    url: episode.shortUrl || 'https://javascriptair.com',
+    number: episode.number,
+    numberDisplay: episode.numberDisplay,
+    title: episode.title,
+    year: new Date(episode.date).getFullYear(),
+    youTubeId: episode.youTubeId,
+  }))
 }
 
 function downloadVideoToMp3(episode) {

@@ -33,7 +33,7 @@ inquirer.prompt([
     type: 'input',
     message: 'Artist?',
   },
-], ({file, title, number, year, url, artist}) => {
+]).then(({file, title, number, year, url, artist}) => {
   podcastifyAudio({
     file,
     episode: {title, number, year, url, artist},

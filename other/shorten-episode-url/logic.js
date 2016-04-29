@@ -15,18 +15,14 @@ function beginPrompt(episodeData, noCopy) {
 
   function getCustomAlias(data = {}) {
     return getEpisodeInfo().then(({title, date}) => {
-      return new Promise(resolve => {
-        inquirer.prompt([
-          {
-            name: 'alias',
-            type: 'input',
-            message: 'What alias do you want?',
-            default: getNameSuggestionFromEpisodeTitle(title),
-          },
-        ], ({alias}) => {
-          resolve({...data, alias, date})
-        })
-      })
+      return inquirer.prompt([
+        {
+          name: 'alias',
+          type: 'input',
+          message: 'What alias do you want?',
+          default: getNameSuggestionFromEpisodeTitle(title),
+        },
+      ]).then(({alias}) => ({...data, alias, date}))
     })
 
     function getNameSuggestionFromEpisodeTitle(title) {
@@ -50,38 +46,30 @@ function beginPrompt(episodeData, noCopy) {
       if (episodeData) {
         return Promise.resolve(episodeData)
       }
-      return new Promise(resolve => {
-        inquirer.prompt([
-          {
-            ...episodeList,
-            message: 'Which episode are you short-linking?',
-          },
-        ], ({episode: {title, date}}) => {
-          resolve({title, date})
-        })
-      })
+      return inquirer.prompt([
+        {
+          ...episodeList,
+          message: 'Which episode are you short-linking?',
+        },
+      ]).then(({episode: {title, date}}) => ({title, date}))
     }
   }
 
   function getApiKey(data = {}) {
-    return new Promise(resolve => {
-      let key
-      try {
-        key = require('../hive.api.ignored.json').key
-      } catch (e) {
-        key = null
-      }
-      inquirer.prompt([
-        {
-          name: 'key',
-          type: 'input',
-          message: `What's your API key for hive.am?`,
-          default: key,
-        },
-      ], ({key: apiKey}) => {
-        resolve({...data, apiKey, noCopy})
-      })
-    })
+    let key
+    try {
+      key = require('../hive.api.ignored.json').key
+    } catch (e) {
+      key = null
+    }
+    return inquirer.prompt([
+      {
+        name: 'key',
+        type: 'input',
+        message: `What's your API key for hive.am?`,
+        default: key,
+      },
+    ]).then(({key: apiKey}) => ({...data, apiKey, noCopy}))
   }
 
   function logFailure(rejection) {

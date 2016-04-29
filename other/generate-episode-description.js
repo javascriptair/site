@@ -13,7 +13,7 @@ import inquirer from 'inquirer'
 
 inquirer.prompt([
   episodeList,
-], ({episode}) => {
+]).then(({episode}) => {
   const showSponsors = getSponsorsForDate(episode.date)
 
   const string = ReactDOMServer.renderToStaticMarkup(

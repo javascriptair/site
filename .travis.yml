@@ -18,4 +18,4 @@ before_install:
 before_script:
   - npm prune
 script:
-  - time npm run build && time npm run deploy
+  - time npm start build && time npm start deploy
