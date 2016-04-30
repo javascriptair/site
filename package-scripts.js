@@ -7,7 +7,7 @@ module.exports = {
     build: {
       default: {
         description: 'Runs all the build scripts in parallel',
-        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.deals,build.css,build.contributors',
+        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.deals,build.css,build.contributors,createJson.script',
       },
       home: 'babel-node generate/home',
       episodes: './scripts/build-episodes.sh',
@@ -47,6 +47,10 @@ module.exports = {
     addContributor: {
       description: 'Similar to add guest except this is specific to adding contributors',
       script: 'babel-node ./other/add-contributor',
+    },
+    createJson: {
+      description: 'Create JSON data of episodes, panelists, host and sponsors',
+      script: 'babel-node generate/json-files',
     },
     dev: {
       default: {

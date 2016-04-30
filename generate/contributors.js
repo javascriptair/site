@@ -1,20 +1,13 @@
 import {resolve} from 'path'
 import renderComponentToFile from './renderComponentToFile'
 
+import {host} from '../resources/host'
 import sponsors from '../sponsors'
 import contributors from '../data/contributors'
 import {panelists} from '../resources/panelists'
 import {nextEpisode} from '../episodes'
-
 import Contributors from '../src/pages/contributors'
 
-const host = {
-  twitter: 'kentcdodds',
-  link: 'https://twitter.com/kentcdodds',
-  imgSrc: '/resources/kentcdodds.png',
-  name: 'Kent C. Dodds',
-  contributions: 'Host + stuff',
-}
 
 const panelistContributors = panelists.map(p => {
   return {

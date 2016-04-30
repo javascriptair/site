@@ -44,6 +44,11 @@ const contributors = [
     twitter: 'about_hiroppy',
     contributions: 'Site PRs',
   },
+  {
+    name: 'Erwan Datin',
+    twitter: 'erwan_datin',
+    contributions: 'Site PRs',
+  },
 ].map(c => {
   return {
     imgSrc: `/data/contributors/${c.twitter}.png`,

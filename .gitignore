@@ -3,3 +3,4 @@ index.html
 styles.dist.css
 *.ignored.*
 npm-debug.log
+data.json
