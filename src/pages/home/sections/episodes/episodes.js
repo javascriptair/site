@@ -3,7 +3,7 @@ import Episode from './episode'
 import EpisodeSmall from './episode-small'
 import {sortBy} from 'lodash'
 
-import Title from '../../../../components/title.js'
+import Title from '<components>/title.js'
 
 export default EpisodesSection
 

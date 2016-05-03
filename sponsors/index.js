@@ -1,6 +1,6 @@
 import moment from 'moment'
 import {sortBy} from 'lodash'
-import {isPast} from '../shared/utils'
+import {isPast} from '<utils>/utils'
 
 const sponsors = {
   premierSponsors: [

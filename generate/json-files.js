@@ -1,8 +1,8 @@
 import path from 'path'
 import {writeJsonArray, writeJsonObject} from './write-to-json-file'
-import {host} from '../resources/host'
+import {host} from '<resources>/host'
 import {episodes} from '../episodes'
-import {panelists} from '../resources/panelists'
+import {panelists} from '<resources>/panelists'
 import sponsors from '../sponsors'
 import * as config from './json-files-configs'
 

@@ -3,7 +3,7 @@ import renderComponentToFile from './renderComponentToFile'
 
 import deals from '../data/deals'
 import DealsPage from '../src/pages/deals'
-import {markdownToHTML} from '../shared/utils'
+import {markdownToHTML} from '<utils>/utils'
 
 const theDeals = deals.map(d => {
   return {

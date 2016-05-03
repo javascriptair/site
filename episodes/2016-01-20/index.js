@@ -1,5 +1,5 @@
 /* eslint max-len:0 no-trailing-spaces:0 */
-import {panelists} from '../../resources/panelists'
+import {panelists} from '<resources>/panelists'
 import {cloneDeep} from 'lodash'
 const guests = cloneDeep(panelists)
 

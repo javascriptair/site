@@ -1,5 +1,5 @@
 import {StyleSheet, css} from 'aphrodite'
-import IconLink from '../../../components/icon-link'
+import IconLink from '<components>/icon-link'
 
 export default SubscribeIconGroup
 

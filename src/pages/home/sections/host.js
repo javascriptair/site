@@ -1,4 +1,4 @@
-import Person from '../../../components/person'
+import Person from '<components>/person'
 import {StyleSheet, css} from 'aphrodite'
 import sharedStyles from './shared-styles'
 

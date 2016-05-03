@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import PersonNotes from './person-notes'
-import {sortPeople, intersperse} from '../../../../../shared/utils'
+import {sortPeople, intersperse} from '<utils>/utils'
 
 export default ShowNotes
 

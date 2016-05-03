@@ -3,7 +3,7 @@
 import path from 'path'
 import glob from 'glob'
 import {groupBy} from 'lodash'
-import getEpisodeData from '../shared/get-episode-data'
+import getEpisodeData from '<utils>/get-episode-data'
 
 const episodeDirectories = glob.sync(
   path.join(__dirname, '**/index.js'),

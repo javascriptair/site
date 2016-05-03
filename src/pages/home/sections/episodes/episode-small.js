@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import {upToBig} from '../../../../styles/media-queries'
-import {displayListify} from '../../../../../shared/utils'
+import {upToBig} from '<styles>/media-queries'
+import {displayListify} from '<utils>/utils'
 
 export default EpisodeSmall
 

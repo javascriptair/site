@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import {linkColor, linkHoverColor} from '../styles/variables'
+import {linkColor, linkHoverColor} from '<styles>/variables'
 import classNames from 'classnames'
 import Icon from './icon'
 

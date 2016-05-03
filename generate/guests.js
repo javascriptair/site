@@ -5,7 +5,7 @@ import {flatten, uniq} from 'lodash'
 
 import {episodes} from '../episodes'
 import Guests from '../src/pages/guests'
-import {sortPeople} from '../shared/utils'
+import {sortPeople} from '<utils>/utils'
 
 const guests = sortPeople(
   uniq(
