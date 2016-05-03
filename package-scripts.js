@@ -7,7 +7,7 @@ module.exports = {
     build: {
       default: {
         description: 'Runs all the build scripts in parallel',
-        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.deals,build.css,build.contributors,createJson.script',
+        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.deals,build.css,build.contributors,createJson',
       },
       home: 'babel-node generate/home',
       episodes: './scripts/build-episodes.sh',
