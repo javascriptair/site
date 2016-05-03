@@ -1,5 +1,5 @@
 import {PropTypes} from 'react'
-import RSVPIcon from '../../../../components/rsvp-icon'
+import RSVPIcon from '<components>/rsvp-icon'
 
 import VideoPlayer from './video-player'
 

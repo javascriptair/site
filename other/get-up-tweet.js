@@ -1,7 +1,7 @@
 import path from 'path'
 import inquirer from 'inquirer'
 import {copy} from 'copy-paste'
-import {displayListify, sortPeople, getRandomPositiveEmoji} from '../shared/utils'
+import {displayListify, sortPeople, getRandomPositiveEmoji} from '<utils>/utils'
 import shortenEpisodeUrl from './shorten-episode-url/logic'
 import episodeList from './utils/episode-list'
 

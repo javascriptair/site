@@ -3,9 +3,9 @@ import deindent from 'deindent'
 import marked from 'marked'
 import {StyleSheet, css} from 'aphrodite'
 
-import TwitterWidgetScript from '../../components/scripts/twitter-widget'
+import TwitterWidgetScript from '<components>/scripts/twitter-widget'
 
-import Page from '../../components/page'
+import Page from '<components>/page'
 import TwitterFeed from './twitter-feed'
 
 import Header from './sections/header'
@@ -13,7 +13,7 @@ import AudioSection from './sections/audio'
 import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
 import TranscriptSection from './sections/transcript'
-import SponsorsSection from '../../components/sponsors'
+import SponsorsSection from '<components>/sponsors'
 
 
 export default EpisodePage

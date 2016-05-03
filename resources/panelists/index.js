@@ -1,4 +1,4 @@
-import {sortPeople} from '../../shared/utils'
+import {sortPeople} from '<utils>/utils'
 
 const panelists = sortPeople([
   {name: 'Dan Abramov', twitter: 'dan_abramov', startDate: '2015-12-09'},

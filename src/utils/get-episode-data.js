@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 
-import {panelists} from '../resources/panelists'
+import {panelists} from '<resources>/panelists'
 import moment from 'moment'
 import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
-const episodes = getDirectories(path.resolve(__dirname, '../episodes'))
+const episodes = getDirectories(path.resolve(__dirname, '../../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
 
 export default getEpisodeData

@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet} from 'aphrodite'
 import moment from 'moment'
-import RSVPIcon from '../../../../../components/rsvp-icon'
+import RSVPIcon from '<components>/rsvp-icon'
 
 export default Calendar
 

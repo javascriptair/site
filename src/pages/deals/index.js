@@ -1,8 +1,8 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import Page from '../../components/page.js'
-import {intersperse} from '../../../shared/utils'
+import Page from '<components>/page.js'
+import {intersperse} from '<utils>/utils'
 
 export default DealsPage
 

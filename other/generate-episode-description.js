@@ -7,7 +7,7 @@ import deindent from 'deindent'
 
 import {getSponsorsForDate} from '../sponsors'
 
-import * as utils from '../shared/utils'
+import * as utils from '<utils>/utils'
 import episodeList from './utils/episode-list'
 import inquirer from 'inquirer'
 

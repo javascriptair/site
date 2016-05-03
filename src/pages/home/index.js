@@ -1,11 +1,11 @@
 import {PropTypes} from 'react'
 
 import {last} from 'lodash'
-import Page from '../../components/page'
+import Page from '<components>/page'
 import Header from './header'
 import EpisodesSection from './sections/episodes'
 import PanelistsSection from './sections/panelists'
-import SponsorsSection from '../../components/sponsors'
+import SponsorsSection from '<components>/sponsors'
 import Footer from './sections/footer'
 import FeatureShowGetter from './feature-show-getter'
 

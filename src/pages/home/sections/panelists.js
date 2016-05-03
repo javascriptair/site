@@ -1,12 +1,12 @@
 import {StyleSheet, css} from 'aphrodite'
 import {PropTypes} from 'react'
-import Person from '../../../components/person'
-import Decor from '../../../components/decor'
+import Person from '<components>/person'
+import Decor from '<components>/decor'
 import Host from './host'
 import sharedStyles from './shared-styles'
-import {container as containerStyle} from '../../../styles'
+import {container as containerStyle} from '<styles>'
 
-import Title from '../../../components/title'
+import Title from '<components>/title'
 
 export default Panelists
 

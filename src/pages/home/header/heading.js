@@ -1,6 +1,6 @@
 import {StyleSheet, css} from 'aphrodite'
-import {atLeastExtraSmall, atLeastSmall} from '../../../styles/media-queries'
-import Icon from '../../../components/icon'
+import {atLeastExtraSmall, atLeastSmall} from '<styles>/media-queries'
+import Icon from '<components>/icon'
 
 export default Heading
 

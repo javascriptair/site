@@ -1,4 +1,4 @@
-import Icon from '../../../../components/icon'
+import Icon from '<components>/icon'
 import {StyleSheet, css} from 'aphrodite'
 import sharedStyles from './shared-styles'
 

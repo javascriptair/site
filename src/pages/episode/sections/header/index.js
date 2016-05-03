@@ -1,8 +1,8 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import PersonGroup from '../../../../components/person-group'
-import {isPast} from '../../../../../shared/utils'
-import RSVPIcon from '../../../../components/rsvp-icon'
+import PersonGroup from '<components>/person-group'
+import {isPast} from '<utils>/utils'
+import RSVPIcon from '<components>/rsvp-icon'
 import TweetLink from './tweet-link'
 
 export default Header

@@ -1,7 +1,7 @@
 import {resolve} from 'path'
 import renderComponentToFile from './renderComponentToFile'
 
-import getEpisodeData from '../shared/get-episode-data'
+import getEpisodeData from '<utils>/get-episode-data'
 import {getSponsorsForDate} from '../sponsors'
 import EpisodePage from '../src/pages/episode'
 

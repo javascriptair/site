@@ -1,8 +1,8 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import striptags from 'striptags'
-import IconLink from '../../../../components/icon-link'
-import {displayListify, getRandomPositiveEmoji} from '../../../../../shared/utils'
+import IconLink from '<components>/icon-link'
+import {displayListify, getRandomPositiveEmoji} from '<utils>/utils'
 
 export default TweetLink
 

@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import Person from '../../../../components/person'
+import Person from '<components>/person'
 
 export default PersonNotes
 

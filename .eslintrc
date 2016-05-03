@@ -4,4 +4,9 @@
     "comma-dangle": [1, "always-multiline"], // I got tired of this breaking the build ¯\_(ツ)_/¯
     "react/react-in-jsx-scope": 0,
   },
+  "settings": {
+    "import/resolver": {
+      "babel-module-alias": {},
+    },
+  },
 }

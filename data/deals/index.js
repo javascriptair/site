@@ -1,5 +1,5 @@
 import {sortBy} from 'lodash'
-import {isFuture} from '../../shared/utils'
+import {isFuture} from '<utils>/utils'
 
 const deals = [
   {

@@ -1,8 +1,8 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import Page from '../../components/page'
-import PersonGroup from '../../components/person-group'
+import Page from '<components>/page'
+import PersonGroup from '<components>/person-group'
 
 export default Guests
 

@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import Icon from './icon'
 import {StyleSheet, css} from 'aphrodite'
-import {social, socialDecor} from '../styles'
+import {social, socialDecor} from '<styles>'
 
 export default HeaderBar
 

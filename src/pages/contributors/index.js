@@ -1,9 +1,9 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import Page from '../../components/page.js'
-import Person from '../../components/person'
-import HeaderBar from '../../components/header'
+import Page from '<components>/page.js'
+import Person from '<components>/person'
+import HeaderBar from '<components>/header'
 
 export default ContributorsPage
 

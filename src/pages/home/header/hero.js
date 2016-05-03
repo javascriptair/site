@@ -1,7 +1,7 @@
 import {StyleSheet, css} from 'aphrodite'
 import SubscribeIconGroupSection from '../sections/subscribe-icon-group'
-import {social as socialStyles, socialDecor as socialDecorStyles} from '../../../styles'
-import {upToMedium, upToSmall} from '../../../styles/media-queries'
+import {social as socialStyles, socialDecor as socialDecorStyles} from '<styles>'
+import {upToMedium, upToSmall} from '<styles>/media-queries'
 
 export default Hero
 

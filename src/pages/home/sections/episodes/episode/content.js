@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
-import PersonGroup from '../../../../../components/person-group'
-import {sortPeople} from '../../../../../../shared/utils'
+import PersonGroup from '<components>/person-group'
+import {sortPeople} from '<utils>/utils'
 
 export default Content
 
