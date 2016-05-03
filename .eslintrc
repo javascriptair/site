@@ -6,12 +6,7 @@
   },
   "settings": {
     "import/resolver": {
-      "babel-module-alias": [
-        {"src": "./src/utils", "expose": "<utils>"},
-        {"src": "./src/styles", "expose": "<styles>"},
-        {"src": "./src/components", "expose": "<components>"},
-        {"src": "./resources", "expose": "<resources>"},
-      ],
-    }
-  }
+      "babel-module-alias": {},
+    },
+  },
 }
