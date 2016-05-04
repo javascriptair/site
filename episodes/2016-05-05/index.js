@@ -20,7 +20,8 @@ export default {
     Guests include: [samuel john saccone](https://twitter.com/samccone), [Tero Parviainen](https://twitter.com/teropa),
     [Mike Brocchi](https://twitter.com/brocco), [Jules Kremer](https://twitter.com/jules_kremer),
     [John Papa](https://twitter.com/John_Papa), [Aysegul Yonet](https://twitter.com/AysegulYonet),
-    and [Alyssa Nicoll](https://twitter.com/AlyssaNicoll)
+    [Alyssa Nicoll](https://twitter.com/AlyssaNicoll), [Scott Moss](https://twitter.com/scotups),
+    and [Tero Parviainen](https://twitter.com/teropa)
   `,
   hangoutId: 'cbjlovqo30a8qlgnofngrcvoecg',
   youTubeId: 'Q9aL9kmdmIE',
