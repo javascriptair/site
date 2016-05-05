@@ -2,9 +2,8 @@ export default {
   title: `Inclusiveness`,
   guests: [
     {
-      name: 'TBA',
-      imgSrc: '/resources/images/guest-tba.png',
-      link: null,
+      name: 'Omoju Miller',
+      twitter: 'omojumiller',
       links: [
       ],
       tips: [
@@ -103,5 +102,3 @@ export default {
     },
   ],
 }
-
-
