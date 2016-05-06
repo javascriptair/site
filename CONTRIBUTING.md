@@ -11,7 +11,7 @@ Note: This project requires [Node.js v6](https://nodejs.org/). And I recommend [
 2. Clone your fork
 3. Make a branch for your feature/bugfix/new episode/etc.
 4. Run `npm install` (make sure you have node and npm installed first)
-5. Run `npm start validate` to get everything built for the first bit.
+5. Run `npm start validate` to get everything built for the first bit. (If this doesn't work, please file an issue with your node/npm versions and the error message).
 6. Run `npm start server` and open `localhost:8080` in a browser
 7. If you experience any issues up to this point, please file an issue!
 8. Run the dev script(s) (in separate terminal tabs/windows) relevant for the changes you're making (see below), make your changes, and refresh your browser to see them
