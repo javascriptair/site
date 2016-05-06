@@ -7,7 +7,11 @@ import HeaderBar from '<components>/header'
 
 export default ContributorsPage
 
-function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}) {
+function ContributorsPage({
+  sponsors,
+  nonFinancialContributors,
+  nextEpisode,
+}) {
   const {styles} = ContributorsPage
   return (
     <Page
@@ -27,7 +31,7 @@ function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}
 
         <div>
           <h3>Non-financial contributors</h3>
-          <Contributors contributors={[host, ...panelists, ...contributors]} />
+          <Contributors contributors={nonFinancialContributors} />
         </div>
 
         <hr />
@@ -50,9 +54,7 @@ function ContributorsPage({sponsors, contributors, panelists, host, nextEpisode}
 
 ContributorsPage.propTypes = {
   sponsors: PropTypes.array.isRequired,
-  contributors: PropTypes.array.isRequired,
-  panelists: PropTypes.array.isRequired,
-  host: PropTypes.object.isRequired,
+  nonFinancialContributors: PropTypes.array.isRequired,
   nextEpisode: PropTypes.object.isRequired,
 }
 

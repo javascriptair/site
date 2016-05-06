@@ -28,13 +28,12 @@ const sponsorContributors = Object.keys(sponsors).reduce((array, sponsorGroupKey
   return [...array, ...groupArray]
 }, [])
 
+const nonFinancialContributors = [host, ...panelistContributors, ...contributors]
 
 renderComponentToFile(
   <Contributors
     sponsors={sponsorContributors}
-    contributors={contributors}
-    panelists={panelistContributors}
-    host={host}
+    nonFinancialContributors={nonFinancialContributors}
     nextEpisode={nextEpisode}
   />,
   resolve(__dirname, '../contributors/index.html'),
