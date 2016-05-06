@@ -5,6 +5,8 @@ Join [gitter](https://gitter.im/javascriptair/site) channel for discussion.
 
 ## Setup
 
+Note: This project requires [Node.js v6](https://nodejs.org/). And I recommend [npm v3](https://npmjs.com/package/npm).
+
 1. Fork the repo
 2. Clone your fork
 3. Make a branch for your feature/bugfix/new episode/etc.
@@ -23,14 +25,10 @@ Join [gitter](https://gitter.im/javascriptair/site) channel for discussion.
 
 Even for minimal changes, I'd love it if you add yourself to the official
 [JavaScript Air contributors page](https://javascriptair.com/contributors) for your first contribution.
-Here's all you need to do for that:
 
-```
-npm start add-contributor
-```
-
-Provide your twitter username. This will automatically download and optimize your profile photo for the site and put it
-in the `data/contributors` directory. Then add an entry for yourself to `data/contributors/index.js`. That's it! Thanks!
+Please download your photo and use `npm start compress-image /path/to/the/image` to compress your photo (more info
+below). Put the resulting image in the `data/contributors` directory. Then add an entry for yourself to
+`data/contributors/index.js`. That's it! Thanks!
 
 ## npm scripts
 
@@ -90,7 +88,7 @@ To do this we're using [imagina](http://npm.im/imagina). Check out the `imagina`
 Simply run:
 
 ```
-npm start compress-image -- /path/to/the/image
+npm start compress-image /path/to/the/image
 ```
 
 And you'll get a compressed, resized, and converted (if needed) image to use for the site. This image will have the original filename, but will end with "resized.png". Before committing, make sure to replace your original image with the compressed one by deleting the original and renaming the compressed one to the original's filename.
