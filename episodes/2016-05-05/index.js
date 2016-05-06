@@ -16,7 +16,7 @@ export default {
 - [Mike Brocchi](https://twitter.com/brocco) - Learn Clingon (Angular CLI)
 - [Scott Moss](https://twitter.com/scotups) - Angular 2 for the rest of us
 - [Aysegul Yonet](https://twitter.com/AysegulYonet) - Pipe Hype (Creating custom pipes)
-- [Alyssa Nicoll](https://twitter.com/AlyssaNicoll) - Wanting it all vs. Being Great
+- [Alyssa Nicoll](https://twitter.com/AlyssaNicoll) and [Sergio Cruz](https://twitter.com/hashtagserg) - Wanting it all vs. Being Great
 - [Jules Kremer](https://twitter.com/jules_kremer), [Brad Green](https://twitter.com/bradlygreen), and [Miško Hevery](https://twitter.com/mhevery) - Keynote (Angular Community)
   `,
   hangoutId: 'cbjlovqo30a8qlgnofngrcvoecg',

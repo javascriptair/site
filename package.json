@@ -55,7 +55,7 @@
     "mv": "2.1.1",
     "nodemon": "1.9.1",
     "npm-run-all": "1.8.0",
-    "p-s": "0.5.0",
+    "p-s": "0.5.1",
     "plop": "1.5.0",
     "postcss-cli": "2.5.2",
     "postcss-import": "8.1.0",
