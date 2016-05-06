@@ -52,7 +52,7 @@ well. If you're working on a specific episode (for example, the first
 episode), simply run:
 
 ```
-npm start dev:episode -- episodes/2015-12-09
+npm start dev:episode episodes/2015-12-09
 ```
 
 This will start nodemon watching your file system for changes and
@@ -73,7 +73,7 @@ Follow the prompts and it will generate the episode file for you.
 You can generate the description for the podbean podcast like so:
 
 ```
-npm start description -- episodes/2015-12-09
+npm start description episodes/2015-12-09
 ```
 
 `pbcopy` is available on OSX if you want to pipe the output to your
