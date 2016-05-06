@@ -9,7 +9,8 @@ export default {
     },
   ],
   description: `
-    We'll be on site at one of the biggest and most exciting conferences in the world: ng-conf.
+    We'll be on site at one of the biggest and most exciting conferences in the world: ng-conf. In this show we're
+    joined by some amazing developers and community builders in the Angular community.
     <br />
 - [samuel john saccone](https://twitter.com/samccone) - Promises are probably older than you.
 - [Tero Parviainen](https://twitter.com/teropa) - Generative Art in Angular 2
