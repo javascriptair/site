@@ -11,12 +11,6 @@ export default {
   description: `
     We'll be on site at one of the biggest and most exciting conferences in the world: ng-conf.
     <br />
-    Guests include: [samuel john saccone](https://twitter.com/samccone), [Tero Parviainen](https://twitter.com/teropa),
-    [Mike Brocchi](https://twitter.com/brocco), [Jules Kremer](https://twitter.com/jules_kremer),
-    [John Papa](https://twitter.com/John_Papa), [Aysegul Yonet](https://twitter.com/AysegulYonet),
-    [Alyssa Nicoll](https://twitter.com/AlyssaNicoll), [Scott Moss](https://twitter.com/scotups),
-    and [Brad Green](https://twitter.com/bradlygreen)
-
 - [samuel john saccone](https://twitter.com/samccone) - Promises are probably older than you.
 - [Tero Parviainen](https://twitter.com/teropa) - Generative Art in Angular 2
 - [Mike Brocchi](https://twitter.com/brocco) - Learn Clingon (Angular CLI)
