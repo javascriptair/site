@@ -11,6 +11,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Steve Andrews',
+      twitter: 'SteveAndrews',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     The JavaScript community is composed of a ton of people with a ton of different backgrounds and privilege. We need to do our very best to make everyone feel as included as possible. It makes everything better when we work to foster a welcoming and friendly community. We're going to talk about what you can do to improve your workspace and community.
