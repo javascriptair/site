@@ -65,6 +65,7 @@ const sponsors = {
       link: 'http://jsair.io/fluent',
       tagline: 'Web development training',
       startDate: '2016-02-02',
+      endDate: '2016-05-02',
     },
     {
       imgSrc: '/sponsors/auth0.png',
