@@ -13,7 +13,7 @@ export default {
     },
     {
       name: 'Steven Luscher',
-      twitter: 'gozala',
+      twitter: 'steveluscher',
       links: [
       ],
       tips: [
