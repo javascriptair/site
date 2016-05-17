@@ -12,8 +12,8 @@ export default {
       ],
     },
     {
-      name: 'Nick Schrock',
-      twitter: 'schrockn',
+      name: 'Steven Luscher',
+      twitter: 'gozala',
       links: [
       ],
       tips: [
@@ -112,5 +112,3 @@ export default {
     },
   ],
 }
-
-
