@@ -10,6 +10,7 @@ const sponsors = {
       link: 'http://jsair.io/eggheadio',
       tagline: 'Bite-sized web development video training',
       startDate: '2015-12-08',
+      endDate: '2016-06-08',
     },
   ],
   goldSponsors: [
@@ -19,6 +20,7 @@ const sponsors = {
       link: 'http://jsair.io/frontendmasters',
       tagline: 'Expert front-end training',
       startDate: '2015-12-08',
+      endDate: '2016-06-08',
     },
     {
       imgSrc: '/sponsors/trackjs.png',
@@ -26,6 +28,7 @@ const sponsors = {
       link: 'http://jsair.io/trackjs',
       tagline: 'JavaScript Error Monitoring',
       startDate: '2015-12-08',
+      endDate: '2016-06-08',
     },
     {
       imgSrc: '/sponsors/wallabyjs.png',
@@ -49,6 +52,7 @@ const sponsors = {
       link: 'http://jsair.io/sparkpost',
       tagline: `Email. We've Got It Down.`,
       startDate: '2016-04-19',
+      endDate: '2016-07-05',
     },
     {
       imgSrc: '/sponsors/webstorm.png',
@@ -56,6 +60,7 @@ const sponsors = {
       link: 'http://jsair.io/webstorm',
       tagline: 'Smart JavaScript IDE',
       startDate: '2016-04-20',
+      endDate: '2016-07-20',
     },
   ],
   silverSponsors: [
@@ -80,6 +85,7 @@ const sponsors = {
       link: 'http://jsair.io/trading-technologies',
       tagline: `Building For What's Next`,
       startDate: '2016-03-22',
+      endDate: '2016-06-22',
     },
     {
       imgSrc: '/sponsors/sparkpost.png',
@@ -95,11 +101,13 @@ const sponsors = {
       twitter: '_jwngr',
       name: 'Jacob Wenger',
       startDate: '2016-03-11',
+      endDate: '2016-06-11',
     },
     {
       twitter: 'nyrosmith',
       name: 'Martin Schmid',
       startDate: '2016-03-11',
+      endDate: '2016-06-11',
     },
   ].map(s => {
     return {
