@@ -37,7 +37,7 @@ export default {
   `,
   hangoutId: 'csvotlp55dohetinq6k4cmrnhcg',
   youTubeId: 'ENqDNIp1Nd8',
-  podbeanId: '',
+  podbeanId: 'betn7-5f6d7a',
   shortUrl: 'http://jsair.io/rest-graphql',
   host: {
     links: [
