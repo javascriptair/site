@@ -79,7 +79,7 @@ export default {
   `,
   hangoutId: 'cujm1df0s1715nfd2urvgkoacp8',
   youTubeId: 'JTVbjircIHA',
-  podbeanId: '',
+  podbeanId: 'd4tth-5f9f32',
   shortUrl: 'http://jsair.io/pwa',
   host: {
     links: [
