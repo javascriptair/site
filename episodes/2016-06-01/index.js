@@ -1,55 +1,13 @@
 export default {
-  title: `webpack: JavaScript bundler`,
-  guests: [
-    {
-      name: 'Johannes Ewald',
-      twitter: 'jhnnns',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'Juho Vepsäläinen',
-      twitter: 'bebraw',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'Tobias Koppers',
-      imgSrc: '/episodes/2016-06-01/sokra.png',
-      link: 'https://github.com/sokra',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'Sean T. Larkin',
-      twitter: 'thelarkinn',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-  ],
+  title: `TBA`,
+  guests: [],
   description: `
-    [webpack](http://webpack.github.io/) is an amazing bundler for frontend assets. For many people it has completely changed the game for their build pipeline, entirely replacing other build tools and task runners like grunt and gulp. Join us with the webpack creator and core contributors as we talk with the webpack team about this impressive piece of tech.
+
   `,
-  hangoutId: 'c31tk63au5fg1l4m7gq1f9sm63g',
-  youTubeId: 'admLV6V2eDg',
+  hangoutId: 'cih8v93lp9otgqn6ql14qct90nc',
+  youTubeId: 'JE4yFUVpcmA',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/webpack',
+  shortUrl: 'http://jsair.io/2016-06-01',
   host: {
     links: [
     ],

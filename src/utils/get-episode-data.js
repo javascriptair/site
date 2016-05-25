@@ -57,7 +57,7 @@ function getEpisodeData(episodePath) {
 
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
-  const description = episode.description || getDefaultDescription()
+  const description = (episode.description && episode.description.trim()) || getDefaultDescription()
   const {transcript, title = 'TBA'} = episode
 
   return {
@@ -83,7 +83,7 @@ function getEpisodeData(episodePath) {
     return `
       This show is yet to be announced,
       but you can bet that it'll be awesome!
-    `
+    `.trim()
   }
 
   function htmlifyLinksPicksAndTips(thing) {
