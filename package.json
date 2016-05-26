@@ -68,6 +68,7 @@
     "random-emoji": "1.0.1",
     "react": "15.0.1",
     "react-dom": "15.0.1",
+    "react-html-email": "1.0.2",
     "read-glob": "2.1.0",
     "rimraf": "2.5.2",
     "shell-escape": "0.2.0",
