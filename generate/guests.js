@@ -11,7 +11,7 @@ const guests = sortPeople(
   uniqBy(
     flatten(episodes.map(e => e.guests))
       .filter(g => g.name !== 'TBA'),
-   'twitter'
+   'id'
   )
 )
 

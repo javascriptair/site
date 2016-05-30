@@ -24,6 +24,7 @@ function getEpisodeData(episodePath) {
       links: [],
       tips: [],
       picks: [],
+      id: guest.twitter || guest.name,
       ...guest,
     }
     htmlifyLinksPicksAndTips(guest)
