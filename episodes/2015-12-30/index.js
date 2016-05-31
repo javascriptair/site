@@ -33,7 +33,7 @@ export default {
     },
   ],
   description: `
-    Functional programming have been greatly facilitated with ES6.
+    Functional programming has been greatly facilitated with ES6.
     We're going to talk about the how and why of functional
     programming and immutable design patterns in JavaScript.
   `,
