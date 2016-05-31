@@ -56,7 +56,7 @@ function EpisodeDescription({episode, sponsors}) {
 
       <div>
         <strong>Description:</strong>
-        <span dangerouslySetInnerHTML={descriptionHTML} />
+        <div dangerouslySetInnerHTML={descriptionHTML} />
       </div>
 
       <div>
