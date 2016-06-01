@@ -78,6 +78,7 @@ const sponsors = {
       link: 'http://jsair.io/auth0',
       tagline: 'Authentication Made Simple',
       startDate: '2016-02-17',
+      endDate: '2016-05-17',
     },
     {
       imgSrc: '/sponsors/trading-tech.png',
