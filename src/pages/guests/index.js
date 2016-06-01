@@ -22,7 +22,7 @@ function Guests({guests}) {
           <h1 className={css(styles.title)}>
             <a href="/" alt="home">JavaScript Air</a>
           </h1>
-          <a href="http://guests.javascriptair.com">
+          <a href="http://javascriptair.com/guests">
             Show Guests
           </a>
         </header>
