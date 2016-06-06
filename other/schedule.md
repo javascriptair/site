@@ -24,8 +24,8 @@
 | 2016-05-11 | [Inclusiveness](/../../issues/74) |
 | 2016-05-18 | [Transitioning from REST to GraphQL](/../../issues/21) |
 | 2016-05-25 | [Progressive Web Apps](/../../issues/79) |
-| 2016-06-01 | [webpack](/../../issues/82) |
-| 2016-06-08 | [](/../../issues/) |
+| 2016-06-01 | [(Rerun) Functional and Immutable Design Patterns in JavaScript](/../../issues/9) |
+| 2016-06-08 | [webpack](/../../issues/82) |
 | 2016-06-15 | [](/../../issues/) |
 | 2016-06-22 | [KCDC](/../../issues/48) |
 | 2016-06-29 | [](/../../issues/) |
