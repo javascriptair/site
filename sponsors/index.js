@@ -10,7 +10,7 @@ const sponsors = {
       link: 'http://jsair.io/eggheadio',
       tagline: 'Bite-sized web development video training',
       startDate: '2015-12-08',
-      endDate: '2016-06-08',
+      endDate: '2016-09-08',
     },
   ],
   goldSponsors: [
