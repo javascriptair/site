@@ -7,11 +7,12 @@ module.exports = {
     build: {
       default: {
         description: 'Runs all the build scripts in parallel',
-        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.deals,build.css,build.contributors,createJson',
+        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson',
       },
       home: 'babel-node generate/home',
       episodes: './scripts/build-episodes.sh',
       guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
+      'links-tips-picks': 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
       deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
       css: 'postcss -u postcss-import -u postcss-nested -u postcss-mixins -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css',
       contributors: 'rimraf contributors && mkdir contributors && babel-node generate/contributors',
@@ -60,6 +61,7 @@ module.exports = {
       home: `nodemon ${commonWatch} --exec npm run start build.home -s`,
       episodes: `nodemon ${commonWatch} --exec npm run start build.episodes -s`,
       guests: `nodemon ${commonWatch} --exec npm run start build.guests -s`,
+      'links-tips-picks': `nodemon ${commonWatch} --exec npm run start build.links-tips-picks -s`,
       deals: 'nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run start build.deals -s',
       contributors: 'nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run start build.contributors -s',
       css: 'nodemon --watch resources/css --ext css --exec npm run start build.css',
