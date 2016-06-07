@@ -47,5 +47,10 @@ function getLinks() {
       alt: 'Deals',
       title: 'Deals',
     },
+    {
+      href: '/links-tips-picks',
+      alt: 'All Links, Tips, and Picks ',
+      title: 'All Links, Tips, and Picks ',
+    },
   ]
 }
