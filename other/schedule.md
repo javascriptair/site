@@ -30,7 +30,7 @@
 | 2016-06-22 | [KCDC](/../../issues/48) |
 | 2016-06-29 | [Web Animations](/../../issues/106) |
 | 2016-07-06 | [](/../../issues/) |
-| 2016-07-13 | [](/../../issues/) |
+| 2016-07-13 | [Automated Accessibility Testing with aXe-core](/../../issues/108) |
 | 2016-07-20 | [](/../../issues/) |
 | 2016-07-27 | [](/../../issues/) |
 | 2016-08-03 | [](/../../issues/) |
