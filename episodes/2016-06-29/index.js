@@ -11,9 +11,19 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Rachel Nabors',
+      twitter: 'rachelnabors',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
-    It&#x27;s totally mind blowing what can be done to enhance the user&#x27;s experience with animations on the web these days. Let&#x27;s talk about how some of this is done and what tools are out there to help you with this.
+    It's totally mind blowing what can be done to enhance the user's experience with animations on the web these days. Let's talk about how some of this is done and what tools are out there to help you with this.
   `,
   hangoutId: 'cf37rj3l0b03ir4od5t15jbsfrs',
   youTubeId: '5JpsSC_gumk',
