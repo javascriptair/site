@@ -21,6 +21,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Sarah Drasner',
+      twitter: 'sarah_edo',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     It's totally mind blowing what can be done to enhance the user's experience with animations on the web these days. Let's talk about how some of this is done and what tools are out there to help you with this.
