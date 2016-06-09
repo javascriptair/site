@@ -24,7 +24,7 @@ const sponsors = {
     },
     {
       imgSrc: '/sponsors/trackjs.png',
-      name: '{Track:js}',
+      name: 'TrackJS',
       link: 'http://jsair.io/trackjs',
       tagline: 'JavaScript Error Monitoring',
       startDate: '2015-12-08',
