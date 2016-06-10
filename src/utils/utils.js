@@ -1,12 +1,12 @@
 import moment from 'moment'
 import marked from 'marked'
 import deindent from 'deindent'
-import {sample} from 'lodash'
+import {sample, shuffle} from 'lodash'
 import {css} from 'aphrodite'
 
 export {
   displayListify, intersperse,
-  isPast, isFuture, isToday, isPastAndNotToday, sortPeople,
+  isPast, isFuture, isToday, isPastAndNotToday, shuffle as sortPeople,
   markdownToHTML, getClassNames,
   getRandomPositiveEmoji,
 }
@@ -82,14 +82,6 @@ function markdownToHTML(string, stripP) {
     html = html.slice(3, -5)
   }
   return {__html: html}
-}
-
-function sortPeople(people = []) {
-  return people.sort((a, b) => {
-    const aVal = (a.twitter || a.name).toLowerCase()
-    const bVal = (b.twitter || b.name).toLowerCase()
-    return aVal > bVal ? 1 : -1
-  })
 }
 
 function getClassNames(styles) {
