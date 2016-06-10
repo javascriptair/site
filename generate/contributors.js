@@ -7,6 +7,7 @@ import contributors from '../data/contributors'
 import {panelists} from '<resources>/panelists'
 import {nextEpisode} from '../episodes'
 import Contributors from '../src/pages/contributors'
+import {sortPeople} from '<utils>/utils'
 
 
 const panelistContributors = panelists.map(p => {
@@ -28,7 +29,7 @@ const sponsorContributors = Object.keys(sponsors).reduce((array, sponsorGroupKey
   return [...array, ...groupArray]
 }, [])
 
-const nonFinancialContributors = [host, ...panelistContributors, ...contributors]
+const nonFinancialContributors = sortPeople([host, ...panelistContributors, ...contributors])
 
 renderComponentToFile(
   <Contributors
