@@ -1,12 +1,24 @@
 export default {
-  title: `TBA`,
+  title: `For the Beginners`,
+  guests: [
+    {
+      name: 'Aimee Knight',
+      twitter: 'aimee_knight',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+  ],
   description: `
-    This show is yet to be nailed down, but you can bet it'll be awesome!
+    We're going to talk about when we were beginners, some of the things we wished we knew, some of our biggest early days goofs, our suggestions for newbies, etc. We'll also talk about making the community open to newbies/what can be done to increase this.
   `,
   hangoutId: 'ck3nvcs9ahbtpkj172hihdrt6mo',
   youTubeId: '1glcyvhf5yY',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/2016-06-15',
+  shortUrl: 'http://jsair.io/beginners',
   host: {
     links: [
     ],

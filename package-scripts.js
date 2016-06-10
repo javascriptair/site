@@ -27,7 +27,7 @@ module.exports = {
     },
     createShortUrl: {
       description: 'Create a short URL for a show',
-      scripts: 'babel-node ./other/shorten-episode-url',
+      script: 'babel-node ./other/shorten-episode-url',
     },
     compressImage: {
       description: 'Compress an image for use on the site. You must pass two arguments: ./input.jpg ./output.png',
