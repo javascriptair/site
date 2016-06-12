@@ -29,7 +29,7 @@
 | 2016-06-15 | [For the Beginners](/../../issues/109) |
 | 2016-06-22 | [KCDC](/../../issues/48) |
 | 2016-06-29 | [Web Animations](/../../issues/106) |
-| 2016-07-06 | [](/../../issues/) |
+| 2016-07-06 | [Electron Apps](/../../issues/112) |
 | 2016-07-13 | [Automated Accessibility Testing with aXe-core](/../../issues/108) |
 | 2016-07-20 | [](/../../issues/) |
 | 2016-07-27 | [](/../../issues/) |
