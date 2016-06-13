@@ -11,6 +11,36 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Tim Dorr',
+      twitter: 'timdorr',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Max Stoiber',
+      twitter: 'mxstbr',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Scott Moss',
+      twitter: 'scotups',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     We're going to talk about when we were beginners, some of the things we wished we knew, some of our biggest early days goofs, our suggestions for newbies, etc. We'll also talk about making the community open to newbies/what can be done to increase this.
