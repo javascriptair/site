@@ -66,9 +66,9 @@ module.exports = {
       contributors: 'nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run start build.contributors -s',
       css: 'nodemon --watch resources/css --ext css --exec npm run start build.css',
       data: 'npm-run-all --parallel dev:home dev:episodes dev:guests server',
-      episode: {
+      singleEpisode: {
         description: 'Pass an episode directory to build just that episode with a watch',
-        script: `nodemon ${commonWatch} --exec npm run start build.episode -s`,
+        script: `nodemon ${commonWatch} --exec npm run start build.singleEpisode -s`,
       },
     },
     description: 'babel-node other/generate-episode-description',
