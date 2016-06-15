@@ -31,6 +31,16 @@ export default {
       picks: [
       ],
     },
+    {
+      name: 'Henry Zhu',
+      twitter: 'left_pad',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
   ],
   description: `
     Doing open source involves a lot more than just coding up the tool/library. We&#x27;re going to talk about the challenge of activly publishing an open source package on npm and some of the tools that have been developed to automate this process. Our guests have each developed some amazing tools, so you&#x27;re in for a really interesting show!
