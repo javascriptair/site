@@ -1,8 +1,10 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 import Episode from './episode'
 import EpisodeSmall from './episode-small'
 import {sortBy} from 'lodash'
 
+import {upToBig} from '<styles>/media-queries'
 import Title from '<components>/title.js'
 
 export default EpisodesSection
@@ -14,12 +16,11 @@ function EpisodesSection({future, past}) {
   const farFutureEpisodes = futureEpisodes.splice(3, futureEpisodes.length)
 
   const pastEpisodes = sortBy(past, 'date').reverse()
+  const {styles} = EpisodesSection
 
   return (
-    <section id="episodes" className="episodes">
-      <div className="episodes__container">
-
-        {/* Upcoming Episodes - The first three upcoming episodes are displayed prominently */}
+    <section id="episodes" className={css(styles.episodesRoot)}>
+      <div className={css(styles.episodesContainer)}>
 
         <Title
           name={lamePlural('Upcoming Episode', nearFutureEpisodes)}
@@ -27,7 +28,7 @@ function EpisodesSection({future, past}) {
           buttonUrl="http://suggest.javascriptair.com"
         />
 
-        <div className="episodes-container">
+        <div>
           {nearFutureEpisodes.map((e, i) => (
             <Episode
               episodeData={e}
@@ -50,6 +51,22 @@ EpisodesSection.propTypes = {
   past: PropTypes.array.isRequired,
 }
 
+EpisodesSection.styles = StyleSheet.create({
+  episodesRoot: {
+    width: '100%',
+    backgroundColor: '#e4e4e4',
+  },
+  episodesContainer: {
+    margin: '0 auto',
+    width: '1000px',
+    paddingBottom: '50px',
+    backgroundColor: '#e4e4e4',
+    [upToBig]: {
+      width: '100%',
+    },
+  },
+})
+
 function FutureEpisodes({episodes = []}) {
   if (!episodes.length) {
     return <noscript />
@@ -57,8 +74,7 @@ function FutureEpisodes({episodes = []}) {
   return (
     <div>
       <Title name={lamePlural('Future Episode', episodes)} />
-
-      <div className="episodes-container--future episodes-container--small">
+      <div>
         {mapToSmallEpisodes(episodes)}
       </div>
     </div>
@@ -76,8 +92,7 @@ function PastEpisodes({episodes = []}) {
   return (
     <div>
       <Title name="Past Episodes" id="previous-episodes" />
-
-      <div className="episodes-container--past episodes-container--small">
+      <div>
         {mapToSmallEpisodes(episodes)}
       </div>
     </div>
