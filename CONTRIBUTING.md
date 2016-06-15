@@ -40,6 +40,9 @@ If you want, you can just run `npm start dev`. That effectively rebuilds everyth
 
 ## CSS
 
+CSS is currently being migrated to [`aphrodite`](https://npmjs.com/package/aphrodite). This means you don't need to do anything
+special from a build perspective for most stuff. For some of the older stuff, here's what you've gotta do:
+
 CSS is processed using [postcss](https://github.com/postcss/postcss) and you need to build it (it's `.gitignored`). To do this, run `npm start build.css`.
 
 If you're going to work on the css, you can run `npm start dev.css` and it will watch the file for changes and rebuild.
