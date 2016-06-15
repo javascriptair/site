@@ -16,7 +16,7 @@ function LinksPicksTips({person}) {
 
   return (
     <div>
-      <Person name={person.name} twitter={person.twitter} />
+      <Person {...person} />
       {nothing ? ': No links, tips, or picks this week' : ''}
       <ul>
         {

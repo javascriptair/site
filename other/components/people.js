@@ -10,13 +10,7 @@ function People({people}) {
     <span>
       {
         utils.displayListify(
-          people.map(({twitter, name}, i) => (
-            <Person
-              key={i}
-              twitter={twitter}
-              name={name}
-            />
-          ))
+          people.map(person => <Person key={person.id} {...person} />)
         )
       }
     </span>

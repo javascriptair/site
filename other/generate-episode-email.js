@@ -159,9 +159,9 @@ function Logo() {
   return (
     <A href="https://javascriptair.com">
       <Image
-        src="https://gallery.mailchimp.com/b94b1e66eec3edf77e4740a5e/images/25b3b086-1d69-44cf-a6dc-3e7cb6616299.png" // eslint-disable-line
+        src="https://javascriptair.com/resources/images/logo-wide.png"
         width={600}
-        height={166}
+        height={222.38}
         alt="JavaScript Air Logo"
       />
     </A>
