@@ -29,6 +29,7 @@ function getEpisodeData(episodePath) {
       ...guest,
     }
     htmlifyLinksPicksAndTips(guest)
+    guest.hasNotes = hasNotes(guest)
     return guest
   })
   episode.sortedGuests = sortPeople(episode.guests)
@@ -43,6 +44,7 @@ function getEpisodeData(episodePath) {
       ...panelist,
     }
     htmlifyLinksPicksAndTips(panelist)
+    panelist.hasNotes = hasNotes(panelist)
     return panelist
   })
 
@@ -54,6 +56,7 @@ function getEpisodeData(episodePath) {
     ...episode.host,
   }
   htmlifyLinksPicksAndTips(episode.host)
+  episode.host.hasNotes = hasNotes(episode.host)
 
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
@@ -120,4 +123,8 @@ function pad(n, width, z) {
 function episodeHasHappened(episodeRaw, date) {
   const {past, podbeanId, transcript, host: {picks = []} = {}} = episodeRaw // eslint-disable-line no-shadow
   return !!past || !!podbeanId || !!transcript || !!picks.length || isPastAndNotToday(date)
+}
+
+function hasNotes({links, tips, picks}) {
+  return links.length + tips.length + picks.length > 0
 }

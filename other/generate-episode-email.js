@@ -11,6 +11,7 @@ import {getSponsorsForDate} from '../sponsors'
 import LinksPicksTips from './components/links-picks-tips'
 import ShowDescription from './components/show-description'
 import personPropType from './components/prop-types/person'
+import Person from './components/person'
 
 import * as utils from '<utils>/utils'
 import {episodes} from '../episodes'
@@ -359,17 +360,39 @@ function ShowNotes({people}) {
     h2: {
       marginTop: 0,
     },
+    td: {
+      verticalAlign: 'top',
+    },
   }
   return (
     <Box>
       <Item>
         <h2 style={styles.h2}>Links, Picks, and Tips</h2>
-        {people.map((a, i) => (
-          <div key={i}>
-            {i !== 0 ? <Spacer /> : null}
-            <LinksPicksTips person={a} Image={Image} />
-          </div>
-        ))}
+        {people.map((person, i) => {
+          return (
+            <Clear key={i}>
+              {i !== 0 ? <Spacer /> : null}
+              <Box>
+                <tr>
+                  <td style={styles.td}>
+                    <Person {...person} Image={Image} />
+                  </td>
+                  <td style={styles.td}>
+                    {
+                      !person.hasNotes ?
+                      'No links, tips, or picks this week' :
+                        <LinksPicksTips
+                          linksHTML={person.linksHTML}
+                          tipsHTML={person.tipsHTML}
+                          picksHTML={person.picksHTML}
+                        />
+                    }
+                  </td>
+                </tr>
+              </Box>
+            </Clear>
+          )
+        })}
       </Item>
     </Box>
   )

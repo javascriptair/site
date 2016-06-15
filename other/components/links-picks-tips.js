@@ -1,12 +1,8 @@
 import {PropTypes} from 'react'
-import Person from './person'
-import personPropTypes from './prop-types/person'
 
 export default LinksPicksTips
 
-function LinksPicksTips({person, Image}) {
-  const {linksHTML, tipsHTML, picksHTML} = person
-  const nothing = !linksHTML.length && !tipsHTML.length && !picksHTML.length
+function LinksPicksTips({linksHTML, tipsHTML, picksHTML}) {
   const notesSections = [
     {label: 'Links', notes: linksHTML},
     {label: 'Tips', notes: tipsHTML},
@@ -14,24 +10,21 @@ function LinksPicksTips({person, Image}) {
   ]
 
   return (
-    <div>
-      <Person {...person} Image={Image} />
-      {nothing ? ': No links, tips, or picks this week' : ''}
-      <ul>
-        <div>
-          {
-            notesSections.map((section, index) => (
-              <Notes {...section} key={index} />
-            ))
-          }
-        </div>
-      </ul>
-    </div>
+    <ul>
+      <div>
+        {
+          notesSections.map((section, index) => (
+            <Notes {...section} key={index} />
+          ))
+        }
+      </div>
+    </ul>
   )
 }
 LinksPicksTips.propTypes = {
-  Image: PropTypes.any,
-  person: personPropTypes.isRequired,
+  linksHTML: PropTypes.array.isRequired,
+  picksHTML: PropTypes.array.isRequired,
+  tipsHTML: PropTypes.array.isRequired,
 }
 
 function Notes({notes, label}) {
