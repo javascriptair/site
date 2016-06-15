@@ -5,7 +5,6 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 300;
 }
 *, :before, :after {box-sizing: border-box;}
 strong {font-weight: bold;}
