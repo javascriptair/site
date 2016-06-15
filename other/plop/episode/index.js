@@ -45,7 +45,7 @@ export default ({addFile}) => {
   function episodeActions(data) {
     const actions = []
     Object.keys(data).forEach((d, k) => {
-      data[k] = d.replace(/&#x27;/g, `'`)
+      data[k] = d.replace(/'/g, `'`)
     })
 
     actions.push(addFile({
