@@ -1,4 +1,5 @@
 /* eslint react/prop-types: 0 */
+import {PropTypes} from 'react'
 import ReactHTMLEmail, {Email, Box, Item, Image, A, renderEmail} from 'react-html-email'
 
 import {copy} from 'copy-paste'
@@ -7,8 +8,11 @@ import striptags from 'striptags'
 // import deindent from 'deindent'
 
 import {getSponsorsForDate} from '../sponsors'
+import LinksPicksTips from './components/links-picks-tips'
+import ShowDescription from './components/show-description'
+import personPropType from './components/prop-types/person'
 
-// import * as utils from '<utils>/utils'
+import * as utils from '<utils>/utils'
 import {episodes} from '../episodes'
 // import episodeList from './utils/episode-list'
 // import inquirer from 'inquirer'
@@ -46,14 +50,14 @@ function EpisodeEmail({episode, sponsors}) {
     titleHTML,
     descriptionHTML,
     number,
-    // guests,
-    // host,
-    // panelists,
+    guests,
+    host,
+    panelists,
   } = episode
   const title = striptags(titleHTML.__html)
   const episodePage = `https://javascriptair.com${episode.page}`
-  // const panelistsAndHost = utils.sortPeople([...panelists, host])
-  // const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
+  const panelistsAndHost = utils.sortPeople([...panelists, host])
+  const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
   const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors, ...sponsors.silverSponsors]
   const headCSS = getHeadCSS()
 
@@ -64,12 +68,26 @@ function EpisodeEmail({episode, sponsors}) {
       style={{backgroundColor: 'white'}}
     >
       <Banner page={episodePage} />
-      <Item align="center">
+      <Item>
+        <Spacer space={24} />
         <WatchShowButton page={episodePage} />
-        <ShowImage />
+        <Clear>
+          <ShowImage />
+        </Clear>
         <Description descriptionHTML={descriptionHTML} />
+        <Spacer space={16} />
         <ClickButtonWithAudioOption page={episodePage} number={number} />
-        <SponsorsSection sponsors={combinedSponsors} />
+        <Spacer />
+        <Clear>
+          <SponsorsSection sponsors={combinedSponsors} />
+        </Clear>
+        <Line />
+        <Clear>
+          <ShowNotes people={showAttendees} />
+        </Clear>
+        <Line />
+        <ShowDescription />
+        <Spacer />
       </Item>
     </Email>
   )
@@ -160,7 +178,6 @@ function WatchShowButton({page}) {
       msoTableRspace: '0pt',
       msTextSizeAdjust: '100%',
       WebkitTextSizeAdjust: '100%',
-      marginTop: 24,
     },
     p: {
       lineHeight: '100%',
@@ -249,10 +266,13 @@ function Description({descriptionHTML}) {
 
 function ClickButtonWithAudioOption({page, number}) {
   const styles = {
+    div: {
+      textAlign: 'center',
+      width: '100%',
+    },
     p: {
       fontSize: 16,
       margin: 0,
-      marginTop: 16,
       lineHeight: '100%',
       display: 'inline-block',
     },
@@ -275,14 +295,16 @@ function ClickButtonWithAudioOption({page, number}) {
     },
   }
   return (
-    <p style={styles.p}>
-      <A
-        href={page}
-        style={styles.a}
-      >
-        Click for more about Episode {number}, including an audio option
-      </A>
-    </p>
+    <div style={styles.div}>
+      <p style={styles.p}>
+        <A
+          href={page}
+          style={styles.a}
+        >
+          Click for more about Episode {number}, including an audio option
+        </A>
+      </p>
+    </div>
   )
 }
 
@@ -296,7 +318,6 @@ function SponsorsSection({sponsors}) {
       msoTableRspace: '0pt',
       msTextSizeAdjust: '100%',
       WebkitTextSizeAdjust: '100%',
-      marginTop: 40,
     },
     item: {
       fontFamily: 'Helvetica',
@@ -333,10 +354,53 @@ function SponsorsSection({sponsors}) {
   )
 }
 
+function ShowNotes({people}) {
+  const styles = {
+    h2: {
+      marginTop: 0,
+    },
+  }
+  return (
+    <Box>
+      <Item>
+        <h2 style={styles.h2}>Links, Picks, and Tips</h2>
+        {people.map((a, i) => <LinksPicksTips key={i} person={a} />)}
+      </Item>
+    </Box>
+  )
+}
+ShowNotes.propTypes = {
+  people: PropTypes.arrayOf(personPropType),
+}
+
+function Clear({children}) {
+  const styles = {
+    visibility: 'hidden',
+    display: 'block',
+    height: 0,
+    clear: 'both',
+  }
+  return (
+    <div>
+      {children}
+      <div style={styles} />
+    </div>
+  )
+}
+
+function Spacer({space = 32}) {
+  return <div style={{marginTop: space}} />
+}
+
+function Line() {
+  return <hr style={{marginTop: 32, marginBottom: 32}} />
+}
+
 function hijackConsole() {
   const ignoreLogs = [
     'in outlook:',
     'unsupported in: outlook.',
+    'unsupported in: outlook-web.',
     'mso-line-height-rule',
     'border-radius` supplied to `Box` unsupported in',
   ]
