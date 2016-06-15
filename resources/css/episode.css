@@ -62,94 +62,6 @@
       This card part contains information regarding the
       date and time that the episode aired or airs.
     */
-    &--date {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      min-width: 250px;
-
-      box-shadow: inset -23px -1px 35px -15px rgba(0,0,0,0.12);
-      background-color: #ebebeb;
-
-      @media only screen and (max-width : 1100px) {
-        padding: 20px;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        box-shadow: none;
-      }
-
-      /*
-       Sections
-
-        Sections within the  DATE episode card  part are sub-areas
-        of the component, handling specific separated information,
-        such as time, date, month, etc.
-      */
-      &__section {
-
-        /* Section - NUMBER - Large, stylized episode number */
-        &--number {
-          padding: 20px 40px;
-          padding-bottom: 0;
-
-          &__h2 {
-            display: block;
-            font-size: 6.25em;
-            font-weight: bold;
-          }
-
-        }
-
-        @media only screen and (max-width : 1100px) {
-
-          &--number {
-            padding: 0px;
-            padding-right: 15px;
-
-            &__h2 {
-              font-size: 1.7em;
-            }
-          }
-
-        }
-
-
-        /* Section - CALENDAR - Displays nearby dates in a calendar format */
-        &--calendar {
-
-        }
-
-        /* Section - BUTTONS - Displays call-to-action buttons and interactions */
-        &--buttons {
-          padding: 20px;
-          justify-self: flex-end;
-          text-align: center;
-
-          @media only screen and (max-width : 1100px) {
-            display: none;
-          }
-
-          a {
-            font-size: 1.05em;
-            font-weight: bold;
-            text-decoration: none;
-            color: gray;
-            padding: 10px;
-
-            transition: all 0.4s;
-
-            &:hover {
-              letter-spacing: 0.1em;
-            }
-          }
-
-        }
-
-      }
-
-    }
-
     &--content {
       padding: 20px;
       width: 100%;
@@ -215,15 +127,6 @@
 
 .calendar {
   overflow: hidden;
-
-  &--mobile {
-    display: none;
-
-    @media only screen and (max-width : 1100px) {
-      display: block;
-      font-size: 1.7em;
-    }
-  }
 
   @media only screen and (max-width : 1100px) {
     display: none;
