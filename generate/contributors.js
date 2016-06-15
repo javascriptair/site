@@ -1,7 +1,7 @@
 import {resolve} from 'path'
 import renderComponentToFile from './renderComponentToFile'
 
-import {host} from '<resources>/host'
+import host from '<resources>/host'
 import sponsors from '../sponsors'
 import contributors from '../data/contributors'
 import {panelists} from '<resources>/panelists'

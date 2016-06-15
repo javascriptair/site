@@ -1,4 +1,4 @@
-export const host = {
+export default {
   twitter: 'kentcdodds',
   link: 'https://twitter.com/kentcdodds',
   imgSrc: '/resources/kentcdodds.png',

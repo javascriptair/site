@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import {panelists} from '<resources>/panelists'
+import host from '<resources>/host'
 import moment from 'moment'
 import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
@@ -46,9 +47,7 @@ function getEpisodeData(episodePath) {
   })
 
   episode.host = {
-    name: 'Kent C. Dodds',
-    twitter: 'kentcdodds',
-    imgSrc: '/resources/kentcdodds.png',
+    ...host,
     links: [],
     tips: [],
     picks: [],

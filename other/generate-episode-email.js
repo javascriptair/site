@@ -20,7 +20,7 @@ import {episodes} from '../episodes'
 hijackConsole()
 
 ReactHTMLEmail.injectReactEmailAttributes()
-renderAndCopy(episodes[24])
+renderAndCopy(episodes[26])
 // inquirer.prompt([
 //   episodeList,
 // ]).then(({episode}) => {
@@ -364,7 +364,12 @@ function ShowNotes({people}) {
     <Box>
       <Item>
         <h2 style={styles.h2}>Links, Picks, and Tips</h2>
-        {people.map((a, i) => <LinksPicksTips key={i} person={a} />)}
+        {people.map((a, i) => (
+          <div key={i}>
+            {i !== 0 ? <Spacer /> : null}
+            <LinksPicksTips person={a} Image={Image} />
+          </div>
+        ))}
       </Item>
     </Box>
   )
@@ -403,6 +408,7 @@ function hijackConsole() {
     'unsupported in: outlook-web.',
     'mso-line-height-rule',
     'border-radius` supplied to `Box` unsupported in',
+    'border-radius` supplied to `Image` unsupported in',
   ]
   hijack('warn')
   hijack('error')

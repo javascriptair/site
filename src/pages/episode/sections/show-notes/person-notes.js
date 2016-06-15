@@ -29,8 +29,8 @@ function PersonNotes({person}) {
                 <Notes {...section} key={index} />
               ))
             }
-            </div>
-          )
+          </div>
+        )
       }
     </div>
   )
