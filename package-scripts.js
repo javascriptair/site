@@ -1,7 +1,7 @@
 /* eslint max-len:[2, 200] */
 const commonWatch = '--watch ' + [
   'src', 'sponsors', 'episodes', 'shared', 'generate',
-].join(' --watch')
+].join(' --watch ')
 module.exports = {
   scripts: {
     build: {
@@ -10,16 +10,16 @@ module.exports = {
         script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson',
       },
       home: 'babel-node generate/home',
-      episodes: './scripts/build-episodes.sh',
-      guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
-      'links-tips-picks': 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
-      deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
-      css: 'postcss -u postcss-import -u postcss-nested -u postcss-mixins -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css',
-      contributors: 'rimraf contributors && mkdir contributors && babel-node generate/contributors',
-      episode: {
+      singleEpisode: {
         description: 'Pass this a directory for the episode to build just that episode page',
         script: './scripts/build-episode.sh',
       },
+      episodes: './scripts/build-episodes.sh',
+      guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
+      linksTipsPicks: 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
+      deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
+      css: 'postcss -u postcss-import -u postcss-nested -u postcss-mixins -u autoprefixer -u cssnano resources/css/styles.css > styles.dist.css',
+      contributors: 'rimraf contributors && mkdir contributors && babel-node generate/contributors',
     },
     deploy: {
       description: 'Deploys to surge.sh to javascriptair.com (requires a SURGE_TOKEN variable). This should only be run on Travis',
@@ -61,7 +61,7 @@ module.exports = {
       home: `nodemon ${commonWatch} --exec npm run start build.home -s`,
       episodes: `nodemon ${commonWatch} --exec npm run start build.episodes -s`,
       guests: `nodemon ${commonWatch} --exec npm run start build.guests -s`,
-      'links-tips-picks': `nodemon ${commonWatch} --exec npm run start build.links-tips-picks -s`,
+      linksTipsPicks: `nodemon ${commonWatch} --exec npm run start build.links-tips-picks -s`,
       deals: 'nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run start build.deals -s',
       contributors: 'nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run start build.contributors -s',
       css: 'nodemon --watch resources/css --ext css --exec npm run start build.css',
