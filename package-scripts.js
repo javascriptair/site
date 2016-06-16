@@ -12,9 +12,9 @@ module.exports = {
       home: 'babel-node generate/home',
       singleEpisode: {
         description: 'Pass this a directory for the episode to build just that episode page',
-        script: './scripts/build-episode.sh',
+        script: 'babel-node ./scripts/build-episode',
       },
-      episodes: './scripts/build-episodes.sh',
+      episodes: 'babel-node ./scripts/build-episodes',
       guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
       linksTipsPicks: 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
       deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
@@ -55,6 +55,7 @@ module.exports = {
     },
     dev: {
       home: `nodemon ${commonWatch} --exec npm run start build.home -s`,
+      episodes: `nodemon ${commonWatch} --exec npm run start build.episodes -s`,
       guests: `nodemon ${commonWatch} --exec npm run start build.guests -s`,
       linksTipsPicks: `nodemon ${commonWatch} --exec npm run start build.links-tips-picks -s`,
       deals: 'nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run start build.deals -s',

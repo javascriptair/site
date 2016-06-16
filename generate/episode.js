@@ -6,15 +6,20 @@ import getEpisodeData from '<utils>/get-episode-data'
 import {getSponsorsForDate} from '../sponsors'
 import EpisodePage from '../src/pages/episode'
 
-const episodePath = resolve(__dirname, '../', process.argv[2])
-const episodeData = getEpisodeData(episodePath)
-const sponsors = getSponsorsForDate(episodeData.date)
+export default generateEpisode
 
-renderComponentToFile(
-  <EpisodePage
-    episode={episodeData}
-    nextEpisode={nextEpisode}
-    sponsors={sponsors}
-  />,
-  resolve(episodePath, './index.html'),
-)
+function generateEpisode(path, cb) {
+  const episodePath = resolve(__dirname, '../', path)
+  const episodeData = getEpisodeData(episodePath)
+  const sponsors = getSponsorsForDate(episodeData.date)
+
+  renderComponentToFile(
+    <EpisodePage
+      episode={episodeData}
+      nextEpisode={nextEpisode}
+      sponsors={sponsors}
+    />,
+    resolve(episodePath, './index.html'),
+    cb,
+  )
+}
