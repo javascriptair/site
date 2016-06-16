@@ -54,18 +54,12 @@ module.exports = {
       script: 'babel-node generate/json-files',
     },
     dev: {
-      default: {
-        description: 'Run a nodemon server to automatically re-run the entire build on file changes (generally this is a little heavy handed)',
-        script: `nodemon ${commonWatch} --exec npm run start build -s`,
-      },
       home: `nodemon ${commonWatch} --exec npm run start build.home -s`,
-      episodes: `nodemon ${commonWatch} --exec npm run start build.episodes -s`,
       guests: `nodemon ${commonWatch} --exec npm run start build.guests -s`,
       linksTipsPicks: `nodemon ${commonWatch} --exec npm run start build.links-tips-picks -s`,
       deals: 'nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run start build.deals -s',
       contributors: 'nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run start build.contributors -s',
       css: 'nodemon --watch resources/css --ext css --exec npm run start build.css',
-      data: 'npm-run-all --parallel dev:home dev:episodes dev:guests server',
       singleEpisode: {
         description: 'Pass an episode directory to build just that episode with a watch',
         script: `nodemon ${commonWatch} --exec npm run start build.singleEpisode -s`,
