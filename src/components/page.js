@@ -11,8 +11,8 @@ function Page({
 } = {}) {
   /* eslint max-len:0 */
   return (
-    <html>
-      <head lang="en">
+    <html lang="en">
+      <head>
         <title>{striptags(title)}</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

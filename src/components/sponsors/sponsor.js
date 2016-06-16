@@ -5,6 +5,7 @@ export default Sponsor
 
 function Sponsor({name, link, tagline = '', imgSrc}) {
   imgSrc = imgSrc || `sponsors/${name}.png`
+  const altText = `${name} logo`
   const {styles} = Sponsor
   return (
     <a
@@ -12,7 +13,10 @@ function Sponsor({name, link, tagline = '', imgSrc}) {
       href={link}
       alt={`${name} site`}
     >
-      <img className={css(styles.logo)} src={imgSrc} />
+      <img className={css(styles.logo)}
+        src={imgSrc}
+        alt={altText}
+      />
       <span className={css(styles.name)}>{name}</span>
       {tagline ? <span className={css(styles.tagline)}>{tagline}</span> : null}
     </a>

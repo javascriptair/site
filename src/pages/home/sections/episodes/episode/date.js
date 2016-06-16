@@ -124,7 +124,7 @@ AddToCalendar.styles = StyleSheet.create({
     fontSize: '1.05em',
     fontWeight: 'bold',
     textDecoration: 'none',
-    color: 'gray',
+    color: '#4a4a4a',
     padding: '10px',
     transition: 'all 0.4s',
     ':hover': {

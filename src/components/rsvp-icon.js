@@ -15,6 +15,7 @@ function RSVPIcon(props) {
       className={css(styles.iconLink, iconStyles)}
       href={props.hangoutUrl}
       name="calendar"
+      aria-label="RSVP"
       {...props}
     />
   )
