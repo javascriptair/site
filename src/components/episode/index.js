@@ -28,7 +28,7 @@ Episode.styles = StyleSheet.create({
   episodeRoot: {
     display: 'flex',
     marginBottom: '50px',
-    minHeight: '450px',
+    minHeight: '440px',
     backgroundColor: 'white',
     boxShadow: '0px 17px 69px -12px rgba(0,0,0,0.42)',
     [upToBig]: {

@@ -9,7 +9,6 @@ import SponsorsSection from '<components>/sponsors'
 import HeaderBar from '<components>/header'
 
 import TwitterFeed from './twitter-feed'
-import FeatureShowGetter from './feature-show-getter'
 
 import Header from './sections/header'
 import AudioSection from './sections/audio'
@@ -39,7 +38,6 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
               <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
         }
       </div>
-      <FeatureShowGetter />
     </Page>
   )
 }

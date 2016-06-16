@@ -7,7 +7,7 @@ module.exports = {
     build: {
       default: {
         description: 'Runs all the build scripts in parallel',
-        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson',
+        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson,build.screenshot.all',
       },
       home: 'babel-node generate/home',
       singleEpisode: {
@@ -15,6 +15,16 @@ module.exports = {
         script: 'babel-node ./scripts/build-episode',
       },
       episodes: 'babel-node ./scripts/build-episodes',
+      screenshot: {
+        all: {
+          description: 'generates all the screenshot pages',
+          script: 'babel-node ./scripts/screenshot-episodes',
+        },
+        single: {
+          description: 'generates the given screenshot page',
+          script: 'babel-node ./scripts/screenshot-episode',
+        },
+      },
       guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
       linksTipsPicks: 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
       deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
@@ -64,6 +74,10 @@ module.exports = {
       singleEpisode: {
         description: 'Pass an episode directory to build just that episode with a watch',
         script: `nodemon ${commonWatch} --exec npm run start build.singleEpisode -s`,
+      },
+      screenshot: {
+        all: `nodemon ${commonWatch} --exec npm start build.screenshot.all -s`,
+        single: `nodemon ${commonWatch} --exec npm start build.screenshot.single -s`,
       },
     },
     description: 'babel-node other/generate-episode-description',
