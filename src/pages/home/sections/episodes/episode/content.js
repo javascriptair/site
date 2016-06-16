@@ -121,7 +121,7 @@ Buttons.styles = StyleSheet.create({
     padding: '20px 25px',
     fontSize: '1.4em',
     textDecoration: 'none',
-    color: 'gray',
+    color: '#4a4a4a',
     transition: 'all 0.4s',
     ':hover': {
       letterSpacing: '0.1em',
