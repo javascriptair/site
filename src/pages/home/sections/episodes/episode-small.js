@@ -74,7 +74,7 @@ EpisodeSmall.styles = StyleSheet.create({
   guests: {
     fontSize: '0.9em',
     lineHeight: '1.3',
-    color: 'gray',
+    color: '#4a4a4a',
     [upToBig]: {
       fontSize: '1.2em',
       paddingTop: 10,
@@ -83,7 +83,7 @@ EpisodeSmall.styles = StyleSheet.create({
     },
   },
   guestsAnchor: {
-    color: 'gray',
+    color: '#4a4a4a',
     ':hover': {
       color: 'black',
     },
