@@ -7,14 +7,12 @@ function FeatureShowGetter() {
 }
 
 function runScript() {
-  const match = location.search.match(/feature-show=(.*?)($|\&)/) || []
-  const showToFeature = match[1]
-  if (showToFeature) {
+  if (/feature-show/.test(location.search)) {
     const script = document.createElement('script')
     script.setAttribute('type', 'text/javascript')
     script.setAttribute('src', '/resources/feature-show.js')
     script.onload = function onLoad() {
-      window.featureShow(showToFeature)
+      window.featureShow()
     }
     document.body.appendChild(script)
   }

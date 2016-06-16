@@ -1,8 +1,8 @@
 /* eslint-disable */ // this runs in phantom so no ES6 niceness
-function featureShow(indexOrDate) {
+function featureShow() {
   'use strict'
   // get featured episode
-  var feature = document.body.querySelector('.episode-' + indexOrDate)
+  var feature = document.body.querySelector('[class^="episodeWrapper_"]')
 
   // style stuff
   var styles = [

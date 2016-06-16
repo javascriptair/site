@@ -4,17 +4,18 @@ import marked from 'marked'
 import {StyleSheet, css} from 'aphrodite'
 
 import TwitterWidgetScript from '<components>/scripts/twitter-widget'
-
 import Page from '<components>/page'
+import SponsorsSection from '<components>/sponsors'
+import HeaderBar from '<components>/header'
+
 import TwitterFeed from './twitter-feed'
+import FeatureShowGetter from './feature-show-getter'
 
 import Header from './sections/header'
 import AudioSection from './sections/audio'
 import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
 import TranscriptSection from './sections/transcript'
-import SponsorsSection from '<components>/sponsors'
-import HeaderBar from '<components>/header'
 
 
 export default EpisodePage
@@ -38,6 +39,7 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
               <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
         }
       </div>
+      <FeatureShowGetter />
     </Page>
   )
 }
