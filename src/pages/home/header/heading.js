@@ -57,12 +57,12 @@ Heading.styles = StyleSheet.create({
   },
   subtext: {
     fontSize: '1.5em',
-    color: '#8C8015',
+    color: '#634806',
     marginTop: 10,
     lineHeight: '1.35em',
   },
   sponsorLink: {
-    color: '#8C8015',
+    color: '#634806',
     textDecoration: 'underline',
     ':hover': {
       color: '#61590F',
