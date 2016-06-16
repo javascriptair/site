@@ -7,7 +7,7 @@ function featureShow() {
   // style stuff
   var styles = [
     'body {',
-    '  width: 1170px;',
+    '  width: 1200px;',
     '  margin: 0 auto;',
     '  padding: 1px;',
     '  height: 600px;',
