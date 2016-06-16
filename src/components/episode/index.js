@@ -6,21 +6,21 @@ import Content from './content'
 
 export default Episode
 
-function Episode({episodeData, index}) {
-  const {date} = episodeData
+function Episode({episode, index}) {
+  const {date} = episode
   const {styles} = Episode
   // we have a special className to make it easier to run GhostInspector tests
   const className = `${css(styles.episodeRoot)} episode-index-${index} episode-${date}`
   return (
     <div className={className}>
-      <Date episode={episodeData} />
-      <Content episode={episodeData} />
+      <Date episode={episode} />
+      <Content episode={episode} />
     </div>
   )
 }
 
 Episode.propTypes = {
-  episodeData: PropTypes.object,
+  episode: PropTypes.object,
   index: PropTypes.number,
 }
 

@@ -14,11 +14,12 @@ import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
 import TranscriptSection from './sections/transcript'
 import SponsorsSection from '<components>/sponsors'
+import HeaderBar from '<components>/header'
 
 
 export default EpisodePage
 
-function EpisodePage({episode, sponsors}) {
+function EpisodePage({episode, nextEpisode, sponsors}) {
   const {numberDisplay, title, description, past} = episode
   const descriptionHTMLString = marked(deindent(description))
   return (
@@ -26,6 +27,7 @@ function EpisodePage({episode, sponsors}) {
       title={`JavaScript Air | ${title}`}
       description={getPageDescription(numberDisplay, descriptionHTMLString)}
     >
+      <HeaderBar nextEpisode={nextEpisode} />
       <div className="episode-page container">
         <Header
           episode={episode}
@@ -42,6 +44,7 @@ function EpisodePage({episode, sponsors}) {
 
 EpisodePage.propTypes = {
   episode: PropTypes.object,
+  nextEpisode: PropTypes.object,
   sponsors: PropTypes.object,
 }
 
@@ -57,7 +60,7 @@ function getPageDescription(numberDisplay, descriptionHTML) {
 function PastEpisodeStuff({episodeData, sponsors}) {
   const {podbeanId, youTubeId, transcriptHTML} = episodeData
   return (
-    <div>
+    <div style={{fontSize: 23}}>
       {
         podbeanId ? (
           <div>
@@ -78,6 +81,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
       <SponsorsSection {...sponsors} />
       <hr />
       <ShowNotes episode={episodeData} />
+      <hr />
       <TranscriptSection transcriptHTML={transcriptHTML} />
     </div>
   )

@@ -17,7 +17,7 @@ function Guests({guests}) {
     <Page
       title="JavaScript Air show guests"
     >
-      <div className="container guests-page">
+      <div className={`container ${css(styles.guestsPageRoot)}`}>
         <header className={css(styles.header)}>
           <h1 className={css(styles.title)}>
             <a href="/" alt="home">JavaScript Air</a>
@@ -44,6 +44,12 @@ Guests.propTypes = {
 }
 
 Guests.styles = StyleSheet.create({
+  guestsPageRoot: {
+    margin: '40px auto 100px',
+    maxWidth: 1000,
+    width: '90%',
+    fontSize: 20,
+  },
   header: {textAlign: 'center'},
   title: {marginBottom: 20},
   link: {textAlign: 'center'},

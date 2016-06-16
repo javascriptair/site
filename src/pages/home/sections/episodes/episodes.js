@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import Episode from './episode'
+import Episode from '<components>/episode'
 import EpisodeSmall from './episode-small'
 import {sortBy} from 'lodash'
 
@@ -31,7 +31,7 @@ function EpisodesSection({future, past}) {
         <div>
           {nearFutureEpisodes.map((e, i) => (
             <Episode
-              episodeData={e}
+              episode={e}
               key={i}
               index={i}
             />

@@ -14,7 +14,7 @@ function TweetLink({episode}) {
   return (
     <span className={css(styles.iconContainer)}>
       <IconLink
-        className={css(styles.icon)}
+        black={true}
         href={tweetUrl}
         target="_blank"
         title="Tweet this"

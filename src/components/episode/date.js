@@ -3,7 +3,9 @@ import {StyleSheet, css} from 'aphrodite'
 import moment from 'moment'
 import {upToBig} from '<styles>/media-queries'
 
+import TweetLink from './tweet-link'
 import Calendar from './calendar'
+
 export default Date
 
 function Date({episode}) {
@@ -20,7 +22,10 @@ function Date({episode}) {
         <MobileCalendar date={date} />
         <Calendar episode={episode} />
       </div>
-      <AddToCalendar page={page} />
+      <div className={css(styles.bottomWrapper)}>
+        <AddToCalendar page={page} />
+        <TweetLink episode={episode} />
+      </div>
     </div>
   )
 }
@@ -45,6 +50,9 @@ Date.styles = StyleSheet.create({
       alignItems: 'center',
       boxShadow: 'none',
     },
+  },
+  bottomWrapper: {
+    marginBottom: 10,
   },
 })
 
@@ -114,7 +122,7 @@ function AddToCalendar({page}) {
 }
 AddToCalendar.styles = StyleSheet.create({
   addToCalendarRoot: {
-    padding: 20,
+    padding: 10,
     textAlign: 'center',
     [upToBig]: {
       display: 'none',
