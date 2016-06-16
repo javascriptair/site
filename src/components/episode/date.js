@@ -52,6 +52,7 @@ Date.styles = StyleSheet.create({
     },
   },
   bottomWrapper: {
+    textAlign: 'center',
     marginBottom: 10,
   },
 })
