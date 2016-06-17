@@ -4,3 +4,6 @@ styles.dist.css
 *.ignored.*
 npm-debug.log
 data.json
+screenshot.html
+screenshot.png*
+email.html

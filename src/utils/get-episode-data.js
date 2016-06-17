@@ -1,8 +1,10 @@
 import fs from 'fs'
 import path from 'path'
+import moment from 'moment'
+import striptags from 'striptags'
 
 import {panelists} from '<resources>/panelists'
-import moment from 'moment'
+import host from '<resources>/host'
 import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../../episodes'))
@@ -28,6 +30,7 @@ function getEpisodeData(episodePath) {
       ...guest,
     }
     htmlifyLinksPicksAndTips(guest)
+    guest.hasNotes = hasNotes(guest)
     return guest
   })
   episode.sortedGuests = sortPeople(episode.guests)
@@ -42,34 +45,39 @@ function getEpisodeData(episodePath) {
       ...panelist,
     }
     htmlifyLinksPicksAndTips(panelist)
+    panelist.hasNotes = hasNotes(panelist)
     return panelist
   })
 
   episode.host = {
-    name: 'Kent C. Dodds',
-    twitter: 'kentcdodds',
-    imgSrc: '/resources/kentcdodds.png',
+    ...host,
     links: [],
     tips: [],
     picks: [],
     ...episode.host,
   }
   htmlifyLinksPicksAndTips(episode.host)
+  episode.host.hasNotes = hasNotes(episode.host)
 
   const time = episode.time || '12:00 PM (CT)'
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   const description = (episode.description && episode.description.trim()) || getDefaultDescription()
   const {transcript, title = 'TBA'} = episode
+  const descriptionHTML = markdownToHTML(description)
+  const titleHTML = markdownToHTML(title, true)
 
   return {
     date,
     time,
     dateDisplay,
     title,
-    titleHTML: markdownToHTML(title, true),
+    titleHTML,
+    taglessTitle: striptags(titleHTML.__html),
     description,
+    metaDescription: getMetaPageDescription(numberDisplay, descriptionHTML),
+    screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
     page: `/episodes/${date}`,
-    descriptionHTML: markdownToHTML(description),
+    descriptionHTML,
     timeHTML: markdownToHTML(time, true),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
@@ -121,4 +129,17 @@ function pad(n, width, z) {
 function episodeHasHappened(episodeRaw, date) {
   const {past, podbeanId, transcript, host: {picks = []} = {}} = episodeRaw // eslint-disable-line no-shadow
   return !!past || !!podbeanId || !!transcript || !!picks.length || isPastAndNotToday(date)
+}
+
+function hasNotes({links, tips, picks}) {
+  return links.length + tips.length + picks.length > 0
+}
+
+function getMetaPageDescription(numberDisplay, descriptionHTML) {
+  const description = descriptionHTML.__html
+    .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
+    .replace(/\n/g, ' ')
+    .replace(/DOUBLE_NEW_LINE/g, '\n\n')
+    .trim()
+  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${striptags(description)}`
 }

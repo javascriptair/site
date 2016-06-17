@@ -1,25 +1,24 @@
 import {resolve} from 'path'
 import renderComponentToFile from './renderComponentToFile'
-
 import {nextEpisode} from '../episodes'
 import getEpisodeData from '<utils>/get-episode-data'
+import EpisodeEmail from '../src/pages/episode-email'
 import {getSponsorsForDate} from '../sponsors'
-import EpisodePage from '../src/pages/episode'
 
-export default generateEpisode
+export default generateEpisodeEmailPage
 
-function generateEpisode(path, cb) {
+function generateEpisodeEmailPage(path, cb) {
   const episodePath = resolve(__dirname, '../', path)
   const episodeData = getEpisodeData(episodePath)
   const sponsors = getSponsorsForDate(episodeData.date)
 
   renderComponentToFile(
-    <EpisodePage
-      episode={episodeData}
+    <EpisodeEmail
       nextEpisode={nextEpisode}
+      episode={episodeData}
       sponsors={sponsors}
     />,
-    resolve(episodePath, './index.html'),
+    resolve(episodePath, './email.html'),
     cb,
   )
 }

@@ -9,6 +9,7 @@
         {"src": "./src/styles", "expose": "<styles>"},
         {"src": "./src/components", "expose": "<components>"},
         {"src": "./resources", "expose": "<resources>"},
+        {"src": "./other", "expose": "<other>"},
       ]
     ],
   ],

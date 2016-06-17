@@ -14,7 +14,7 @@ function LinksTipsPicks({nextEpisode, episodes}) {
       title="JavaScript Air links tips and picks"
     >
       <HeaderBar nextEpisode={nextEpisode} />
-      <div className="episode-page container">
+      <div className={`container ${css(styles.linksTipsPicksRoot)}`}>
         {episodes.filter(e => e.past).map(e =>{
           return (
             <div key={e.number} className={css(styles.episode)}>
@@ -36,6 +36,12 @@ LinksTipsPicks.propTypes = {
 }
 
 LinksTipsPicks.styles = StyleSheet.create({
+  linksTipsPicksRoot: {
+    margin: '40px auto 100px',
+    maxWidth: 1000,
+    width: '90%',
+    fontSize: 23,
+  },
   episode: {
     marginBottom: '20px',
     [upToBig]: {padding: '16px 20px'},

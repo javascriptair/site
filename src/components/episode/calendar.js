@@ -1,5 +1,5 @@
 import {PropTypes} from 'react'
-import {StyleSheet} from 'aphrodite'
+import {StyleSheet, css} from 'aphrodite'
 import moment from 'moment'
 import RSVPIcon from '<components>/rsvp-icon'
 
@@ -35,8 +35,9 @@ Calendar.propTypes = {
 }
 
 function ShowMonth({date}) {
+  const {styles} = ShowMonth
   return (
-    <div className="calendar__section calendar__section--heading calendar__section--month">
+    <div className={`calendar__section calendar__section--heading calendar__section--month ${css(styles.showMonth)}`}>
       <h3>{date.format('MMMM')}</h3>
     </div>
   )
@@ -45,6 +46,12 @@ function ShowMonth({date}) {
 ShowMonth.propTypes = {
   date: PropTypes.object.isRequired,
 }
+
+ShowMonth.styles = StyleSheet.create({
+  showMonth: {
+    paddingTop: 0,
+  },
+})
 
 function ShowDays({date, page, dateBefore, dateAfter, hangoutUrl}) {
   return (

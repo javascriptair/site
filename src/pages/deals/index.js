@@ -12,7 +12,7 @@ function DealsPage({deals}) {
     <Page
       title="JavaScript Air Deals"
     >
-      <div className="deals-page container">
+      <div className={`container ${css(styles.dealsPageRoot)}`}>
         <header className={css(styles.header)}>
           <h1>
             <a href="/deals" alt="home">JavaScript Air Deals</a>
@@ -38,6 +38,12 @@ DealsPage.propTypes = {
 }
 
 DealsPage.styles = StyleSheet.create({
+  dealsPageRoot: {
+    margin: '40px auto 100px',
+    maxWidth: 1000,
+    width: '90%',
+    fontSize: 20,
+  },
   header: {textAlign: 'center'},
   subtitle: {marginTop: 40},
   email: {display: 'block', marginTop: 20, fontSize: '0.8em'},

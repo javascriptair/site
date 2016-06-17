@@ -1,15 +1,10 @@
 // here be some interesting dragons
 // beware...
-import path from 'path'
-import glob from 'glob'
 import {groupBy} from 'lodash'
 import getEpisodeData from '<utils>/get-episode-data'
+import getEpisodeDirectories from './get-episode-directories'
 
-const episodeDirectories = glob.sync(
-  path.join(__dirname, '**/index.js'),
-  {ignore: __filename}
-)
-
+const episodeDirectories = getEpisodeDirectories()
 const episodes = episodeDirectories.map(getEpisodeData)
 const episodeGroups = groupBy(episodes, e => e.past ? 'past' : 'future')
 const {future = [], past} = episodeGroups

@@ -2,19 +2,30 @@
 const commonWatch = '--watch ' + [
   'src', 'sponsors', 'episodes', 'shared', 'generate',
 ].join(' --watch ')
+const otherComponentsWatch = `${commonWatch} --watch other/components`
 module.exports = {
   scripts: {
     build: {
       default: {
         description: 'Runs all the build scripts in parallel',
-        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson',
+        script: 'p-s -p eslint,build.home,build.episodes,build.guests,build.links-tips-picks,build.deals,build.css,build.contributors,createJson,build.screenshot.all',
       },
       home: 'babel-node generate/home',
       singleEpisode: {
         description: 'Pass this a directory for the episode to build just that episode page',
-        script: './scripts/build-episode.sh',
+        script: 'babel-node ./scripts/build-episode',
       },
-      episodes: './scripts/build-episodes.sh',
+      episodes: 'babel-node ./scripts/build-episodes',
+      screenshot: {
+        all: {
+          description: 'generates all the screenshot pages',
+          script: 'babel-node ./scripts/screenshot-episodes',
+        },
+        single: {
+          description: 'generates the given screenshot page',
+          script: 'babel-node ./scripts/screenshot-episode',
+        },
+      },
       guests: 'rimraf guests && mkdir guests && babel-node generate/guests',
       linksTipsPicks: 'rimraf links-tips-picks && mkdir links-tips-picks && babel-node generate/links-tips-picks',
       deals: 'rimraf deals && mkdir deals && babel-node generate/deals',
@@ -54,10 +65,6 @@ module.exports = {
       script: 'babel-node generate/json-files',
     },
     dev: {
-      default: {
-        description: 'Run a nodemon server to automatically re-run the entire build on file changes (generally this is a little heavy handed)',
-        script: `nodemon ${commonWatch} --exec npm run start build -s`,
-      },
       home: `nodemon ${commonWatch} --exec npm run start build.home -s`,
       episodes: `nodemon ${commonWatch} --exec npm run start build.episodes -s`,
       guests: `nodemon ${commonWatch} --exec npm run start build.guests -s`,
@@ -65,11 +72,21 @@ module.exports = {
       deals: 'nodemon --watch src/pages/deals --watch data/deals --watch shared --watch generate/deals.js --exec npm run start build.deals -s',
       contributors: 'nodemon --watch src/pages/contributors --watch sponsors --watch src/components --watch data/contributors --watch shared --exec npm run start build.contributors -s',
       css: 'nodemon --watch resources/css --ext css --exec npm run start build.css',
-      data: 'npm-run-all --parallel dev:home dev:episodes dev:guests server',
       singleEpisode: {
         description: 'Pass an episode directory to build just that episode with a watch',
         script: `nodemon ${commonWatch} --exec npm run start build.singleEpisode -s`,
       },
+      screenshot: {
+        all: `nodemon ${commonWatch} --exec npm start build.screenshot.all -s`,
+        single: `nodemon ${commonWatch} --exec npm start build.screenshot.single -s`,
+      },
+    },
+    email: {
+      default: {
+        description: 'generates the email HTML for sending to people',
+        script: 'babel-node other/generate-episode-email',
+      },
+      watch: `nodemon ${otherComponentsWatch} --watch other/generate-episode-email.js --exec npm run start email -s`,
     },
     description: 'babel-node other/generate-episode-description',
     eslint: 'eslint .',

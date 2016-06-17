@@ -1,11 +1,11 @@
 import {PropTypes} from 'react'
-import deindent from 'deindent'
-import marked from 'marked'
 import {StyleSheet, css} from 'aphrodite'
 
 import TwitterWidgetScript from '<components>/scripts/twitter-widget'
-
 import Page from '<components>/page'
+import SponsorsSection from '<components>/sponsors'
+import HeaderBar from '<components>/header'
+
 import TwitterFeed from './twitter-feed'
 
 import Header from './sections/header'
@@ -13,19 +13,19 @@ import AudioSection from './sections/audio'
 import VideoSection from './sections/video'
 import ShowNotes from './sections/show-notes'
 import TranscriptSection from './sections/transcript'
-import SponsorsSection from '<components>/sponsors'
 
 
 export default EpisodePage
 
-function EpisodePage({episode, sponsors}) {
-  const {numberDisplay, title, description, past} = episode
-  const descriptionHTMLString = marked(deindent(description))
+function EpisodePage({episode, nextEpisode, sponsors}) {
+  const {taglessTitle, metaDescription, past} = episode
   return (
     <Page
-      title={`JavaScript Air | ${title}`}
-      description={getPageDescription(numberDisplay, descriptionHTMLString)}
+      title={`JavaScript Air | ${taglessTitle}`}
+      description={metaDescription}
+      headTags={getHeadTags(episode)}
     >
+      <HeaderBar nextEpisode={nextEpisode} />
       <div className="episode-page container">
         <Header
           episode={episode}
@@ -42,22 +42,14 @@ function EpisodePage({episode, sponsors}) {
 
 EpisodePage.propTypes = {
   episode: PropTypes.object,
+  nextEpisode: PropTypes.object,
   sponsors: PropTypes.object,
-}
-
-function getPageDescription(numberDisplay, descriptionHTML) {
-  const description = descriptionHTML
-    .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
-    .replace(/\n/g, ' ')
-    .replace(/DOUBLE_NEW_LINE/g, '\n\n')
-    .trim()
-  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${description}`
 }
 
 function PastEpisodeStuff({episodeData, sponsors}) {
   const {podbeanId, youTubeId, transcriptHTML} = episodeData
   return (
-    <div>
+    <div style={{fontSize: 23}}>
       {
         podbeanId ? (
           <div>
@@ -78,6 +70,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
       <SponsorsSection {...sponsors} />
       <hr />
       <ShowNotes episode={episodeData} />
+      <hr />
       <TranscriptSection transcriptHTML={transcriptHTML} />
     </div>
   )
@@ -150,6 +143,32 @@ FutureEpisodeStuff.styles = StyleSheet.create({
     },
   },
 })
+
+function getHeadTags(episode) {
+  /* eslint react/jsx-max-props-per-line:0 */
+  const {metaDescription, page, numberDisplay, taglessTitle} = episode
+  const episodeUrl = `https://javascriptair.com${page}`
+  const image = `${episodeUrl}/screenshot.png`
+  return [
+    // Google
+    <meta key="g1" name="description" content={metaDescription} />,
+    <meta key="g2" name="keywords" content={taglessTitle} />,
+    <meta key="g3" name="author" content="JavaScript Air" />,
+    <meta key="g4" name="copyright" content={new Date().getFullYear()} />,
+    <meta key="g5" name="application-name" content="JavaScript Air Podcast" />,
+    // Facebook
+    <meta key="f1" property="og:title" content={taglessTitle} />,
+    <meta key="f2" property="og:type" content="podcast" />,
+    <meta key="f3" property="og:image" content={image} />,
+    <meta key="f4" property="og:url" content={episodeUrl} />,
+    <meta key="f5" property="og:description" content={metaDescription} />,
+    // Twitter
+    <meta key="t1" name="twitter:card" content={`JavaScript Air episode ${numberDisplay}`} />,
+    <meta key="t2" name="twitter:title" content={taglessTitle} />,
+    <meta key="t3" name="twitter:description" content={metaDescription} />,
+    <meta key="t4" name="twitter:image" content={image} />,
+  ]
+}
 
 function hasShowNotes(episodeData) {
   const {guests, host, panelists} = episodeData

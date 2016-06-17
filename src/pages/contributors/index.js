@@ -20,7 +20,7 @@ function ContributorsPage({
 
       <HeaderBar nextEpisode={nextEpisode} />
 
-      <div className="container contributors-page">
+      <div className={`container ${css(styles.contributorsRoot)}`}>
 
         <div>
           <h3>Financial contributors</h3>
@@ -59,6 +59,12 @@ ContributorsPage.propTypes = {
 }
 
 ContributorsPage.styles = StyleSheet.create({
+  contributorsRoot: {
+    margin: '40px auto 100px',
+    maxWidth: 1000,
+    width: '90%',
+    fontSize: 23,
+  },
   links: {
     textAlign: 'center',
     fontSize: '0.8em',

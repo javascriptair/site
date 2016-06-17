@@ -1,6 +1,5 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import striptags from 'striptags'
 import IconLink from '<components>/icon-link'
 import {displayListify, getRandomPositiveEmoji} from '<utils>/utils'
 
@@ -14,7 +13,7 @@ function TweetLink({episode}) {
   return (
     <span className={css(styles.iconContainer)}>
       <IconLink
-        className={css(styles.icon)}
+        black={true}
         href={tweetUrl}
         target="_blank"
         title="Tweet this"
@@ -37,11 +36,10 @@ TweetLink.styles = StyleSheet.create({
   },
 })
 
-function getMessage({past, titleHTML, sortedGuests, shortUrl, date}) {
-  const title = striptags(titleHTML.__html)
+function getMessage({past, taglessTitle, sortedGuests, shortUrl, date}) {
   const guestList = sortedGuests.map((guest) => guest.twitter ? `@${guest.twitter}` : guest.name)
   const message = past ?
-    `Check out "${title}" w/ ${displayListify(guestList).join('')} ${shortUrl}` :
-    `Watch "${title}" live w/ ${displayListify(guestList).join('')} on ${date} ${shortUrl}`
+    `Check out "${taglessTitle}" w/ ${displayListify(guestList).join('')} ${shortUrl}` :
+    `Watch "${taglessTitle}" live w/ ${displayListify(guestList).join('')} on ${date} ${shortUrl}`
   return message + ' ' + getRandomPositiveEmoji()
 }

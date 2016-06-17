@@ -5,4 +5,5 @@ shared/
 src/
 app/
 package.json
-
+screenshot.html
+screenshot.png.*
