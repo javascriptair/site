@@ -4,9 +4,9 @@ export default Links
 
 function Links() {
   return (
-    <ul className={css(sharedStyles.list)}>
+    <ul className={'row ' + css(sharedStyles.list)}>
       {getLinks().map((link, i) => (
-        <li key={i} className={css(sharedStyles.item)}>
+        <li key={i} className={'col-md-6 ' + css(sharedStyles.item)}>
           <a
             className={css(sharedStyles.link)}
             href={link.href}
@@ -51,6 +51,16 @@ function getLinks() {
       href: '/links-tips-picks',
       alt: 'All Links, Tips, and Picks ',
       title: 'All Links, Tips, and Picks ',
+    },
+    {
+      href: 'https://github.com/javascriptair/CODE_OF_CONDUCT',
+      alt: 'Code of Conduct',
+      title: 'Code of Conduct',
+    },
+    {
+      href: '/contributors',
+      alt: 'Site Contributors',
+      title: 'Site Contributors',
     },
   ]
 }

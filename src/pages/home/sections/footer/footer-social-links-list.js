@@ -10,11 +10,12 @@ function SocialIconGroup() {
     {href: 'https://twitter.com/JavaScriptAir', name: 'twitter', text: 'Twitter'},
     {href: 'https://plus.google.com/105493143005968326308', name: 'googlePlus', text: 'Google+'},
     {href: 'https://facebook.com/JavaScriptAir', name: 'facebook', text: 'Facebook'},
+    {href: 'https://github.com/javascriptair/site', name: 'github', text: 'GitHub'},
   ]
   return (
-    <ul className={css(sharedStyles.list)}>
+    <ul className={'row ' + css(sharedStyles.list)}>
       {itemList.map((item, index) => (
-        <li className={css(sharedStyles.item)} key={index}>
+        <li className={'col-md-6 ' + css(sharedStyles.item)} key={index}>
           <a className={css(sharedStyles.link)} href={item.href}>
             <Icon className={css(styles.icon)} name={item.name} />
             {item.text}

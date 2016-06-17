@@ -8,17 +8,12 @@ export default StyleSheet.create({
     '@media only screen and (min-width : 490px)': {
       marginBottom: 0,
     },
-    '@media only screen and (min-width : 900px)': {
-      textAlign: 'left',
-    },
   },
   item: {
     display: 'block',
     marginBottom: 10,
-    lineHeight: itemHeight,
     '@media only screen and (min-width : 490px)': {
       display: 'inline-block',
-      marginBottom: 0,
     },
   },
   link: {
