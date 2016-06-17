@@ -1,7 +1,4 @@
 import {PropTypes} from 'react'
-import deindent from 'deindent'
-import marked from 'marked'
-import striptags from 'striptags'
 import {StyleSheet, css} from 'aphrodite'
 
 import TwitterWidgetScript from '<components>/scripts/twitter-widget'
@@ -21,13 +18,12 @@ import TranscriptSection from './sections/transcript'
 export default EpisodePage
 
 function EpisodePage({episode, nextEpisode, sponsors}) {
-  const {numberDisplay, title, description, past} = episode
-  const descriptionHTMLString = marked(deindent(description))
+  const {taglessTitle, metaDescription, past} = episode
   return (
     <Page
-      title={`JavaScript Air | ${title}`}
-      description={getPageDescription(numberDisplay, descriptionHTMLString)}
-      headTags={getHeadTags(episode, descriptionHTMLString)}
+      title={`JavaScript Air | ${taglessTitle}`}
+      description={metaDescription}
+      headTags={getHeadTags(episode)}
     >
       <HeaderBar nextEpisode={nextEpisode} />
       <div className="episode-page container">
@@ -48,15 +44,6 @@ EpisodePage.propTypes = {
   episode: PropTypes.object,
   nextEpisode: PropTypes.object,
   sponsors: PropTypes.object,
-}
-
-function getPageDescription(numberDisplay, descriptionHTML) {
-  const description = descriptionHTML
-    .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
-    .replace(/\n/g, ' ')
-    .replace(/DOUBLE_NEW_LINE/g, '\n\n')
-    .trim()
-  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${striptags(description)}`
 }
 
 function PastEpisodeStuff({episodeData, sponsors}) {
@@ -157,29 +144,28 @@ FutureEpisodeStuff.styles = StyleSheet.create({
   },
 })
 
-function getHeadTags(episode, descriptionHTMLString) {
+function getHeadTags(episode) {
   /* eslint react/jsx-max-props-per-line:0 */
-  const description = getPageDescription(episode.numberDisplay, descriptionHTMLString)
-  const episodeUrl = `https://javascriptair.com${episode.page}`
+  const {metaDescription, page, numberDisplay, taglessTitle} = episode
+  const episodeUrl = `https://javascriptair.com${page}`
   const image = `${episodeUrl}/screenshot.png`
-  const title = striptags(episode.title)
   return [
     // Google
-    <meta key="g1" name="description" content={description} />,
-    <meta key="g2" name="keywords" content={title} />,
+    <meta key="g1" name="description" content={metaDescription} />,
+    <meta key="g2" name="keywords" content={taglessTitle} />,
     <meta key="g3" name="author" content="JavaScript Air" />,
     <meta key="g4" name="copyright" content={new Date().getFullYear()} />,
     <meta key="g5" name="application-name" content="JavaScript Air Podcast" />,
     // Facebook
-    <meta key="f1" property="og:title" content={title} />,
+    <meta key="f1" property="og:title" content={taglessTitle} />,
     <meta key="f2" property="og:type" content="podcast" />,
     <meta key="f3" property="og:image" content={image} />,
     <meta key="f4" property="og:url" content={episodeUrl} />,
-    <meta key="f5" property="og:description" content={description} />,
+    <meta key="f5" property="og:description" content={metaDescription} />,
     // Twitter
-    <meta key="t1" name="twitter:card" content={`JavaScript Air episode ${episode.numberDisplay}`} />,
-    <meta key="t2" name="twitter:title" content={title} />,
-    <meta key="t3" name="twitter:description" content={description} />,
+    <meta key="t1" name="twitter:card" content={`JavaScript Air episode ${numberDisplay}`} />,
+    <meta key="t2" name="twitter:title" content={taglessTitle} />,
+    <meta key="t3" name="twitter:description" content={metaDescription} />,
     <meta key="t4" name="twitter:image" content={image} />,
   ]
 }

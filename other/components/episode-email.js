@@ -1,6 +1,5 @@
 import {PropTypes} from 'react'
 import {Email, Box, Item, Image, A} from 'react-html-email'
-import striptags from 'striptags'
 
 import LinksPicksTips from './links-picks-tips'
 import ShowDescription from './show-description'
@@ -11,13 +10,13 @@ import * as utils from '<utils>/utils'
 
 const episodePropType = PropTypes.object
 const sponsorsPropType = PropTypes.object
+hijackConsole()
 
 export default EpisodeEmail
 
 function EpisodeEmail({episode, sponsors}) {
   const {
-    // date,
-    titleHTML,
+    taglessTitle,
     descriptionHTML,
     number,
     guests,
@@ -25,7 +24,6 @@ function EpisodeEmail({episode, sponsors}) {
     panelists,
     screenshot,
   } = episode
-  const title = striptags(titleHTML.__html)
   const episodePage = `https://javascriptair.com${episode.page}`
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
@@ -34,7 +32,7 @@ function EpisodeEmail({episode, sponsors}) {
 
   return (
     <Email
-      title={title}
+      title={taglessTitle}
       headCSS={headCSS}
       style={{backgroundColor: 'white'}}
     >
@@ -423,4 +421,30 @@ Spacer.propTypes = {
 
 function Line() {
   return <hr style={{marginTop: 32, marginBottom: 32}} />
+}
+
+function hijackConsole() {
+  const ignoreLogs = [
+    'in outlook:',
+    'unsupported in: outlook.',
+    'unsupported in: outlook-web.',
+    'mso-line-height-rule',
+    'border-radius` supplied to `Box` unsupported in',
+    'border-radius` supplied to `Image` unsupported in',
+    '<html> cannot appear as a child of <div>', // can't think of how to get around this :-/
+  ]
+  hijack('warn')
+  hijack('error')
+
+  function hijack(logger) {
+    const original = console[logger]
+    console[logger] = function hijackedConsole(...args) {
+      const line = args.join(' ')
+      const shouldIgnore = ignoreLogs.some(l => line.includes(l))
+      if (!shouldIgnore) {
+        return original(...args)
+      }
+      return undefined
+    }
+  }
 }

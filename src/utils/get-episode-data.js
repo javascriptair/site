@@ -1,9 +1,10 @@
 import fs from 'fs'
 import path from 'path'
+import moment from 'moment'
+import striptags from 'striptags'
 
 import {panelists} from '<resources>/panelists'
 import host from '<resources>/host'
-import moment from 'moment'
 import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../../episodes'))
@@ -62,17 +63,21 @@ function getEpisodeData(episodePath) {
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   const description = (episode.description && episode.description.trim()) || getDefaultDescription()
   const {transcript, title = 'TBA'} = episode
+  const descriptionHTML = markdownToHTML(description)
+  const titleHTML = markdownToHTML(title, true)
 
   return {
     date,
     time,
     dateDisplay,
     title,
-    titleHTML: markdownToHTML(title, true),
+    titleHTML,
+    taglessTitle: striptags(titleHTML.__html),
     description,
+    metaDescription: getMetaPageDescription(numberDisplay, descriptionHTML),
     screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
     page: `/episodes/${date}`,
-    descriptionHTML: markdownToHTML(description),
+    descriptionHTML,
     timeHTML: markdownToHTML(time, true),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
@@ -128,4 +133,13 @@ function episodeHasHappened(episodeRaw, date) {
 
 function hasNotes({links, tips, picks}) {
   return links.length + tips.length + picks.length > 0
+}
+
+function getMetaPageDescription(numberDisplay, descriptionHTML) {
+  const description = descriptionHTML.__html
+    .replace(/\n\n/g, 'DOUBLE_NEW_LINE')
+    .replace(/\n/g, ' ')
+    .replace(/DOUBLE_NEW_LINE/g, '\n\n')
+    .trim()
+  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${striptags(description)}`
 }

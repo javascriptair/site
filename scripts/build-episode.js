@@ -1,6 +1,12 @@
+import {parallel} from 'async'
 import generateEpisode from '../generate/episode'
+import generateEpisodeEmailPage from '../generate/episode-email'
 
 const path = process.argv[2]
-generateEpisode(path, () => {
+
+parallel([
+  cb => generateEpisode(path, cb),
+  cb => generateEpisodeEmailPage(path, cb),
+], () => {
   console.log(`done building ${path} 🎉`)
 })
