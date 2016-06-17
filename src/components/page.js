@@ -8,6 +8,7 @@ function Page({
   children,
   title = 'JavaScript Air',
   description = 'The live JavaScript podcast all about JavaScript and the web platform. Available on YouTube, iTunes, and an RSS audio feed',
+  headTags = [],
 } = {}) {
   /* eslint max-len:0 */
   return (
@@ -20,6 +21,7 @@ function Page({
         <meta name="theme-color" content="#efdd4f" />
         <meta name="author" content="Kent C. Dodds" />
         <meta name="description" content={striptags(description)} />
+        {headTags}
         <link
           rel="shortcut icon"
           type="image/png"

@@ -1,6 +1,7 @@
 import {PropTypes} from 'react'
 import deindent from 'deindent'
 import marked from 'marked'
+import striptags from 'striptags'
 import {StyleSheet, css} from 'aphrodite'
 
 import TwitterWidgetScript from '<components>/scripts/twitter-widget'
@@ -26,6 +27,7 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
     <Page
       title={`JavaScript Air | ${title}`}
       description={getPageDescription(numberDisplay, descriptionHTMLString)}
+      headTags={getHeadTags(episode, descriptionHTMLString)}
     >
       <HeaderBar nextEpisode={nextEpisode} />
       <div className="episode-page container">
@@ -54,7 +56,7 @@ function getPageDescription(numberDisplay, descriptionHTML) {
     .replace(/\n/g, ' ')
     .replace(/DOUBLE_NEW_LINE/g, '\n\n')
     .trim()
-  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${description}`
+  return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${striptags(description)}`
 }
 
 function PastEpisodeStuff({episodeData, sponsors}) {
@@ -154,6 +156,33 @@ FutureEpisodeStuff.styles = StyleSheet.create({
     },
   },
 })
+
+function getHeadTags(episode, descriptionHTMLString) {
+  /* eslint react/jsx-max-props-per-line:0 */
+  const description = getPageDescription(episode.numberDisplay, descriptionHTMLString)
+  const episodeUrl = `https://javascriptair.com${episode.page}`
+  const image = `${episodeUrl}/screenshot.png`
+  const title = striptags(episode.title)
+  return [
+    // Google
+    <meta key="g1" name="description" content={description} />,
+    <meta key="g2" name="keywords" content={title} />,
+    <meta key="g3" name="author" content="JavaScript Air" />,
+    <meta key="g4" name="copyright" content={new Date().getFullYear()} />,
+    <meta key="g5" name="application-name" content="JavaScript Air Podcast" />,
+    // Facebook
+    <meta key="f1" property="og:title" content={title} />,
+    <meta key="f2" property="og:type" content="podcast" />,
+    <meta key="f3" property="og:image" content={image} />,
+    <meta key="f4" property="og:url" content={episodeUrl} />,
+    <meta key="f5" property="og:description" content={description} />,
+    // Twitter
+    <meta key="t1" name="twitter:card" content={`JavaScript Air episode ${episode.numberDisplay}`} />,
+    <meta key="t2" name="twitter:title" content={title} />,
+    <meta key="t3" name="twitter:description" content={description} />,
+    <meta key="t4" name="twitter:image" content={image} />,
+  ]
+}
 
 function hasShowNotes(episodeData) {
   const {guests, host, panelists} = episodeData
