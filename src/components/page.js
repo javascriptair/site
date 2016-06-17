@@ -19,7 +19,8 @@ function Page({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />
         <meta name="theme-color" content="#efdd4f" />
-        <meta name="author" content="Kent C. Dodds" />
+        <meta name="author" content="JavaScript Air" />
+        <link rel="publisher" href="https://plus.google.com/b/105493143005968326308" />
         <meta name="description" content={striptags(description)} />
         {headTags}
         <link

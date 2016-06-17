@@ -145,8 +145,8 @@ FutureEpisodeStuff.styles = StyleSheet.create({
 })
 
 function getHeadTags(episode) {
-  /* eslint react/jsx-max-props-per-line:0 */
-  const {metaDescription, page, taglessTitle} = episode
+  /* eslint react/jsx-max-props-per-line:0, max-len:0 */
+  const {metaDescription, page, taglessTitle, date} = episode
   const episodeUrl = `https://javascriptair.com${page}`
   const image = `${episodeUrl}/screenshot.png`
   return [
@@ -158,15 +158,20 @@ function getHeadTags(episode) {
     <meta key="g5" name="application-name" content="JavaScript Air Podcast" />,
     // Facebook
     <meta key="f1" property="og:title" content={taglessTitle} />,
-    <meta key="f2" property="og:type" content="podcast" />,
+    <meta key="f2" property="og:type" content="video.episode" />,
     <meta key="f3" property="og:image" content={image} />,
     <meta key="f4" property="og:url" content={episodeUrl} />,
     <meta key="f5" property="og:description" content={metaDescription} />,
+    <meta key="f6" property="og:site_name" content="JavaScript Air" />,
+    <meta key="f7" property="video:release_date" content={date} />,
     // Twitter
-    <meta key="t1" name="twitter:card" content="summary" />,
+    <meta key="t1" name="twitter:card" content="summary_large_image" />,
     <meta key="t2" name="twitter:title" content={taglessTitle} />,
     <meta key="t3" name="twitter:description" content={metaDescription} />,
     <meta key="t4" name="twitter:image" content={image} />,
+    <meta key="t5" name="twitter:image:alt" content="JavaScript Air episode card with information about the guests, the episode description, and the episode date and time" />,
+    <meta key="t6" name="twitter:site" content="@JavaScriptAir" />,
+    <meta key="t7" name="twitter:creator" content="@JavaScriptAir" />,
   ]
 }
 
