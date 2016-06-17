@@ -14,7 +14,7 @@ function Page({
   return (
     <html lang="en">
       <head>
-        <title>{striptags(title)}</title>
+        <title dangerouslySetInnerHTML={{__html: striptags(title)}} />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="85n8ZBk_3hSeShlRmsVJXgDolakFG4UsMJgpy3mQyPs" />

@@ -146,7 +146,7 @@ FutureEpisodeStuff.styles = StyleSheet.create({
 
 function getHeadTags(episode) {
   /* eslint react/jsx-max-props-per-line:0, max-len:0 */
-  const {metaDescription, page, taglessTitle, date, youTubeId, isPast} = episode
+  const {metaDescription, page, taglessTitle, date, youTubeId, past} = episode
   const episodeUrl = `https://javascriptair.com${page}`
   const image = `${episodeUrl}/screenshot.png`
   const youTubeEmbed = `https://www.youtube.com/embed/${youTubeId}`
@@ -177,7 +177,7 @@ function getHeadTags(episode) {
     <meta key="f16" property="og:video:width" content="1280" />,
     <meta key="f17" property="og:video:height" content="720" />,
     // Twitter
-    <meta key="t1" name="twitter:card" content={isPast ? 'player' : 'summary_large_image'} />,
+    <meta key="t1" name="twitter:card" content={past ? 'player' : 'summary_large_image'} />,
     <meta key="t2" name="twitter:title" content={taglessTitle} />,
     <meta key="t3" name="twitter:description" content={metaDescription} />,
     <meta key="t4" name="twitter:image" content={image} />,

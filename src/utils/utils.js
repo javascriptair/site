@@ -81,6 +81,10 @@ function markdownToHTML(string, stripP) {
   if (stripP) {
     html = html.slice(3, -5)
   }
+  html = html
+    .replace(/\&#39;/g, `'`)
+    .replace(/\&#x27;/g, `'`)
+    .replace(/&amp;/g, '&')
   return {__html: html}
 }
 
