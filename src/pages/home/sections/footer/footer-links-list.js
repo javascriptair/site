@@ -1,10 +1,11 @@
-import {css} from 'aphrodite'
+import {StyleSheet, css} from 'aphrodite'
 import sharedStyles from './shared-styles'
 export default Links
 
 function Links() {
+  const {styles} = Links
   return (
-    <ul className={css(sharedStyles.list)}>
+    <ul className={css(sharedStyles.list, styles.linkList)}>
       {getLinks().map((link, i) => (
         <li key={i} className={css(sharedStyles.item)}>
           <a
@@ -52,5 +53,24 @@ function getLinks() {
       alt: 'All Links, Tips, and Picks ',
       title: 'All Links, Tips, and Picks ',
     },
+    {
+      href: 'https://github.com/javascriptair/CODE_OF_CONDUCT',
+      alt: 'Code of Conduct',
+      title: 'Code of Conduct',
+    },
+    {
+      href: '/contributors',
+      alt: 'Site Contributors',
+      title: 'Site Contributors',
+    },
   ]
 }
+
+Links.styles = StyleSheet.create({
+  linkList: {
+    '@media only screen and (min-width : 900px)': {
+      height: '9em',
+    },
+  },
+})
+

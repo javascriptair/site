@@ -10,9 +10,10 @@ function SocialIconGroup() {
     {href: 'https://twitter.com/JavaScriptAir', name: 'twitter', text: 'Twitter'},
     {href: 'https://plus.google.com/105493143005968326308', name: 'googlePlus', text: 'Google+'},
     {href: 'https://facebook.com/JavaScriptAir', name: 'facebook', text: 'Facebook'},
+    {href: 'https://github.com/javascriptair/site', name: 'github', text: 'GitHub'},
   ]
   return (
-    <ul className={css(sharedStyles.list)}>
+    <ul className={css(sharedStyles.list, styles.socialList)}>
       {itemList.map((item, index) => (
         <li className={css(sharedStyles.item)} key={index}>
           <a className={css(sharedStyles.link)} href={item.href}>
@@ -31,5 +32,10 @@ SocialIconGroup.styles = StyleSheet.create({
     width: 23,
     height: 23,
     marginRight: 5,
+  },
+  socialList: {
+    '@media only screen and (min-width : 900px)': {
+      height: '6em',
+    },
   },
 })

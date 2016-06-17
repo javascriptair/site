@@ -60,11 +60,15 @@ const contributors = [
     contributions: 'Site PRs',
   },
   {
+    name: 'Houssein Djirdeh',
+    twitter: 'hdjirdeh',
+    contributions: 'Site PRs',
+  },
+  {
     name: 'Jenn Turner',
     twitter: 'jennwrites',
     contributions: 'Newsletter',
   },
-  
 ].map(c => {
   return {
     imgSrc: `/data/contributors/${c.twitter}.png`,

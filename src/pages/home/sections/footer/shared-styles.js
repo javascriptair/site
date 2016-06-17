@@ -9,16 +9,15 @@ export default StyleSheet.create({
       marginBottom: 0,
     },
     '@media only screen and (min-width : 900px)': {
-      textAlign: 'left',
+      display: 'flex',
+      flexFlow: 'column wrap',
     },
   },
   item: {
     display: 'block',
     marginBottom: 10,
-    lineHeight: itemHeight,
     '@media only screen and (min-width : 490px)': {
       display: 'inline-block',
-      marginBottom: 0,
     },
   },
   link: {
