@@ -146,7 +146,7 @@ FutureEpisodeStuff.styles = StyleSheet.create({
 
 function getHeadTags(episode) {
   /* eslint react/jsx-max-props-per-line:0 */
-  const {metaDescription, page, numberDisplay, taglessTitle} = episode
+  const {metaDescription, page, taglessTitle} = episode
   const episodeUrl = `https://javascriptair.com${page}`
   const image = `${episodeUrl}/screenshot.png`
   return [
@@ -163,7 +163,7 @@ function getHeadTags(episode) {
     <meta key="f4" property="og:url" content={episodeUrl} />,
     <meta key="f5" property="og:description" content={metaDescription} />,
     // Twitter
-    <meta key="t1" name="twitter:card" content={`JavaScript Air episode ${numberDisplay}`} />,
+    <meta key="t1" name="twitter:card" content="summary" />,
     <meta key="t2" name="twitter:title" content={taglessTitle} />,
     <meta key="t3" name="twitter:description" content={metaDescription} />,
     <meta key="t4" name="twitter:image" content={image} />,
