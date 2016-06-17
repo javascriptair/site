@@ -1,4 +1,5 @@
 export default {
+  time: '11:45 AM (CT)',
   title: `On site at KCDC`,
   guests: [
     {
