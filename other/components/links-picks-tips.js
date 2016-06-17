@@ -8,17 +8,20 @@ function LinksPicksTips({linksHTML, tipsHTML, picksHTML}) {
     {label: 'Tips', notes: tipsHTML},
     {label: 'Picks', notes: picksHTML},
   ]
+  const styles = {
+    div: {
+      marginLeft: 24,
+    },
+  }
 
   return (
-    <ul>
-      <div>
-        {
-          notesSections.map((section, index) => (
-            <Notes {...section} key={index} />
-          ))
-        }
-      </div>
-    </ul>
+    <div style={styles.div}>
+      {
+        notesSections.map((section, index) => (
+          <Notes {...section} key={index} />
+        ))
+      }
+    </div>
   )
 }
 LinksPicksTips.propTypes = {
@@ -36,9 +39,12 @@ function Notes({notes, label}) {
       marginTop: 0,
       listStyle: 'disc',
     },
+    div: {
+      fontSize: 16,
+    },
   }
   return (
-    <div>
+    <div style={styles.div}>
       <strong>{label}</strong>
       <ul style={styles.ul}>
         {

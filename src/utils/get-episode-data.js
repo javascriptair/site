@@ -70,6 +70,7 @@ function getEpisodeData(episodePath) {
     title,
     titleHTML: markdownToHTML(title, true),
     description,
+    screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
     page: `/episodes/${date}`,
     descriptionHTML: markdownToHTML(description),
     timeHTML: markdownToHTML(time, true),
