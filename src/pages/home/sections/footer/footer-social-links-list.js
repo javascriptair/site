@@ -13,9 +13,9 @@ function SocialIconGroup() {
     {href: 'https://github.com/javascriptair/site', name: 'github', text: 'GitHub'},
   ]
   return (
-    <ul className={'row ' + css(sharedStyles.list)}>
+    <ul className={css(sharedStyles.list, styles.socialList)}>
       {itemList.map((item, index) => (
-        <li className={'col-md-6 ' + css(sharedStyles.item)} key={index}>
+        <li className={css(sharedStyles.item)} key={index}>
           <a className={css(sharedStyles.link)} href={item.href}>
             <Icon className={css(styles.icon)} name={item.name} />
             {item.text}
@@ -32,5 +32,10 @@ SocialIconGroup.styles = StyleSheet.create({
     width: 23,
     height: 23,
     marginRight: 5,
+  },
+  socialList: {
+    '@media only screen and (min-width : 900px)': {
+      height: '6em',
+    },
   },
 })

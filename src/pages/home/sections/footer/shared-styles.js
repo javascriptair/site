@@ -8,6 +8,10 @@ export default StyleSheet.create({
     '@media only screen and (min-width : 490px)': {
       marginBottom: 0,
     },
+    '@media only screen and (min-width : 900px)': {
+      display: 'flex',
+      flexFlow: 'column wrap',
+    },
   },
   item: {
     display: 'block',

@@ -1,12 +1,13 @@
-import {css} from 'aphrodite'
+import {StyleSheet, css} from 'aphrodite'
 import sharedStyles from './shared-styles'
 export default Links
 
 function Links() {
+  const {styles} = Links
   return (
-    <ul className={'row ' + css(sharedStyles.list)}>
+    <ul className={css(sharedStyles.list, styles.linkList)}>
       {getLinks().map((link, i) => (
-        <li key={i} className={'col-md-6 ' + css(sharedStyles.item)}>
+        <li key={i} className={css(sharedStyles.item)}>
           <a
             className={css(sharedStyles.link)}
             href={link.href}
@@ -64,3 +65,12 @@ function getLinks() {
     },
   ]
 }
+
+Links.styles = StyleSheet.create({
+  linkList: {
+    '@media only screen and (min-width : 900px)': {
+      height: '9em',
+    },
+  },
+})
+

@@ -9,13 +9,11 @@ function Footer() {
   return (
     <footer className={css(styles.footer)}>
       <div className={css(styles.container)}>
-        <div className="row">
-          <div className="col-md-6">
-            <FooterSocialLinks />
-          </div>
-          <div className="col-md-6">
-            <FooterLinks />
-          </div>
+        <div className={css(styles.column)}>
+          <FooterSocialLinks />
+        </div>
+        <div className={css(styles.column)}>
+          <FooterLinks />
         </div>
       </div>
     </footer>
@@ -33,5 +31,11 @@ Footer.styles = StyleSheet.create({
     maxWidth: '1000px',
     width: '90%',
     margin: '0 auto',
+  },
+  column: {
+    '@media only screen and (min-width : 900px)': {
+      float: 'left',
+      width: '50%',
+    },
   },
 })
