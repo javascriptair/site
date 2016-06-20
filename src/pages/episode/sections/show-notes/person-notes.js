@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToSmall, upToMedium} from '<styles>/media-queries'
 
 import Person from '<components>/person'
 
@@ -43,11 +44,14 @@ PersonNotes.propTypes = {
 PersonNotes.styles = StyleSheet.create({
   personNotes: {
     display: 'flex',
+    [upToMedium]: {
+      flexDirection: 'column',
+    },
   },
   notesContainer: {flex: 1},
   personRoot: {
     minWidth: 220,
-    '@media only screen and (max-width: 500px)': {
+    [upToSmall]: {
       minWidth: 150,
     },
   },
@@ -80,6 +84,7 @@ Notes.propTypes = {
 Notes.styles = StyleSheet.create({
   list: {
     listStyle: 'disc',
-    paddingLeft: 40,
+    padding: '10px 0px 10px 40px',
+    lineHeight: '1.2em',
   },
 })
