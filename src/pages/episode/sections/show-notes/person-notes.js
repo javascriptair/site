@@ -18,7 +18,7 @@ function PersonNotes({person}) {
   const personClassNames = {root: css(styles.personRoot)}
 
   return (
-    <div className={css(styles.personNotes)}>
+    <div className={`${css(styles.personNotes)} +space-children`}>
       <Person {...person} personClassNames={personClassNames} />
       {
         nothing ?

@@ -51,6 +51,10 @@
       margin-top: 34px;
       margin-bottom: 34px;
     }
+    .\+space-children>* {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
     hr.person-note-separator {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -71,6 +75,10 @@
     hr {
       margin-top: 70px;
       margin-bottom: 70px;
+    }
+    .\+space-children>* {
+      margin-left: 28px;
+      margin-right: 28px;
     }
     hr.person-note-separator {
       margin-top: 36px;
