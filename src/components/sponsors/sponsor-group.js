@@ -22,7 +22,7 @@ function SponsorGroup({sponsors, title}) {
       {
         chunkedSponsors.map((rowSponsors, index) => {
           return (
-            <div className={`${css(styles.group)} +space-children`} key={index}>
+            <div className={css(styles.group)} key={index}>
               {rowSponsors.map((s, i) => <Sponsor key={i} {...s} />)}
             </div>
           )
