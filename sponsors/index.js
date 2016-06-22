@@ -86,7 +86,7 @@ const sponsors = {
       link: 'http://jsair.io/trading-technologies',
       tagline: `Building For What's Next`,
       startDate: '2016-03-22',
-      endDate: '2016-06-22',
+      endDate: '2016-09-22',
     },
     {
       imgSrc: '/sponsors/sparkpost.png',
