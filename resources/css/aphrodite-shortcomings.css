@@ -46,6 +46,7 @@ strong {font-weight: bold;}
     margin-bottom: 40px;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .container {
     h1 {
@@ -63,6 +64,7 @@ strong {font-weight: bold;}
     }
   }
 }
+
 @media only screen and (min-width: 768px) {
   .container {
     h1 {
