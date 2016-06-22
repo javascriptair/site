@@ -18,6 +18,7 @@ import TranscriptSection from './sections/transcript'
 export default EpisodePage
 
 function EpisodePage({episode, nextEpisode, sponsors}) {
+  const {styles} = EpisodePage
   const {taglessTitle, metaDescription, past} = episode
   return (
     <Page
@@ -26,7 +27,7 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
       headTags={getHeadTags(episode)}
     >
       <HeaderBar nextEpisode={nextEpisode} />
-      <div className="episode-page container">
+      <div className={`${css(styles.episodePage)} container`}>
         <Header
           episode={episode}
         />
@@ -45,6 +46,14 @@ EpisodePage.propTypes = {
   nextEpisode: PropTypes.object,
   sponsors: PropTypes.object,
 }
+
+EpisodePage.styles = StyleSheet.create({
+  episodePage: {
+    margin: '40px auto 100px',
+    maxWidth: 1000,
+    width: '90%',
+  },
+})
 
 function PastEpisodeStuff({episodeData, sponsors}) {
   const {podbeanId, youTubeId, transcriptHTML} = episodeData

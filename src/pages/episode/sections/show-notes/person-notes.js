@@ -18,7 +18,7 @@ function PersonNotes({person}) {
   const personClassNames = {root: css(styles.personRoot)}
 
   return (
-    <div className={`${css(styles.personNotes)} +space-children`}>
+    <div className={css(styles.personNotes)}>
       <Person {...person} personClassNames={personClassNames} />
       {
         nothing ?
@@ -48,7 +48,17 @@ PersonNotes.styles = StyleSheet.create({
       flexDirection: 'column',
     },
   },
-  notesContainer: {flex: 1},
+  notesContainer: {
+    flex: 1,
+    '@media only screen and (max-width: 767px)': {
+      marginLeft: '10',
+      marginRight: '10',
+    },
+    '@media only screen and (min-width: 768px)': {
+      marginLeft: '28',
+      marginRight: '28',
+    },
+  },
   personRoot: {
     minWidth: 220,
     [upToSmall]: {
