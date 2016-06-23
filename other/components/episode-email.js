@@ -55,7 +55,7 @@ function EpisodeEmail({episode, sponsors}) {
           <ShowNotes people={showAttendees} />
         </Clear>
         <Line />
-        <ShowDescription />
+        <ShowDescriptionSection />
         <Spacer />
       </Item>
     </Email>
@@ -123,7 +123,7 @@ function Banner({page}) {
           </div>
         </Item>
       </Box>
-      <Logo />
+      <BannerLogo />
     </Item>
   )
 }
@@ -131,7 +131,7 @@ Banner.propTypes = {
   page: PropTypes.string.isRequired,
 }
 
-function Logo() {
+function BannerLogo() {
   return (
     <A href="https://javascriptair.com">
       <Image
@@ -392,6 +392,42 @@ function ShowNotes({people}) {
 }
 ShowNotes.propTypes = {
   people: PropTypes.arrayOf(personPropType),
+}
+
+function ShowDescriptionSection() {
+  const styles = {
+    box: {
+      width: '100%',
+    },
+    descriptionTD: {
+      lineHeight: '150%',
+    },
+    imageTD: {
+      verticalAlign: 'top',
+    },
+    img: {
+      marginLeft: 'auto',
+      paddingLeft: 72,
+    },
+  }
+  return (
+    <Box style={styles.box}>
+      <tr>
+        <td style={styles.descriptionTD}>
+          <ShowDescription />
+        </td>
+        <td style={styles.imageTD}>
+          <Image
+            width={128}
+            height={128}
+            style={styles.img}
+            src="https://javascriptair.com/resources/logo.png"
+            alt="JavaScript Air square logo"
+          />
+        </td>
+      </tr>
+    </Box>
+  )
 }
 
 function Clear({children}) {
