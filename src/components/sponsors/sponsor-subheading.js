@@ -16,6 +16,7 @@ SponsorSubheading.propTypes = {
 
 SponsorSubheading.styles = StyleSheet.create({
   subheading: {
+    fontWeight: 'normal',
     fontSize: '1.6em',
     lineHeight: 1.3,
     '@media only screen and (max-width: 530px)': {

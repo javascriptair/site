@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToMediumBig, atLeastMediumBig} from '<styles>/media-queries'
 
 import PersonNotes from './person-notes'
 import {sortPeople, intersperse} from '<utils>/utils'
@@ -7,6 +8,7 @@ import {sortPeople, intersperse} from '<utils>/utils'
 export default ShowNotes
 
 function ShowNotes({episode}) {
+  const {styles} = ShowNotes
   const {guests, panelists, host, hideShowNotes} = episode
   const panelistsAndHost = sortPeople([...panelists, host])
   const showAttendees = [...sortPeople(guests), ...panelistsAndHost]
@@ -15,7 +17,7 @@ function ShowNotes({episode}) {
   }
   return (
     <section id="show-notes">
-      <h3 className="+margin-bottom-large">Links, Tips, and Picks</h3>
+      <h3 className={css(styles.headerSpacing)}>Links, Tips, and Picks</h3>
       <div className="show-notes">
         <PeopleNotes people={showAttendees} />
       </div>
@@ -26,6 +28,12 @@ function ShowNotes({episode}) {
 ShowNotes.propTypes = {
   episode: PropTypes.object.isRequired,
 }
+
+ShowNotes.styles = StyleSheet.create({
+  headerSpacing: {
+    marginBottom: 40,
+  },
+})
 
 function PeopleNotes({people = []}) {
   const {styles} = PeopleNotes
@@ -47,11 +55,11 @@ PeopleNotes.propTypes = {
 PeopleNotes.styles = StyleSheet.create({
   noteSeparator: {
     width: '90%',
-    '@media only screen and (max-width: 767px)': {
+    [upToMediumBig]: {
       marginTop: 20,
       marginBottom: 20,
     },
-    '@media only screen and (min-width: 768px)': {
+    [atLeastMediumBig]: {
       marginTop: 36,
       marginBottom: 36,
     },

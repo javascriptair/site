@@ -19,9 +19,7 @@ function Hero() {
         <div className={css(styles.social)}>
           <div className={css(styles.socialDecor)}></div>
           <div className={css(styles.socialBottom)}>
-            <div className={css(styles.socialTitle)}>
-              <h2>Available On</h2>
-            </div>
+              <h2 className={css(styles.socialTitle)}>Available On</h2>
             <SubscribeIconGroupSection />
           </div>
         </div>

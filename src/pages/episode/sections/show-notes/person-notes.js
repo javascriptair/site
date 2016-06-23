@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import {upToSmall, upToMedium} from '<styles>/media-queries'
+import {upToSmall, upToMedium, upToMediumBig, atLeastMediumBig} from '<styles>/media-queries'
 
 import Person from '<components>/person'
 
@@ -50,11 +50,11 @@ PersonNotes.styles = StyleSheet.create({
   },
   notesContainer: {
     flex: 1,
-    '@media only screen and (max-width: 767px)': {
+    [upToMediumBig]: {
       marginLeft: '10',
       marginRight: '10',
     },
-    '@media only screen and (min-width: 768px)': {
+    [atLeastMediumBig]: {
       marginLeft: '28',
       marginRight: '28',
     },

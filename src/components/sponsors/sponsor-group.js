@@ -17,7 +17,7 @@ function SponsorGroup({sponsors, title}) {
   const chunkedSponsors = chunk(sponsors, rows)
   return (
     <div>
-      <hr />
+      <hr className={css(styles.sectionDivider)} />
       <SponsorSubheading title={title} />
       {
         chunkedSponsors.map((rowSponsors, index) => {
@@ -39,4 +39,9 @@ SponsorGroup.propTypes = {
 
 SponsorGroup.styles = StyleSheet.create({
   group: {display: 'flex'},
+  sectionDivider: {
+    borderTop: '1px solid #9A9A9A',
+    marginTop: 30,
+    marginBottom: 30,
+  },
 })

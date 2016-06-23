@@ -27,7 +27,7 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
       headTags={getHeadTags(episode)}
     >
       <HeaderBar nextEpisode={nextEpisode} />
-      <div className={`${css(styles.episodePage)} container`}>
+      <div className={css(styles.episodePage)}>
         <Header
           episode={episode}
         />
@@ -99,7 +99,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
         youTubeId ? (
           <div>
             <hr />
-            <div className="+margin-bottom-large">
+            <div className={css(styles.sectionSpacing)}>
               <VideoSection
                 youTubeId={youTubeId}
                 hangoutUrl={hangoutUrl}
@@ -150,6 +150,9 @@ FutureEpisodeStuff.styles = StyleSheet.create({
     '@media only screen and (min-width: 803px)': {
       display: 'flex',
     },
+  },
+  sectionSpacing: {
+    marginBottom: 40,
   },
 })
 

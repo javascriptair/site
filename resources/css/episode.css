@@ -158,21 +158,30 @@
     clear: both;
 
     &--heading {
-      font-weight: bold;
+      text-align: center;
       text-align: center;
       text-transform: uppercase;
-
-      color: #4a4a4a;
       padding: 10px;
+
+      h3 {
+        margin-top: 0px;
+        margin-bottom: 0px; 
+        font-weight: bold;
+        color: #4a4a4a;
+      }
     }
 
     &--month {
-      font-size: 1.5em;
+      h3 {
+        font-size: 1.5em;
+      }
     }
 
     &--time {
-      letter-spacing: 0.06em;
-      font-size: 1.15em;
+      h3 {
+        letter-spacing: 0.06em;
+        font-size: 1.15em;
+      }
     }
 
     &--dates {
