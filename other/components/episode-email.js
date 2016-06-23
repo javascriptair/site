@@ -55,7 +55,16 @@ function EpisodeEmail({episode, sponsors}) {
           <ShowNotes people={showAttendees} />
         </Clear>
         <Line />
-        <ShowDescription />
+        <Clear>
+          <ShowDescriptionSection />
+        </Clear>
+        <Spacer />
+        <Clear>
+          <Black>
+            <Footer />
+            <LegalText />
+          </Black>
+        </Clear>
         <Spacer />
       </Item>
     </Email>
@@ -123,7 +132,7 @@ function Banner({page}) {
           </div>
         </Item>
       </Box>
-      <Logo />
+      <BannerLogo />
     </Item>
   )
 }
@@ -131,7 +140,7 @@ Banner.propTypes = {
   page: PropTypes.string.isRequired,
 }
 
-function Logo() {
+function BannerLogo() {
   return (
     <A href="https://javascriptair.com">
       <Image
@@ -392,6 +401,123 @@ function ShowNotes({people}) {
 }
 ShowNotes.propTypes = {
   people: PropTypes.arrayOf(personPropType),
+}
+
+function ShowDescriptionSection() {
+  const styles = {
+    box: {
+      width: '100%',
+    },
+    descriptionTD: {
+      lineHeight: '150%',
+    },
+    imageTD: {
+      verticalAlign: 'top',
+    },
+    img: {
+      marginLeft: 'auto',
+      paddingLeft: 72,
+    },
+  }
+  return (
+    <Box style={styles.box}>
+      <tr>
+        <td style={styles.descriptionTD}>
+          <ShowDescription />
+        </td>
+        <td style={styles.imageTD}>
+          <Image
+            width={128}
+            height={128}
+            style={styles.img}
+            src="https://javascriptair.com/resources/logo.png"
+            alt="JavaScript Air square logo"
+          />
+        </td>
+      </tr>
+    </Box>
+  )
+}
+
+function Black({children}) { // eslint-disable-line react/prop-types
+  const styles = {
+    box: {
+      backgroundColor: 'black',
+      color: 'white',
+      width: '100%',
+    },
+  }
+  return (
+    <Box style={styles.box}><Item>{children}</Item></Box>
+  )
+}
+
+function Footer() {
+  const styles = {
+    box: {
+      width: '100%',
+      textAlign: 'center',
+      height: 100,
+    },
+    image: {
+      display: 'inline',
+      outline: 'none',
+      border: 'none',
+      textDecoration: 'none',
+    },
+  }
+  const icons = [
+    {name: 'twitter', link: 'https://twitter.com/javascriptair'},
+    {name: 'youtube', link: 'http://video.javascriptair.com'},
+    {name: 'link', link: 'https://javascriptair.com'},
+    {name: 'rss2', link: 'http://audio.javascriptair.com'},
+    {name: 'google-plus', link: 'https://plus.google.com/+JavaScriptAir'},
+    {name: 'facebook', link: 'https://facebook.com/javascriptair'},
+    {name: 'github', link: 'https://github.com/javascriptair'},
+  ]
+  return (
+    <Box style={styles.box}>
+      <tr>
+        {icons.map((icon, index) => (
+          <td key={index}>
+            <SocialIcon {...icon} />
+          </td>
+        ))}
+      </tr>
+    </Box>
+  )
+
+  function SocialIcon({name, link}) { // eslint-disable-line react/prop-types
+    return (
+      <A href={link}>
+        <img
+          style={styles.image}
+          width={24}
+          height={24}
+          alt={`${name} icon`}
+          src={`https://javascriptair.com/resources/images/email/${name}.png`}
+        />
+      </A>
+    )
+  }
+}
+
+function LegalText() {
+  const styles = {
+    box: {
+      textAlign: 'center',
+      width: '100%',
+      fontSize: '0.6em',
+      height: 30,
+    },
+  }
+  return (
+    <Box style={styles.box}>
+      <Item>
+        JavaScript Air · P.O. Box 562 · American Fork, UT 84003 · USA
+      </Item>
+    </Box>
+  )
 }
 
 function Clear({children}) {
