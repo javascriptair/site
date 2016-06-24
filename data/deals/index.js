@@ -88,6 +88,19 @@ const deals = [
       heavyweights and the finest talent that London has to offer.
     `,
   },
+  {
+    imgSrc: '/data/deals/sentry.png',
+    organization: 'Sentry',
+    tagline: 'Cross-platform crash-reporting',
+    link: 'http://jsair.io/sentry-deal',
+    deal: `
+      Use the code **javascriptair**
+    `,
+    expires: '',
+    description: `
+      The web's check engine light. Sentry provides real-time crash reporting for your web apps, mobile apps, and games.
+    `,
+  },
 ]
 
 const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())

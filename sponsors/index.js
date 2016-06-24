@@ -96,6 +96,14 @@ const sponsors = {
       startDate: '2016-04-05',
       endDate: '2016-04-19',
     },
+    {
+      imgSrc: '/sponsors/sentry.png',
+      name: 'Sentry',
+      link: 'http://jsair.io/sentry',
+      tagline: `Cross-platform crash-reporting`,
+      startDate: '2016-06-24',
+      endDate: '2016-09-24',
+    },
   ],
   appreciationSponsors: [
     {
