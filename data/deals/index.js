@@ -94,11 +94,14 @@ const deals = [
     tagline: 'Cross-platform crash-reporting',
     link: 'http://jsair.io/sentry-deal',
     deal: `
-      Use the code **javascriptair**
+      Use the code **javascriptair** for $50 credit on a new Sentry account.
     `,
     expires: '',
     description: `
-      The web's check engine light. Sentry provides real-time crash reporting for your web apps, mobile apps, and games.
+      Users experience way more errors than they report. When they do report errors, they tell you about the
+      experience, not the cause. Sentry’s error tracking shows you every crash in your stack as it happens, with the
+      details needed to reproduce and fix each issue, information your support team can use to reach out to and help
+      affected users, and tools that let users send you feedback for peace of mind.
     `,
   },
 ]
