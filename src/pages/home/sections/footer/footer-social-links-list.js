@@ -9,6 +9,7 @@ function SocialIconGroup() {
   const itemList = [
     {href: 'https://twitter.com/JavaScriptAir', name: 'twitter', text: 'Twitter'},
     {href: 'https://plus.google.com/105493143005968326308', name: 'googlePlus', text: 'Google+'},
+    {href: 'mailto:javascriptair+website@gmail.com', name: 'contactus', text: 'Contact us'},
     {href: 'https://facebook.com/JavaScriptAir', name: 'facebook', text: 'Facebook'},
     {href: 'https://github.com/javascriptair/site', name: 'github', text: 'GitHub'},
   ]
@@ -35,7 +36,7 @@ SocialIconGroup.styles = StyleSheet.create({
   },
   socialList: {
     '@media only screen and (min-width : 900px)': {
-      height: '6em',
+      height: '8em',
     },
   },
 })

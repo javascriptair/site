@@ -29,11 +29,6 @@ function getLinks() {
       title: 'Suggest Episodes',
     },
     {
-      href: 'mailto:javascriptair+website@gmail.com',
-      alt: 'Email JavaScript Air',
-      title: 'Contact us',
-    },
-    {
       href: '/guests',
       alt: 'Guests',
       title: 'All Show Guests',
