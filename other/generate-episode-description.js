@@ -77,7 +77,7 @@ function EpisodeDescription({episode, sponsors}) {
       <div>
         <strong>Links, Picks, and Tips:</strong>
         {
-          showAttendees.map((a, i) => <LinksPicksTips key={i} person={a} />)
+          showAttendees.map((a, i) => <LinksPicksTips key={i} {...a} />)
         }
       </div>
 
