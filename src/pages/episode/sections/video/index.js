@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
 import RSVPIcon from '<components>/rsvp-icon'
 
 import VideoPlayer from './video-player'
@@ -6,9 +7,10 @@ import VideoPlayer from './video-player'
 export default VideoSection
 
 function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
+  const {styles} = VideoSection
   return (
     <section id="video">
-      <h3 className="+margin-bottom-large">
+      <h3 className={css(styles.headerSpacing)}>
         {label + ' '}
         {hangoutUrl ? <Rsvp hangoutUrl={hangoutUrl} /> : ''}
       </h3>
@@ -24,6 +26,12 @@ VideoSection.propTypes = {
   hangoutUrl: PropTypes.string,
   label: PropTypes.string,
 }
+
+VideoSection.styles = StyleSheet.create({
+  headerSpacing: {
+    marginBottom: 40,
+  },
+})
 
 function Rsvp({hangoutUrl}) {
   if (!hangoutUrl) {

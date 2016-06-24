@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {sponsorDividerColor} from '<styles>/variables'
 import {chunk} from 'lodash'
 import SponsorSubheading from './sponsor-subheading'
 
@@ -17,7 +18,7 @@ function SponsorGroup({sponsors, title}) {
   const chunkedSponsors = chunk(sponsors, rows)
   return (
     <div>
-      <hr />
+      <hr className={css(styles.sectionDivider)} />
       <SponsorSubheading title={title} />
       {
         chunkedSponsors.map((rowSponsors, index) => {
@@ -39,4 +40,9 @@ SponsorGroup.propTypes = {
 
 SponsorGroup.styles = StyleSheet.create({
   group: {display: 'flex'},
+  sectionDivider: {
+    borderColor: sponsorDividerColor,
+    marginTop: 30,
+    marginBottom: 30,
+  },
 })

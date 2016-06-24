@@ -14,7 +14,7 @@ function LinksTipsPicks({nextEpisode, episodes}) {
       title="JavaScript Air links tips and picks"
     >
       <HeaderBar nextEpisode={nextEpisode} />
-      <div className={`container ${css(styles.linksTipsPicksRoot)}`}>
+      <div className={css(styles.linksTipsPicksRoot)}>
         {episodes.filter(e => e.past).map(e =>{
           return (
             <div key={e.number} className={css(styles.episode)}>

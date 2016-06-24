@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import {upToSmall, upToMedium} from '<styles>/media-queries'
+import {upToSmall, upToMedium, upToMediumBig, atLeastMediumBig} from '<styles>/media-queries'
 
 import Person from '<components>/person'
 
@@ -18,7 +18,7 @@ function PersonNotes({person}) {
   const personClassNames = {root: css(styles.personRoot)}
 
   return (
-    <div className={`${css(styles.personNotes)} +space-children`}>
+    <div className={css(styles.personNotes)}>
       <Person {...person} personClassNames={personClassNames} />
       {
         nothing ?
@@ -48,7 +48,17 @@ PersonNotes.styles = StyleSheet.create({
       flexDirection: 'column',
     },
   },
-  notesContainer: {flex: 1},
+  notesContainer: {
+    flex: 1,
+    [upToMediumBig]: {
+      marginLeft: '10',
+      marginRight: '10',
+    },
+    [atLeastMediumBig]: {
+      marginLeft: '28',
+      marginRight: '28',
+    },
+  },
   personRoot: {
     minWidth: 220,
     [upToSmall]: {

@@ -17,7 +17,7 @@ function Guests({guests}) {
     <Page
       title="JavaScript Air show guests"
     >
-      <div className={`container ${css(styles.guestsPageRoot)}`}>
+      <div className={css(styles.guestsPageRoot)}>
         <header className={css(styles.header)}>
           <h1 className={css(styles.title)}>
             <a href="/" alt="home">JavaScript Air</a>

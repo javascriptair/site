@@ -12,7 +12,7 @@ function DealsPage({deals}) {
     <Page
       title="JavaScript Air Deals"
     >
-      <div className={`container ${css(styles.dealsPageRoot)}`}>
+      <div className={css(styles.dealsPageRoot)}>
         <header className={css(styles.header)}>
           <h1>
             <a href="/deals" alt="home">JavaScript Air Deals</a>

@@ -1,10 +1,14 @@
 import {PropTypes} from 'react'
+import {StyleSheet, css} from 'aphrodite'
+import {upToMediumBig, atLeastMediumBig} from '<styles>/media-queries'
+
 import PersonNotes from './person-notes'
 import {sortPeople, intersperse} from '<utils>/utils'
 
 export default ShowNotes
 
 function ShowNotes({episode}) {
+  const {styles} = ShowNotes
   const {guests, panelists, host, hideShowNotes} = episode
   const panelistsAndHost = sortPeople([...panelists, host])
   const showAttendees = [...sortPeople(guests), ...panelistsAndHost]
@@ -13,7 +17,7 @@ function ShowNotes({episode}) {
   }
   return (
     <section id="show-notes">
-      <h3 className="+margin-bottom-large">Links, Tips, and Picks</h3>
+      <h3 className={css(styles.headerSpacing)}>Links, Tips, and Picks</h3>
       <div className="show-notes">
         <PeopleNotes people={showAttendees} />
       </div>
@@ -25,13 +29,20 @@ ShowNotes.propTypes = {
   episode: PropTypes.object.isRequired,
 }
 
+ShowNotes.styles = StyleSheet.create({
+  headerSpacing: {
+    marginBottom: 40,
+  },
+})
+
 function PeopleNotes({people = []}) {
+  const {styles} = PeopleNotes
   return (
     <div>
       {
         intersperse(people.map((person, index) => (
           <PersonNotes person={person} key={index} />
-        )), (p, i) => <hr key={`hr${i}`} className="person-note-separator" />)
+        )), (p, i) => <hr key={`hr${i}`} className={css(styles.noteSeparator)} />)
       }
     </div>
   )
@@ -40,3 +51,17 @@ function PeopleNotes({people = []}) {
 PeopleNotes.propTypes = {
   people: PropTypes.array,
 }
+
+PeopleNotes.styles = StyleSheet.create({
+  noteSeparator: {
+    width: '90%',
+    [upToMediumBig]: {
+      marginTop: 20,
+      marginBottom: 20,
+    },
+    [atLeastMediumBig]: {
+      marginTop: 36,
+      marginBottom: 36,
+    },
+  },
+})

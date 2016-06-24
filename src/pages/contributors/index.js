@@ -20,7 +20,7 @@ function ContributorsPage({
 
       <HeaderBar nextEpisode={nextEpisode} />
 
-      <div className={`container ${css(styles.contributorsRoot)}`}>
+      <div className={css(styles.contributorsRoot)}>
 
         <div>
           <h3>Financial contributors</h3>
