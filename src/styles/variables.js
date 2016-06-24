@@ -1,3 +1,4 @@
 const linkColor = '#155674'
 const linkHoverColor = '#318cb7'
-export {linkColor, linkHoverColor}
+const sponsorDividerColor = '#9A9A9A'
+export {linkColor, linkHoverColor, sponsorDividerColor}
