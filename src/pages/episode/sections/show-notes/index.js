@@ -16,7 +16,7 @@ function ShowNotes({episode}) {
     return <noscript />
   }
   return (
-    <section className={css(styles.showNotes)}>
+    <section id="show-notes" className={css(styles.showNotes)}>
       <h3 className={css(styles.headerSpacing)}>Links, Tips, and Picks</h3>
       <div>
         <PeopleNotes people={showAttendees} />
