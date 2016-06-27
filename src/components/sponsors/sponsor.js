@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToMediumBig} from '<styles>/media-queries'
 
 export default Sponsor
 
@@ -45,7 +46,7 @@ Sponsor.styles = StyleSheet.create({
   },
   logo: {
     marginBottom: 10,
-    '@media only screen and (max-width : 500px)': {
+    [upToMediumBig]: {
       width: '100%',
       maxWidth: 120,
     },

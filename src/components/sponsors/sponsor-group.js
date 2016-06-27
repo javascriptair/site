@@ -1,5 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToSmall} from '<styles>/media-queries'
+
 import {sponsorDividerColor} from '<styles>/variables'
 import {chunk} from 'lodash'
 import SponsorSubheading from './sponsor-subheading'
@@ -39,7 +41,12 @@ SponsorGroup.propTypes = {
 }
 
 SponsorGroup.styles = StyleSheet.create({
-  group: {display: 'flex'},
+  group: {
+    display: 'flex',
+    [upToSmall]: {
+      flexDirection: 'column',
+    },
+  },
   sectionDivider: {
     borderColor: sponsorDividerColor,
     marginTop: 30,

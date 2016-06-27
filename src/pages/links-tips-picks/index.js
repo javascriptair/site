@@ -40,7 +40,6 @@ LinksTipsPicks.styles = StyleSheet.create({
     margin: '40px auto 100px',
     maxWidth: 1000,
     width: '90%',
-    fontSize: 23,
   },
   episode: {
     marginBottom: '20px',

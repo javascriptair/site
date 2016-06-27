@@ -16,9 +16,9 @@ function ShowNotes({episode}) {
     return <noscript />
   }
   return (
-    <section id="show-notes">
+    <section className={css(styles.showNotes)}>
       <h3 className={css(styles.headerSpacing)}>Links, Tips, and Picks</h3>
-      <div className="show-notes">
+      <div>
         <PeopleNotes people={showAttendees} />
       </div>
     </section>
@@ -32,6 +32,9 @@ ShowNotes.propTypes = {
 ShowNotes.styles = StyleSheet.create({
   headerSpacing: {
     marginBottom: 40,
+  },
+  showNotes: {
+    fontSize: 23,
   },
 })
 

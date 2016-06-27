@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToSmall} from '<styles>/media-queries'
 
 export default SponsorSubheading
 
@@ -19,7 +20,7 @@ SponsorSubheading.styles = StyleSheet.create({
     fontWeight: 'normal',
     fontSize: '1.6em',
     lineHeight: 1.3,
-    '@media only screen and (max-width: 530px)': {
+    [upToSmall]: {
       textAlign: 'center',
     },
   },
