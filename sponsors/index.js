@@ -1,6 +1,6 @@
 import moment from 'moment'
 import {sortBy} from 'lodash'
-import {isPast} from '<utils>/utils'
+import {isPast, isToday} from '<utils>/utils'
 
 const sponsors = {
   premierSponsors: [
@@ -97,6 +97,14 @@ const sponsors = {
       endDate: '2016-04-19',
     },
     {
+      imgSrc: '/sponsors/reactjs-program.png',
+      name: 'SparkPost',
+      link: 'http://jsair.io/reactjs-program',
+      tagline: `Master the React.js Ecosystem`,
+      startDate: '2016-06-27',
+      endDate: '2016-09-27',
+    },
+    {
       imgSrc: '/sponsors/sentry.png',
       name: 'Sentry',
       link: 'http://jsair.io/sentry',
@@ -148,7 +156,7 @@ function getSponsorFilter(date) {
   const momentDate = moment(date)
   return function filter(sponsor) {
     const {startDate, endDate} = sponsor
-    const sponsorshipHasBegun = isPast(startDate, momentDate)
+    const sponsorshipHasBegun = isPast(startDate, momentDate) || isToday(startDate)
     const sponsorshipHasEnded = endDate && isPast(endDate, momentDate)
     return sponsorshipHasBegun && !sponsorshipHasEnded
   }
