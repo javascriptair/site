@@ -58,7 +58,7 @@ EpisodePage.styles = StyleSheet.create({
 function PastEpisodeStuff({episodeData, sponsors}) {
   const {podbeanId, youTubeId, transcriptHTML} = episodeData
   return (
-    <div style={{fontSize: 23}}>
+    <div>
       {
         podbeanId ? (
           <div>

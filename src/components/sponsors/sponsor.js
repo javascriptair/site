@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {upToMediumBig, atLeastMediumBig} from '<styles>/media-queries'
 
 export default Sponsor
 
@@ -39,13 +40,17 @@ Sponsor.styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     padding: '20px 0',
+    fontSize: 23,
+    [upToMediumBig]: {
+      fontSize: 19,
+    },
     ':hover': {
       backgroundColor: '#E8E8E8',
     },
   },
   logo: {
     marginBottom: 10,
-    '@media only screen and (max-width : 500px)': {
+    [upToMediumBig]: {
       width: '100%',
       maxWidth: 120,
     },
@@ -57,5 +62,10 @@ Sponsor.styles = StyleSheet.create({
     borderBottom: '2px black solid',
     lineHeight: '1.2em',
   },
-  tagline: {textAlign: 'center'},
+  tagline: {
+    textAlign: 'center',
+    [atLeastMediumBig]: {
+      paddingTop: 10,
+    },
+  },
 })
