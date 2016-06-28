@@ -98,7 +98,7 @@ const sponsors = {
     },
     {
       imgSrc: '/sponsors/reactjs-program.png',
-      name: 'SparkPost',
+      name: 'React.js Program',
       link: 'http://jsair.io/reactjs-program',
       tagline: `Master the React.js Ecosystem`,
       startDate: '2016-06-27',
