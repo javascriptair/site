@@ -8,7 +8,7 @@ function StartServiceWorker() {
 
 function runScript() {
   /* eslint no-console:0 */
-  if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator && location.host.indexOf('localhost') === -1) {
     navigator.serviceWorker.register('/service-worker.js').then(function onRegister(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope)
