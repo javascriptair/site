@@ -33,7 +33,7 @@ export default {
     },
   ],
   description: `
-     The Deque Labs team is doing some really cool stuff for automated accessibility testing, bringing their years of accessibility expertise to mainstream web developers. The open source axe-core framework, written entirely in JavaScript, supports a bunch of integrations: Webdriver JS, Grunt and Gulp plugins, Chrome and Firefox extensions, and more. Get the low-down on how to integrate accessibility testing into your workflow with the core team from Deque. (pronounced Dee-Cue)
+     The Deque Labs team is doing some really cool stuff for automated accessibility testing, bringing their years of accessibility expertise to mainstream web developers. The open source axe-core framework, written entirely in JavaScript, supports a bunch of integrations: unit testing, Selenium Webdriver, Chrome and Firefox extensions, Grunt, React and more. Get the low-down on how to integrate accessibility testing into your workflow with the core team from Deque.
   `,
   hangoutId: 'c86bqmgr1bk53qec2b4qqfui8u0',
   youTubeId: 'KSUBrO48k5M',
