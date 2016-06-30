@@ -115,7 +115,7 @@ Navigation.styles = StyleSheet.create({
   },
 })
 
-function HeaderBar({isEpisode, nextEpisode}) {
+function HeaderBar({isEpisode, nextEpisode, showEpisodeBox}) {
   const {styles} = HeaderBar
   return (
     <div className={css(styles.headerBar)}>
@@ -132,10 +132,14 @@ function HeaderBar({isEpisode, nextEpisode}) {
             </h1>
           </a>
         </div>
-        <EpisodeBox
-          isEpisode={isEpisode}
-          nextEpisode={nextEpisode}
-        />
+        {
+          showEpisodeBox ? (
+            <EpisodeBox
+              isEpisode={isEpisode}
+              nextEpisode={nextEpisode}
+            />
+          ) : ''
+        }
       </div>
       <Navigation />
     </div>
@@ -143,6 +147,7 @@ function HeaderBar({isEpisode, nextEpisode}) {
 }
 
 HeaderBar.propTypes = {
+  showEpisodeBox: PropTypes.bool,
   isEpisode: PropTypes.bool,
   nextEpisode: nextEpisodePropTypes,
 }
