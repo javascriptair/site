@@ -79,6 +79,11 @@ const contributors = [
     twitter: 'anthwinter',
     contributions: 'CSS Refactor',
   },
+  {
+    name: 'Kurtis Kemple',
+    twitter: 'kurtiskemple',
+    contributions: 'Site PRs',
+  },
 ].map(c => {
   return {
     imgSrc: `/data/contributors/${c.twitter}.png`,

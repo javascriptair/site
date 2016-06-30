@@ -20,13 +20,14 @@ export default EpisodePage
 function EpisodePage({episode, nextEpisode, sponsors}) {
   const {styles} = EpisodePage
   const {taglessTitle, metaDescription, past} = episode
+  const showEpisodeBox = episode.number !== nextEpisode.number
   return (
     <Page
       title={`JavaScript Air | ${taglessTitle}`}
       description={metaDescription}
       headTags={getHeadTags(episode)}
     >
-      <HeaderBar nextEpisode={nextEpisode} />
+      <HeaderBar nextEpisode={nextEpisode} showEpisodeBox={showEpisodeBox} />
       <div className={css(styles.episodePage)}>
         <Header
           episode={episode}
