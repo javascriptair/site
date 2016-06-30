@@ -11,7 +11,6 @@ import inquirer from 'inquirer'
 
 import LinksPicksTips from './components/links-picks-tips'
 import ShowDescription from './components/show-description'
-import People from './components/people'
 
 inquirer.prompt([
   episodeList,
@@ -42,6 +41,7 @@ function EpisodeDescription({episode, sponsors}) {
     guests,
     host,
     panelists,
+    screenshot,
   } = episode
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
@@ -51,6 +51,7 @@ function EpisodeDescription({episode, sponsors}) {
       <div>
         <Title
           date={date}
+          screenshot={screenshot}
           titleHTML={titleHTML}
           guests={guests}
         />
@@ -92,12 +93,43 @@ function EpisodeDescription({episode, sponsors}) {
   )
 }
 
-function Title({date, titleHTML, guests}) {
+function Title({date, screenshot, titleHTML, guests}) {
+  return (
+    <div>
+      <h1>
+        <a href={`http://javascriptair.com/episodes/${date}`} dangerouslySetInnerHTML={titleHTML} />
+        {' with '}
+        <People people={guests} />
+      </h1>
+      <div>
+        <img
+          src={screenshot}
+          style={{maxWidth: '100%'}}
+          alt="Episode Screenshot"
+        />
+      </div>
+    </div>
+  )
+}
+
+
+function Person({twitter, name}) {
+  return <a href={`https://twitter.com/${twitter}`}>{name}</a>
+}
+
+function People({people}) {
   return (
     <span>
-      <a href={`http://javascriptair.com/episodes/${date}`} dangerouslySetInnerHTML={titleHTML} />
-      {' with '}
-      <People people={guests} />
+      {
+        utils.displayListify(
+        people.map(({twitter, name}, i) => (
+          <Person
+            key={i}
+            twitter={twitter}
+            name={name}
+          />
+        )))
+      }
     </span>
   )
 }
