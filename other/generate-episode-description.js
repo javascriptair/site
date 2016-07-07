@@ -10,6 +10,7 @@ import episodeList from './utils/episode-list'
 import inquirer from 'inquirer'
 
 import LinksPicksTips from './components/links-picks-tips'
+import Person from './components/person'
 import ShowDescription from './components/show-description'
 
 inquirer.prompt([
@@ -78,7 +79,12 @@ function EpisodeDescription({episode, sponsors}) {
       <div>
         <strong>Links, Picks, and Tips:</strong>
         {
-          showAttendees.map((a, i) => <LinksPicksTips key={i} {...a} />)
+          showAttendees.map((a, i) => (
+            <div>
+              <Person {...a} />
+              <LinksPicksTips key={i} {...a} />
+            </div>
+          ))
         }
       </div>
 
@@ -112,22 +118,13 @@ function Title({date, screenshot, titleHTML, guests}) {
   )
 }
 
-
-function Person({twitter, name}) {
-  return <a href={`https://twitter.com/${twitter}`}>{name}</a>
-}
-
 function People({people}) {
   return (
     <span>
       {
         utils.displayListify(
         people.map(({twitter, name}, i) => (
-          <Person
-            key={i}
-            twitter={twitter}
-            name={name}
-          />
+          <a key={i} href={`https://twitter.com/${twitter}`}>{name}</a>
         )))
       }
     </span>
