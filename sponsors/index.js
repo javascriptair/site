@@ -52,7 +52,7 @@ const sponsors = {
       link: 'http://jsair.io/sparkpost',
       tagline: `Email. We've Got It Down.`,
       startDate: '2016-04-19',
-      endDate: '2016-07-05',
+      endDate: '2016-07-12',
     },
     {
       imgSrc: '/sponsors/webstorm.png',
