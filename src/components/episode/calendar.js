@@ -43,8 +43,9 @@ function Calendar({episode}) {
     page,
   } = episode
   const dateCurrent = moment(date)
-  const dateAfter = moment(date).add(1, 'days')
-  const dateBefore = moment(date).subtract(1, 'days')
+  const dayDifference = 1
+  const dateAfter = moment(date).add(dayDifference, 'days')
+  const dateBefore = moment(date).subtract(dayDifference, 'days')
   const {styles} = Calendar
   return (
     <div className={`${css(styles.calendar)}`}>
@@ -130,7 +131,7 @@ function MainDate({page, date, hangoutUrl}) {
           black={true}
           iconStyles={styles.mainDateRSVPIcon}
         />
-      <a className={`${css(styles.calendarDateSlideLink)}`} href={page}>Add to Calendar</a>
+        <a className={`${css(styles.calendarDateSlideLink)}`} href={page}>Add to Calendar</a>
       </div>
     </DateSquare>
   )
@@ -176,7 +177,7 @@ MainDate.styles = StyleSheet.create({
 function DateSquare({side, date, children}) {
   const {styles} = DateSquare
   return (
-    <div className={`${css(styles.calendarDate)} ${css(styles['calendarDate' + side])}`}>
+    <div className={`${css(styles.calendarDate)} ${css(styles[`calendarDate${side}`])}`}>
       <div className={`${css(styles.calendarDateName)}`}>{date.format('ddd')}</div>
       <div className={`${css(styles.calendarDateNumber)}`}>{date.format('D')}</div>
       {children}

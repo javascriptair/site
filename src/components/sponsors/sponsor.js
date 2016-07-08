@@ -14,7 +14,8 @@ function Sponsor({name, link, tagline = '', imgSrc}) {
       href={link}
       alt={`${name} site`}
     >
-      <img className={css(styles.logo)}
+      <img
+        className={css(styles.logo)}
         src={imgSrc}
         alt={altText}
       />

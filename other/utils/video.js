@@ -14,9 +14,11 @@ import YoutubeMp3Downloader from 'youtube-mp3-downloader'
 import inquirer from 'inquirer'
 import ProgressBar from 'cli-progress-bar'
 import {random as randomEmoji} from 'random-emoji'
-import ffmpegPath from './ffmpeg-path'
+import getFfmpegPath from './ffmpeg-path'
 import podcastifyAudio from './audio'
 import episodeList from './episode-list'
+
+const ffmpegPath = getFfmpegPath()
 
 export default podcastifyVideo
 

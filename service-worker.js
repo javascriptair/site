@@ -35,14 +35,14 @@ self.addEventListener('fetch', function onServiceWorkerFetch(event) {
     // First we look if we can get the (maybe updated)
     // resource from the network
     fetch(event.request).then(function updateCacheAndReturnNetworkResponse(networkResponse) {
-      console.log('fetch from network for ' + event.request.url + ' successfull, updating cache')
+      console.log(`fetch from network for ${event.request.url} successfull, updating cache`)
       caches.open(currentCache).then(function addToCache(cache) {
         return cache.add(event.request)
       })
       return networkResponse
     }).catch(function lookupCachedResponse(reason) {
       // On failure, look up in the Cache for the requested resource
-      console.log('fetch from network for ' + event.request.url + ' failed:', reason)
+      console.log(`fetch from network for ${event.request.url} failed:`, reason)
       return caches.match(event.request).then(function returnCachedResponse(cachedResponse) {
         return cachedResponse
       })

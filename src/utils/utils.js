@@ -34,6 +34,7 @@ function intersperse(arr, sep) {
 }
 
 function displayListify(arr) {
+  /* eslint no-magic-numbers: "off" */
   const sep = ', '
   const preLast = 'and '
 
@@ -82,8 +83,8 @@ function markdownToHTML(string, stripP) {
     html = html.slice(3, -5)
   }
   html = html
-    .replace(/\&#39;/g, `'`)
-    .replace(/\&#x27;/g, `'`)
+    .replace(/&#39;/g, `'`)
+    .replace(/&#x27;/g, `'`)
     .replace(/&amp;/g, '&')
   return {__html: html}
 }

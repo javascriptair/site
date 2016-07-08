@@ -1,6 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import Episode from '<components>/episode'
+
 export default EpisodeScreenshotPage
 
 function EpisodeScreenshotPage({episode}) {
@@ -20,7 +21,7 @@ function EpisodeScreenshotPage({episode}) {
           type="text/css"
         />
         <link rel="stylesheet" href="/styles.dist.css" />
-        <style>/* aphrodite-content */</style>
+        <style>{'/* aphrodite-content */'}</style>
         <style dangerouslySetInnerHTML={{__html: hackStyles}} />
       </head>
       <body className={css(styles.body)}>

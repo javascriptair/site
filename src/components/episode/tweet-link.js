@@ -16,6 +16,7 @@ function TweetLink({episode}) {
         black={true}
         href={tweetUrl}
         target="_blank"
+        rel="noopener noreferrer"
         title="Tweet this"
         name="twitter"
       />
@@ -37,9 +38,9 @@ TweetLink.styles = StyleSheet.create({
 })
 
 function getMessage({past, taglessTitle, sortedGuests, shortUrl, date}) {
-  const guestList = sortedGuests.map((guest) => guest.twitter ? `@${guest.twitter}` : guest.name)
+  const guestList = sortedGuests.map(guest => (guest.twitter ? `@${guest.twitter}` : guest.name))
   const message = past ?
     `Check out "${taglessTitle}" w/ ${displayListify(guestList).join('')} ${shortUrl}` :
     `Watch "${taglessTitle}" live w/ ${displayListify(guestList).join('')} on ${date} ${shortUrl}`
-  return message + ' ' + getRandomPositiveEmoji()
+  return `${message} ${getRandomPositiveEmoji()}`
 }

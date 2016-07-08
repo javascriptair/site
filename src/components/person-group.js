@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
-import Person from './person'
 import {StyleSheet, css} from 'aphrodite'
+import Person from './person'
 
 export default PersonGroup
 

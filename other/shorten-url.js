@@ -1,6 +1,7 @@
 import qs from 'qs'
 import axios from 'axios'
 import {copy} from 'copy-paste'
+
 export default shortenUrl
 
 function shortenUrl({
@@ -23,7 +24,7 @@ function shortenUrl({
       return Promise.resolve(short)
     }
     return new Promise((resolve, reject) => {
-      copy(short, (err) => {
+      copy(short, err => {
         if (err) {
           reject(err)
         }
@@ -37,7 +38,7 @@ function shortenUrl({
 
 function getApiKey() {
   try {
-    return require('./hive.api.ignored.json').key
+    return require('./hive.api.ignored.json').key // eslint-disable-line global-require
   } catch (e) {
     throw new Error('you must provide an API key or have a hive.api.ignored.json')
   }

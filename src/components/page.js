@@ -1,6 +1,6 @@
+import striptags from 'striptags'
 import GoogleAnalyticsScript from './scripts/google-analytics'
 import StartServiceWorker from './scripts/start-service-worker'
-import striptags from 'striptags'
 
 export default Page
 
@@ -35,7 +35,7 @@ function Page({
         />
         <link rel="stylesheet" href="/styles.dist.css" />
         <link rel="manifest" href="/resources/manifest/manifest.json" />
-        <style>/* aphrodite-content */</style>
+        <style>{'/* aphrodite-content */'}</style>
       </head>
       <body>
         {children}

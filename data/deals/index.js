@@ -107,6 +107,6 @@ const deals = [
 ]
 
 const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())
-const filteredDeals = sortedDeals.filter(d => d.expires ? isFuture(d.expires) : true)
+const filteredDeals = sortedDeals.filter(d => (d.expires ? isFuture(d.expires) : true))
 
 export default filteredDeals

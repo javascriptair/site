@@ -8,7 +8,7 @@ import episodeList from './utils/episode-list'
 getEpisodeDirectory()
   .then(episodePathToEpisodeData)
   .then(generateMessage)
-  .then(message => message + ' ' + getRandomPositiveEmoji())
+  .then(message => `${message} ${getRandomPositiveEmoji()}`)
   .then(copyMessage)
   .then(result => console.log(result))
   .catch(err => console.error(err))
@@ -41,7 +41,7 @@ function episodePathToEpisodeData(episodeData) {
 }
 
 function generateMessage({title, guests, shortUrl}) {
-  const twitterHandles = sortPeople(guests).map(g => g.twitter ? `@${g.twitter}` : g.name)
+  const twitterHandles = sortPeople(guests).map(g => (g.twitter ? `@${g.twitter}` : g.name))
   const url = shortUrl ? ` ${shortUrl}` : ''
 
   return `"${title}" w/ ${displayListify(twitterHandles).join('')} is up!${url}`

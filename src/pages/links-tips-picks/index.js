@@ -15,16 +15,14 @@ function LinksTipsPicks({nextEpisode, episodes}) {
     >
       <HeaderBar nextEpisode={nextEpisode} />
       <div className={css(styles.linksTipsPicksRoot)}>
-        {episodes.filter(e => e.past).map(e =>{
-          return (
-            <div key={e.number} className={css(styles.episode)}>
-              <h2><strong>{e.number}. {e.title}</strong> </h2>
-              <ShowNotes episode={e} />
-              <hr />
-            </div>
-            )
-        })
-      }
+        {episodes.filter(episode => episode.past).map(episode => (
+          <div key={episode.number} className={css(styles.episode)}>
+            <h2><strong>{episode.number}. {episode.title}</strong></h2>
+            <ShowNotes episode={episode} />
+            <hr />
+          </div>
+          )
+        )}
       </div>
     </Page>
   )

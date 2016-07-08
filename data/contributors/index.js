@@ -84,12 +84,10 @@ const contributors = [
     twitter: 'kurtiskemple',
     contributions: 'Site PRs',
   },
-].map(c => {
-  return {
-    imgSrc: `/data/contributors/${c.twitter}.png`,
-    link: `https://twitter.com/${c.twitter}`,
-    ...c,
-  }
-})
+].map(c => ({
+  imgSrc: `/data/contributors/${c.twitter}.png`,
+  link: `https://twitter.com/${c.twitter}`,
+  ...c,
+}))
 
 export default contributors

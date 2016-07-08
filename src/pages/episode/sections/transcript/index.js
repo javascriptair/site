@@ -5,7 +5,8 @@ export default Transcript
 
 function Transcript({transcriptHTML}) {
   const {styles} = Transcript
-  if (!transcriptHTML) {
+  const noTranscript = !transcriptHTML
+  if (noTranscript) {
     return <noscript />
   } else {
     return (

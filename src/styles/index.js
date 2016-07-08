@@ -1,4 +1,5 @@
 import {upToMedium} from './media-queries'
+
 const container = {
   maxWidth: 1000,
   width: '90%',

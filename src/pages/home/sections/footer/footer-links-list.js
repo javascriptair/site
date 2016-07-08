@@ -1,5 +1,6 @@
 import {StyleSheet, css} from 'aphrodite'
 import sharedStyles from './shared-styles'
+
 export default Links
 
 function Links() {
@@ -14,11 +15,11 @@ function Links() {
             key={i}
             alt={link.alt || link.title}
           >
-          {link.title}
+            {link.title}
           </a>
         </li>
       ))}
-      </ul>
+    </ul>
   )
 }
 
@@ -68,4 +69,3 @@ Links.styles = StyleSheet.create({
     },
   },
 })
-

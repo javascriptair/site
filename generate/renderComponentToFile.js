@@ -6,9 +6,7 @@ import {noop} from 'lodash'
 export default renderComponent
 
 function renderComponent(comp, destination, cb = noop) {
-  const {html, css} = StyleSheetServer.renderStatic(() => {
-    return ReactDOMServer.renderToStaticMarkup(comp)
-  })
+  const {html, css} = StyleSheetServer.renderStatic(() => ReactDOMServer.renderToStaticMarkup(comp))
   const string = html.replace('/* aphrodite-content */', css.content)
   writeFile(destination, string, cb)
 }

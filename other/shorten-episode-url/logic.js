@@ -58,7 +58,7 @@ function beginPrompt(episodeData, noCopy) {
   function getApiKey(data = {}) {
     let key
     try {
-      key = require('../hive.api.ignored.json').key
+      key = require('../hive.api.ignored.json').key // eslint-disable-line global-require
     } catch (e) {
       key = null
     }

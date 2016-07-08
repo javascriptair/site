@@ -1,8 +1,8 @@
-import path from 'path'
-import request from 'request'
 import fs from 'fs'
+import path from 'path'
 import temp from 'temp'
 import filenamify from 'filenamify'
+import request from 'request'
 
 import {getProfileImageURL} from './twitter'
 import compressImage from './compress-image'

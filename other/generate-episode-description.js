@@ -1,13 +1,12 @@
 /* eslint react/prop-types: 0 */
 import ReactDOMServer from 'react-dom/server'
-
+import inquirer from 'inquirer'
 import {copy} from 'copy-paste'
 
 import {getSponsorsForDate} from '../sponsors'
 
 import * as utils from '<utils>/utils'
 import episodeList from './utils/episode-list'
-import inquirer from 'inquirer'
 
 import LinksPicksTips from './components/links-picks-tips'
 import Person from './components/person'
@@ -80,9 +79,9 @@ function EpisodeDescription({episode, sponsors}) {
         <strong>Links, Picks, and Tips:</strong>
         {
           showAttendees.map((a, i) => (
-            <div>
+            <div key={i}>
               <Person {...a} />
-              <LinksPicksTips key={i} {...a} />
+              <LinksPicksTips {...a} />
             </div>
           ))
         }

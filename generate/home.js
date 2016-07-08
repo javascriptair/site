@@ -1,12 +1,9 @@
 import {resolve} from 'path'
-import renderComponentToFile from './renderComponentToFile'
-
+import panelists from '<resources>/panelists'
+import Home from '../src/pages/home'
 import {future as futureEpisodes, past as pastEpisodes} from '../episodes'
 import {currentSponsors} from '../sponsors'
-import {panelists} from '<resources>/panelists'
-
-import Home from '../src/pages/home'
-
+import renderComponentToFile from './renderComponentToFile'
 
 renderComponentToFile(
   <Home

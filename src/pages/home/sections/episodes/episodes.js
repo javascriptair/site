@@ -1,11 +1,11 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import Episode from '<components>/episode'
-import EpisodeSmall from './episode-small'
 import {sortBy} from 'lodash'
-
+import Episode from '<components>/episode'
 import {upToBig} from '<styles>/media-queries'
-import Title from '<components>/title.js'
+import Title from '<components>/title'
+
+import EpisodeSmall from './episode-small'
 
 export default EpisodesSection
 

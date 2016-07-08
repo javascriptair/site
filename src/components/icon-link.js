@@ -7,12 +7,12 @@ import Icon from './icon'
 export default IconLink
 
 function IconLink(props) {
+  const {black, ...remaining} = props // eslint-disable-line
   const {styles} = IconLink
-  const {black} = props
   const iconClassName = css(black ? styles.blackIcon : styles.icon)
   return (
-    <a {...props} className={null}>
-      <Icon {...props} className={classNames(iconClassName, props.className)}/>
+    <a {...remaining} className={null}>
+      <Icon {...remaining} className={classNames(iconClassName, props.className)} />
     </a>
   )
 }

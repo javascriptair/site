@@ -16,4 +16,4 @@ panelists.forEach(p => {
   p.imgSrc = `/resources/panelists/${p.twitter}.png`
 })
 
-export {panelists}
+export default panelists

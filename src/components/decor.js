@@ -1,4 +1,5 @@
 import {StyleSheet, css} from 'aphrodite'
+
 export default Decor
 
 function Decor() {

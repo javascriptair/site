@@ -1,10 +1,9 @@
 import {resolve} from 'path'
-import renderComponentToFile from './renderComponentToFile'
-
-import {nextEpisode} from '../episodes'
 import getEpisodeData from '<utils>/get-episode-data'
-import {getSponsorsForDate} from '../sponsors'
+import {nextEpisode} from '../episodes'
 import EpisodePage from '../src/pages/episode'
+import {getSponsorsForDate} from '../sponsors'
+import renderComponentToFile from './renderComponentToFile'
 
 export default generateEpisode
 

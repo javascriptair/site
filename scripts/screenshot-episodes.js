@@ -11,5 +11,7 @@ async.eachLimit(episodeDirectories, parallelLimit, generateEpisodeScreenshotPage
     throw err
   }
   console.log('All screenshots taken 🌈')
-  process.exit(0)
+  // not sure how to avoid process.exit here...
+  const NO_ERROR = 0
+  process.exit(NO_ERROR) // eslint-disable-line no-process-exit
 })

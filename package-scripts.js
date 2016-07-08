@@ -1,5 +1,5 @@
 /* eslint max-len:[2, 200] */
-const commonWatch = '--watch ' + [
+const commonWatch = '--watch ' + [ // eslint-disable-line prefer-template
   'src', 'sponsors', 'episodes', 'shared', 'generate',
 ].join(' --watch ')
 const otherComponentsWatch = `${commonWatch} --watch other/components`

@@ -3,7 +3,7 @@ import {StyleSheet, css} from 'aphrodite'
 
 import {container as containerStyles} from '<styles>'
 
-import Title from '../title.js'
+import Title from '../title'
 import SponsorGroup from './sponsor-group'
 import Sponsor from './sponsor'
 import SponsorSubheading from './sponsor-subheading'

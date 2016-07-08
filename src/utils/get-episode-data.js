@@ -3,7 +3,7 @@ import path from 'path'
 import moment from 'moment'
 import striptags from 'striptags'
 
-import {panelists} from '<resources>/panelists'
+import panelists from '<resources>/panelists'
 import host from '<resources>/host'
 import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
 
@@ -14,10 +14,11 @@ export default getEpisodeData
 
 function getEpisodeData(episodePath) {
   /* eslint complexity:[2,8] */
-  const episode = require(episodePath).default
-  const date = dateRegex.exec(episodePath)[1]
+  const episode = require(episodePath).default // eslint-disable-line global-require
+  const [, date] = dateRegex.exec(episodePath)
   const number = episode.number || episodes.indexOf(date)
-  const numberDisplay = pad(number, 3)
+  const numberPad = 3
+  const numberDisplay = pad(number, numberPad)
 
   episode.guests = (episode.guests || []).map(guest => {
     guest = {
@@ -115,15 +116,15 @@ function transcriptToHTML(transcript) {
 
 
 function getDirectories(srcpath) {
-  return fs.readdirSync(srcpath).filter((file) => {
-    return fs.statSync(path.join(srcpath, file)).isDirectory()
-  })
+  return fs.readdirSync(srcpath).filter(file => (
+    fs.statSync(path.join(srcpath, file)).isDirectory()
+  ))
 }
 
 function pad(n, width, z) {
   z = z || '0'
-  n = n + ''
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
+  n = String(n)
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n // eslint-disable-line no-magic-numbers
 }
 
 function episodeHasHappened(episodeRaw, date) {
@@ -132,7 +133,8 @@ function episodeHasHappened(episodeRaw, date) {
 }
 
 function hasNotes({links, tips, picks}) {
-  return links.length + tips.length + picks.length > 0
+  const none = 0
+  return links.length + tips.length + picks.length > none
 }
 
 function getMetaPageDescription(numberDisplay, descriptionHTML) {

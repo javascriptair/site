@@ -13,5 +13,6 @@ function getEpisodeDirectories() {
 
 function trimIndexJs(string) {
   const indexJs = '/index.js'
-  return string.slice(0, -indexJs.length)
+  const first = 0
+  return string.slice(first, -indexJs.length)
 }

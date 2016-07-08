@@ -11,7 +11,7 @@ function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
   return (
     <section id="video">
       <h3 className={css(styles.headerSpacing)}>
-        {label + ' '}
+        {`${label} `}
         {hangoutUrl ? <Rsvp hangoutUrl={hangoutUrl} /> : ''}
       </h3>
       <div style={{textAlign: 'center'}}>

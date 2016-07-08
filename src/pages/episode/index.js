@@ -33,9 +33,11 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
           episode={episode}
         />
         {
-          past ?
-            <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
-              <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
+          past ? (
+            <PastEpisodeStuff episodeData={episode} sponsors={sponsors} />
+          ) : (
+            <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
+          )
         }
       </div>
     </Page>
@@ -198,8 +200,8 @@ function getHeadTags(episode) {
     <meta key="t6" name="twitter:site" content="@JavaScriptAir" />,
     <meta key="t7" name="twitter:creator" content="@JavaScriptAir" />,
     <meta key="t8" name="twitter:player" content={youTubeEmbed} />,
-    <meta key="t9" name="twitter:player:width" content="1280"/>,
-    <meta key="t10" name="twitter:player:height" content="720"/>,
+    <meta key="t9" name="twitter:player:width" content="1280" />,
+    <meta key="t10" name="twitter:player:height" content="720" />,
   ]
 }
 

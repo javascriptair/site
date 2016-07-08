@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
-import IconLink from './icon-link'
 import {StyleSheet, css} from 'aphrodite'
+import IconLink from './icon-link'
 
 export default RSVPIcon
 
@@ -9,14 +9,14 @@ function RSVPIcon(props) {
     return <noscript />
   }
   const {styles} = RSVPIcon
-  const {iconStyles} = props
+  const {hangoutUrl, iconStyles, ...forwardProps} = props
   return (
     <IconLink
       className={css(styles.iconLink, iconStyles)}
-      href={props.hangoutUrl}
+      href={hangoutUrl}
       name="calendar"
       aria-label="RSVP"
-      {...props}
+      {...forwardProps}
     />
   )
 }

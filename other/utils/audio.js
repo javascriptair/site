@@ -2,7 +2,9 @@ import path from 'path'
 import spawn from 'spawn-command'
 import shellEscape from 'shell-escape'
 import filenamify from 'filenamify'
-import ffmpegPath from './ffmpeg-path'
+import getFfmpegPath from './ffmpeg-path'
+
+const ffmpegPath = getFfmpegPath()
 
 export {podcastifyAudio as default, analyzeAudio, optimizeAudio}
 
@@ -29,12 +31,12 @@ function analyzeAudio({file, episode}) {
     let buffer = ''
     const options = {stdio: [process.stdin, process.stdout, 'pipe']}
     spawn(command, options)
-    .stderr.on('data', (data) => {
+    .stderr.on('data', data => {
       const chunk = data.toString()
       buffer += chunk
       console.log(chunk)
     })
-    .on('error', (err) => {
+    .on('error', err => {
       reject(err)
     })
     .on('close', () => {

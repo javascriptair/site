@@ -1,12 +1,6 @@
 {
-  "extends": "kentcdodds/react",
+  "extends": ["kentcdodds", "kentcdodds/react", "kentcdodds/babel-module-alias", "kentcdodds/babel-react-require"],
   "rules": {
     "comma-dangle": [1, "always-multiline"], // I got tired of this breaking the build ¯\_(ツ)_/¯
-    "react/react-in-jsx-scope": 0,
-  },
-  "settings": {
-    "import/resolver": {
-      "babel-module-alias": {},
-    },
   },
 }

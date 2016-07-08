@@ -1,4 +1,5 @@
 import {StyleSheet} from 'aphrodite'
+
 const itemHeight = 23
 
 export default StyleSheet.create({

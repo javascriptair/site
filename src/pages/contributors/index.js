@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import Page from '<components>/page.js'
+import Page from '<components>/page'
 import Person from '<components>/person'
 import HeaderBar from '<components>/header'
 

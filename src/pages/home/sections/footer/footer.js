@@ -1,6 +1,6 @@
+import {StyleSheet, css} from 'aphrodite'
 import FooterLinks from './footer-links-list'
 import FooterSocialLinks from './footer-social-links-list'
-import {StyleSheet, css} from 'aphrodite'
 
 export default Footer
 

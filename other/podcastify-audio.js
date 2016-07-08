@@ -1,5 +1,5 @@
-import podcastifyAudio from './utils/audio'
 import inquirer from 'inquirer'
+import podcastifyAudio from './utils/audio'
 
 inquirer.prompt([
   {

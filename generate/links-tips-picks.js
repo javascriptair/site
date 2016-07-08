@@ -1,7 +1,7 @@
 import {resolve} from 'path'
-import renderComponentToFile from './renderComponentToFile'
-import {episodes, nextEpisode} from '../episodes'
 import LinksTipsPicks from '../src/pages/links-tips-picks'
+import {episodes, nextEpisode} from '../episodes'
+import renderComponentToFile from './renderComponentToFile'
 
 renderComponentToFile(
   <LinksTipsPicks

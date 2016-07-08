@@ -19,8 +19,8 @@ function runServer(cb) {
   })
   server.start(() => {
     address = `http://localhost:${port}`
-    console.log('server listening at: ' + address)
-    console.log('with a root at: ' + rootPath)
+    console.log(`server listening at: ${address}`)
+    console.log(`with a root at: ${rootPath}`)
     cb(address)
   })
 }

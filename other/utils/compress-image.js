@@ -1,5 +1,5 @@
-import Imagina from 'imagina'
 import path from 'path'
+import Imagina from 'imagina'
 import mv from 'mv'
 
 export default compressImage
@@ -10,9 +10,9 @@ function compressImage(inputImagePath, outputFilePath) {
   }
   const imageDir = path.dirname(inputImagePath)
   const imageExtension = path.extname(inputImagePath).substring(1)
-  const imageFilename = path.basename(inputImagePath, '.' + imageExtension)
-  const resizedImagePath = path.join(imageDir, imageFilename + '.resized.' + imageExtension)
-  const finalImagePath = path.join(imageDir, imageFilename + '.resized.png')
+  const imageFilename = path.basename(inputImagePath, `.${imageExtension}`)
+  const resizedImagePath = path.join(imageDir, `${imageFilename}.resized.${imageExtension}`)
+  const finalImagePath = path.join(imageDir, `${imageFilename}.resized.png`)
 
   const im = new Imagina()
 
@@ -37,7 +37,9 @@ function compressImage(inputImagePath, outputFilePath) {
   }
 
   function maybeConvert() {
-    if (imageExtension !== 'png') {
+    if (imageExtension === 'png') {
+      return undefined
+    } else {
       return new Promise((resolve, reject) => {
         convert(resizedImagePath, function onConvertDone(doneErr) {
           if (doneErr) {
@@ -47,16 +49,14 @@ function compressImage(inputImagePath, outputFilePath) {
           }
         })
       })
-    } else {
-      return undefined
     }
   }
 
   function convert(inputPath, cb) {
     const dir = path.dirname(inputPath)
     const extension = path.extname(inputPath).substring(1)
-    const filename = path.basename(inputPath, '.' + extension)
-    const outputPath = path.join(dir, filename + '.png')
+    const filename = path.basename(inputPath, `.${extension}`)
+    const outputPath = path.join(dir, `${filename}.png`)
     im.convert(inputPath, outputPath, cb)
   }
 

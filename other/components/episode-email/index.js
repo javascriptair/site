@@ -1,16 +1,29 @@
 import {PropTypes} from 'react'
 import {Email, Box, Item, Image, A} from 'react-html-email'
 
-import LinksPicksTips from './links-picks-tips'
-import ShowDescription from './show-description'
-import personPropType from './prop-types/person'
-import Person from './person'
-
 import * as utils from '<utils>/utils'
+import hijackConsole from '../../utils/hijack-console'
+import ShowDescription from '../show-description'
+import Banner from './banner'
+import WatchShowButton from './watch-show-button'
+import SponsorsSection from './sponsors-section'
+import ShowNotes from './show-notes'
+import {Clear, Spacer, Line} from './util-components'
 
 const episodePropType = PropTypes.object
 const sponsorsPropType = PropTypes.object
-hijackConsole()
+const ignoreLogs = [
+  'in outlook:',
+  'unsupported in: outlook.',
+  'unsupported in: outlook-web.',
+  'mso-line-height-rule',
+  'border-radius` supplied to `Box` unsupported in',
+  'border-radius` supplied to `Image` unsupported in',
+  '<html> cannot appear as a child of <div>', // can't think of how to get around this :-/
+  'Unknown prop `xmlns` on <html> tag', // fb.me/react-unknown-prop
+  /Unknown props.*on <table> tag\./, // fb.me/react-unknown-prop
+]
+hijackConsole(ignoreLogs)
 
 export default EpisodeEmail
 
@@ -85,120 +98,6 @@ function getHeadCSS() {
       text-decoration: none;
     }
   `
-}
-
-function Banner({page}) {
-  const link = `${page}#email`
-  const textColor = '#656565'
-  const styles = {
-    item: {
-      paddingBottom: 9,
-      msoLineHeightRule: 'exactly',
-      msTextSizeAdjust: '100%',
-      WebkitTextSizeAdjust: '100%',
-      wordBreak: 'break-word',
-      fontFamily: 'Helvetica',
-      textAlign: 'center',
-    },
-    div: {
-      display: 'inline-block',
-      width: 300,
-    },
-    p: {
-      color: textColor,
-      fontSize: '12px',
-      lineHeight: '150%',
-      display: 'inline',
-    },
-    a: {
-      color: textColor,
-    },
-  }
-  return (
-    <Item align="center">
-      <Box width="100%">
-        <Item style={styles.item}>
-          <div style={{...styles.div, textAlign: 'left'}}>
-            <p style={styles.p}>
-              The live broadcast podcast all about JavaScript.
-            </p>
-          </div>
-          <div style={{...styles.div, textAlign: 'right'}}>
-            <p style={styles.p}>
-              <A href={link} style={styles.a}>
-                View this email in your browser
-              </A>
-            </p>
-          </div>
-        </Item>
-      </Box>
-      <BannerLogo />
-    </Item>
-  )
-}
-Banner.propTypes = {
-  page: PropTypes.string.isRequired,
-}
-
-function BannerLogo() {
-  return (
-    <A href="https://javascriptair.com">
-      <Image
-        src="https://javascriptair.com/resources/images/logo-wide.png"
-        width={600}
-        height={222.38}
-        alt="JavaScript Air Logo"
-      />
-    </A>
-  )
-}
-
-function WatchShowButton({page}) {
-  const styles = {
-    box: {
-      borderCollapse: 'separate !important',
-      borderRadius: '3px',
-      backgroundColor: '#AAAAAA',
-      msoTableLspace: '0pt',
-      msoTableRspace: '0pt',
-      msTextSizeAdjust: '100%',
-      WebkitTextSizeAdjust: '100%',
-    },
-    p: {
-      lineHeight: '100%',
-      fontSize: '16px',
-      padding: '15px',
-      margin: 0,
-    },
-    a: {
-      fontWeight: 'bold',
-      letterSpacing: 'normal',
-      textAlign: 'center',
-      textDecoration: 'none',
-      color: '#FFFFFF',
-      msoLineHeightRule: 'exactly',
-      msTextSizeAdjust: '100%',
-      WebkitTextSizeAdjust: '100%',
-      display: 'block',
-    },
-  }
-  return (
-    <Box style={styles.box} align="center">
-      <Item>
-        <p style={styles.p}>
-          <A
-            href={page}
-            style={styles.a}
-          >
-            Watch the latest episode now
-          </A>
-        </p>
-      </Item>
-    </Box>
-  )
-}
-WatchShowButton.propTypes = {
-  page: PropTypes.string.isRequired,
 }
 
 function ShowImage({src}) {
@@ -306,101 +205,6 @@ function ClickButtonWithAudioOption({page, number}) {
 ClickButtonWithAudioOption.propTypes = {
   page: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
-}
-
-function SponsorsSection({sponsors}) {
-  const styles = {
-    box: {
-      minWidth: '100%',
-      border: '2px solid #222222',
-      borderCollapse: 'collapse',
-      msoTableLspace: '0pt',
-      msoTableRspace: '0pt',
-      msTextSizeAdjust: '100%',
-      WebkitTextSizeAdjust: '100%',
-    },
-    item: {
-      fontFamily: 'Helvetica',
-      fontSize: '14px',
-      fontWeight: 'normal',
-      textAlign: 'left',
-      msoLineHeightRule: 'exactly',
-      msTextSizeAdjust: '100%',
-      WebkitTextSizeAdjust: '100%',
-      wordBreak: 'break-word',
-      color: '#202020',
-      lineHeight: '150%',
-      padding: 18,
-    },
-    h2: {
-      marginTop: 0,
-    },
-  }
-  return (
-    <Box style={styles.box}>
-      <Item style={styles.item}>
-        <h2 style={styles.h2}>This episode made possible by</h2>
-        <ul>
-          {
-            sponsors.map(({name, link, tagline}, i) => (
-              <li key={i}>
-                <A href={link} textDecoration="none">{name}</A> - {tagline}
-              </li>
-            ))
-          }
-        </ul>
-      </Item>
-    </Box>
-  )
-}
-SponsorsSection.propTypes = {
-  sponsors: PropTypes.array,
-}
-
-function ShowNotes({people}) {
-  const styles = {
-    h2: {
-      marginTop: 0,
-    },
-    td: {
-      verticalAlign: 'top',
-    },
-  }
-  return (
-    <Box>
-      <Item>
-        <h2 style={styles.h2}>Links, Picks, and Tips</h2>
-        {people.map((person, i) => {
-          return (
-            <Clear key={i}>
-              {i !== 0 ? <Spacer /> : null}
-              <Box>
-                <tr>
-                  <td style={styles.td}>
-                    <Person {...person} Image={Image} />
-                  </td>
-                  <td style={styles.td}>
-                    {
-                      !person.hasNotes ?
-                      'No links, tips, or picks this week' :
-                        <LinksPicksTips
-                          linksHTML={person.linksHTML}
-                          tipsHTML={person.tipsHTML}
-                          picksHTML={person.picksHTML}
-                        />
-                    }
-                  </td>
-                </tr>
-              </Box>
-            </Clear>
-          )
-        })}
-      </Item>
-    </Box>
-  )
-}
-ShowNotes.propTypes = {
-  people: PropTypes.arrayOf(personPropType),
 }
 
 function ShowDescriptionSection() {
@@ -518,59 +322,4 @@ function LegalText() {
       </Item>
     </Box>
   )
-}
-
-function Clear({children}) {
-  const styles = {
-    visibility: 'hidden',
-    display: 'block',
-    height: 0,
-    clear: 'both',
-  }
-  return (
-    <div>
-      {children}
-      <div style={styles} />
-    </div>
-  )
-}
-Clear.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-function Spacer({space = 32}) {
-  return <div style={{marginTop: space}} />
-}
-Spacer.propTypes = {
-  space: PropTypes.number,
-}
-
-function Line() {
-  return <hr style={{marginTop: 32, marginBottom: 32}} />
-}
-
-function hijackConsole() {
-  const ignoreLogs = [
-    'in outlook:',
-    'unsupported in: outlook.',
-    'unsupported in: outlook-web.',
-    'mso-line-height-rule',
-    'border-radius` supplied to `Box` unsupported in',
-    'border-radius` supplied to `Image` unsupported in',
-    '<html> cannot appear as a child of <div>', // can't think of how to get around this :-/
-  ]
-  hijack('warn')
-  hijack('error')
-
-  function hijack(logger) {
-    const original = console[logger]
-    console[logger] = function hijackedConsole(...args) {
-      const line = args.join(' ')
-      const shouldIgnore = ignoreLogs.some(l => line.includes(l))
-      if (!shouldIgnore) {
-        return original(...args)
-      }
-      return undefined
-    }
-  }
 }
