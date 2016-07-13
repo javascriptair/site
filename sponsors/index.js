@@ -62,6 +62,14 @@ const sponsors = {
       startDate: '2016-04-20',
       endDate: '2016-07-20',
     },
+    {
+      imgSrc: '/sponsors/trading-tech.png',
+      name: 'Trading Technologies',
+      link: 'http://jsair.io/trading-technologies',
+      tagline: `Building For What's Next`,
+      startDate: '2016-07-13',
+      endDate: '2016-10-13',
+    },
   ],
   silverSponsors: [
     {
@@ -86,7 +94,7 @@ const sponsors = {
       link: 'http://jsair.io/trading-technologies',
       tagline: `Building For What's Next`,
       startDate: '2016-03-22',
-      endDate: '2016-09-22',
+      endDate: '2016-07-12',
     },
     {
       imgSrc: '/sponsors/sparkpost.png',
