@@ -33,7 +33,7 @@
 | 2016-07-13 | [Automated Accessibility Testing with aXe-core](/../../issues/108) |
 | 2016-07-20 | [Publishing JavaScript Packages](/../../issues/113) |
 | 2016-07-27 | [Getting started with web audio](/../../issues/111) |
-| 2016-08-03 | [](/../../issues/) |
+| 2016-08-03 | [Typed Function Programming in JavaScript](/../../issues/114) |
 | 2016-08-10 | [How to be a mentor](/../../issues/117) |
 | 2016-08-17 | [](/../../issues/) |
 | 2016-08-26 | [React Rally](/../../issues/143) |
