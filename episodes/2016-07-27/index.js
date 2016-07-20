@@ -33,7 +33,7 @@ export default {
     },
   ],
   description: `
-    Web audio opens the door for rich multimedia, audio and gaming applications. It remains an unknown topic for many. Let&#x27;s get an overview at audio programming with JavaScript and an introduction to some tools and frameworks that can make your life easier doing this.
+    Web audio opens the door for rich multimedia, audio and gaming applications. It remains an unknown topic for many. Let's get an overview at audio programming with JavaScript and an introduction to some tools and frameworks that can make your life easier doing this.
   `,
   hangoutId: 'cmk6drjd25odn32q83ke59elssk',
   youTubeId: 'sucLfBy-dVY',

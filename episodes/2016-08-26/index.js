@@ -1,39 +1,9 @@
 export default {
-  title: `Publishing JavaScript Packages`,
+  title: `On-site at React Rally`,
   guests: [
     {
-      name: 'John-David Dalton',
-      twitter: 'jdalton',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'Stephan Bönnemann',
-      twitter: 'boennemann',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'James Kyle',
-      twitter: 'thejameskyle',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      name: 'Henry Zhu',
-      twitter: 'left_pad',
+      name: 'React Rally',
+      twitter: 'ReactRally',
       links: [
       ],
       tips: [
@@ -43,12 +13,12 @@ export default {
     },
   ],
   description: `
-    Doing open source involves a lot more than just coding up the tool/library. We're going to talk about the challenge of activly publishing an open source package on npm and some of the tools that have been developed to automate this process. Our guests have each developed some amazing tools, so you're in for a really interesting show!
+    We'll be live and on-site at React Rally. Join us as we chat with attendees and speakers about the awesome React conference in Utah.
   `,
-  hangoutId: 'ch2o1c4siukllgb5kuiip7gd514',
-  youTubeId: 'aK0-SrdHriw',
+  hangoutId: 'chotm7pe4n3tv504nbqfhs6r3bo',
+  youTubeId: 'XYBpRRkRvhM',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/publishing',
+  shortUrl: 'http://jsair.io/react-rally',
   host: {
     links: [
     ],

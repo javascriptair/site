@@ -45,7 +45,11 @@ export default ({addFile}) => {
   function episodeActions(data) {
     const actions = []
     Object.keys(data).forEach((d, k) => {
-      data[k] = d.replace(/'/g, `'`)
+      // TODO: this doesn't seem to be working :-(
+      data[k] = d
+        .replace(/&amp;/g, '&')
+        .replace(/(&#39;|&#x27;)/g, `'`)
+        .replace(/(&quot;|”|“)/g, '"')
     })
 
     actions.push(addFile({
@@ -64,4 +68,3 @@ export default ({addFile}) => {
     return actions
   }
 }
-

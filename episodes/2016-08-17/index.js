@@ -1,9 +1,9 @@
 export default {
-  title: `Publishing JavaScript Packages`,
+  title: `Managing Dependencies like a boss 😎`,
   guests: [
     {
-      name: 'John-David Dalton',
-      twitter: 'jdalton',
+      name: 'Andrew Nesbitt',
+      twitter: 'teabass',
       links: [
       ],
       tips: [
@@ -22,8 +22,8 @@ export default {
       ],
     },
     {
-      name: 'James Kyle',
-      twitter: 'thejameskyle',
+      name: 'Ben Coe',
+      twitter: 'BenjaminCoe',
       links: [
       ],
       tips: [
@@ -32,8 +32,8 @@ export default {
       ],
     },
     {
-      name: 'Henry Zhu',
-      twitter: 'left_pad',
+      name: 'Ashley Williams',
+      twitter: 'ag_dubs',
       links: [
       ],
       tips: [
@@ -43,12 +43,12 @@ export default {
     },
   ],
   description: `
-    Doing open source involves a lot more than just coding up the tool/library. We're going to talk about the challenge of activly publishing an open source package on npm and some of the tools that have been developed to automate this process. Our guests have each developed some amazing tools, so you're in for a really interesting show!
+    The average npm project has [100](http://blog.npmjs.org/post/146943134240/npm-add-ons) dependencies and subdependencies. Managing these dependencies can be challenging. We're going to talk with the great people behind [DependencyCI](https://dependencyci.com/), [Libraries.io](https://libraries.io/), and [Greenkeeper.io](https://greenkeeper.io/) about how to make managing these dependencies easier.
   `,
-  hangoutId: 'ch2o1c4siukllgb5kuiip7gd514',
-  youTubeId: 'aK0-SrdHriw',
+  hangoutId: 'cm4394mohlqq5dcob5pjgp84pv4',
+  youTubeId: 'http://www.youtube.com/watch?v=_dnDzmhxlZM',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/publishing',
+  shortUrl: 'http://jsair.io/deps',
   host: {
     links: [
     ],

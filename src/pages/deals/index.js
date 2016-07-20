@@ -98,7 +98,7 @@ function Deal({deal}) {
           />
         </a>
       </div>
-      <div>
+      <div className={css(styles.description)}>
         <p dangerouslySetInnerHTML={descriptionHTML} />
       </div>
       <div>
@@ -126,4 +126,5 @@ Deal.styles = StyleSheet.create({
   image: {marginTop: 30},
   deal: {marginTop: 18, marginBottom: 18},
   expiration: {display: 'block', marginTop: 8, fontSize: '0.8em'},
+  description: {marginTop: 20},
 })

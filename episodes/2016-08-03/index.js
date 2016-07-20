@@ -1,9 +1,9 @@
 export default {
-  title: `Publishing JavaScript Packages`,
+  title: `Typed Functional Programming in JavaScript`,
   guests: [
     {
-      name: 'John-David Dalton',
-      twitter: 'jdalton',
+      name: 'Alfonso García-Caro',
+      twitter: 'alfonsogcnunez',
       links: [
       ],
       tips: [
@@ -12,8 +12,8 @@ export default {
       ],
     },
     {
-      name: 'Stephan Bönnemann',
-      twitter: 'boennemann',
+      name: 'Richard Feldman',
+      twitter: 'rtfeldman',
       links: [
       ],
       tips: [
@@ -22,8 +22,8 @@ export default {
       ],
     },
     {
-      name: 'James Kyle',
-      twitter: 'thejameskyle',
+      name: 'Phil Freeman',
+      twitter: 'paf31',
       links: [
       ],
       tips: [
@@ -32,8 +32,8 @@ export default {
       ],
     },
     {
-      name: 'Henry Zhu',
-      twitter: 'left_pad',
+      name: 'Jordan Walke',
+      twitter: 'jordwalke',
       links: [
       ],
       tips: [
@@ -43,12 +43,12 @@ export default {
     },
   ],
   description: `
-    Doing open source involves a lot more than just coding up the tool/library. We're going to talk about the challenge of activly publishing an open source package on npm and some of the tools that have been developed to automate this process. Our guests have each developed some amazing tools, so you're in for a really interesting show!
+    "Tie your hands to free your mind" is a mantra you hear that applies really well to the constraints that you put on yourself by embracing statically typed languages and functional programming. We're going to hear from various people about their respective visions of typed FP in JS.
   `,
-  hangoutId: 'ch2o1c4siukllgb5kuiip7gd514',
-  youTubeId: 'aK0-SrdHriw',
+  hangoutId: 'ca87vqg4bsqfj63f7gh25lsl9pc',
+  youTubeId: 'mwdXBFtRl0o',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/publishing',
+  shortUrl: 'http://jsair.io/typed-fp',
   host: {
     links: [
     ],

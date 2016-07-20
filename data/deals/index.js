@@ -104,6 +104,21 @@ const deals = [
       affected users, and tools that let users send you feedback for peace of mind.
     `,
   },
+  {
+    imgSrc: '/data/deals/ReactRally.png',
+    organization: 'React Rally',
+    tagline: 'A community React conference',
+    link: 'http://jsair.io/react-rally-deal',
+    deal: `
+      Use the code **JSAIR** for 15% of React Rally tickets.
+    `,
+    expires: '2016-08-26',
+    description: `
+      React Rally is a community React conference in Salk Lake City, UT on August 25th-26th featuring interesting
+      people doing exciting things with React. Learn how to build better applications faster, expand your mind, and meet
+      the great people in the React community.
+    `,
+  },
 ]
 
 const sortedDeals = sortBy(deals, d => d.organization.toLowerCase())
