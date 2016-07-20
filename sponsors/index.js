@@ -60,7 +60,7 @@ const sponsors = {
       link: 'http://jsair.io/webstorm',
       tagline: 'Smart JavaScript IDE',
       startDate: '2016-04-20',
-      endDate: '2016-07-20',
+      endDate: '2016-10-20',
     },
     {
       imgSrc: '/sponsors/trading-tech.png',
