@@ -127,11 +127,11 @@ function MainDate({page, date, hangoutUrl}) {
     <DateSquare side="main" date={date}>
       <div className={`${css(styles.calendarDateSlide)}`}>
         <RSVPIcon
-          hangoutUrl={hangoutUrl}
+          hangoutUrl={page}
           black={true}
           iconStyles={styles.mainDateRSVPIcon}
         />
-        <a className={`${css(styles.calendarDateSlideLink)}`} href={page}>Add to Calendar</a>
+        <a className={`${css(styles.calendarDateSlideLink)}`} href={hangoutUrl}>Add to Calendar</a>
       </div>
     </DateSquare>
   )
