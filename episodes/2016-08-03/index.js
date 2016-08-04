@@ -42,11 +42,11 @@ export default {
       twitter: 'jordwalke',
       links: [
         `[Flow](https://flowtype.org/)`,
-        `[ML](https://en.wikipedia.org/wiki/ML_(programming_language))`,
+        `<a href="https://en.wikipedia.org/wiki/ML_(programming_language)" alt="ML wikipedia page">ML</a>`,
       ],
       picks: [
-        `Vim-mode-plus: Atom plugin recreating Vim’s editing paradigm https://github.com/t9md/atom-vim-mode-plus`,
-        `Real World OCaml: Great technical book, free online version: https://realworldocaml.org/`,
+        `[Vim-mode-plus](https://github.com/t9md/atom-vim-mode-plus): Atom plugin recreating Vim’s editing paradigm`,
+        `[Real World OCaml](https://realworldocaml.org/): Great technical book, free online version`,
       ],
     },
   ],
