@@ -62,7 +62,7 @@ export default {
       `[React30](https://react30.com/) episode [006 - Origins of React](https://youtu.be/yiCnfJ1rflI) with [Jordan Walke](https://twitter.com/jordwalke)`,
       `[Midwest JS](http://midwestjs.com/) next week - [tickets](https://ti.to/midwestjs/2016) are still available!`,
       `My frontend masters workshops are next week! [Webpack Deep Dive](http://kcd.im/fem-webpack) and [Writing an Open Source JavaScript Library](http://kcd.im/fem-oss) - tickets are still available for in person and online.`,
-      `[Ragtime](https://en.wikipedia.org/wiki/Ragtime_(musical)) the musical`,
+      `<a alt="Ragtime" href="https://en.wikipedia.org/wiki/Ragtime_(musical)">Ragtime</a> the musical`,
     ],
   },
   panelists: [
