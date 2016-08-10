@@ -2,16 +2,6 @@ export default {
   title: `Managing Dependencies like a boss 😎`,
   guests: [
     {
-      name: 'Andrew Nesbitt',
-      twitter: 'teabass',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
       name: 'Stephan Bönnemann',
       twitter: 'boennemann',
       links: [
