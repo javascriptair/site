@@ -1,24 +1,40 @@
 export default {
-  title: `Managing Dependencies like a boss 😎`,
+  title: `Managing Dependencies like a boss <span style="font-weight:normal">😎</span>`,
   guests: [
     {
       name: 'Stephan Bönnemann',
       twitter: 'boennemann',
       links: [
+        `[npm shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap)`,
+        `[nodesecurity.io](https://nodesecurity.io/)`,
+        `[app.greenkeeper.io](https://app.greenkeeper.io/)`,
       ],
       tips: [
+        `Noise Cancelling Headphones help focus a lot`,
+        `Investing money in a good router really helps with WiFi quality and internet speed`,
+        `Take a break`,
       ],
       picks: [
+        `[bundled-dependecies](https://www.npmjs.com/package/bundled-dependencies)`,
+        `[dont-break](http://npm.im/dont-break) & [next-update](http://npm.im/next-update)`,
       ],
     },
     {
       name: 'Ben Coe',
       twitter: 'BenjaminCoe',
       links: [
+        `[Istanbul](https://istanbul.js.org/)`,
+        `[Yargs](https://yargs.js.org/)`,
+        `[npms.io](https://npms.io/) `,
+        `[standard](https://github.com/feross/standard)`,
       ],
       tips: [
+        `[dns.js.org](https://dns.js.org)`,
+        `Help with [yargs](http://yargs.js.org/) and [istanbul](http://istanbul.js.org/)!`,
       ],
       picks: [
+        `[Stranger Things](https://www.netflix.com/title/80057281) on [Netflix](https://www.netflix.com/)`,
+        `[IstanbulJS](https://istanbul.js.org/) website: http://istanbul.js.org/`,
       ],
     },
   ],
@@ -27,88 +43,20 @@ export default {
   `,
   hangoutId: 'cm4394mohlqq5dcob5pjgp84pv4',
   youTubeId: '_dnDzmhxlZM',
-  podbeanId: '',
+  podbeanId: 'zuz3b-61e6eb',
   shortUrl: 'http://jsair.io/deps',
   host: {
     links: [
+      `[How to use bundleDependencies (to avoid unpublish blues) ](https://youtu.be/qOGRUfdSiaM)`,
     ],
     tips: [
+      `Go out into nature`,
+      `Play Sports`,
     ],
     picks: [
+      `[dont-break](http://npm.im/dont-break)`,
+      `[next-update](http://npm.im/next-update)`,
+      `[Why semver ranges are literally the worst...](https://medium.com/@kentcdodds/why-semver-ranges-are-literally-the-worst-817cdcb09277) - use greenkeeper? :)`,
     ],
   },
-  panelists: [
-    {
-      twitter: 'dan_abramov',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'drboolean',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'getify',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-  ],
 }
