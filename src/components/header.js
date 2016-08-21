@@ -19,7 +19,7 @@ function EpisodeBox({nextEpisode}) {
     <a className={css(styles.socialLink)} href={page}>
       <div>
         <div className={css(styles.social)}>
-          <div className={css(styles.socialDecor)}></div>
+          <div className={css(styles.socialDecor)} />
           <div className={css(styles.showBody)}>
             <div className={css(styles.bodyTop)}>
               <h2 className={css(styles.bodyTopH2)}>View Next Show</h2>

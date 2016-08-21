@@ -257,7 +257,7 @@ function ShowTime({timeHTML}) {
   const {styles} = ShowTime
   return (
     <div className={`${css(styles.section, styles.sectionHeading, styles.sectionTime)}`}>
-      <h3 dangerouslySetInnerHTML={timeHTML}></h3>
+      <h3 dangerouslySetInnerHTML={timeHTML} />
     </div>
   )
 }

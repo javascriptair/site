@@ -1,6 +1,7 @@
 {
-  "extends": ["kentcdodds", "kentcdodds/react", "kentcdodds/babel-module-alias", "kentcdodds/babel-react-require"],
+  "extends": ["kentcdodds", "kentcdodds/react", "kentcdodds/babel-module", "kentcdodds/babel-react-require"],
   "rules": {
     "comma-dangle": [1, "always-multiline"], // I got tired of this breaking the build ¯\_(ツ)_/¯
+    "react/prop-types": "off", // https://github.com/yannickcr/eslint-plugin-react/issues/735
   },
 }

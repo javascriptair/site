@@ -6,9 +6,9 @@ function Decor() {
   const {styles} = Decor
   return (
     <div className={css(styles.root)}>
-      <span className={css(styles.part, styles.dark)}></span>
-      <span className={css(styles.part, styles.medium)}></span>
-      <span className={css(styles.part, styles.light)}></span>
+      <span className={css(styles.part, styles.dark)} />
+      <span className={css(styles.part, styles.medium)} />
+      <span className={css(styles.part, styles.light)} />
     </div>
   )
 }

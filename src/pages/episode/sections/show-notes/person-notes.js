@@ -69,7 +69,7 @@ PersonNotes.styles = StyleSheet.create({
 
 function Notes({notes, label}) {
   if (!notes.length) {
-    return <span></span>
+    return <span />
   }
   const {styles} = Notes
   return (

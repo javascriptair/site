@@ -12,7 +12,7 @@ function Transcript({transcriptHTML}) {
     return (
       <section id="transcript" className="episode-page__episode-transcript">
         <h3 className={css(styles.headerSpacing)}>Transcript</h3>
-        <div dangerouslySetInnerHTML={transcriptHTML}></div>
+        <div dangerouslySetInnerHTML={transcriptHTML} />
       </section>
     )
   }

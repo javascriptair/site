@@ -11,8 +11,7 @@ function VideoPlayer({youTubeId}) {
       frameBorder="0"
       allowFullScreen
       style={{maxWidth: '100%'}}
-    >
-    </iframe>
+    />
   )
 }
 

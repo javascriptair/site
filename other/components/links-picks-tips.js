@@ -32,7 +32,7 @@ LinksPicksTips.propTypes = {
 
 function Notes({notes, label}) {
   if (!notes.length) {
-    return <span></span>
+    return <span />
   }
   const styles = {
     ul: {

@@ -4,14 +4,17 @@
     "transform-es2015-destructuring",
     "react-require",
     [
-      "module-alias",
-      [
-        {"src": "./src/utils", "expose": "<utils>"},
-        {"src": "./src/styles", "expose": "<styles>"},
-        {"src": "./src/components", "expose": "<components>"},
-        {"src": "./resources", "expose": "<resources>"},
-        {"src": "./other", "expose": "<other>"},
-      ]
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "<utils>": "./src/utils",
+          "<styles>": "./src/styles",
+          "<components>": "./src/components",
+          "<resources>": "./resources",
+          "<other>": "./other"
+        }
+      }
     ],
   ],
 }
