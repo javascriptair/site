@@ -1,5 +1,6 @@
 export default {
   title: `On-site at React Rally`,
+  time: '12:30 PM **MT**',
   guests: [
     {
       name: 'React Rally',
