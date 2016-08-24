@@ -13,12 +13,17 @@ function Chat({youTubeId}) {
   const base = 'https://www.youtube.com/live_chat'
   const src = `${base}?${queryify(params)}`
   return (
-    <iframe
-      width="640"
-      height="500"
-      className={css(styles.chatFrame)}
-      src={src}
-    />
+    <div>
+      <iframe
+        width="640"
+        height="500"
+        className={css(styles.chatFrame)}
+        src={src}
+      />
+      <div className={css(styles.coc)}>
+        Please adhear to our <a href="https://jsair.io/CoC">Code of Conduct</a>.
+      </div>
+    </div>
   )
 }
 
@@ -30,5 +35,8 @@ Chat.styles = StyleSheet.create({
   chatFrame: {
     maxWidth: '100%',
     marginTop: 10,
+  },
+  coc: {
+    marginTop: 30,
   },
 })
