@@ -1,7 +1,8 @@
 import moment from 'moment'
 import marked from 'marked'
 import deindent from 'deindent'
-import {sample, shuffle} from 'lodash'
+import arrify from 'arrify'
+import {sample, shuffle, padStart} from 'lodash'
 import {css} from 'aphrodite'
 
 const timezones = {
@@ -16,7 +17,7 @@ export {
   displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, shuffle as sortPeople,
   markdownToHTML, getClassNames,
-  getRandomPositiveEmoji, timezones,
+  getRandomPositiveEmoji, timezones, tweetifyMessage,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -102,5 +103,24 @@ function getClassNames(styles) {
 }
 
 function getRandomPositiveEmoji() {
-  return sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻'])
+  return sample(['✨', '💥', '🎉', '🚀', '🌟', '🎊', '👍', '💯', '👏', '🙌', '😎', '🔥', '😻', '💖', '🤘'])
+}
+
+function tweetifyMessage(message, urls, thingsToRemove) {
+  thingsToRemove = arrify(thingsToRemove)
+  const MAX_LENGTH = 140
+  const LENGTH_OF_URLS = 23
+  const messageWithProperLengthUrls = arrify(urls).reduce((msg, url, index) => {
+    return msg.replace(url, padStart(`URL${index}`, LENGTH_OF_URLS, '_'))
+  }, message)
+  const tweetLength = lengthWithEmojiCountingAsOne(messageWithProperLengthUrls)
+  if (tweetLength > MAX_LENGTH && thingsToRemove.length) {
+    const [, ...remainingThingsToRemove] = thingsToRemove
+    return tweetifyMessage(message.replace(thingsToRemove[0], ''), urls, remainingThingsToRemove)
+  }
+  return message
+}
+
+function lengthWithEmojiCountingAsOne(message) {
+  return message.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, '0').length
 }

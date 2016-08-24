@@ -1,12 +1,9 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 
-import TwitterWidgetScript from '<components>/scripts/twitter-widget'
 import Page from '<components>/page'
 import SponsorsSection from '<components>/sponsors'
 import HeaderBar from '<components>/header'
-
-import TwitterFeed from './twitter-feed'
 
 import Header from './sections/header'
 import AudioSection from './sections/audio'
@@ -74,7 +71,7 @@ function PastEpisodeStuff({episodeData, sponsors}) {
         youTubeId ? (
           <div>
             <hr />
-            <VideoSection youTubeId={youTubeId} />
+            <VideoSection past={true} youTubeId={youTubeId} />
           </div>
         ) : ''
       }
@@ -109,23 +106,6 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
                 label="Watch Live"
               />
             </div>
-
-            <div className={css(styles.twitterFeedContainer)}>
-              <TwitterFeed
-                widgetId="675885424049393664"
-                linkTo="https://twitter.com/hashtag/JavaScriptAir"
-              >
-                Tweet about #JavaScriptAir
-              </TwitterFeed>
-
-              <TwitterFeed
-                widgetId="675879000950988805"
-                linkTo="https://twitter.com/hashtag/jsAirQuestion"
-              >
-                Ask a #jsAirQuestion
-              </TwitterFeed>
-              <TwitterWidgetScript />
-            </div>
           </div>
         ) : ''
       }
@@ -149,11 +129,6 @@ FutureEpisodeStuff.propTypes = {
 }
 
 FutureEpisodeStuff.styles = StyleSheet.create({
-  twitterFeedContainer: {
-    '@media only screen and (min-width: 803px)': {
-      display: 'flex',
-    },
-  },
   sectionSpacing: {
     marginBottom: 40,
   },

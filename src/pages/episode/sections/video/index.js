@@ -3,10 +3,11 @@ import {StyleSheet, css} from 'aphrodite'
 import AddToCalendarIcon from '<components>/add-to-calendar-icon'
 
 import VideoPlayer from './video-player'
+import Chat from './chat'
 
 export default VideoSection
 
-function VideoSection({youTubeId, calendarUrl, label = 'Video'}) {
+function VideoSection({past, youTubeId, calendarUrl, label = 'Video'}) {
   const {styles} = VideoSection
   return (
     <section id="video">
@@ -16,6 +17,7 @@ function VideoSection({youTubeId, calendarUrl, label = 'Video'}) {
       </h3>
       <div style={{textAlign: 'center'}}>
         <VideoPlayer youTubeId={youTubeId} />
+        {past ? '' : <Chat youTubeId={youTubeId} />}
       </div>
     </section>
   )
@@ -25,6 +27,7 @@ VideoSection.propTypes = {
   youTubeId: PropTypes.string.isRequired,
   calendarUrl: PropTypes.string,
   label: PropTypes.string,
+  past: PropTypes.bool,
 }
 
 VideoSection.styles = StyleSheet.create({

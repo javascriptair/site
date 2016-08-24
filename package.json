@@ -23,6 +23,7 @@
   "homepage": "https://github.com/javascriptair/javascriptair.github.io#readme",
   "devDependencies": {
     "aphrodite": "0.5.0",
+    "arrify": "1.0.1",
     "async": "2.0.1",
     "autoprefixer": "6.4.0",
     "axios": "0.13.1",

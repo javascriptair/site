@@ -71,10 +71,13 @@ function getEpisodeData(episodePath) {
   const titleHTML = markdownToHTML(title, true)
   const taglessTitle = striptags(titleHTML.__html)
   const metaDescription = getMetaPageDescription(numberDisplay, descriptionHTML)
+  const timeObj = getHourAndMinute(time)
 
   return {
     date,
     time,
+    timeObj,
+    timezone,
     dateDisplay,
     title,
     titleHTML,
@@ -89,14 +92,14 @@ function getEpisodeData(episodePath) {
       title: taglessTitle,
       details: metaDescription,
       guests: episode.guests,
-      time,
+      timeObj,
       shortUrl,
       timezone,
       date,
     }),
     screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
     page: `/episodes/${date}`,
-    timeHTML: getTimeHTML(time, timezone),
+    timeHTML: getTimeHTML(timeObj, timezone),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     past: episodeHasHappened(episode, date),
     ...episode,
@@ -168,13 +171,13 @@ function getCalendarUrl({
   timezone,
   date,
   guests,
-  time,
+  timeObj,
 }) {
   const base = 'http://www.google.com/calendar/event'
   const guestNames = displayListify(guests.map(g => g.name)).join('')
   const ctz = timezones[timezone]
   const day = moment(date).format('YYYYMMDD')
-  const startTime = moment(getHourAndMinute(time))
+  const startTime = moment(timeObj)
   const endTime = moment(startTime).add(1, 'hour')
   const start = startTime.format('HHmmss')
   const end = endTime.format('HHmmss')
@@ -191,10 +194,9 @@ function getCalendarUrl({
   return `${base}?${queryify(params)}`
 }
 
-function getTimeHTML(time, timezone) {
+function getTimeHTML(timeObj, timezone) {
   // just thought I'd try the functional approach. I think I like it...
-  return [time]
-    .map(getHourAndMinute)
+  return [timeObj]
     .map(s => moment(s))
     .map(s => s.format('h:mm a'))
     .map(s => `${s} ${timezone}`)
