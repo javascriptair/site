@@ -1,11 +1,19 @@
 export default {
-  title: `On-site at React Rally`,
-  time: '12:30',
-  timezone: 'MT',
+  title: `Typed JavaScript with TypeScript and Flow`,
   guests: [
     {
-      name: 'React Rally',
-      twitter: 'ReactRally',
+      name: 'Jeff Morrison',
+      twitter: 'lbljeffmo',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Anders Hejlsberg',
+      twitter: 'ahejlsberg',
       links: [
       ],
       tips: [
@@ -15,11 +23,11 @@ export default {
     },
   ],
   description: `
-    We'll be live and on-site at React Rally. Join us as we chat with attendees and speakers about the awesome React conference in Utah.
+    Adding typings to JavaScript is becoming more and more popular. We&#x27;re going to chat with the creators of TypeScript and Flow to discuss the why and how behind typed JavaScript.
   `,
-  youTubeId: 'XYBpRRkRvhM',
+  youTubeId: 'Qiqsg02nXFE',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/react-rally',
+  shortUrl: 'http://jsair.io/typed',
   host: {
     links: [
     ],

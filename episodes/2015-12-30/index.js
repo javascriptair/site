@@ -37,7 +37,6 @@ export default {
     We're going to talk about the how and why of functional
     programming and immutable design patterns in JavaScript.
   `,
-  hangoutId: 'c6gcf8f0nirc5t83homjb5trquc',
   youTubeId: '82M9fKe7hiw',
   podbeanId: 'eu658-5b510e',
   shortUrl: 'http://jsair.io/functional',

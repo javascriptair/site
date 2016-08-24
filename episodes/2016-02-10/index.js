@@ -2,7 +2,8 @@
 
 export default {
   title: `JavaScript Forward: ES6 and ES7`,
-  time: '11:20 PM **PST**',
+  time: '11:20',
+  timezone: 'PT',
   guests: [
     {
       name: 'Allen Wirfs-Brock',
@@ -17,7 +18,6 @@ export default {
     Join us for this show live at [ForwardJS](http://forwardjs.com) where we'll chat with Allen Wirfs-Brock,
     project editor of the ES2015 specification about the future of the JavaScript spec.
   `,
-  hangoutUrl: 'cs8p8a6fgmlrl490siif59emci0',
   youTubeId: '57MmZtd03ks',
   podbeanId: 'sqmnj-5ca6ed',
   shortUrl: 'http://jsair.io/forward',

@@ -84,7 +84,6 @@ export default {
   description: `
     [webpack](http://webpack.github.io/) is an amazing bundler for frontend assets. For many people it has completely changed the game for their build pipeline, entirely replacing other build tools and task runners like grunt and gulp. Join us with the webpack creator and core contributors as we talk with the webpack team about this impressive piece of tech.
   `,
-  hangoutId: 'c31tk63au5fg1l4m7gq1f9sm63g',
   youTubeId: 'admLV6V2eDg',
   podbeanId: 'i3prd-5fff14',
   shortUrl: 'http://jsair.io/webpack',

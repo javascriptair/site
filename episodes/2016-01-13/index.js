@@ -47,7 +47,6 @@ export default {
   description: `
     React is in your browser. Not just in web pages, but in the browser itself! Join us as we talk with developers from Firefox's Developer Tools team about how they're using React and Redux to build developer tools, and how the two make the DX (developer experience) of building developer tools better.
   `,
-  hangoutId: 'c06t5m6an80s3aracj7erm18lkc',
   youTubeId: 'wseL3Vl-Hh4',
   podbeanId: 'edvzg-5bc1f9',
   shortUrl: 'http://jsair.io/ff-react-redux',

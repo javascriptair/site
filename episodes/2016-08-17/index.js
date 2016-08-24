@@ -41,7 +41,6 @@ export default {
   description: `
     The average npm project has [100](http://blog.npmjs.org/post/146943134240/npm-add-ons) dependencies and subdependencies. Managing these dependencies can be challenging. We're going to talk about [DependencyCI](https://dependencyci.com/) and [Libraries.io](https://libraries.io/), and with the great person behind [Greenkeeper.io](https://greenkeeper.io/) about how to make managing these dependencies easier.
   `,
-  hangoutId: 'cm4394mohlqq5dcob5pjgp84pv4',
   youTubeId: '_dnDzmhxlZM',
   podbeanId: 'zuz3b-61e6eb',
   shortUrl: 'http://jsair.io/deps',

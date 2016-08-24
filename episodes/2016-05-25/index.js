@@ -77,8 +77,6 @@ export default {
   description: `
     A [Progressive Web App](https://developers.google.com/web/progressive-web-apps?hl=en) "uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, leveraging the web's low friction." The JavaScript Air website uses some of these techniques and technologies. Let's learn about this awesome stuff!
   `,
-  hangoutId: 'cujm1df0s1715nfd2urvgkoacp8',
-  youTubeId: 'JTVbjircIHA',
   podbeanId: 'd4tth-5f9f32',
   shortUrl: 'http://jsair.io/pwa',
   host: {
@@ -93,7 +91,7 @@ export default {
     ],
   },
   transcript: `
-    KENT: And we're live at JavaScript Air! Hello, everyone. We are super excited to be talking about progressive web apps today, in this JavaScript broadcast podcast, JavaScript Air, that we love so much. 
+    KENT: And we're live at JavaScript Air! Hello, everyone. We are super excited to be talking about progressive web apps today, in this JavaScript broadcast podcast, JavaScript Air, that we love so much.
 
     Before we get started, I'd like to give a shout out to our sponsors, that make this possible. We have Egghead.io, the show's premier sponsor. They have a huge library of bite-sized web development training videos. Check them out for content on JavaScript, Angular, React, Node, TypeScript, all kinds of awesome stuff. And upcoming really soon, a deep dive on Webpack that I'm working on right now. Really excited about it. And I'm using Webpack too, which is the bomb.
 

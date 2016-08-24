@@ -42,7 +42,6 @@ export default {
   description: `
     Electron is becoming more and more of a relevant and popular way of building multi-platform desktop apps with web technologies. Let's get a dive into this awesome tech and see how we can use it to enhance our own experience and our user's experience on the desktop.
   `,
-  hangoutId: 'cemdkrr1jecuni5lbs249sps1f8',
   youTubeId: 'y4S5eiWMYsI',
   podbeanId: 'wabfm-60c69f',
   shortUrl: 'http://jsair.io/electron',
@@ -70,7 +69,7 @@ export default {
     },
   ],
   transcript: `
-    KENT: We're live with JavaScript Air. Hello everyone, my name is Kent C. Dodds and I am your host for this JavaScript broadcast podcast called JavaScript Air. And today we're going to be talking about Electron apps. This is episode number 30, our 31st episode. We start at zero, of course. I'm really excited to be chatting with some subject matter experts about Electron and building desktop apps with web technologies. Super cool stuff. 
+    KENT: We're live with JavaScript Air. Hello everyone, my name is Kent C. Dodds and I am your host for this JavaScript broadcast podcast called JavaScript Air. And today we're going to be talking about Electron apps. This is episode number 30, our 31st episode. We start at zero, of course. I'm really excited to be chatting with some subject matter experts about Electron and building desktop apps with web technologies. Super cool stuff.
 
     Before I get into it though, I'd like to give a shout out to the sponsors that make it possible. So Egghead.io is the show's premier platform sponsor and they have a huge library of bite-sized web development training videos. Check them out for content on JavaScript Angular, React, Node and much, much more.
 

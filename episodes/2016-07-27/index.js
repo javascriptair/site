@@ -37,7 +37,6 @@ export default {
   description: `
     Web audio opens the door for rich multimedia, audio and gaming applications. It remains an unknown topic for many. Let's get an overview at audio programming with JavaScript and an introduction to some tools and frameworks that can make your life easier doing this.
   `,
-  hangoutId: 'cmk6drjd25odn32q83ke59elssk',
   youTubeId: 'sucLfBy-dVY',
   podbeanId: 'beruc-614d9c',
   shortUrl: 'http://jsair.io/audio',
@@ -51,7 +50,7 @@ export default {
     ],
   },
   transcription: `
-    KENT: We're live with JavaScript Air. Hello, everyone! My name is Kent C. Dodds and I am your host for JavaScript Air. This JavaScript broadcast podcast that is awesome. So today, we're gonna be talking about getting started with web audio. This is episode 33. So before we get into our subject with our subject matter experts, I'd like to give a shout out to our sponsors that make many of the cool things about the show possible. 
+    KENT: We're live with JavaScript Air. Hello, everyone! My name is Kent C. Dodds and I am your host for JavaScript Air. This JavaScript broadcast podcast that is awesome. So today, we're gonna be talking about getting started with web audio. This is episode 33. So before we get into our subject with our subject matter experts, I'd like to give a shout out to our sponsors that make many of the cool things about the show possible.
 
     So first, Egghead.io, the show's premiere sponsor, has a huge library of bite-sized web development training videos. Check them out for content on JavaScript, Angular, React, Node, and more. And Egghead.io is the host of two free courses from Dan Abramov. Find them at Egghead.io/redux
 

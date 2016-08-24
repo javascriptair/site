@@ -17,8 +17,6 @@ export default {
   description: `
     End-to-End testing is among the various forms of testing that is critical for the development and quality assurance of your applications. Join us with a subject matter expert to chat about this important part of application development
   `,
-  hangoutId: 'c7h4gafbmpo00gc5llo6v737g3o',
-  youTubeId: 'yoPIsrhaNGU',
   podbeanId: '67rvv-5d98e5',
   shortUrl: 'http://jsair.io/e2e',
   host: {

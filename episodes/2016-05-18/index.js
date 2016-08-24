@@ -35,7 +35,6 @@ export default {
   description: `
     We've heard about [GraphQL](https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html) [quite](https://www.youtube.com/watch?v=cr4QB3j8qFc) [a](https://www.youtube.com/watch?v=gY48GW87Feo) [bit](https://www.youtube.com/watch?v=S0s935RKKB4). We know that there are problems with REST and GraphQL solves many of those problems. But now we have a new problem: Transitioning from REST to GraphQL. Let's talk about what it takes to do that well and how services need to adapt to this new way of thinking about data access.
   `,
-  hangoutId: 'csvotlp55dohetinq6k4cmrnhcg',
   youTubeId: 'ENqDNIp1Nd8',
   podbeanId: 'betn7-5f6d7a',
   shortUrl: 'http://jsair.io/rest-graphql',

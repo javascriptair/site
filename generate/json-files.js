@@ -67,7 +67,7 @@ function getConfig() {
         'date',
         'time',
         'description',
-        'hangoutId',
+        'calendarUrl',
         'youTubeId',
         'guests',
       ],

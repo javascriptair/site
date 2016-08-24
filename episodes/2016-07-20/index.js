@@ -69,7 +69,6 @@ export default {
   description: `
     Doing open source involves a lot more than just coding up the tool/library. We're going to talk about the challenge of activly publishing an open source package on npm and some of the tools that have been developed to automate this process. Our guests have each developed some amazing tools, so you're in for a really interesting show!
   `,
-  hangoutId: 'ch2o1c4siukllgb5kuiip7gd514',
   youTubeId: 'aK0-SrdHriw',
   podbeanId: '4anuw-6123a2',
   shortUrl: 'http://jsair.io/publishing',

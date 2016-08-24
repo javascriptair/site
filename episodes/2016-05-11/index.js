@@ -41,7 +41,6 @@ export default {
   description: `
     The JavaScript community is composed of a ton of people with a ton of different backgrounds and privilege. We need to do our very best to make everyone feel as included as possible. It makes everything better when we work to foster a welcoming and friendly community. We're going to talk about what you can do to improve your workspace and community.
   `,
-  hangoutId: 'carao3pdrl3bag1kf8l9frerml4',
   youTubeId: '-rH-W483sUg',
   podbeanId: '4ajwx-5f40ab',
   shortUrl: 'http://jsair.io/science',

@@ -32,7 +32,6 @@ export default {
   description: `
     Angular is the most widely used JavaScript framework in the world and there's a reason for that. Angular 1 changed the framework landscape and Angular 2 is shaping up to do that again. Join us with some of the core team members to talk about this amazing piece of JavaScript tech!
   `,
-  hangoutId: 'cikahchraiqcname9ghsi5j1bh0',
   youTubeId: 'naDNy5VBQuA',
   podbeanId: 'xrg68-5e3062',
   shortUrl: 'http://jsair.io/angular',

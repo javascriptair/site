@@ -25,11 +25,6 @@ export default ({addFile}) => {
         message: 'Description',
       },
       {
-        name: 'hangoutId',
-        type: 'input',
-        message: 'Hangout ID',
-      },
-      {
         name: 'youTubeId',
         type: 'input',
         message: 'YouTube ID',

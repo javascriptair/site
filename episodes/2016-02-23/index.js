@@ -2,7 +2,8 @@
 
 export default {
   title: `Live at React Conf`,
-  time: '**12:45** PM **PST**',
+  time: '12:45',
+  timezone: 'PT',
   guests: [
     {
       name: 'React Conf',
@@ -25,7 +26,6 @@ export default {
 - [Jamison Dance](https://twitter.com/jergason) - Rethinking All Practices: Building Applications in Elm
 - [Maria Hollweck](https://twitter.com/maria_hollweck) - React Native: Lessons Learned After Migrating an App from iOS to Android
   `,
-  hangoutId: 'c6kdirtpl5i76am6mlhuqis490o',
   youTubeId: 'rgoyT95ce2U',
   podbeanId: 'hwwwv-5cf025',
   shortUrl: 'http://jsair.io/react-conf',

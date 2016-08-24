@@ -2,10 +2,14 @@ import fs from 'fs'
 import path from 'path'
 import moment from 'moment'
 import striptags from 'striptags'
+import {stringify as queryify} from 'query-string'
 
 import panelists from '<resources>/panelists'
 import host from '<resources>/host'
-import {markdownToHTML, isPastAndNotToday, sortPeople} from './utils'
+import {
+  displayListify, markdownToHTML,
+  isPastAndNotToday, sortPeople, timezones,
+} from './utils'
 
 const episodes = getDirectories(path.resolve(__dirname, '../../episodes'))
 const dateRegex = /\/(\d{4}-\d{2}-\d{2})/
@@ -60,12 +64,13 @@ function getEpisodeData(episodePath) {
   htmlifyLinksPicksAndTips(episode.host)
   episode.host.hasNotes = hasNotes(episode.host)
 
-  const time = episode.time || '12:00 PM (CT)'
+  const {title = 'TBA', time = '12:00', transcript, timezone = 'CT', shortUrl} = episode
   const dateDisplay = moment(date).format('dddd, MMMM Do, YYYY')
   const description = (episode.description && episode.description.trim()) || getDefaultDescription()
-  const {transcript, title = 'TBA'} = episode
   const descriptionHTML = markdownToHTML(description)
   const titleHTML = markdownToHTML(title, true)
+  const taglessTitle = striptags(titleHTML.__html)
+  const metaDescription = getMetaPageDescription(numberDisplay, descriptionHTML)
 
   return {
     date,
@@ -73,18 +78,27 @@ function getEpisodeData(episodePath) {
     dateDisplay,
     title,
     titleHTML,
-    taglessTitle: striptags(titleHTML.__html),
-    description,
-    metaDescription: getMetaPageDescription(numberDisplay, descriptionHTML),
-    screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
-    page: `/episodes/${date}`,
-    descriptionHTML,
-    timeHTML: markdownToHTML(time, true),
-    transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
-    hangoutUrl: episode.hangoutId ? `https://plus.google.com/events/${episode.hangoutId}` : null,
-    past: episodeHasHappened(episode, date),
+    taglessTitle,
     number,
     numberDisplay,
+    description,
+    descriptionHTML,
+    metaDescription,
+    calendarUrl: getCalendarUrl({
+      numberDisplay,
+      title: taglessTitle,
+      details: metaDescription,
+      guests: episode.guests,
+      time,
+      shortUrl,
+      timezone,
+      date,
+    }),
+    screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
+    page: `/episodes/${date}`,
+    timeHTML: getTimeHTML(time, timezone),
+    transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
+    past: episodeHasHappened(episode, date),
     ...episode,
   }
 
@@ -144,4 +158,58 @@ function getMetaPageDescription(numberDisplay, descriptionHTML) {
     .replace(/DOUBLE_NEW_LINE/g, '\n\n')
     .trim()
   return `Episode ${numberDisplay} of the live JavaScript broadcast podcast. ${striptags(description)}`
+}
+
+function getCalendarUrl({
+  numberDisplay,
+  title,
+  details,
+  shortUrl,
+  timezone,
+  date,
+  guests,
+  time,
+}) {
+  const base = 'http://www.google.com/calendar/event'
+  const guestNames = displayListify(guests.map(g => g.name)).join('')
+  const ctz = timezones[timezone]
+  const day = moment(date).format('YYYYMMDD')
+  const startTime = moment(getHourAndMinute(time))
+  const endTime = moment(startTime).add(1, 'hour')
+  const start = startTime.format('HHmmss')
+  const end = endTime.format('HHmmss')
+  const params = {
+    action: 'TEMPLATE',
+    text: `JavaScript Air Episode ${numberDisplay}: ${title} with ${guestNames}`,
+    ctz,
+    dates: `${day}T${start}/${day}T${end}`,
+    details,
+    location: shortUrl,
+    trp: false,
+    sprop: [shortUrl, 'name:JavaScript Air'],
+  }
+  return `${base}?${queryify(params)}`
+}
+
+function getTimeHTML(time, timezone) {
+  // just thought I'd try the functional approach. I think I like it...
+  return [time]
+    .map(getHourAndMinute)
+    .map(s => moment(s))
+    .map(s => s.format('h:mm a'))
+    .map(s => `${s} ${timezone}`)
+    .map(s => {
+      const normalTime = '12:00 pm CT'
+      if (s === normalTime) {
+        return normalTime
+      } else {
+        return `**${s}**`
+      }
+    })
+    .map(s => markdownToHTML(s, true))[0]
+}
+
+function getHourAndMinute(time) {
+  const [, hour, minute] = /(\d{1,2}):(\d{2})/.exec(time)
+  return {hour, minute, second: 0}
 }

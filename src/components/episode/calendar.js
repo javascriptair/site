@@ -1,7 +1,7 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
 import moment from 'moment'
-import RSVPIcon from '<components>/rsvp-icon'
+import AddToCalendarIcon from '<components>/add-to-calendar-icon'
 
 export default Calendar
 
@@ -38,9 +38,8 @@ const CalendarSection = {
 function Calendar({episode}) {
   const {
     date,
-    hangoutUrl,
+    calendarUrl,
     timeHTML,
-    page,
   } = episode
   const dateCurrent = moment(date)
   const dayDifference = 1
@@ -52,10 +51,9 @@ function Calendar({episode}) {
       <ShowMonth date={dateCurrent} />
       <ShowDays
         date={dateCurrent}
-        page={page}
         dateBefore={dateBefore}
         dateAfter={dateAfter}
-        hangoutUrl={hangoutUrl}
+        calendarUrl={calendarUrl}
       />
       <ShowTime timeHTML={timeHTML} />
     </div>
@@ -94,16 +92,15 @@ ShowMonth.styles = StyleSheet.create(Object.assign({
   },
 }, CalendarSection))
 
-function ShowDays({date, page, dateBefore, dateAfter, hangoutUrl}) {
+function ShowDays({date, dateBefore, dateAfter, calendarUrl}) {
   const {styles} = ShowDays
   return (
     <div className={`${css(styles.section, styles.sectionDates)}`}>
       <div className={`${css(styles.sectionDatesContainer)}`}>
         <DateSquare side="before" date={dateBefore} />
         <MainDate
-          page={page}
           date={date}
-          hangoutUrl={hangoutUrl}
+          calendarUrl={calendarUrl}
         />
         <DateSquare side="after" date={dateAfter} />
       </div>
@@ -115,23 +112,29 @@ ShowDays.propTypes = {
   date: PropTypes.object.isRequired,
   dateBefore: PropTypes.object.isRequired,
   dateAfter: PropTypes.object.isRequired,
-  hangoutUrl: PropTypes.string.isRequired,
-  page: PropTypes.string.isRequired,
+  calendarUrl: PropTypes.string.isRequired,
 }
 
 ShowDays.styles = StyleSheet.create(CalendarSection)
 
-function MainDate({page, date, hangoutUrl}) {
+function MainDate({date, calendarUrl}) {
   const {styles} = MainDate
   return (
     <DateSquare side="main" date={date}>
       <div className={`${css(styles.calendarDateSlide)}`}>
-        <RSVPIcon
-          hangoutUrl={page}
+        <AddToCalendarIcon
+          calendarUrl={calendarUrl}
           black={true}
           iconStyles={styles.mainDateRSVPIcon}
         />
-        <a className={`${css(styles.calendarDateSlideLink)}`} href={hangoutUrl}>Add to Calendar</a>
+        <a
+          className={`${css(styles.calendarDateSlideLink)}`}
+          href={calendarUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Add to Calendar
+        </a>
       </div>
     </DateSquare>
   )
@@ -139,8 +142,7 @@ function MainDate({page, date, hangoutUrl}) {
 
 MainDate.propTypes = {
   date: PropTypes.object.isRequired,
-  hangoutUrl: PropTypes.string.isRequired,
-  page: PropTypes.string.isRequired,
+  calendarUrl: PropTypes.string.isRequired,
 }
 
 MainDate.styles = StyleSheet.create({

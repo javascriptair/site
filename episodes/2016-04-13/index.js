@@ -47,7 +47,6 @@ export default {
   description: `
     Object oriented programming, functional programming, reactive programming, reactive functional programming. There are so many different ways to think about the system you're building and different design patterns to follow. Join us as we talk about reactive programming in JavaScript.
   `,
-  hangoutId: 'cbu3fh4too4a6iot5psgo9cl4d4',
   youTubeId: 'RFvwLifhxDg',
   podbeanId: 'yn6zw-5e65e8',
   shortUrl: 'http://jsair.io/reactive',

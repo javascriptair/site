@@ -26,7 +26,11 @@ function Links() {
 function getLinks() {
   return [
     {
-      href: 'http://suggest.javascriptair.com',
+      href: 'https://jsair.io/feedback',
+      title: 'Give Feedback',
+    },
+    {
+      href: 'https://jsair.io/suggest',
       title: 'Suggest Episodes',
     },
     {
@@ -35,7 +39,7 @@ function getLinks() {
       title: 'All Show Guests',
     },
     {
-      href: 'http://jsair.io/email',
+      href: 'https://jsair.io/email',
       alt: 'Show Notes Email Registration',
       title: 'Show Notes Email Registration',
     },

@@ -4,11 +4,19 @@ import deindent from 'deindent'
 import {sample, shuffle} from 'lodash'
 import {css} from 'aphrodite'
 
+const timezones = {
+  PT: 'America/Los_Angeles',
+  AKT: 'America/Anchorage',
+  CT: 'America/Chicago',
+  MT: 'America/Denver',
+  ET: 'America/New_York',
+}
+
 export {
   displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, shuffle as sortPeople,
   markdownToHTML, getClassNames,
-  getRandomPositiveEmoji,
+  getRandomPositiveEmoji, timezones,
 }
 
 /* intersperse: Return an array with the separator interspersed between

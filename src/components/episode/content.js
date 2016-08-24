@@ -11,7 +11,7 @@ function Content({episode}) {
     titleHTML,
     guests = [],
     descriptionHTML,
-    hangoutUrl,
+    calendarUrl,
   } = episode
 
   const {styles} = Content
@@ -19,7 +19,7 @@ function Content({episode}) {
     <div className={css(styles.episodeContentRoot)}>
       <Title page={page} titleHTML={titleHTML} />
       <Description descriptionHTML={descriptionHTML} />
-      <Buttons page={page} hangoutUrl={hangoutUrl} />
+      <Buttons page={page} calendarUrl={calendarUrl} />
       <Guests guests={guests} />
     </div>
   )
@@ -95,14 +95,19 @@ Description.styles = StyleSheet.create({
   },
 })
 
-function Buttons({page, hangoutUrl}) {
+function Buttons({page, calendarUrl}) {
   const {styles} = Buttons
   return (
     <div className={css(styles.buttonRoot)}>
       <a className={css(styles.button)} href={page}>
         View Episode...
       </a>
-      <a className={css(styles.button)} href={hangoutUrl}>
+      <a
+        className={css(styles.button)}
+        href={calendarUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Add to Calendar...
       </a>
     </div>
@@ -111,7 +116,7 @@ function Buttons({page, hangoutUrl}) {
 
 Buttons.propTypes = {
   page: PropTypes.string.isRequired,
-  hangoutUrl: PropTypes.string.isRequired,
+  calendarUrl: PropTypes.string.isRequired,
 }
 
 Buttons.styles = StyleSheet.create({

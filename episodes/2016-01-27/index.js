@@ -2,7 +2,6 @@
 
 export default {
   title: `Chakra, Microsoft's Open Source JavaScript Engine`,
-  hangoutId: 'cr1d6qpgnbgn5a77upg4hu010gk',
   guests: [
     {
       name: 'Gaurav Seth',

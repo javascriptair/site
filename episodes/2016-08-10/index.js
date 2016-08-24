@@ -62,7 +62,6 @@ export default {
   description: `
     With so many new developers coming into the JavaScript world, there's never been a greater need for experienced developers to mentor and teach others. In this episode we'll chat with some experts on how to be an effective mentor.
   `,
-  hangoutId: 'cld206bma155l4ku80dlm761k2c',
   youTubeId: 'lA8mo8oQ9J0',
   podbeanId: '2736i-61b46c',
   shortUrl: 'http://jsair.io/mentor',

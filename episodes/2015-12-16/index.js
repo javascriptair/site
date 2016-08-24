@@ -2,7 +2,6 @@
 
 export default {
   title: 'Learning and Developing JavaScript',
-  hangoutId: 'c2bgue075m3us9cemis03iivrag',
   guests: [
     {
       name: 'Ashley G. Williams',

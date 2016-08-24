@@ -34,7 +34,6 @@ export default {
   description: `
     The world is becoming more and more interconnected with more devices joining and communicating on the network every day. The space of hardware hacking is exciting! It's becoming even more welcoming to developers as the barrier to entry has been decreased significantly with JavaScript.
   `,
-  hangoutId: 'c46nrh7d108hnt81d4pdmbd00as',
   youTubeId: 'oUBbfYUzaAI',
   podbeanId: 'sgtax-5e9e3d',
   shortUrl: 'http://jsair.io/iot',

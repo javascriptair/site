@@ -2,7 +2,8 @@
 
 export default {
   title: `Live at Fluent Conf`,
-  time: '**12:45** PM **PST**',
+  time: '12:45',
+  timezone: 'PT',
   guests: [
     {
       name: 'Fluent Conf',
@@ -21,7 +22,6 @@ export default {
 - [Jen Kramer](https://twitter.com/jen4web) - Planning successful products
 - [Rachel Andrew](https://twitter.com/rachelandrew) - Making sense of the new CSS layout
   `,
-  hangoutId: 'c7vou4l3f49a9vcamh1it3mru5c',
   youTubeId: 'R0eIlOvo5Js',
   podbeanId: 'a2jc5-5d6380',
   shortUrl: 'http://jsair.io/fluent-conf',

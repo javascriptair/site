@@ -10,6 +10,7 @@ function SocialIconGroup() {
     {href: 'https://twitter.com/JavaScriptAir', name: 'twitter', text: 'Twitter'},
     {href: 'https://plus.google.com/105493143005968326308', name: 'googlePlus', text: 'Google+'},
     {href: 'mailto:javascriptair+website@gmail.com', name: 'contactus', text: 'Contact us'},
+    {href: 'https://jsair.io/calendar', name: 'calendar', text: 'Show Calendar'},
     {href: 'https://facebook.com/JavaScriptAir', name: 'facebook', text: 'Facebook'},
     {href: 'https://github.com/javascriptair/site', name: 'github', text: 'GitHub'},
   ]

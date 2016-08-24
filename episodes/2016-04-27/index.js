@@ -48,7 +48,6 @@ export default {
   description: `
     Ember is one of the most widely used JavaScript frameworks in the world and has some pretty amazing features. Its focus is on giving you everything you need to build web applications and delivers on that promise for many applications in the world today!
   `,
-  hangoutId: 'cuntpmhlo4u8o4vm7t04alundfo',
   youTubeId: 'sU1Zo2evbkU',
   podbeanId: 'dhumh-5ed368',
   shortUrl: 'http://jsair.io/ember',

@@ -63,7 +63,6 @@ export default {
     We'll be joined by ESLint committers and the author
     of [the Standard library](http://npm.im/standard).
   `,
-  hangoutId: 'cms6et0sffpkf92nucv1nf70c74',
   youTubeId: 'sEXow0FPE3Q',
   podbeanId: 'dank2-5cc2ff',
   shortUrl: 'http://jsair.io/eslint',

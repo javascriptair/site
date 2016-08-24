@@ -114,7 +114,6 @@ export default {
   description: `
     We have some solid developers on the JavaScript Air panel working on some amazing things. This is your chance to get to know them!
   `,
-  hangoutId: 'ciduop5sck7su6n8f99nnctigt0',
   youTubeId: 'gxI5m_raAWg',
   podbeanId: 'mu5vn-5bebfd',
   shortUrl: 'http://jsair.io/panel-intro',

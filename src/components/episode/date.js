@@ -12,7 +12,7 @@ function Date({episode}) {
   const {
     numberDisplay,
     date,
-    page,
+    calendarUrl,
   } = episode
   const {styles} = Date
   return (
@@ -23,7 +23,7 @@ function Date({episode}) {
         <Calendar episode={episode} />
       </div>
       <div className={css(styles.bottomWrapper)}>
-        <AddToCalendar page={page} />
+        <AddToCalendar calendarUrl={calendarUrl} />
         <TweetLink episode={episode} />
       </div>
     </div>
@@ -113,11 +113,18 @@ MobileCalendar.styles = StyleSheet.create({
   },
 })
 
-function AddToCalendar({page}) {
+function AddToCalendar({calendarUrl}) {
   const {styles} = AddToCalendar
   return (
     <div className={css(styles.addToCalendarRoot)}>
-      <a href={page} className={css(styles.addToCalendarLink)}>Add to Calendar</a>
+      <a
+        href={calendarUrl}
+        className={css(styles.addToCalendarLink)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Add to Calendar
+      </a>
     </div>
   )
 }
@@ -143,5 +150,5 @@ AddToCalendar.styles = StyleSheet.create({
 })
 
 AddToCalendar.propTypes = {
-  page: PropTypes.string.isRequired,
+  calendarUrl: PropTypes.string.isRequired,
 }

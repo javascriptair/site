@@ -95,7 +95,7 @@ PastEpisodeStuff.propTypes = {
 
 function FutureEpisodeStuff({episodeData, sponsors}) {
   const {styles} = FutureEpisodeStuff
-  const {youTubeId, hangoutUrl} = episodeData
+  const {youTubeId, calendarUrl} = episodeData
   return (
     <div>
       {
@@ -105,7 +105,7 @@ function FutureEpisodeStuff({episodeData, sponsors}) {
             <div className={css(styles.sectionSpacing)}>
               <VideoSection
                 youTubeId={youTubeId}
-                hangoutUrl={hangoutUrl}
+                calendarUrl={calendarUrl}
                 label="Watch Live"
               />
             </div>

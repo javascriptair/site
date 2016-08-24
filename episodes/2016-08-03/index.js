@@ -53,7 +53,6 @@ export default {
   description: `
     "Tie your hands to free your mind" is a mantra you hear that applies really well to the constraints that you put on yourself by embracing statically typed languages and functional programming. We're going to hear from various people about their respective visions of typed FP in JS.
   `,
-  hangoutId: 'ca87vqg4bsqfj63f7gh25lsl9pc',
   youTubeId: 'mwdXBFtRl0o',
   podbeanId: 'e2iiw-6180fa',
   shortUrl: 'http://jsair.io/typed-fp',

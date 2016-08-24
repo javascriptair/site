@@ -1,18 +1,18 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
-import RSVPIcon from '<components>/rsvp-icon'
+import AddToCalendarIcon from '<components>/add-to-calendar-icon'
 
 import VideoPlayer from './video-player'
 
 export default VideoSection
 
-function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
+function VideoSection({youTubeId, calendarUrl, label = 'Video'}) {
   const {styles} = VideoSection
   return (
     <section id="video">
       <h3 className={css(styles.headerSpacing)}>
         {`${label} `}
-        {hangoutUrl ? <Rsvp hangoutUrl={hangoutUrl} /> : ''}
+        {calendarUrl ? <Rsvp calendarUrl={calendarUrl} /> : ''}
       </h3>
       <div style={{textAlign: 'center'}}>
         <VideoPlayer youTubeId={youTubeId} />
@@ -23,7 +23,7 @@ function VideoSection({youTubeId, hangoutUrl, label = 'Video'}) {
 
 VideoSection.propTypes = {
   youTubeId: PropTypes.string.isRequired,
-  hangoutUrl: PropTypes.string,
+  calendarUrl: PropTypes.string,
   label: PropTypes.string,
 }
 
@@ -33,23 +33,29 @@ VideoSection.styles = StyleSheet.create({
   },
 })
 
-function Rsvp({hangoutUrl}) {
-  if (!hangoutUrl) {
+function Rsvp({calendarUrl}) {
+  if (!calendarUrl) {
     return <noscript />
   }
   return (
     <span>
-      <RSVPIcon hangoutUrl={hangoutUrl} />
+      <AddToCalendarIcon calendarUrl={calendarUrl} />
       <br />
       <small>
-        {'RSVP to '}
-        <a href={hangoutUrl}>the event</a>
-        {' to add it to your calendar'}
+        {'Click '}
+        <a
+          href={calendarUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        {' to add this to your Google Calendar'}
       </small>
     </span>
   )
 }
 
 Rsvp.propTypes = {
-  hangoutUrl: PropTypes.string,
+  calendarUrl: PropTypes.string,
 }

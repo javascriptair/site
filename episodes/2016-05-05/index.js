@@ -1,6 +1,7 @@
 export default {
   title: `On site at ng-conf`,
-  time: '2:00 PM **MDT**',
+  time: '14:00',
+  timezone: 'MT',
   guests: [
     {
       name: 'ng-conf',
@@ -20,7 +21,6 @@ export default {
 - [Alyssa Nicoll](https://twitter.com/AlyssaNicoll) and [Sergio Cruz](https://twitter.com/hashtagserg) - Wanting it all vs. Being Great
 - [Jules Kremer](https://twitter.com/jules_kremer), [Brad Green](https://twitter.com/bradlygreen), and [Miško Hevery](https://twitter.com/mhevery) - Keynote (Angular Community)
   `,
-  hangoutId: 'cbjlovqo30a8qlgnofngrcvoecg',
   youTubeId: 'Q9aL9kmdmIE',
   podbeanId: 'kjqzk-5f14af',
   shortUrl: 'http://jsair.io/ng-conf',

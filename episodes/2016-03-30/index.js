@@ -36,7 +36,6 @@ export default {
   description: `
     Vue.js is a JavaScript Framework for building reactive components for modern web interfaces. It allows you to write your JS, HTML, and CSS in a single file, has powerful data bindings, focuses on composability, is small, and is insanely fast. Join us with the author for this show!
   `,
-  hangoutId: 'ctmiq58p34btmpqe4b1p8flq8a0',
   youTubeId: 'i3ET71ZCW_E',
   podbeanId: 'ysfta-5dfb9d',
   shortUrl: 'http://jsair.io/vuejs',

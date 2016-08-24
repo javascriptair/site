@@ -1,6 +1,5 @@
 export default {
   title: `JavaScript Debugging`,
-  hangoutId: 'c36b25girvo89474lqo92loikic',
   guests: [
     {
       name: 'Alex Liu',
