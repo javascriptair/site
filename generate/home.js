@@ -12,5 +12,8 @@ renderComponentToFile(
     sponsors={currentSponsors}
     panelists={panelists}
   />,
-  resolve(__dirname, '../index.html'),
+  [
+    resolve(__dirname, '../index.html'),
+    resolve(__dirname, '../404.html'),
+  ],
 )
