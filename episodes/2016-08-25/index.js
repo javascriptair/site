@@ -3,103 +3,18 @@ export default {
   time: '20:30',
   timezone: 'MT',
   guests: [
-    {
-      name: 'React Rally',
-      twitter: 'ReactRally',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
+    {name: 'React Rally', twitter: 'ReactRally'},
   ],
   description: `
     We'll be live and on-site at React Rally. Join us as we chat with attendees and speakers about the awesome React conference in Utah.
+    <br />
+- [Katherine Poulter](https://twitter.com/katpoulter)
+- [Sergio Cruz](https://twitter.com/hashtagserg)
+- [James Long](https://twitter.com/jlongster)
+- [Ryan Florence](https://twitter.com/ryanflorence)
+- [Jamison Dance](https://twitter.com/jergason)
   `,
   youTubeId: 'XYBpRRkRvhM',
-  podbeanId: '',
+  podbeanId: 'rbgx5-621d84',
   shortUrl: 'http://jsair.io/react-rally',
-  host: {
-    links: [
-    ],
-    tips: [
-    ],
-    picks: [
-    ],
-  },
-  panelists: [
-    {
-      twitter: 'dan_abramov',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'drboolean',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'getify',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'kwuchu',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'linclark',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'mzabriskie',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-  ],
 }
