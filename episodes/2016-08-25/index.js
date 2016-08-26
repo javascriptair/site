@@ -1,6 +1,6 @@
 export default {
   title: `On-site at React Rally`,
-  time: '20:00',
+  time: '20:30',
   timezone: 'MT',
   guests: [
     {
