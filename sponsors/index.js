@@ -28,7 +28,7 @@ const sponsors = {
       link: 'http://jsair.io/trackjs',
       tagline: 'JavaScript Error Monitoring',
       startDate: '2015-12-08',
-      endDate: '2016-09-08',
+      endDate: '2016-12-08',
     },
     {
       imgSrc: '/sponsors/wallabyjs.png',
