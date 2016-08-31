@@ -12,6 +12,16 @@ export default {
       ],
     },
     {
+      name: 'Gregor Martynus',
+      twitter: 'gr2m',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
       name: 'Myles Borins',
       twitter: 'thealphanerd',
       links: [
