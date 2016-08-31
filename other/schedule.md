@@ -38,7 +38,7 @@
 | 2016-08-17 | [Managing Dependencies like a boss 😎](/../../issues/145) |
 | 2016-08-26 | [React Rally](/../../issues/143) |
 | 2016-08-31 | [Typed JavaScript](/../../issues/140) |
-| 2016-09-07 | [](/../../issues/) |
+| 2016-09-07 | [Node.js and Community](/../../issues/148) |
 | 2016-09-14 | [Strange Loop](/../../issues/46) |
 | 2016-09-21 | [](/../../issues/) |
 | 2016-09-28 | [](/../../issues/) |
