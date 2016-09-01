@@ -26,7 +26,7 @@ export default {
     },
   ],
   description: `
-    Adding typings to JavaScript is becoming more and more popular. We&#x27;re going to chat with the creators of TypeScript and Flow to discuss the why and how behind typed JavaScript.
+    Adding typings to JavaScript is becoming more and more popular. We're going to chat with the creators of TypeScript and Flow to discuss the why and how behind typed JavaScript.
   `,
   youTubeId: 'Qiqsg02nXFE',
   podbeanId: 'bz2fp-624493',
