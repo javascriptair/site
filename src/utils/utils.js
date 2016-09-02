@@ -3,7 +3,6 @@ import marked from 'marked'
 import deindent from 'deindent'
 import arrify from 'arrify'
 import {sample, shuffle, padStart} from 'lodash'
-import {css} from 'aphrodite'
 
 const timezones = {
   PT: 'America/Los_Angeles',
@@ -16,8 +15,7 @@ const timezones = {
 export {
   displayListify, intersperse,
   isPast, isFuture, isToday, isPastAndNotToday, shuffle as sortPeople,
-  markdownToHTML, getClassNames,
-  getRandomPositiveEmoji, timezones, tweetifyMessage,
+  markdownToHTML, getRandomPositiveEmoji, timezones, tweetifyMessage,
 }
 
 /* intersperse: Return an array with the separator interspersed between
@@ -96,10 +94,6 @@ function markdownToHTML(string, stripP) {
     .replace(/&#x27;/g, `'`)
     .replace(/&amp;/g, '&')
   return {__html: html}
-}
-
-function getClassNames(styles) {
-  return Object.keys(styles).map(k => css(styles[k]))
 }
 
 function getRandomPositiveEmoji() {
