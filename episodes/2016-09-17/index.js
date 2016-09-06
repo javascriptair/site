@@ -13,7 +13,7 @@ export default {
     },
   ],
   description: `
-    We&#x27;re going to be chatting with the wonderful and intelligent people at The Strange Loop Conference!
+    We're going to be chatting with the wonderful and intelligent people at The Strange Loop Conference!
   `,
   youTubeId: 'XPr9lT-UuTs',
   podbeanId: '',
