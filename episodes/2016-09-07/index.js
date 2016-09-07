@@ -41,16 +41,6 @@ export default {
       picks: [
       ],
     },
-    {
-      name: 'Emily Rose',
-      twitter: 'nexxylove',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
   ],
   description: `
     A huge part of open source is the community that is formed around it. This is one of the best parts of open source. It is also a challenge to manage, especially with big projects like Node.js. We'll be chatting with some community builders and code contributors to learn how Node.js fosters and grows its community.
