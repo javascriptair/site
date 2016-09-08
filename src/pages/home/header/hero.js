@@ -71,8 +71,11 @@ Hero.styles = StyleSheet.create({
     marginTop: 50,
   },
   social: {
-    width: '45%',
+    width: '500px',
     margin: '0 auto',
+    [upToMedium]: {
+      width: '240px',
+    },
     ...socialStyles,
   },
   socialDecor: socialDecorStyles,

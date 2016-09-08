@@ -13,7 +13,7 @@ const social = {
   boxShadow: '0px 14px 22px -6px rgba(0,0,0,0.38)',
   minWidth: 420,
   [upToMedium]: {
-    width: '85%',
+    width: '220px',
     minWidth: 'inherit',
   },
 }
