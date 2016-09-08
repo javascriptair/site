@@ -9,6 +9,7 @@ function SubscribeIconGroup() {
     {href: 'http://audio.javascriptair.com/feed/', name: 'podcast', title: 'Podcast RSS Feed'},
     {href: 'http://video.javascriptair.com/', name: 'youtube', title: 'YouTube Channel'},
     {href: 'http://itunes.javascriptair.com/', name: 'apple', title: 'iTunes Podcast'},
+    {href: 'http://pca.st/javaair', name: 'pocketcasts', title: 'Pocketcasts app'},
   ]
   return (
     <ul className={css(styles.list)}>
