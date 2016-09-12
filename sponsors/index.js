@@ -20,7 +20,7 @@ const sponsors = {
       link: 'http://jsair.io/frontendmasters',
       tagline: 'Expert front-end training',
       startDate: '2015-12-08',
-      endDate: '2016-09-08',
+      endDate: '2016-12-08',
     },
     {
       imgSrc: '/sponsors/trackjs.png',
