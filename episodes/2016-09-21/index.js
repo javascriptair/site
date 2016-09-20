@@ -1,9 +1,19 @@
 export default {
-  title: `TBA`,
+  title: `Test all the things with Cypress`,
   guests: [
     {
-      name: 'TBA',
-      twitter: '',
+      name: 'Brian Mann',
+      twitter: 'be_mann',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Gleb Bahmutov',
+      twitter: 'bahmutov',
       links: [
       ],
       tips: [
@@ -13,11 +23,11 @@ export default {
     },
   ],
   description: `
-    This show is yet to be announced, but it will be great!
+    Cypress.io is an automated testing tool that runs in the context of the browser and has some really solid features that make unit, integration, and even end to end testing much easier!
   `,
   youTubeId: 'JYPks6u2hGk',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/2016-09-21',
+  shortUrl: 'http://jsair.io/cypress',
   host: {
     links: [
     ],

@@ -40,7 +40,7 @@
 | 2016-08-31 | [Typed JavaScript](/../../issues/140) |
 | 2016-09-07 | [Node.js and Community](/../../issues/148) |
 | 2016-09-14 | [Strange Loop](/../../issues/46) |
-| 2016-09-21 | [](/../../issues/) |
+| 2016-09-21 | [Test all the things with Cypress](/../../issues/153) |
 | 2016-09-28 | [](/../../issues/) |
 | 2016-10-05 | [](/../../issues/) |
 | 2016-10-12 | [](/../../issues/) |
