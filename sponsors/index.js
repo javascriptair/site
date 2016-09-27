@@ -120,6 +120,14 @@ const sponsors = {
       startDate: '2016-06-24',
       endDate: '2016-09-24',
     },
+    {
+      imgSrc: '/sponsors/hired.png',
+      name: 'Hired.com',
+      link: 'http://jsair.io/hired',
+      tagline: `We Bring Job Offers To You`,
+      startDate: '2016-09-27',
+      endDate: '2016-12-27',
+    },
   ],
   appreciationSponsors: [
     {
