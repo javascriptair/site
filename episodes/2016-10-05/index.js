@@ -1,9 +1,19 @@
 export default {
-  title: `TBA`,
+  title: `React Native`,
   guests: [
     {
-      name: 'TBA',
-      twitter: '',
+      name: 'Tyler McGinnis',
+      twitter: 'tylermcginnis33',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Ken Wheeler',
+      twitter: 'ken_wheeler',
       links: [
       ],
       tips: [
@@ -13,7 +23,7 @@ export default {
     },
   ],
   description: `
-    This show is yet to be announced, but you can bet it&#x27;ll be great!
+    JavaScript is taking the software world by storm, and we're going to talk about yet another enabling technology: [React Native](https://facebook.github.io/react-native/).
   `,
   youTubeId: '5vqKnvutCug',
   podbeanId: '',
@@ -83,15 +93,6 @@ export default {
     },
     {
       twitter: 'pamasaur',
-      links: [
-      ],
-      tips: [
-      ],
-      picks: [
-      ],
-    },
-    {
-      twitter: 'tylermcginnis33',
       links: [
       ],
       tips: [
