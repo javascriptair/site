@@ -50,6 +50,7 @@ PersonNotes.styles = StyleSheet.create({
   },
   notesContainer: {
     flex: 1,
+    'word-break': 'break-word',
     [upToMediumBig]: {
       marginLeft: '10',
       marginRight: '10',
