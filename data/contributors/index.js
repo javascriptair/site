@@ -89,6 +89,11 @@ const contributors = [
     twitter: 'rb30',
     contributions: 'Site PRs',
   },
+  {
+    name: 'Marek Grzybek',
+    twitter: 'feimosi',
+    contributions: 'Site PRs',
+  },
 ].map(c => ({
   imgSrc: `/data/contributors/${c.twitter}.png`,
   link: `https://twitter.com/${c.twitter}`,
