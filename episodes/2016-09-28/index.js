@@ -5,9 +5,9 @@ export default {
       name: 'Rob Dodson',
       twitter: 'rob_dodson',
       links: [
-        `Server Components (https://pimterry.github.io/server-components/)`,
-        `[Using React app techniques at the web component level with Redux, virtual-dom, and JSX ](https://component.kitchen/blog/posts/using-react-app-techniques-at-the-web-component-level-with-redux-virtual-dom-and-jsx)`,
-        `Dig up twitter thread. It’s a total centithread but here’s a decent jumping in point (https://twitter.com/dan_abramov/status/770645608415784960)`,
+        `[Server Components](https://pimterry.github.io/server-components/)`,
+        `[Using React app techniques at the web component level with Redux, virtual-dom, and JSX](https://component.kitchen/blog/posts/using-react-app-techniques-at-the-web-component-level-with-redux-virtual-dom-and-jsx)`,
+        `[Web Components Twitter Thread](https://twitter.com/dan_abramov/status/770645608415784960)`,
       ],
       tips: [
         `The gas arrow in your rental car dashboard tells you which side the gas tank is on`,
