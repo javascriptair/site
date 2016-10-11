@@ -1,9 +1,19 @@
 export default {
-  title: `TBA`,
+  title: `Routing in React`,
   guests: [
     {
-      name: 'TBA',
-      twitter: '',
+      name: 'Tim Dorr',
+      twitter: 'timdorr',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Jimmy Jia',
+      twitter: 'jimmy_jia',
       links: [
       ],
       tips: [
@@ -13,11 +23,14 @@ export default {
     },
   ],
   description: `
-    This show is still being planned
+    As soon as you start building "Single Page Applications" in the client, you need to start thinking about
+    the URL. Often it's really helpful to have an abstraction for managing this called a router. And in most
+    cases, routers will be different based on which framework you're using. We're going to talk about the
+    approaches you can take when routing in React.
   `,
   youTubeId: 'yBAC1k5nALU',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/2016-10-12',
+  shortUrl: 'http://jsair.io/route-react',
   host: {
     links: [
     ],
