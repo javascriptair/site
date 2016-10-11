@@ -31,7 +31,7 @@
     "babel-core": "6.13.2",
     "babel-eslint": "6.1.2",
     "babel-plugin-module-resolver": "2.1.0",
-    "babel-plugin-react-require": "2.1.0",
+    "babel-plugin-react-require": "3.0.0",
     "babel-plugin-transform-es2015-destructuring": "6.9.0",
     "babel-preset-node6": "11.0.0",
     "babel-preset-react": "6.11.1",

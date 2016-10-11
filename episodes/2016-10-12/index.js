@@ -2,6 +2,16 @@ export default {
   title: `Async Patterns in JavaScript`,
   guests: [
     {
+      name: 'Valeri Karpov',
+      twitter: 'code_barbarian',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
       name: 'Peter Lyons',
       twitter: 'focusaurus',
       links: [
