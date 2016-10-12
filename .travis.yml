@@ -14,6 +14,8 @@ branches:
 node_js:
   - "6"
 before_install:
-  - npm i -g npm@^3.0.0
+  - npm i yarn --cache-min 9999999
+install:
+  - $(npm bin)/yarn
 script:
   - time npm start build && time npm start deploy
