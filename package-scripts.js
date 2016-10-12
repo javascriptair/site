@@ -92,6 +92,6 @@ module.exports = {
     eslint: 'eslint .',
     server: 'http-server',
     test: 'nps eslint',
-    validate: 'nps build && nps test',
+    validate: 'nps build',
   },
 }
