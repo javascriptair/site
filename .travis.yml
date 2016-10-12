@@ -1,6 +1,8 @@
 language: node_js
 cache:
   directories:
+    - $HOME/.npm
+    - $HOME/.yarn-cache
     - node_modules
 notifications:
   webhooks:
@@ -14,8 +16,8 @@ branches:
 node_js:
   - "6"
 before_install:
-  - npm i yarn --cache-min 9999999
+  - npm i -g yarn --cache-min 999999999
 install:
-  - $(npm bin)/yarn
+  - yarn
 script:
-  - time npm start build && time npm start deploy
+  - time yarn start build && time yarn start deploy
