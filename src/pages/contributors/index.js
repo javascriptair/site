@@ -100,7 +100,7 @@ Contributors.styles = StyleSheet.create({
     textAlign: 'center',
   },
   contributor: {
-    margin: '0 10px 18px 10px';
-    flex: 1;
+    margin: '0 10px 18px 10px',
+    flex: 1,
   },
 })
