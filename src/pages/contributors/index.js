@@ -99,5 +99,8 @@ Contributors.styles = StyleSheet.create({
     flexFlow: 'row wrap',
     textAlign: 'center',
   },
-  contributor: {margin: '0 10px 18px 10px'},
+  contributor: {
+    margin: '0 10px 18px 10px';
+    flex: 1;
+  },
 })
