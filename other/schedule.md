@@ -43,7 +43,7 @@
 | 2016-09-21 | [Test all the things with Cypress](/../../issues/153) |
 | 2016-09-28 | [Web Components](/../../issues/150) |
 | 2016-10-05 | [(Rerun) The past, present, and future of JavaScript](https://jsair.io/first-rerun) |
-| 2016-10-12 | [](/../../issues/) |
+| 2016-10-12 | [Async Patterns in JavaScript](/../../issues/158) |
 | 2016-10-19 | [On-site at Connect.tech](/../../issues/146) |
 | 2016-10-26 | [React Native](/../../issues/154) |
 | 2016-11-02 | [](/../../issues/) |
