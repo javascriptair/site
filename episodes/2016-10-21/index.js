@@ -18,7 +18,7 @@ export default {
   description: `
     We'll be live and on site at Connect.tech in Atlanta Georgia. See you there!
   `,
-  youTubeId: 'AdK5f3bCPXI',
+  youTubeId: 's9kNekW8B-8',
   podbeanId: '',
   shortUrl: 'http://jsair.io/connect',
   host: {
