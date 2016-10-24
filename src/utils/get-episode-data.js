@@ -20,13 +20,14 @@ function getEpisodeData(episodePath) {
   /* eslint complexity:[2,8] */
   const episode = require(episodePath).default // eslint-disable-line global-require
   const [, date] = dateRegex.exec(episodePath)
+  const episodeBasename = path.basename(episodePath)
   const number = episode.number || episodes.indexOf(date)
   const numberPad = 3
   const numberDisplay = pad(number, numberPad)
 
   episode.guests = (episode.guests || []).map(guest => {
     guest = {
-      imgSrc: guest.name === 'TBA' ? '/resources/images/guest-tba.png' : `/episodes/${date}/${guest.twitter}.png`,
+      imgSrc: guest.name === 'TBA' ? '/resources/images/guest-tba.png' : `/episodes/${episodeBasename}/${guest.twitter}.png`, // eslint-disable-line
       link: `https://twitter.com/${guest.twitter}`,
       links: [],
       tips: [],
@@ -97,8 +98,8 @@ function getEpisodeData(episodePath) {
       timezone,
       date,
     }),
-    screenshot: `https://javascriptair.com/episodes/${date}/screenshot.png`,
-    page: `/episodes/${date}`,
+    screenshot: `https://javascriptair.com/episodes/${episodeBasename}/screenshot.png`,
+    page: `/episodes/${episodeBasename}`,
     timeHTML: getTimeHTML(timeObj, timezone),
     transcriptHTML: transcript ? transcriptToHTML(transcript) : null,
     past: episodeHasHappened(episode, date),

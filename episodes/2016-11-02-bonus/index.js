@@ -1,10 +1,42 @@
 export default {
-  title: `JavaScript and the Web Platform`,
-  number: 48,
+  title: `Yarn (bonus show)`,
+  time: '10:00',
+  number: 47,
+  timezone: 'CT',
   guests: [
     {
-      name: 'Brendan Eich',
-      twitter: 'brendaneich',
+      name: 'Sebastian McKenzie',
+      twitter: 'sebmck',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Konstantin Raev',
+      twitter: 'bestander_nz',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Yehuda Katz',
+      twitter: 'wycats',
+      links: [
+      ],
+      tips: [
+      ],
+      picks: [
+      ],
+    },
+    {
+      name: 'Christoph Pojer',
+      twitter: 'cpojer',
       links: [
       ],
       tips: [
@@ -14,11 +46,11 @@ export default {
     },
   ],
   description: `
-    JavaScript has changed the world. It has changed my life. This will be the last episode of JavaScript Air. Brendan Eich, the creator of JavaScript and the guest on our first show, will join us to wrap up the show. Please join us for our grand finale.
+    [Yarn](https://yarnpkg.com/) bills itself as fast, reliable, and secure dependency management. It was [recently released](https://code.facebook.com/posts/1840075619545360) as a collaborative effort with developers from Facebook, Google, and Tilde. In this bonus show, we're going to talk about what this means for the JavaScript community.
   `,
-  youTubeId: '88XtcaLHbIY',
+  youTubeId: 'amaVRFsopZs',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/finale',
+  shortUrl: 'http://jsair.io/yarn',
   host: {
     links: [
     ],
