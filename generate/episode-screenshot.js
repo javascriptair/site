@@ -23,7 +23,7 @@ function generateEpisodeScreenshotPage(path, cb) {
       throw err
     }
     getServerAddress(address => {
-      const url = `${address}/episodes/${episode.date}/screenshot.html`
+      const url = `${address}${episode.page}/screenshot.html`
       const screenshotPath = resolve(episodePath, 'screenshot.png')
       takeScreenshot(url, episodePath).then(() => cb(null, screenshotPath), cb)
     })
