@@ -110,7 +110,7 @@ const sponsors = {
       link: 'http://jsair.io/reactjs-program',
       tagline: `Master the React.js Ecosystem`,
       startDate: '2016-06-27',
-      endDate: '2016-09-27',
+      endDate: '2016-12-27',
     },
     {
       imgSrc: '/sponsors/sentry.png',
