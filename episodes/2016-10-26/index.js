@@ -37,7 +37,7 @@ export default {
   `,
   youTubeId: '5vqKnvutCug',
   podbeanId: '',
-  shortUrl: 'http://jsair.io/2016-10-05',
+  shortUrl: 'http://jsair.io/react-native',
   host: {
     links: [
     ],
