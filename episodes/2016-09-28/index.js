@@ -39,7 +39,7 @@ export default {
       picks: [
         `Electron!`,
         `GO VOTE`,
-        `[punchesbears](twitter.com/punchesbears) is an amazing twitter where a dude posts hilarious videos of various videogames he is making (dancing bears! Throw macbooks at hipsters! Drunk navigating of a 7-11 for a burrito!)`,
+        `[punchesbears](https://twitter.com/punchesbears) is an amazing twitter where a dude posts hilarious videos of various videogames he is making (dancing bears! Throw macbooks at hipsters! Drunk navigating of a 7-11 for a burrito!)`,
       ],
     },
   ],
