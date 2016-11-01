@@ -31,7 +31,7 @@ export default {
         `[Detailed browser support for the Web Animations API at the Edge Platform API catalog--don’t trust caniuse on this beast of an API!](https://developer.microsoft.com/en-us/microsoft-edge/platform/catalog/spec/web-animations-1/)`,
       ],
       picks: [
-        `[My new CSS Animations + Transitions Course](courses.rachelnabors.com)`,
+        `[My new CSS Animations + Transitions Course](http://courses.rachelnabors.com)`,
         `[CSS Conf Argentina](http://cssconfar.com/)`,
         `[CSS Dev Conf San Antonio](http://2016.cssdevconf.com/) plus [CSS + Motion Design workshop](http://2016.cssdevconf.com/#workshops)`,
         `[All Things Open](http://allthingsopen.org/)`,
