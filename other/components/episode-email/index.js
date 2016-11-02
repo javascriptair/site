@@ -40,7 +40,11 @@ function EpisodeEmail({episode, sponsors}) {
   const episodePage = `https://javascriptair.com${episode.page}`
   const panelistsAndHost = utils.sortPeople([...panelists, host])
   const showAttendees = [...utils.sortPeople(guests), ...panelistsAndHost]
-  const combinedSponsors = [sponsors.premierSponsor, ...sponsors.goldSponsors, ...sponsors.silverSponsors]
+  const combinedSponsors = [
+    sponsors.premierSponsor,
+    ...sponsors.goldSponsors,
+    ...sponsors.silverSponsors,
+  ].filter(Boolean)
   const headCSS = getHeadCSS()
 
   return (

@@ -3,7 +3,7 @@ import {Box, Item, A} from 'react-html-email'
 
 export default SponsorsSection
 
-function SponsorsSection({sponsors}) {
+function SponsorsSection({sponsors = []}) {
   const styles = {
     box: {
       minWidth: '100%',
