@@ -8,18 +8,18 @@ export default EpisodeSmall
 function EpisodeSmall({episodeData}) {
   const {styles} = EpisodeSmall
   const {
-    date,
     title,
     titleHTML,
     guests = [],
     number,
+    page
   } = episodeData
 
   return (
     <div className={css(styles.episodeSmall)}>
       <a
         className={css(styles.title)}
-        href={`/episodes/${date}`}
+        href={`${page}`}
         title={`${title}`}
       >
         {`${number}. `}
