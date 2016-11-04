@@ -12,14 +12,17 @@ function Host() {
   }
   return (
     <section id="host">
-      <Person
-        className={css(styles.host, sharedStyles.panelist)}
-        name="Kent C. Dodds"
-        twitter="kentcdodds"
-        imgSrc="resources/kentcdodds.png"
-        link="https://twitter.com/kentcdodds"
-        personClassNames={personClassNames}
-      />
+      <span className={css(styles.hostPerson)}>
+        <Person
+          className={css(styles.host, sharedStyles.panelist)}
+          name="Kent C. Dodds"
+          twitter="kentcdodds"
+          imgSrc="resources/kentcdodds.png"
+          link="https://twitter.com/kentcdodds"
+          personClassNames={personClassNames}
+          customStyles={{name: {color: '#f8f8f8'}, twitter: {color: '#f8f8f8'}}}
+        />
+      </span>
       <p className={css(sharedStyles.caption)}>
         <a
           className={css(sharedStyles.link)}
@@ -42,6 +45,14 @@ function Host() {
 }
 
 Host.styles = StyleSheet.create({
+  hostPerson: {
+    '@media only screen and (min-width: 730px)': {
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+    },
+  },
   host: {
     padding: '0 15px',
     '@media only screen and (min-width: 730px)': {
