@@ -11,9 +11,21 @@ function Person({
   imgSrc,
   squareImage,
   personClassNames = {root: '', name: '', twitter: '', image: ''},
+  customStyles = {name: {color: 'black'}, twitter: {color: 'black'}},
 }) {
-  const {styles} = Person
-  const personClassName = css(styles.person)
+  const styles = StyleSheet.create({...Person.styles, ...customStyles})
+  const personStyles = StyleSheet.create({
+    person: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      margin: 5,
+      textDecoration: 'none',
+      color: '#adadad',
+    },
+  })
+  const personClassName = css(personStyles.person)
+
   className = className ? `${className} ${personClassName}` : personClassName
   className += ` ${personClassNames.root}`
   const nameClassName = `${personClassNames.name} ${css(styles.name)}`
@@ -56,15 +68,7 @@ const text = {
   fontSize: '1em',
   ':visited': {color: '#adadad'},
 }
-Person.styles = StyleSheet.create({
-  person: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    margin: 5,
-    textDecoration: 'none',
-    color: '#adadad',
-  },
+Person.styles = {
   name: {...text, fontWeight: 700, textAlign: 'center'},
   twitter: {...text, textAlign: 'center'},
   details: {
@@ -79,7 +83,7 @@ Person.styles = StyleSheet.create({
     width: 120,
     height: 120,
   },
-})
+}
 
 function AncorOrDiv(props) {
   if (!props.href) {

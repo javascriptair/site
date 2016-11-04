@@ -60,6 +60,7 @@ function PanelistList({panelists}) {
           className={css(styles.panelist, sharedStyles.panelist)}
           {...p}
           personClassNames={personClassNames}
+          customStyles={{name: {color: '#f8f8f8'}, twitter: {color: '#f8f8f8'}}}
           key={i}
         />
       ))}
