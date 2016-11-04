@@ -19,6 +19,7 @@ function Host() {
         imgSrc="resources/kentcdodds.png"
         link="https://twitter.com/kentcdodds"
         personClassNames={personClassNames}
+        customStyles={{name: {color: '#f8f8f8'}, twitter: {color: '#f8f8f8'}}}
       />
       <p className={css(sharedStyles.caption)}>
         <a
