@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import {StyleSheet, css} from 'aphrodite'
+import {merge} from 'lodash'
 
 export default Person
 
@@ -11,9 +12,10 @@ function Person({
   imgSrc,
   squareImage,
   personClassNames = {root: '', name: '', twitter: '', image: ''},
-  customStyles = {name: {color: 'black'}, twitter: {color: 'black'}},
+  customStyles = {name: {}, twitter: {}},
 }) {
-  const styles = StyleSheet.create({...Person.styles, ...customStyles})
+  const mergedStyle = merge({}, Person.styles, {...customStyles})
+  const styles = StyleSheet.create(mergedStyle)
   const personStyles = StyleSheet.create({
     person: {
       display: 'flex',
@@ -68,6 +70,7 @@ const text = {
   fontSize: '1em',
   ':visited': {color: '#adadad'},
 }
+
 Person.styles = {
   name: {...text, fontWeight: 700, textAlign: 'center'},
   twitter: {...text, textAlign: 'center'},
@@ -84,6 +87,7 @@ Person.styles = {
     height: 120,
   },
 }
+
 
 function AncorOrDiv(props) {
   if (!props.href) {
