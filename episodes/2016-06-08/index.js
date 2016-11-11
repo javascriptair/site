@@ -75,7 +75,7 @@ export default {
         `Read the source code!!! Source code is the one true documentation. If you are ever curious about how something works, or what additional features there are, pop in the source code and start reading. Webpack’s source code has lots of hidden and cool features.`,
       ],
       picks: [
-        `[Midwest Dev Chat Slack](www.midwestdevchat.com)`,
+        `[Midwest Dev Chat Slack](http://www.midwestdevchat.com)`,
         `[webpack-closure-compiler](https://github.com/roman01la/webpack-closure-compiler) awesome alternative to using UglifyJSPlugin. +1 For Typescript Users with \`Tscikle\`. `,
         `[Webpack starter](https://github.com/AngularClass/angular2-webpack-starter) for those users of Angular, this is a nice full featured repo/boilerplate. Once you understand webpack, this repository is a must clone. `,
       ],
