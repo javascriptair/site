@@ -12,7 +12,7 @@ function EpisodeSmall({episodeData}) {
     titleHTML,
     guests = [],
     number,
-    page
+    page,
   } = episodeData
 
   return (
