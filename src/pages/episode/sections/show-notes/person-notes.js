@@ -23,7 +23,6 @@ function PersonNotes({person}) {
       {
         nothing ?
           <p>No links, tips, or picks this week</p> :
-        (
           <div className={css(styles.notesContainer)}>
             {
               notesSections.map((section, index) => (
@@ -31,7 +30,6 @@ function PersonNotes({person}) {
               ))
             }
           </div>
-        )
       }
     </div>
   )

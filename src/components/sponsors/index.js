@@ -30,18 +30,20 @@ function SponsorsSection({
           <SponsorSubheading title="Premier Sponsor" />
           {isEmpty(premierSponsor) ? null : <Sponsor {...premierSponsor} />}
         </div>
-        {isEmpty(goldSponsors) ? null : (
+        {isEmpty(goldSponsors) ?
+          null :
           <SponsorGroup
             sponsors={goldSponsors}
             title={`Gold Sponsor${goldSponsors.length === 1 ? '' : 's'}`}
           />
-        )}
-        {isEmpty(silverSponsors) ? null : (
+        }
+        {isEmpty(silverSponsors) ?
+          null :
           <SponsorGroup
             sponsors={silverSponsors}
             title={`Silver Sponsor${silverSponsors.length === 1 ? '' : 's'}`}
           />
-        )}
+        }
         <p className={css(styles.footnote)}>
           JavaScript Air is supported by
           some <a href="/contributors">awesome contributors</a>.
