@@ -40,7 +40,7 @@ function analyzeAudio({file, episode}) {
       reject(err)
     })
     .on('close', () => {
-      const maxVol = /max_volume: (-?[\d\.]+) dB/.exec(buffer)
+      const maxVol = /max_volume: (-?[\d.]+) dB/.exec(buffer)
 
       if (!maxVol) {
         return resolve({file, episode, gain: 0})
