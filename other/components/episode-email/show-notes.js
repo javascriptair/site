@@ -33,7 +33,7 @@ function ShowNotes({people}) {
                   <td style={styles.td}>
                     {
                       noNotes ?
-                      'No links, tips, or picks this week' :
+                        'No links, tips, or picks this week' :
                         <LinksPicksTips
                           linksHTML={person.linksHTML}
                           tipsHTML={person.tipsHTML}

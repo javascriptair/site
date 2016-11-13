@@ -30,11 +30,10 @@ function EpisodePage({episode, nextEpisode, sponsors}) {
           episode={episode}
         />
         {
-          past ? (
-            <PastEpisodeStuff episodeData={episode} sponsors={sponsors} />
-          ) : (
+          past ?
+            <PastEpisodeStuff episodeData={episode} sponsors={sponsors} /> :
             <FutureEpisodeStuff episodeData={episode} sponsors={sponsors} />
-          )
+
         }
       </div>
     </Page>
