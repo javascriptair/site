@@ -21,3 +21,5 @@ You can also track episode suggestions on
 ## Discussion
 
 Join [gitter](https://gitter.im/javascriptair/site) channel for discussion.
+E-mail Us For Feedback.
+Your Convenience Is Very Important.
