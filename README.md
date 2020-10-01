@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/javascriptair/site/master/resources/logo.png" alt="JavaScript Air logo" title="JavaScript Air" align="right" width="90" height="90" />
+<img src="https://raw.githubusercontent.com/javascriptair/site/master/resources/logo.png" alt="JavaScript Air logo" title="JavaScript Air" align="left" width="90" height="90" />
 
 # [JavaScript Air](http://javascriptair.com)
 
