@@ -5,17 +5,17 @@
 [![Build Status](https://img.shields.io/travis/javascriptair/site.svg?style=flat-square)](https://travis-ci.org/javascriptair/site)
 [![Join Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg?style=flat-square)](https://gitter.im/javascriptair/site)
 
-## Suggest Episode topic/guest
+## Suggest Episode Topic/Guest
 
 Please suggest an episode [using this tool](http://suggest.javascriptair.com)
 or by simply [filing an issue](https://github.com/javascriptair/site/issues/new)
 
-## Track episode progress
+## Track Episode Progress
 
-The official schedule is on [the website](http://javascriptair.com)
-but you can find things in progress in [schedule.md](other/schedule.md).
+The official schedule is on : [the website](http://javascriptair.com)
+but you can find things in progress in : [schedule.md](other/schedule.md).
 
-You can also track episode suggestions on
+You can also track episode suggestions on :
 [waffle.io](https://waffle.io/javascriptair/site)
 
 ## Discussion
