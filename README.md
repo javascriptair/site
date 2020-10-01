@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/travis/javascriptair/site.svg?style=flat-square)](https://travis-ci.org/javascriptair/site)
 [![Join Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg?style=flat-square)](https://gitter.im/javascriptair/site)
 
-## Suggest Episode topic/guest
+## Suggest Episode topic/guest with Javascript
 
 Please suggest an episode [using this tool](http://suggest.javascriptair.com)
 or by simply [filing an issue](https://github.com/javascriptair/site/issues/new)
